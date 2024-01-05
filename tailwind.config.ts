@@ -21,6 +21,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-left': 'linear-gradient(90deg, #F0B90B 0%, #FADD55 100%);'
       },
       fontFamily: {
         montserrat: ["Montserrat"]
