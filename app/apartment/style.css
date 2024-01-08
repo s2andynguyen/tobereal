@@ -16,25 +16,57 @@
     font-weight: 500;
     line-height: normal;
 }
+.title-Calculates {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.text-Calculate {
+    padding-top: 20px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 /* sd chung */
 
-.main {
+.wrapper {
     position: relative;
-    width: 1199px;
-    height: 311.46px;
+}
+.aprtment-wrap {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../../assets/svg/bg-yellow.svg);
+    height: 450px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+.aprtment-wrap::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 .Apartment-Solution {
-    width: 1199px;
-    height: 311.46px;
+    margin: 0 auto;
     display: flex;
     position: relative;
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    background: url(../../assets/svg/bg-yellow.svg);
 }
 .title-Apartment {
     color: #000;
@@ -89,3 +121,164 @@
     width: 286px;
     height: 47px;
 }
+.Management-Services {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.Earnings-wrap {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.apartmentHouse,
+.wrap-TracesNews,
+.wrap-Testimonials,
+.wrap-properties,
+.wrap-MarketingPartners,
+.wrap-activities {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.g-activies {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+}
+.title-activie {
+    font-size: 20px !important;
+    padding: 10px;
+}
+.text-activie {
+    list-style-type: square;
+    font-size: 13px !important;
+    padding-top: 5px;
+}
+
+.g-activies img {
+    height: 80px;
+    width: 58.96px;
+}
+.box-propertie {
+    border-radius: 10px;
+    border: 1px solid #edd440;
+    background: radial-gradient(
+        61.53% 61.53% at 50.2% 100%,
+        #faff00 0%,
+        rgba(250, 255, 0, 0) 100%
+    );
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+    width: 278px;
+    height: 107px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-propertie {
+    font-size: 13px;
+    text-align: center;
+}
+.group-properties {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sliders-katherrine {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+.box-Katherine {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 490px;
+    height: 217px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+}
+.box-Katherine a {
+    color: #f0b90b;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.wrap-Katherine {
+    display: flex;
+    align-items: center;
+}
+
+.Owner-sz {
+    font-size: 13px !important;
+}
+.content-Owner-sz {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.wrap-Katherine img {
+    padding-left: 30px;
+    padding-bottom: 100px;
+    right: 0;
+    top: 0;
+}
+.swiper-wrapper {
+    display: flex;
+}
+.btn-SeeMore {
+    width: 355px !important;
+    height: 40px !important;
+}
+.apartmentHouse {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+.register-now-btn {
+    display: flex;
+
+    height: 40px;
+    padding: 18px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.textapartment {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 20px 0;
+}
+
