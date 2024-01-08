@@ -5,6 +5,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
@@ -18,10 +19,12 @@ const config: Config = {
         primary: '#F0B90B'
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-left': 'linear-gradient(90deg, #F0B90B 0%, #FADD55 100%);'
+        'headblock': 'url("/images/home/head-block.png")',
+        'gradient-left': 'linear-gradient(90deg, #F0B90B 0%, #FADD55 100%)',
+        'gradient-right': 'linear-gradient(90deg, #FFE259 15.1%, #FFA751 85.42%)'
+      },
+      dropShadow: {
+        'title': '0 4px 4px rgba(240, 185, 11, 0.50)'
       },
       fontFamily: {
         montserrat: ["Montserrat"]

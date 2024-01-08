@@ -1,15 +1,26 @@
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link'
+
 import Input from '@/components/Input'
 import InputPassword from '@/components/InputPassword'
-
+import SocialLogin from './SocialLogin'
+import CustomCheckbox from '@/components/CustomCheckbox'
 function AuthForm() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [remember, setRemember] = useState(false)
+
+    const handleSetRemember =() => {
+        setRemember(!remember)
+    }
     return (
-        <div className='h-full w-full flex flex-col items-center justify-center gap-6'>
+        <div className='h-full w-full flex flex-col items-center justify-center gap-3 md:gap-8'>
             <p className='text-[24px] font-black'>Hi, Welcome Back! 👋</p>
-            <div className='w-full px-[150px]'>
+
+            {/* form input */}
+            <div className='w-full px-8 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6'>
+                {/* email */}
                 <Input
                     id={'email'}
                     onChange={(e: any) => {
@@ -20,6 +31,7 @@ function AuthForm() {
                     placeholder='Enter your Email...'
                     value={email}
                 />
+                {/* password */}
                 <InputPassword
                     id={'password'}
                     onChange={(e: any) => {
@@ -29,9 +41,30 @@ function AuthForm() {
                     placeholder='Enter your Password...'
                     value={password}
                 />
-                <button className='bg-gradient-left py-4 px-12'>
-                    123
+
+                {/* remember & fogot password */}
+                <div className='flex justify-center py-2 md:py-0'>
+                    {/* remember me*/}
+                        <CustomCheckbox 
+                            isChecked={remember}
+                            onChange={handleSetRemember}
+                            label='Remember Me'
+                        />
+                    {/* fogot password */}
+                    <Link
+                        href={'/auth/register'}
+                        className='text-[#E86969] ml-10 hover:underline'>
+                        Forgot Password?
+                    </Link>
+                </div>
+                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'>
+                    Login
                 </button>
+            </div>
+
+            {/* login with social */}
+            <div className="w-full px-10 xl:px-20">
+                <SocialLogin />
             </div>
         </div>
     )

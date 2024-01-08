@@ -33,11 +33,11 @@ const Input: React.FC<InputPasswordProps> = ({
         })
     }
     return (
-        <div className='w-full mb-4 relative'>
+        <div className='w-full relative'>
             {label && (
                 <label
                     htmlFor={id}
-                    className='font-[14px] text-[#695C5C] font-montserrat block pb-2'>
+                    className='font-[14px] text-[#695C5C] font-montserrat block md:pb-2'>
                     {label}
                 </label>
             )}
@@ -46,7 +46,7 @@ const Input: React.FC<InputPasswordProps> = ({
                 value={value}
                 type={ishowPassword}
                 onChange={onChange}
-                className='input border-black/40 h-12'
+                className='input border-black/40 h-12 rounded-[10px] placeholder:text-black/70'
                 placeholder={placeholder}
             />
             <span className='absolute right-2 bottom-1 z-[1] cursor-pointer p-3 hover:drop-shadow-lg'
