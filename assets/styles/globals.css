@@ -30,7 +30,7 @@
     @apply text-[40px] leading-tight md:text-[40px] md:leading-[48px] mb-5 font-bold;
   }
   .h2 {
-    @apply text-[40px] leading-tight md:text-[40px] md:leading-[48px] mb-4 font-bold;
+    @apply text-[24px] leading-tight md:text-[32px] lg:text-[40px] lg:leading-[48px] md:leading-[40px] mb-2 sm:mb-4 font-bold;
   }
   p {
     @apply leading-[1.8];
