@@ -46,7 +46,7 @@
     right: 0;
     left: 0;
     background-image: url(../../assets/svg/bg-yellow.svg);
-    height: 450px;
+    /* height: 450px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,6 +142,8 @@
     align-items: center;
     padding: 50px;
 }
+.Wrap-FAQ,
+.Wrap-DevloperManagement,
 .apartmentHouse,
 .wrap-TracesNews,
 .wrap-Testimonials,
@@ -223,12 +225,16 @@
     box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
 }
 .box-Katherine a {
+    cursor: pointer;
     color: #f0b90b;
     font-family: Montserrat;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.box-Katherine a:hover {
+    color: #fff700;
 }
 .wrap-Katherine {
     display: flex;
@@ -254,13 +260,18 @@
 }
 .swiper-wrapper {
     display: flex;
+    align-items: center;
+    min-height: 300px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    display: none;
 }
 .btn-SeeMore {
     width: 355px !important;
     height: 40px !important;
 }
 .apartmentHouse {
-    flex-direction: row !important;
     justify-content: space-between !important;
 }
 .register-now-btn {
@@ -281,4 +292,53 @@
     line-height: normal;
     padding: 20px 0;
 }
+.questions {
+    width: 490px;
+    height: 322px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+}
+.text-questions {
+    padding: 8px;
+    font-size: 16px !important;
+    width: 434px;
+    border-bottom: #cdcdcd solid 1px;
+}
+.show-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 247px;
+    max-width: 247px;
+    height: 220px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 0;
+}
 
+.content-room-dev {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding: 10px;
+    gap: 10px;
+}
+.text-Dev {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.text-room-dev {
+    font-size: 15px;
+    font-weight: 400;
+}

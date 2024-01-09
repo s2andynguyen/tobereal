@@ -5,22 +5,29 @@ import 'swiper/css/pagination'
 import 'swiper/modules'
 import React, { useState } from 'react'
 import './style.css'
-
+// swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
-
+// fetch data
 import ManagementServices from './ui/ManagementServices/page'
 import TrancesNews from './ui/TrancesNews/page'
+
 import { Services_TOBE } from './frame'
 import { Traces_NEWS } from './News'
+
+// main Apartment
 function Apartment() {
+    // state
     const [swiperRef, setSwiperRef] = useState(null)
+    const [swiperRef1, setSwiperRef1] = useState(null)
+
+    const [isShowContent, setIsShowContent] = useState<boolean>(true)
 
     return (
         <div className='wrapper bg-white'>
-            <div className='aprtment-wrap'>
-                <div className='Apartment-Solution container'>
-                    <div className='title-Apartment'>
+            <div className='aprtment-wrap h-[650px] md:h-[450px]'>
+                <div className='Apartment-Solution container flex-col  md:flex-row'>
+                    <div className='title-Apartment text-center md:text-left'>
                         Empty House & Apartment Solutions
                     </div>
                     <div className='Gr-RegisterNow'>
@@ -46,47 +53,49 @@ function Apartment() {
                 </div>
             </div>
             <div className='Management-Services container'>
-                <h2 className="text-black text-[32px] font-bold font-['Montserrat']">
-                    Apartment Management Services by TO BE REAL
+                <h2 className="text-black text-[32px] font-bold font-['Montserrat'] text-center">
+                    Apartment Management Services by SMART REAL
                 </h2>
 
-                <div className='Gr-Services grid grid-cols-3 gap-9'>
+                <div className='Gr-Services grid grid-cols-1 gap-0 md:grid-cols-3 '>
                     {Services_TOBE?.map((card) => (
                         <ManagementServices data={card} key={card?.id} />
                     ))}
                 </div>
             </div>
             <div className='Earnings-wrap container'>
-                <div className='wrap-Calculates flex items-center justify-center gap-10'>
+                <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
                     <img src={'/images/apartment/Calculate.png'} />
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates'>
+                        <h3 className='title-Calculates text-center lg:text-right'>
                             Calculate Your Earning Potential
                         </h3>
-                        <p className='text-Calculate'>
+                        <p className='text-Calculate  text-center lg:text-right'>
                             *Calculations are estimates based on data on similar units in
                             nearby apartment buildings
                         </p>
                     </div>
                 </div>
-                <div className='wrap-Calculates flex items-center justify-center gap-10'>
+                <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col-reverse lg:flex-row'>
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates'>
+                        <h3 className='title-Calculates text-center lg:text-left'>
                             INCOME GUARANTEE, FREE SERVICE CHARGE!
                         </h3>
-                        <p className='text-Calculate'>
-                            At TO BE REAL property management, we also provide a DEFINITE
+                        <p className='text-Calculate text-center lg:text-left'>
+                            At SMART REAL property management, we also provide a DEFINITE
                             RENTAL GUARANTEE!
                         </p>
                     </div>
                     <img src={'/images/apartment/INCOME.png'} />
                 </div>
-                <div className='wrap-Calculates flex items-center justify-center gap-10'>
+                <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
                     <img src={'/images/apartment/chair.png'} />
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates'>FURNISHED BY TO BE REAL</h3>
-                        <p className='text-Calculate'>
-                            TO BE REAL will furnish your apartment according to our
+                        <h3 className='title-Calculates text-center lg:text-right'>
+                            FURNISHED BY SMART REAL
+                        </h3>
+                        <p className='text-Calculate text-center lg:text-right'>
+                            SMART REAL will furnish your apartment according to our
                             standards, and the furniture will become your property at the
                             end of the rental period
                         </p>
@@ -94,14 +103,14 @@ function Apartment() {
                 </div>
             </div>
             <div className='wrap-activities container gap-16'>
-                <h3 className='title-Calculates'>
+                <h3 className='title-Calculates text-center'>
                     All about your units activities at your fingertips
                 </h3>
-                <div className='activities flex gap-9'>
-                    <div className='g-activies'>
+                <div className='activities flex flex-col gap-5 lg:flex-row '>
+                    <div className='g-activies p-0 lg:p-3'>
                         <img src={'/images/apartment/mkt-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates'>
+                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
                             Marketing and Market Reach
                         </h4>
                         <ul>
@@ -116,10 +125,10 @@ function Apartment() {
                             </li>
                         </ul>
                     </div>
-                    <div className='g-activies'>
+                    <div className='g-activies p-0 lg:p-3'>
                         <img src={'/images/apartment/clean-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates'>
+                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
                             Clear Unit Description
                         </h4>
                         <p className='text-activie text-Calculate'>
@@ -142,10 +151,10 @@ function Apartment() {
                             </li>
                         </ul>
                     </div>
-                    <div className='g-activies'>
+                    <div className='g-activies p-0 lg:p-3'>
                         <img src={'/images/apartment/flexlble-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates'>
+                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
                             Flexible Payment Options
                         </h4>
 
@@ -163,10 +172,10 @@ function Apartment() {
                             </li>
                         </ul>
                     </div>
-                    <div className='g-activies'>
+                    <div className='g-activies p-0 lg:p-3'>
                         <img src={'/images/apartment/services-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates'>
+                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
                             Service Standardization
                         </h4>
 
@@ -194,30 +203,65 @@ function Apartment() {
                     </div>
                 </div>
             </div>
-            <div className='wrap-MarketingPartners container gap-8'>
-                <h3 className='title-Calculates p-8'>
-                    TO BE REAL Online Marketing Partner
+            <div className='wrap-MarketingPartners container gap-6 lg:gap-8'>
+                <h3 className='title-Calculates p-0 text-center lg:p-8'>
+                    SMART REAL Online Marketing Partner
                 </h3>
-                <div className='Top-Logos flex gap-9'>
-                    <img src={'/images/apartment/logo-1.png'} />
-                    <img src={'/images/apartment/logo-2.png'} />
-                    <img src={'/images/apartment/logo-3.png'} />
-                    <img src={'/images/apartment/logo-4.png'} />
-                    <img src={'/images/apartment/logo-5.png'} />
+                <div className='Top-Logos flex gap-3 lg:gap-9 '>
+                    <img
+                        className='max-w-[70px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-1.png'}
+                    />
+                    <img
+                        className='max-w-[70px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-2.png'}
+                    />
+                    <img
+                        className='max-w-[70px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-3.png'}
+                    />
+                    <img
+                        className='max-w-[70px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-4.png'}
+                    />
+                    <img
+                        className='max-w-[70px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-5.png'}
+                    />
                 </div>
-                <div className='Bottom-Logos flex gap-9'>
-                    <img src={'/images/apartment/logo-6.png'} />
-                    <img src={'/images/apartment/logo-7.png'} />
-                    <img src={'/images/apartment/logo-8.png'} />
-                    <img src={'/images/apartment/logo-9.png'} />
+                <div className='Bottom-Logos flex gap-3 lg:gap-9 '>
+                    <img
+                        className='max-w-[80px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-6.png'}
+                    />
+                    <img
+                        className='max-w-[80px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-7.png'}
+                    />
+                    <img
+                        className='max-w-[80px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-8.png'}
+                    />
+                    <img
+                        className='max-w-[80px] lg:max-w-[100%]'
+                        src={'/images/apartment/logo-9.png'}
+                    />
                 </div>
             </div>
             <div className='wrap-properties container'>
-                <h3 className='title-Calculates pb-8'>Whose properties do we market?</h3>
-                <img src={'/images/apartment/svg/line-propertie.svg'} />
-                <div className='propertie-g flex gap-14 '>
+                <h3 className='title-Calculates pb-8 text-center'>
+                    Whose properties do we market?
+                </h3>
+                <img
+                    className='hidden md:block'
+                    src={'/images/apartment/svg/line-propertie.svg'}
+                />
+                <div className='propertie-g flex gap-14 flex-col md:flex-row'>
                     <div className='group-properties'>
-                        <img src={'/images/apartment/svg/arrow-propertie.svg'} />
+                        <img
+                            className='hidden md:block'
+                            src={'/images/apartment/svg/arrow-propertie.svg'}
+                        />
                         <div className='box-propertie'>
                             <p className='content-propertie text-Calculate '>
                                 For those of you who have apartments in Jabodetabek,
@@ -227,7 +271,10 @@ function Apartment() {
                         </div>
                     </div>
                     <div className='group-properties'>
-                        <img src={'/images/apartment/svg/arrow-propertie.svg'} />
+                        <img
+                            className='hidden md:block'
+                            src={'/images/apartment/svg/arrow-propertie.svg'}
+                        />
                         <div className='box-propertie'>
                             <p className='content-propertie text-Calculate '>
                                 Those of you who invest in apartment property and want to
@@ -236,7 +283,10 @@ function Apartment() {
                         </div>
                     </div>
                     <div className='group-properties'>
-                        <img src={'/images/apartment/svg/arrow-propertie.svg'} />
+                        <img
+                            className='hidden md:block'
+                            src={'/images/apartment/svg/arrow-propertie.svg'}
+                        />
                         <div className='box-propertie'>
                             <p className='content-propertie text-Calculate '>
                                 Those of you who invest in apartment property and want to
@@ -248,7 +298,7 @@ function Apartment() {
             </div>
             <div className='wrap-Testimonials container'>
                 <h3 className='title-Calculates pb-8'>Testimonials</h3>
-                <div className='w-full'>
+                <div className='slider-wrapper w-full'>
                     <Swiper
                         className='sliders-katherrine'
                         loop={false}
@@ -284,12 +334,12 @@ function Apartment() {
                                     <p className='content-Owner-sz'>
                                         Starting from the deposit, continuing with daily
                                         cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by TO BE REAL
+                                        everything has been handled by SMART REAL
                                     </p>
                                 </div>
                                 <img src={'/images/apartment/room-Katherine.png'} />
                             </div>
-                            <a href='#'>View Videos </a>
+                            <a href='#'>View Videos ➔</a>
                         </SwiperSlide>
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
@@ -306,12 +356,12 @@ function Apartment() {
                                     <p className='content-Owner-sz'>
                                         Starting from the deposit, continuing with daily
                                         cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by TO BE REAL
+                                        everything has been handled by SMART REAL
                                     </p>
                                 </div>
                                 <img src={'/images/apartment/room-Katherine.png'} />
                             </div>
-                            <a href='#'>View Videos </a>
+                            <a href='#'>View Videos ➔</a>
                         </SwiperSlide>
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
@@ -328,12 +378,12 @@ function Apartment() {
                                     <p className='content-Owner-sz'>
                                         Starting from the deposit, continuing with daily
                                         cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by TO BE REAL
+                                        everything has been handled by SMART REAL
                                     </p>
                                 </div>
                                 <img src={'/images/apartment/room-Katherine.png'} />
                             </div>
-                            <a href='#'>View Videos </a>
+                            <a href='#'>View Videos ➔</a>
                         </SwiperSlide>
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
@@ -350,12 +400,12 @@ function Apartment() {
                                     <p className='content-Owner-sz'>
                                         Starting from the deposit, continuing with daily
                                         cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by TO BE REAL
+                                        everything has been handled by SMART REAL
                                     </p>
                                 </div>
                                 <img src={'/images/apartment/room-Katherine.png'} />
                             </div>
-                            <a href='#'>View Videos </a>
+                            <a href='#'>View Videos ➔</a>
                         </SwiperSlide>
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
@@ -372,17 +422,17 @@ function Apartment() {
                                     <p className='content-Owner-sz'>
                                         Starting from the deposit, continuing with daily
                                         cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by TO BE REAL
+                                        everything has been handled by SMART REAL
                                     </p>
                                 </div>
                                 <img src={'/images/apartment/room-Katherine.png'} />
                             </div>
-                            <a href='#'>View Videos </a>
+                            <a href='#'>View Videos ➔</a>
                         </SwiperSlide>
                     </Swiper>
                     <div
                         id='carausel-2-columns-1-arrows'
-                        className='flex justify-between mb-24'>
+                        className='flex justify-between '>
                         <span className='mr-4 text-blue-500 flex slick-arrow custom_prev'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
@@ -502,26 +552,223 @@ function Apartment() {
                     </div>
                 </div>
             </div>
-            <div className='wrap-TracesNews container'>
-                <h3 className='title-Calculates pb-8'>TO BE REAL Traces In The News</h3>
+            <div className='Wrap-DevloperManagement container gap-5'>
+                <div className='nav-DevloperManagements flex-col items-center w-full gap-10'>
+                    <div className='flex gap-10 justify-center'>
+                        <button
+                            onClick={() => setIsShowContent(true)}
+                            className='title-Calculates pb-8'>
+                            Official Developer Partner
+                        </button>
+                        <button
+                            onClick={() => setIsShowContent(false)}
+                            className='title-Calculates pb-8'>
+                            Building Management
+                        </button>
+                    </div>
 
-                <div className='gr-news flex gap-8 pb-8'>
-                    {Traces_NEWS?.map((card) => (
-                        <TrancesNews data={card} key={card?.id} />
-                    ))}
+                    {isShowContent && (
+                        <div className='w-full'>
+                            <Swiper
+                                className='sliders-Dev'
+                                loop={false}
+                                pagination={true}
+                                modules={[Navigation, Pagination]}
+                                breakpoints={{
+                                    300: {
+                                        slidesPerView: 2
+                                    },
+                                    550: {
+                                        slidesPerView: 3
+                                    }
+                                }}
+                                // initialSlide={2}
+                                spaceBetween={20}
+                                slidesPerView={1}>
+                                <SwiperSlide className='show-room lg:ml-5'>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>Grand Central</h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Bogor, West Java
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='show-room lg:ml-5'>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>LRT City</h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Ciracas, East Jakarta
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='show-room lg:ml-5'>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>Meikarta </h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Cikarang, Bekasi
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='show-room lg:ml-5 '>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>Grand Central</h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Bogor, West Java
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='show-room lg:ml-5'>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>LRT City</h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Ciracas, East Jakarta
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='show-room lg:ml-5'>
+                                    <img src='/images/apartment/showRoom.png' alt='' />
+
+                                    <div className='content-room-dev'>
+                                        <h4 className='text-Dev'>Meikarta </h4>
+                                        <p className='text-room-dev text-Dev'>
+                                            Cikarang, Bekasi
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                    )}
+
+                    {!isShowContent && (
+                        <div className='wrap-Logo-Manage flex-col align-center w-full'>
+                            <div className='TopLogos-Management flex justify-center'>
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management1.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management2.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management3.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management4.png'}
+                                />
+                            </div>
+                            <div className='BottomLogos-Managemant flex justify-center'>
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management5.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management6.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management7.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management8.png'}
+                                />
+                                <img
+                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    src={'/images/apartment/logoPartner-Management9.png'}
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
+            </div>
+            <div className='wrap-TracesNews container gap-7'>
+                <h3 className='title-Calculates pb-8 text-center'>
+                    SMART REAL Traces In The News
+                </h3>
+
+                <Swiper
+                    className='gr-news sliders-Dev w-full'
+                    loop={false}
+                    pagination={true}
+                    modules={[Navigation, Pagination]}
+                    breakpoints={{
+                        300: {
+                            slidesPerView: 2
+                        },
+                        550: {
+                            slidesPerView: 3
+                        }
+                    }}
+                    // initialSlide={2}
+                    spaceBetween={20}
+                    slidesPerView={1}>
+                    <SwiperSlide>
+                        {Traces_NEWS?.map((card) => (
+                            <TrancesNews data={card} key={card?.id} />
+                        ))}
+                    </SwiperSlide>
+                </Swiper>
                 <button className='btn-SeeMore wrap-btn'>See More ➔</button>
             </div>
-            <div className='apartmentHouse container flex'>
-                <div className='wrap-content-apartment pb-10'>
-                    <h3 className='title-Calculates'>Is your apartment & house empty?</h3>
-                    <p className='textapartment'>
+            <div className='apartmentHouse container flex-col lg:!flex-row'>
+                <div className='wrap-content-apartment pb-10 flex flex-col items-center lg:items-start'>
+                    <h3 className='title-Calculates text-center lg:!text-left'>
+                        Is your apartment & house empty?
+                    </h3>
+                    <p className='textapartment text-center lg:!text-left'>
                         Dont win it, its better to make money. Come on! Just hand it over
                         to Travelio!
                     </p>
                     <button className='register-now-btn wrap-btn'>REGISTER NOW ➔</button>
                 </div>
                 <img src={'/images/apartment/apartmentHouse.png'} />
+            </div>
+            <div className='Wrap-FAQ container'>
+                <h3 className='title-Calculates pb-8 text-center'>
+                    Frequently Asked Questions(FAQ)
+                </h3>
+                <div className='questions'>
+                    <a href='#' className='title-Calculates text-questions'>
+                        - How to Get Started & TPM Areas
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Apartment Management Services by Travelio
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Property List & Standardization
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Guests & Payments{' '}
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Security
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Prices & Fees
+                    </a>
+                    <a href='#' className='title-Calculates text-questions'>
+                        + Property Regulations
+                    </a>
+                </div>
+                <div className='answers'></div>
             </div>
         </div>
     )
