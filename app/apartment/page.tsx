@@ -15,6 +15,8 @@ import TrancesNews from './ui/TrancesNews/page'
 
 import { Services_TOBE } from './frame'
 import { Traces_NEWS } from './News'
+// compoment
+import RegisterNow from '@/components/RegisterNow/page'
 
 // main Apartment
 function Apartment() {
@@ -31,30 +33,11 @@ function Apartment() {
                     <div className='title-Apartment text-center md:text-left'>
                         Empty House & Apartment Solutions
                     </div>
-                    <div className='Gr-RegisterNow'>
-                        <p className='text-register'>Register Now</p>
-                        <div className='Asset-Gr'>
-                            <div className='Asset'>
-                                <p className='text-asset'>Asset type</p>
-                                <img src={'/images/apartment/svg/icon-register.svg'} />
-                            </div>
-                            <div className='Asset'>
-                                <p className='text-asset'>Interior</p>
-                                <img src={'/images/apartment/svg/icon-register.svg'} />
-                            </div>
-                            <div className='Asset'>
-                                <p className='text-asset'>Asset</p>
-                                <img src={'/images/apartment/svg/icon-register.svg'} />
-                            </div>
-                            <button className='REGISTERED-btn wrap-btn'>
-                                REGISTERED
-                            </button>
-                        </div>
-                    </div>
+                    <RegisterNow />
                 </div>
             </div>
             <div className='Management-Services container'>
-                <h2 className="text-black text-[32px] font-bold font-['Montserrat'] text-center">
+                <h2 className="text-black font-bold font-['Montserrat'] text-center text-2xl md:text-[32px]">
                     Apartment Management Services by SMART REAL
                 </h2>
 
@@ -68,10 +51,10 @@ function Apartment() {
                 <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
                     <img src={'/images/apartment/Calculate.png'} />
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates text-center lg:text-right'>
+                        <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
                             Calculate Your Earning Potential
                         </h3>
-                        <p className='text-Calculate  text-center lg:text-right'>
+                        <p className='text-Calculate text-base md:text-xl text-center lg:text-right'>
                             *Calculations are estimates based on data on similar units in
                             nearby apartment buildings
                         </p>
@@ -79,10 +62,10 @@ function Apartment() {
                 </div>
                 <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col-reverse lg:flex-row'>
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates text-center lg:text-left'>
+                        <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-left'>
                             INCOME GUARANTEE, FREE SERVICE CHARGE!
                         </h3>
-                        <p className='text-Calculate text-center lg:text-left'>
+                        <p className='text-Calculate text-base md:text-xl text-center lg:text-left'>
                             At SMART REAL property management, we also provide a DEFINITE
                             RENTAL GUARANTEE!
                         </p>
@@ -92,10 +75,10 @@ function Apartment() {
                 <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
                     <img src={'/images/apartment/chair.png'} />
                     <div className='content-Calculate'>
-                        <h3 className='title-Calculates text-center lg:text-right'>
+                        <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
                             FURNISHED BY SMART REAL
                         </h3>
-                        <p className='text-Calculate text-center lg:text-right'>
+                        <p className='text-Calculate text-base md:text-xl text-center lg:text-right'>
                             SMART REAL will furnish your apartment according to our
                             standards, and the furniture will become your property at the
                             end of the rental period
@@ -104,108 +87,115 @@ function Apartment() {
                 </div>
             </div>
             <div className='wrap-activities container gap-16'>
-                <h3 className='title-Calculates text-center'>
+                <h3 className='title-Calculates text-xl md:text-2xl text-center'>
                     All about your units activities at your fingertips
                 </h3>
-                <div className='activities flex flex-col gap-5 lg:flex-row '>
-                    <div className='g-activies p-0 lg:p-3'>
-                        <img src={'/images/apartment/mkt-activitie.png'} />
+                {/* flex flex-col gap-5 lg:flex-row */}
+                <div className='activities flex flex-col gap-5 xl:flex-row'>
+                    <div className='mkttop flex flex-col gap-5 md:flex-row'>
+                        <div className='g-activies p-0 lg:p-3'>
+                            <img src={'/images/apartment/mkt-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
-                            Marketing and Market Reach
-                        </h4>
-                        <ul>
-                            <li className='text-activie text-Calculate '>
-                                Agent Partner
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Corporate Partners
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Online Property Listing Partner
-                            </li>
-                        </ul>
+                            <h4 className='title-activie title-Calculates text-xl md:text-2xl text-center lg:text-left'>
+                                Marketing and Market Reach
+                            </h4>
+                            <ul>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Agent Partner
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Corporate Partners
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Online Property Listing Partner
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='g-activies p-0 lg:p-3'>
+                            <img src={'/images/apartment/clean-activitie.png'} />
+
+                            <h4 className='title-activie title-Calculates text-xl md:text-2xl text-center lg:text-left'>
+                                Clear Unit Description
+                            </h4>
+                            <p className='text-activie text-Calculate text-base md:text-xl'>
+                                Photography and Content Writing are clearly complete and
+                                professional
+                            </p>
+                            <ul>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Our team of photographers will take 360 ​​photos,
+                                    facility videos, and detailed photos of your unit
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    The description and completeness of the unit was
+                                    written by our content writer in detail.
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    With all the information listed on your property page,
+                                    tenants will find it easy and confident to rent your
+                                    unit online.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className='g-activies p-0 lg:p-3'>
-                        <img src={'/images/apartment/clean-activitie.png'} />
+                    <div className='mktbottom flex flex-col gap-5 md:flex-row'>
+                        <div className='g-activies p-0 lg:p-3'>
+                            <img src={'/images/apartment/flexlble-activitie.png'} />
 
-                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
-                            Clear Unit Description
-                        </h4>
-                        <p className='text-activie text-Calculate'>
-                            Photography and Content Writing are clearly complete and
-                            professional
-                        </p>
-                        <ul>
-                            <li className='text-activie text-Calculate '>
-                                Our team of photographers will take 360 ​​photos, facility
-                                videos, and detailed photos of your unit
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                The description and completeness of the unit was written
-                                by our content writer in detail.
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                With all the information listed on your property page,
-                                tenants will find it easy and confident to rent your unit
-                                online.
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='g-activies p-0 lg:p-3'>
-                        <img src={'/images/apartment/flexlble-activitie.png'} />
+                            <h4 className='title-activie title-Calculates text-xl md:text-2xl text-center lg:text-left'>
+                                Flexible Payment Options
+                            </h4>
 
-                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
-                            Flexible Payment Options
-                        </h4>
+                            <ul>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Virtual Account / Bank Transfer
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Credit card
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Installments by Credit Card
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Monthly and annual rental installments without a
+                                    credit card
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='g-activies p-0 lg:p-3'>
+                            <img src={'/images/apartment/services-activitie.png'} />
 
-                        <ul>
-                            <li className='text-activie text-Calculate '>
-                                Virtual Account / Bank Transfer
-                            </li>
-                            <li className='text-activie text-Calculate '>Credit card</li>
-                            <li className='text-activie text-Calculate '>
-                                Installments by Credit Card
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Monthly and annual rental installments without a credit
-                                card
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='g-activies p-0 lg:p-3'>
-                        <img src={'/images/apartment/services-activitie.png'} />
+                            <h4 className='title-activie title-Calculates text-xl md:text-2xl text-center lg:text-left'>
+                                Service Standardization
+                            </h4>
 
-                        <h4 className='title-activie title-Calculates text-center lg:text-left'>
-                            Service Standardization
-                        </h4>
-
-                        <ul>
-                            <li className='text-activie text-Calculate '>
-                                Guaranteed unit standardization
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Accommodation Equipment (Wifi Ready, linen, toiletries,
-                                etc.)
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Customer Service 7 days a week
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Integrity and Transparency
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Trusted legal entity company
-                            </li>
-                            <li className='text-activie text-Calculate '>
-                                Technician and Service Services 7 days a week
-                            </li>
-                        </ul>
+                            <ul>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Guaranteed unit standardization
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Accommodation Equipment (Wifi Ready, linen,
+                                    toiletries, etc.)
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Customer Service 7 days a week
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Integrity and Transparency
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Trusted legal entity company
+                                </li>
+                                <li className='text-activie text-Calculate text-base md:text-xl '>
+                                    Technician and Service Services 7 days a week
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='wrap-MarketingPartners container gap-6 lg:gap-8'>
-                <h3 className='title-Calculates p-0 text-center lg:p-8'>
+                <h3 className='title-Calculates text-xl md:text-2xl p-0 text-center lg:p-8'>
                     SMART REAL Online Marketing Partner
                 </h3>
                 <div className='Top-Logos flex gap-3 lg:gap-9 '>
@@ -250,21 +240,21 @@ function Apartment() {
                 </div>
             </div>
             <div className='wrap-properties container'>
-                <h3 className='title-Calculates pb-8 text-center'>
+                <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                     Whose properties do we market?
                 </h3>
                 <img
-                    className='hidden md:block'
+                    className='hidden lg:block'
                     src={'/images/apartment/svg/line-propertie.svg'}
                 />
-                <div className='propertie-g flex gap-14 flex-col md:flex-row'>
+                <div className='propertie-g flex gap-14 flex-col lg:flex-row'>
                     <div className='group-properties'>
                         <img
-                            className='hidden md:block'
+                            className='hidden lg:block'
                             src={'/images/apartment/svg/arrow-propertie.svg'}
                         />
                         <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate '>
+                            <p className='content-propertie text-Calculate text-base md:text-xl '>
                                 For those of you who have apartments in Jabodetabek,
                                 Bandung, Semarang, Yogyakarta Makasar and Surabaya
                                 (Furnished / Unfurnished).
@@ -273,11 +263,11 @@ function Apartment() {
                     </div>
                     <div className='group-properties'>
                         <img
-                            className='hidden md:block'
+                            className='hidden lg:block'
                             src={'/images/apartment/svg/arrow-propertie.svg'}
                         />
                         <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate '>
+                            <p className='content-propertie text-Calculate text-base md:text-xl '>
                                 Those of you who invest in apartment property and want to
                                 achieve maximum yield returns.
                             </p>
@@ -285,11 +275,11 @@ function Apartment() {
                     </div>
                     <div className='group-properties'>
                         <img
-                            className='hidden md:block'
+                            className='hidden lg:block'
                             src={'/images/apartment/svg/arrow-propertie.svg'}
                         />
                         <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate '>
+                            <p className='content-propertie text-Calculate text-base md:text-xl '>
                                 Those of you who invest in apartment property and want to
                                 achieve maximum yield returns.
                             </p>
@@ -298,7 +288,9 @@ function Apartment() {
                 </div>
             </div>
             <div className='wrap-Testimonials container'>
-                <h3 className='title-Calculates pb-8'>Testimonials</h3>
+                <h3 className='title-Calculates text-xl md:text-2xl pb-8'>
+                    Testimonials
+                </h3>
                 <div className='slider-wrapper w-full'>
                     <Swiper
                         className='sliders-katherrine'
@@ -323,7 +315,9 @@ function Apartment() {
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
                                 <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates pb-8'>Katherine</h4>
+                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                        Katherine
+                                    </h4>
                                     <div className='text-Owners gap-8'>
                                         <p className='Owner-sz title-Calculates'>
                                             Apartment Owner
@@ -345,7 +339,9 @@ function Apartment() {
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
                                 <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates pb-8'>Katherine</h4>
+                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                        Katherine
+                                    </h4>
                                     <div className='text-Owners gap-8'>
                                         <p className='Owner-sz title-Calculates'>
                                             Apartment Owner
@@ -367,7 +363,9 @@ function Apartment() {
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
                                 <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates pb-8'>Katherine</h4>
+                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                        Katherine
+                                    </h4>
                                     <div className='text-Owners gap-8'>
                                         <p className='Owner-sz title-Calculates'>
                                             Apartment Owner
@@ -389,7 +387,9 @@ function Apartment() {
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
                                 <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates pb-8'>Katherine</h4>
+                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                        Katherine
+                                    </h4>
                                     <div className='text-Owners gap-8'>
                                         <p className='Owner-sz title-Calculates'>
                                             Apartment Owner
@@ -411,7 +411,9 @@ function Apartment() {
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
                                 <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates pb-8'>Katherine</h4>
+                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                        Katherine
+                                    </h4>
                                     <div className='text-Owners gap-8'>
                                         <p className='Owner-sz title-Calculates'>
                                             Apartment Owner
@@ -558,17 +560,17 @@ function Apartment() {
                     <div className='flex gap-10 justify-center'>
                         <button
                             onClick={() => setIsShowContent(true)}
-                            className='title-Calculates pb-6'>
+                            className='title-Calculates text-xl md:text-2xl pb-6'>
                             Official Developer Partner
                         </button>
 
                         <button
                             onClick={() => setIsShowContent(false)}
-                            className='title-Calculates pb-6'>
+                            className='title-Calculates text-xl md:text-2xl pb-6 text-xl md:text-2xl'>
                             Building Management
                         </button>
                     </div>
-                    <div className='line-wrap flex justify-center gap-14'>
+                    <div className='pl-6 line-wrap flex justify-center gap-14'>
                         <div className={`${isShowContent ? '' : 'opacity-0'}`}>
                             <Image
                                 src={'/images/apartment/line-DevMana.png'}
@@ -670,26 +672,26 @@ function Apartment() {
                     )}
 
                     {!isShowContent && (
-                        <div className='wrap-Logo-Manage flex-col align-center w-full'>
+                        <div className='wrap-Logo-Manage flex flex-col justify-center align-center w-full min-h-[300px] '>
                             <div className='TopLogos-Management flex justify-center'>
                                 <img
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    className='max-w-[80px] md:max-w-[100%]'
                                     src={'/images/apartment/logoPartner-Management.png'}
                                 />
                                 <img
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    className='max-w-[80px] md:max-w-[100%]'
                                     src={'/images/apartment/logoPartner-Management1.png'}
                                 />
                                 <img
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    className='max-w-[80px] md:max-w-[100%]'
                                     src={'/images/apartment/logoPartner-Management2.png'}
                                 />
                                 <img
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    className='max-w-[80px] md:max-w-[100%]'
                                     src={'/images/apartment/logoPartner-Management3.png'}
                                 />
                                 <img
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    className='max-w-[80px] md:max-w-[100%]'
                                     src={'/images/apartment/logoPartner-Management4.png'}
                                 />
                             </div>
@@ -720,7 +722,7 @@ function Apartment() {
                 </div>
             </div>
             <div className='wrap-TracesNews container gap-7'>
-                <h3 className='title-Calculates pb-8 text-center'>
+                <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                     SMART REAL Traces In The News
                 </h3>
 
@@ -756,7 +758,7 @@ function Apartment() {
             </div>
             <div className='apartmentHouse container flex-col lg:!flex-row'>
                 <div className='wrap-content-apartment pb-10 flex flex-col items-center lg:items-start'>
-                    <h3 className='title-Calculates text-center lg:!text-left'>
+                    <h3 className='title-Calculates text-xl md:text-2xl text-center lg:!text-left'>
                         Is your apartment & house empty?
                     </h3>
                     <p className='textapartment text-center lg:!text-left'>
@@ -768,49 +770,49 @@ function Apartment() {
                 <img src={'/images/apartment/apartmentHouse.png'} />
             </div>
             <div className='Wrap-FAQ container'>
-                <h3 className='title-Calculates pb-8 text-center'>
+                <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                     Frequently Asked Questions(FAQ)
                 </h3>
                 <div className='flex flex-col gap-12 lg:flex-row'>
-                    <div className='questions max-w-[420px] lg:min-w-[490px]'>
+                    <div className='questions max-w-[420px] md:min-w-[490px]'>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             - How to Get Started & TPM Areas
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Apartment Management Services by Travelio
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Property List & Standardization
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Guests & Payments{' '}
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Security
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Prices & Fees
                         </a>
                         <a
                             href='#'
-                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
                             + Property Regulations
                         </a>
                     </div>
                     <div className='answers flex flex-col gap-7'>
-                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
                             <p className='text-asset ml-7'>
                                 How easy is it to get started?
                             </p>
@@ -819,7 +821,7 @@ function Apartment() {
                                 src={'/images/apartment/svg/icon-register.svg'}
                             />
                         </div>
-                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
                             <p className='text-asset ml-7'>
                                 Does the apartment have to be fully furnished?
                             </p>
@@ -828,14 +830,14 @@ function Apartment() {
                                 src={'/images/apartment/svg/icon-register.svg'}
                             />
                         </div>
-                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
                             <p className='text-asset ml-7'>Area Coverage anywhere?</p>
                             <img
                                 className='mr-7'
                                 src={'/images/apartment/svg/icon-register.svg'}
                             />
                         </div>
-                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
                             <p className='text-asset ml-7'>
                                 What type of contract should I sign?
                             </p>
