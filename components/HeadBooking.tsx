@@ -2,11 +2,13 @@
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 import BookingRent from '@/app/ui/BookingRent'
-
-function HeadBooking() {
-    const [toggleTab , setToggleTab] = useState('buy')
+interface HeadBookingProps {
+    toggleTab: string, 
+    setToggleTab: any
+}
+const HeadBooking:React.FC<HeadBookingProps> = ({toggleTab, setToggleTab}) => {
     return (
-        <div className='absolute -bottom-80 sm:-bottom-36 lg:-bottom-20 left-0 h-[188px] z-[1] w-full flex justify-center items-center px-2 md:px-20 lg:px-5 xl:px-[115px] '>
+        <div className='absolute -bottom-80 sm:-bottom-36 lg:-bottom-20 left-0 h-[188px] z-[1] w-full flex justify-center items-center px-2 md:px-20 lg:px-5 xl:px-[115px]'>
             <div className='h-full w-full relative rounded-[20px]'>
                 {/* option booking */}  
                 <div className='absolute -top-[180px] sm:-top-[110px] lg:top-0 left-0 h-[70px] w-full sm:w-[304px] bg-white rounded-t-[20px] shadow-yellow'>
@@ -34,7 +36,7 @@ function HeadBooking() {
                                     src={'/images/home/vector/rent-vector.svg'}
                                     width={94}
                                     height={2}
-                                    className={`${toggleTab==='rent' ? '' : 'hidden'}`}
+                                    className={`w-full h-full ${toggleTab==='rent' ? '' : 'hidden'}`}
                                     alt='rent-vector.svg'
                                 />
                             </div>
@@ -43,7 +45,7 @@ function HeadBooking() {
                                     src={'/images/home/vector/rent-vector.svg'}
                                     width={94}
                                     height={2}
-                                    className={`${toggleTab==='buy' ? '' : 'hidden'}`}
+                                    className={`w-full h-full ${toggleTab==='buy' ? '' : 'hidden'}`}
                                     alt='rent-vector.svg'
                                 />
                             </div>

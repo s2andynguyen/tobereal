@@ -29,7 +29,8 @@ const config: Config = {
         'card': '0 4px 11px 0px rgba(0, 0, 0, 0.25)'
       },
       boxShadow: {
-        'yellow': '0 10px 11px 0 rgba(240, 185, 11, 0.25)'
+        'yellow': '0 10px 11px 0 rgba(240, 185, 11, 0.25)',
+        'gray': '0 3px 10px rgba(0, 0, 0, 0.12)'
       },
       fontFamily: {
         montserrat: ["Montserrat"]

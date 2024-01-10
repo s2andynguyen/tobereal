@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
             </div>
 
             {/* nav on scroll */}
-            <div className={`w-full fixed top-0 z-[1] -translate-y-full transition-all duration-200 bg-white  ${isShowNavbar ? 'translate-y-0 shadow-md' : ''}`}>
+            <div className={`w-full fixed top-0 z-[9] -translate-y-full transition-all duration-200 bg-white  ${isShowNavbar ? 'translate-y-0 shadow-md' : ''}`}>
                 <div className='container mx-auto'>
                     <div className='flex justify-between items-center h-14 md:h-[90px] px-2 md:px-10'>
                         {/* logo & nav */}

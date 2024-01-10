@@ -18,6 +18,9 @@
 .swiper-rtl .swiper-button-prev:after {
   color: #f13024;
 }
+.webkit-box {
+  display: -webkit-box
+}
 
 @layer base {
   body {

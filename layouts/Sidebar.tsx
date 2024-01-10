@@ -9,17 +9,17 @@ interface SidebarProps {
     hiddenSidebar?: any
 }
 const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
-    const router = useRouter()
+    const router = useRouter()  
     return (
         <div className='block lg:hidden'>
             {/* layout */}
             <div
-                className={`h-full w-full fixed top-0 left-0 bg-zinc-900 bg-opacity-70 transition duration-500 z-[2] ${
+                className={`h-full w-full fixed top-0 left-0 bg-zinc-900 bg-opacity-70 transition duration-500 z-10 ${
                     isShow ? 'block' : 'hidden'
                 }`}
                 onClick={() => hiddenSidebar()}></div>
             <div
-                className={`w-[300px] fixed top-0 right-0 h-full bg-white transition duration-500 z-[2] ${
+                className={`w-[300px] fixed top-0 right-0 h-full bg-white transition duration-500 z-10 ${
                     isShow ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 <ul>
@@ -27,14 +27,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
-                            <div className='h-6 w-6'>
-                                <Image
-                                    src={'/images/nav/icon-navbar-1.png'}
-                                    width={25}
-                                    height={25}
-                                    alt='icon-navbar-1.png'
-                                />
-                            </div>
+                            <Image
+                                src={'/images/nav/icon-navbar-1.png'}
+                                width={25}
+                                height={25}
+                                alt='icon-navbar-1.png'
+                                className='w-6 h-6'
+                            />
                             <span>Daftarkan Properti Saya</span>
                         </div>
                     </li>
@@ -42,14 +41,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
-                            <div className='h-6 w-6'>
-                                <Image
-                                    src={'/images/nav/icon-navbar-2.png'}
-                                    width={25}
-                                    height={25}
-                                    alt='icon-navbar-2.png'
-                                />
-                            </div>
+                            <Image
+                                src={'/images/nav/icon-navbar-2.png'}
+                                width={25}
+                                height={25}
+                                alt='icon-navbar-2.png'
+                                className='w-6 h-6'
+                            />
                             <span>Pemasaran Rumah</span>
                         </div>
                     </li>
@@ -57,14 +55,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
-                            <div className='h-6 w-6'>
-                                <Image
-                                    src={'/images/nav/icon-navbar-3.png'}
-                                    width={25}
-                                    height={25}
-                                    alt='icon-navbar-3.png'
-                                />
-                            </div>
+                            <Image
+                                src={'/images/nav/icon-navbar-3.png'}
+                                width={25}
+                                height={25}
+                                alt='icon-navbar-3.png'
+                                className='w-6 h-6'
+                            />
                             <span>Pengelolaan Apartemen</span>
                         </div>
                     </li>
@@ -72,14 +69,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
-                            <div className='h-6 w-6'>
-                                <Image
-                                    src={'/images/nav/icon-navbar-4.png'}
-                                    width={25}
-                                    height={25}
-                                    alt='icon-navbar-4.png'
-                                />
-                            </div>
+                            <Image
+                                src={'/images/nav/icon-navbar-4.png'}
+                                width={25}
+                                height={25}
+                                alt='icon-navbar-4.png'
+                                className='w-6 h-6'
+                            />
                             <span>Referensikan Pemilik</span>
                         </div>
                     </li>
@@ -87,14 +83,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
-                            <div className='h-6 w-6'>
-                                <Image
-                                    src={'/images/nav/icon-navbar-5.png'}
-                                    width={25}
-                                    height={25}
-                                    alt='icon-navbar-5.png'
-                                />
-                            </div>
+                            <Image
+                                src={'/images/nav/icon-navbar-5.png'}
+                                width={25}
+                                height={25}
+                                alt='icon-navbar-5.png'
+                                className='h-6 w-6'
+                            />
                             <span>Situs travelio.com</span>
                         </div>
                     </li>
