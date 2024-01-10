@@ -5,46 +5,51 @@ import Link from 'next/link'
 import { formatter } from '@/lib/helper'
 import { hotelRoom } from '../model/hotelRoom'
 import { renderStart } from '@/lib/render'
+import Place from '@/icons/Header/Blockhead/Place'
 const CardNormal:React.FC<hotelRoom> = ({typeRoom ,title, place, icon , price, start, imageUrl}) => {
     let Icon:any = null
     if(icon) Icon = icon
     return (
-        <Link href={'/'} className='h-[214px] flex justify-center items-center hover:-translate-y-px transition-all duration-300'>
-            <div className='shadow-gray mx-2 my-2 rounded-[10px] w-full'>
+        <div className='w-full'>
+            <div className=' shadow-gray rounded-[10px] relative'>
                 <Image
                     src={imageUrl}
-                    width={300}
-                    height={180}
+                    width={247}
+                    height={140}
                     alt='hotel-image'
-                    className='bg-cover object-cover w-full h-[120px] rounded-t-[10px] bg-center'
+                    className='bg-cover object-cover w-full h-[140px] rounded-t-[10px] bg-center'
                 />
-                <div className='bg-white rounded-b-[10px] h-full'>
+                <div className='h-3 w-3 absolute top-2 left-2 bg-[#E3E3E3] rounded-md flex justify-center items-center'>
+                    <Place className="w-[5.5px] h-[7.5px]"/>
+                </div>
+
+                <div className='bg-white rounded-b-[10px] h-full relative'>
                     {/* type room card */}
-                    <div className='flex justify-start'>
-                        <div className='flex items-center justify-between rounded-md px-3 py-1 bg-primary shrink flex-[50%] max-w-[50%] -mt-3'>
-                            <p className='font-montserrat text-[11px] font-semibold flex-[120px] text-nowrap max-w-[80%] overflow-hidden line-clamp-1'>
+                    <div className='flex justify-start absolute -top-3 left-0'>
+                        <div className='flex items-center justify-between rounded-[5px] px-[10.5px] py-1 bg-primary shrink w-[134px] h-[23px]'>
+                            <p className='font-montserrat text-[11px] font-medium text-nowrap overflow-hidden line-clamp-1'>
                                 {typeRoom}
                             </p>
-                            <span className='self-center'>
-                                <Icon size={13} />
+                            <span className='self-center text-[10px]'>
+                                🏨
                             </span>
                         </div>
                     </div>
                     {/* content */}
-                    <div className='px-3 py-1 h-full'>
-                        <p className='text-[12px] font-black font-montserrat'>
+                    <div className='px-3 pt-[18px] h-20'>
+                        <p className='text-[10px] leading-tight font-bold font-montserrat'>
                             {title} - {place}
                         </p>
-                        {start && <div className='flex justify-start gap-1 mb-2 mt-1'>
+                        {start && <div className='flex justify-start gap-1 mb-[11px] mt-1'>
                             {renderStart(start)}
                         </div>}
-                        <p className='font-bold text-sm font-montserrat'>
+                        <p className='font-bold text-[10px] leading-tight font-montserrat'>
                             {formatter.format(price)}
                         </p>
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
 export default CardNormal

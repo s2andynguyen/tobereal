@@ -11,19 +11,19 @@ function MonthlyCheaperPrice() {
            <>
                 <HeadTitle
                     title='Stay Monthly For Cheaper Prices'
-                    icon={FaHouseUser}
+                    icon={'/images/home/icon/Layer_2.png'}
                     seeAll
                     select
                     desc='Diskon hingga $ 1.000.000'
                 />
-                <div className='pt-4 pb-8 bg-zinc-200 '>
+                <div className='pt-5 pb-10 bg-zinc-200 '>
                     <div className='container mx-auto px-4 md:px-6 xl:px-14 flex items-center '>
-                        <div className='flex shrink-0 flex-grow flex-[33.3333%] max-w-[33.3333%]'>
-                            <Image src={'/images/home/img-content-headblock.png'} 
-                                width={266}
-                                height={227}
-                                alt='img-content-headblock'
-                                className='w-[260px] h-[227px] bg-cover object-cover'
+                        <div className='flex items-center justify-center shrink-0 flex-grow flex-[33.3333%] max-w-[33.3333%]'>
+                            <Image src={'/images/home/hotel-image/frame-cheaper.png'} 
+                                width={232}
+                                height={218}
+                                alt='frame-cheaper'
+                                className='w-[232px] h-[218px] bg-cover object-cover'
                             />
                         </div>
                         <div className='shrink-0 flex-grow flex-[66.6667%] max-w-[66.6667%] h-[214px]'>

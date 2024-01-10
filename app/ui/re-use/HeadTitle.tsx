@@ -1,7 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
 interface HeadTitleProps {
     title: string
-    icon?: any
+    icon?: string
     desc?: string
     select?: boolean
     seeAll?: boolean
@@ -19,42 +20,50 @@ const HeadTitle: React.FC<HeadTitleProps> = ({
     if (icon) Icon = icon
     return (
         <div className='bg-white'>
-            <div className='container mx-auto px-4 md:px-8 xl:px-16 h-20 flex justify-between items-center'>
+            <div className='container mx-auto px-4 md:px-8 xl:px-[71px] h-[56px] flex justify-between items-center'>
                 {/* title */}
-                <div className='flex gap-2 items-baseline '>
-                    <h2 className='font-bold text-lg'>{title}</h2>
-                    {icon && <Icon />}
+                <div className='flex gap-3 items-baseline '>
+                    <h2 className='font-bold text-[20px] leading-6 font-montserrat'>
+                        {title}
+                    </h2>
+                    {icon && (
+                        <Image src={icon} width={34} height={29} alt={'Layer_1.png'} className='w-[34px] h-[29px]' />
+                    )}
                     {discount ? (
-                        <p className='text-[12px] ml-5'>
+                        <p className='text-[10px] leading-tight ml-8 font-medium font-montserrat'>
                             Discount up to{' '}
                             <span className='text-[28px] font-montserrat font-bold'>
                                 {discount}%!
                             </span>
                         </p>
                     ) : desc ? (
-                        <p className='text-[12px] ml-5'>{desc}</p>
+                        <p className='text-[10px] leading-tight ml-8 font-medium font-montserrat'>{desc}</p>
                     ) : null}
                 </div>
 
                 {/* button */}
                 <div className='flex gap-4 items-center'>
                     {/* select */}
-                    {select && <select
-                        name=''
-                        id=''
-                        className='focus:ring-0 focus:outline-none border border-[#cdcdcd] py-1 h-9 w-32 px-4 rounded-md hover:cursor-pointer
+                    {select && (
+                        <select
+                            name=''
+                            id=''
+                            className='focus:ring-0 focus:outline-none border border-[#cdcdcd] py-1 h-9 w-32 px-4 rounded-md hover:cursor-pointer
                         text-[15px] font-montserrat font-medium'>
-                        <option value='1'>Jakarta</option>
-                        <option value='2'>Jakarta</option>
-                        <option value='3'>Jakarta</option>
-                        <option value='4'>Jakarta</option>
-                    </select>}
+                            <option value='1'>Jakarta</option>
+                            <option value='2'>Jakarta</option>
+                            <option value='3'>Jakarta</option>
+                            <option value='4'>Jakarta</option>
+                        </select>
+                    )}
                     {/* see all */}
-                    {seeAll && <button
-                        className='h-9 w-32 bg-gradient-right rounded-md flex justify-center items-center align-middle 
+                    {seeAll && (
+                        <button
+                            className='h-9 w-32 bg-gradient-right rounded-md flex justify-center items-center align-middle 
                         hover:shadow-md text-[15px] font-montserrat font-medium'>
-                        See All
-                    </button>}
+                            See All
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

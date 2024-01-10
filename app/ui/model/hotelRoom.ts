@@ -21,7 +21,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -33,7 +33,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -45,7 +45,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -57,7 +57,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -69,7 +69,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -81,7 +81,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -93,7 +93,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     },
@@ -105,7 +105,7 @@ export const dataHotel: hotelRoom[] = [
         icon: FaHouseUser,
         price: 50000,
         start: 4,
-        imageUrl: '/images/home/hotel-image/demo.jpg',
+        imageUrl: '/images/home/hotel-image/demo-hotel.png',
         oldprice:100000,
         discount: 30
     }

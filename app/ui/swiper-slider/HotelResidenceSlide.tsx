@@ -9,7 +9,7 @@ function HotelResidenceSlide() {
     return (
         <SwiperWrap>
             {dataHotel.map((room, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className='h-[220px]'>
                     <CardNormal
                         title={room.title}
                         typeRoom={room.typeRoom}

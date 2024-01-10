@@ -26,11 +26,12 @@ const config: Config = {
       },
       dropShadow: {
         'title': '0 4px 4px rgba(240, 185, 11, 0.50)',
-        'card': '0 4px 11px 0px rgba(0, 0, 0, 0.25)'
+        'card': '0 4px 11px 0px rgba(0, 0, 0, 0.25)',
+        'context': '0 4px 4px rgb(0,0,0)',
       },
       boxShadow: {
         'yellow': '0 10px 11px 0 rgba(240, 185, 11, 0.25)',
-        'gray': '0 3px 10px rgba(0, 0, 0, 0.12)'
+        'gray': '0 3px 10px rgba(0, 0, 0, 0.25)'
       },
       fontFamily: {
         montserrat: ["Montserrat"]
