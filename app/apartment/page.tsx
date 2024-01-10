@@ -5,6 +5,7 @@ import 'swiper/css/pagination'
 import 'swiper/modules'
 import React, { useState } from 'react'
 import './style.css'
+import Image from 'next/image'
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
@@ -21,7 +22,7 @@ function Apartment() {
     const [swiperRef, setSwiperRef] = useState(null)
     const [swiperRef1, setSwiperRef1] = useState(null)
 
-    const [isShowContent, setIsShowContent] = useState<boolean>(true)
+    const [isShowContent, setIsShowContent] = useState(true)
 
     return (
         <div className='wrapper bg-white'>
@@ -455,9 +456,9 @@ function Apartment() {
                                         width='40'
                                         height='40'
                                         filterUnits='userSpaceOnUse'
-                                        color-interpolation-filters='sRGB'>
+                                        colorInterpolationFilters='sRGB'>
                                         <feFlood
-                                            flood-opacity='0'
+                                            floodOpacity='0'
                                             result='BackgroundImageFix'
                                         />
                                         <feColorMatrix
@@ -516,9 +517,9 @@ function Apartment() {
                                         width='40'
                                         height='40'
                                         filterUnits='userSpaceOnUse'
-                                        color-interpolation-filters='sRGB'>
+                                        colorInterpolationFilters='sRGB'>
                                         <feFlood
-                                            flood-opacity='0'
+                                            floodOpacity='0'
                                             result='BackgroundImageFix'
                                         />
                                         <feColorMatrix
@@ -557,14 +558,33 @@ function Apartment() {
                     <div className='flex gap-10 justify-center'>
                         <button
                             onClick={() => setIsShowContent(true)}
-                            className='title-Calculates pb-8'>
+                            className='title-Calculates pb-6'>
                             Official Developer Partner
                         </button>
+
                         <button
                             onClick={() => setIsShowContent(false)}
-                            className='title-Calculates pb-8'>
+                            className='title-Calculates pb-6'>
                             Building Management
                         </button>
+                    </div>
+                    <div className='line-wrap flex justify-center gap-14'>
+                        <div className={`${isShowContent ? '' : 'opacity-0'}`}>
+                            <Image
+                                src={'/images/apartment/line-DevMana.png'}
+                                height={2}
+                                width={293}
+                                alt='line'
+                            />
+                        </div>
+                        <div className={`${isShowContent ? 'opacity-0' : ''}`}>
+                            <Image
+                                src={'/images/apartment/line-DevMana.png'}
+                                height={2}
+                                width={293}
+                                alt='line'
+                            />
+                        </div>
                     </div>
 
                     {isShowContent && (
@@ -714,17 +734,23 @@ function Apartment() {
                             slidesPerView: 2
                         },
                         550: {
+                            slidesPerView: 2
+                        },
+                        960: {
                             slidesPerView: 3
+                        },
+                        1200: {
+                            slidesPerView: 4
                         }
                     }}
                     // initialSlide={2}
                     spaceBetween={20}
                     slidesPerView={1}>
-                    <SwiperSlide>
-                        {Traces_NEWS?.map((card) => (
-                            <TrancesNews data={card} key={card?.id} />
-                        ))}
-                    </SwiperSlide>
+                    {Traces_NEWS?.map((card) => (
+                        <SwiperSlide key={card?.id}>
+                            <TrancesNews data={card} />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
                 <button className='btn-SeeMore wrap-btn'>See More ➔</button>
             </div>
@@ -745,30 +771,81 @@ function Apartment() {
                 <h3 className='title-Calculates pb-8 text-center'>
                     Frequently Asked Questions(FAQ)
                 </h3>
-                <div className='questions'>
-                    <a href='#' className='title-Calculates text-questions'>
-                        - How to Get Started & TPM Areas
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Apartment Management Services by Travelio
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Property List & Standardization
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Guests & Payments{' '}
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Security
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Prices & Fees
-                    </a>
-                    <a href='#' className='title-Calculates text-questions'>
-                        + Property Regulations
-                    </a>
+                <div className='flex flex-col gap-12 lg:flex-row'>
+                    <div className='questions max-w-[420px] lg:min-w-[490px]'>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            - How to Get Started & TPM Areas
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Apartment Management Services by Travelio
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Property List & Standardization
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Guests & Payments{' '}
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Security
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Prices & Fees
+                        </a>
+                        <a
+                            href='#'
+                            className='title-Calculates text-questions w-[364px] lg:w-[434px]'>
+                            + Property Regulations
+                        </a>
+                    </div>
+                    <div className='answers flex flex-col gap-7'>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                            <p className='text-asset ml-7'>
+                                How easy is it to get started?
+                            </p>
+                            <img
+                                className='mr-7'
+                                src={'/images/apartment/svg/icon-register.svg'}
+                            />
+                        </div>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                            <p className='text-asset ml-7'>
+                                Does the apartment have to be fully furnished?
+                            </p>
+                            <img
+                                className='mr-7'
+                                src={'/images/apartment/svg/icon-register.svg'}
+                            />
+                        </div>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                            <p className='text-asset ml-7'>Area Coverage anywhere?</p>
+                            <img
+                                className='mr-7'
+                                src={'/images/apartment/svg/icon-register.svg'}
+                            />
+                        </div>
+                        <div className='boxAnswer flex justify-between items-center max-w-[420px] lg:min-w-[490px]'>
+                            <p className='text-asset ml-7'>
+                                What type of contract should I sign?
+                            </p>
+                            <img
+                                className='mr-7'
+                                src={'/images/apartment/svg/icon-register.svg'}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className='answers'></div>
             </div>
         </div>
     )
