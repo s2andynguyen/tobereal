@@ -1,6 +1,7 @@
+import 'use client'
 import './style.css'
 import RegisterNow from '@/components/RegisterNow/page'
-
+import Image from 'next/image'
 import { JENIS_apartemen } from './Jenis'
 import ShowJenisGr from './ui/ShowJenisGr/page'
 import { Difference } from './Differences'
@@ -31,7 +32,7 @@ function Property() {
                     Our Service Options
                 </h3>
                 <div className='PropertyManagement-wrap flex flex-col-reverse gap-10 w-full justify-between lg:flex-row'>
-                    <img src={'/images/property/SerOptions.png'} alt='' />
+                    <Image src={'/images/property/SerOptions.png'} alt='' />
                     <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                         <div className='content-PM flex flex-col gap-5 '>
                             <h4 className='title-reuse text-center md:text-left'>
@@ -60,7 +61,7 @@ function Property() {
                         </div>
                         <button className='seeMore-btn wrap-btn'>See More</button>
                     </div>
-                    <img src={'/images/property/RealtyOptions.png'} alt='' />
+                    <Image src={'/images/property/RealtyOptions.png'} alt='' />
                 </div>
             </div>
             <div className='wrap-Differences container !p-0'>
@@ -91,7 +92,7 @@ function Property() {
                             REGISTER NOW ➔
                         </button>
                     </div>
-                    <img
+                    <Image
                         className='min-w-[306px] min-h-[304px]'
                         src={'/images/property/money.png'}
                         alt=''

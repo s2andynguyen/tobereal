@@ -1,9 +1,9 @@
 import './style.css'
-
-function ShowJenisGr({ data }) {
+import Image from 'next/image'
+function ShowJenisGr({ data }: { data: any }) {
     return (
         <div className='wrap-tag items-center justify-evenly'>
-            <img className='max-w-[85px] max-h-[90px]' src={data?.img} alt='' />
+            <Image className='max-w-[85px] max-h-[90px]' src={data?.img} alt='Jenis img' />
             <h4 className='text-name-jenis'>{data?.name}</h4>
             <div className='See-more-gr flex gap-5 items-center'>
                 <a
