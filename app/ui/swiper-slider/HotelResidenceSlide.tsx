@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { dataHotel } from '../model/hotelRoom'
 import CardNormal from '../re-use/CardNormal'
 import SwiperWrap from '@/components/SwiperWrap'
-import NavigationCustom from './NavigationCustom'
+import ButtonPrevSwiper from './ButtonPrevSwiper'
+import ButtonNextSwiper from './ButtonNextSwiper'
 import CardNormalSlideSkeleton from '../skeletons/CardNormalSlideSkeleton'
 import { SwiperSlide } from 'swiper/react'
 
@@ -36,7 +37,8 @@ function HotelResidenceSlide() {
                     />
                 </SwiperSlide>
             ))}
-            <NavigationCustom />
+            <ButtonPrevSwiper />
+            <ButtonNextSwiper />
         </SwiperWrap>
     )
 }

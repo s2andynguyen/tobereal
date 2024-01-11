@@ -28,13 +28,13 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                 <div className='container mx-auto'>
                     <div className='flex justify-between items-center h-14 md:h-[90px] px-2 md:px-10'>
                         {/* logo & nav */}
-                        <div className='flex justify-start items-center'>
+                        <div className='flex justify-start items-center gap-10'>
                             {/* logo */}
-                            <div className='w-24 md:w-32'>
+                            <div className='w-[90px] md:w-[115px]'>
                                 <Image
-                                    width={240}
-                                    height={100}
-                                    src={'/images/logo.png'}
+                                    width={115}
+                                    height={60}
+                                    src={'/images/home/logo-navbar.svg'}
                                     alt='logo.png'
                                 />
                             </div>
@@ -59,16 +59,16 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                         </div>
     
                         {/* btn  */}
-                        <div className='hidden lg:flex flex-row gap-7'>
+                        <div className='hidden lg:flex flex-row gap-[34px]'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/login')}>
-                                Login
+                                onClick={() => router.push('/auth/register')}>
+                                Register
                             </button>
                             <button
                                 className='border border-primary h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/register')}>
-                                Register
+                                onClick={() => router.push('/auth/login')}>
+                                Login
                             </button>
                         </div>
     
@@ -89,13 +89,13 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                 <div className='container mx-auto'>
                     <div className='flex justify-between items-center h-14 md:h-[90px] px-2 md:px-10'>
                         {/* logo & nav */}
-                        <div className='flex justify-start items-center'>
+                        <div className='flex justify-start items-center gap-10'>
                             {/* logo */}
-                            <div className='w-24 md:w-32'>
+                            <div className='w-[90px] md:w-[115px]'>
                                 <Image
-                                    width={240}
-                                    height={100}
-                                    src={'/images/logo.png'}
+                                    width={115}
+                                    height={60}
+                                    src={'/images/home/logo-navbar.svg'}
                                     alt='logo.png'
                                 />
                             </div>
@@ -123,13 +123,13 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                         <div className='hidden lg:flex flex-row gap-7'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/login')}>
-                                Login
+                                onClick={() => router.push('/auth/register')}>
+                                Register
                             </button>
                             <button
                                 className='border border-primary h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/register')}>
-                                Register
+                                onClick={() => router.push('/auth/login')}>
+                                Login
                             </button>
                         </div>
 

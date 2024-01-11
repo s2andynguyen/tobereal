@@ -5,6 +5,8 @@ import { dataHotel } from '../model/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
 import CardWithSale from '../re-use/CardWithSale'
 import NavigationCustom from '../swiper-slider/NavigationCustom'
+import ButtonPrevSwiper from '../swiper-slider/ButtonPrevSwiper'
+import ButtonNextSwiper from '../swiper-slider/ButtonNextSwiper'
 import CardWidthSaleSlideSkeleton from '../skeletons/CardWidthSaleSlideSkeleton'
 interface SliderWithSaleProps {
     pending: boolean
@@ -21,19 +23,19 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     bgHeight
 }) => {
     return (
-        <div className={`pt-5 pb-10 ${bgColor}`}>
-            <div className='container h-full mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
-                <div className='flex h-full items-center justify-center shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'>
+        <div className={`pt-5 pb-3 ${bgColor}`}>
+            <div className='container mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
+                <div className='flex items-center justify-center shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'>
                     <Image
                         src={imageUrl}
                         width={bgWidth ?? 232}
                         height={bgHeight ?? 218}
                         alt='frame-cheaper'
-                        className=' bg-cover object-contain'
+                        className='bg-cover object-contain w-auto mb-3 lg:mb-0 h-[100px] lg:w-auto lg:h-auto'
                     />
                     {/* w-[120px] lg:w-[232px] lg:h-[218px] */}
                 </div>
-                <div className='shrink-0 flex-grow w-full lg:flex-[66.6667%] lg:max-w-[66.6667%] h-[214px]'>
+                <div className='shrink-0 flex-grow w-full lg:flex-[66.6667%] lg:max-w-[66.6667%]'>
                     {pending ? (
                         <CardWidthSaleSlideSkeleton sizeSlide='small' />
                     ) : (
@@ -50,7 +52,9 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                                     />
                                 </SwiperSlide>
                             ))}
-                            <NavigationCustom />
+                            <ButtonPrevSwiper />
+                            <ButtonNextSwiper />
+                            {/* <NavigationCustom /> */}
                         </SwiperWrap>
                     )}
                 </div>
