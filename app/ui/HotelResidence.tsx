@@ -11,7 +11,7 @@ function HotelResidence() {
                 icon={'/images/home/icon/Layer_1.png'}
             />
 
-            <div className='container mx-auto px-4 md:px-6 xl:px-[63px] pt-2 pb-4'>
+            <div className='container mx-auto px-2 md:px-4 xl:px-[57px] pt-2 pb-4'>
                 <HotelResidenceSlide />
             </div>
         </div>

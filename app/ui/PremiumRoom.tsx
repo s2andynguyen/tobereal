@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
-function MonthlyCheaperPrice() {
+function PremiumRoom() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
@@ -13,20 +13,22 @@ function MonthlyCheaperPrice() {
         }
     }, [])
     return (
-        <>
+        <div className='pt-[6px]'>
             <HeadTitle
-                title='Stay Monthly For Cheaper Prices'
-                icon={'/images/home/icon/Layer_2.png'}
+                title='Premium'
+                icon={'/images/home/icon/Layer_4.png'}
                 seeAll
-                select
-                desc='Diskon hingga $ 1.000.000'
+                desc='Selected premium unit with 5 star service by Travelio'
             />
             <SliderWithSale
                 pending={pending}
-                imageUrl='/images/home/hotel-image/frame-cheaper.png'
+                imageUrl='/images/home/hotel-image/premium-img.png'
+                bgColor='bg-gradient-fade-yellow'
+                bgWidth={333}
+                bgHeight={221}
             />
-        </>
+        </div>
     )
 }
 
-export default MonthlyCheaperPrice
+export default PremiumRoom

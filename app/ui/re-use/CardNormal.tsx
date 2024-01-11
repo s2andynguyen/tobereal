@@ -1,16 +1,23 @@
 'use client'
-import React, { use, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { formatter } from '@/lib/helper'
 import { hotelRoom } from '../model/hotelRoom'
 import { renderStart } from '@/lib/render'
 import Place from '@/icons/Header/Blockhead/Place'
-const CardNormal:React.FC<hotelRoom> = ({typeRoom ,title, place, icon , price, start, imageUrl}) => {
-    let Icon:any = null
-    if(icon) Icon = icon
+const CardNormal: React.FC<hotelRoom> = ({
+    typeRoom,
+    title,
+    place,
+    icon,
+    price,
+    start,
+    imageUrl
+}) => {
+    let Icon: any = null
+    if (icon) Icon = icon
     return (
-        <div className='w-full'>
+        <div className='w-full h-[220px] select-none cursor-pointer'>
             <div className=' shadow-gray rounded-[10px] relative'>
                 <Image
                     src={imageUrl}
@@ -20,7 +27,7 @@ const CardNormal:React.FC<hotelRoom> = ({typeRoom ,title, place, icon , price, s
                     className='bg-cover object-cover w-full h-[140px] rounded-t-[10px] bg-center'
                 />
                 <div className='h-3 w-3 absolute top-2 left-2 bg-[#E3E3E3] rounded-md flex justify-center items-center'>
-                    <Place className="w-[5.5px] h-[7.5px]"/>
+                    <Place className='w-[5.5px] h-[7.5px]' />
                 </div>
 
                 <div className='bg-white rounded-b-[10px] h-full relative'>
@@ -30,9 +37,7 @@ const CardNormal:React.FC<hotelRoom> = ({typeRoom ,title, place, icon , price, s
                             <p className='font-montserrat text-[11px] font-medium text-nowrap overflow-hidden line-clamp-1'>
                                 {typeRoom}
                             </p>
-                            <span className='self-center text-[10px]'>
-                                🏨
-                            </span>
+                            <span className='self-center text-[10px]'>🏨</span>
                         </div>
                     </div>
                     {/* content */}
@@ -40,9 +45,11 @@ const CardNormal:React.FC<hotelRoom> = ({typeRoom ,title, place, icon , price, s
                         <p className='text-[10px] leading-tight font-bold font-montserrat'>
                             {title} - {place}
                         </p>
-                        {start && <div className='flex justify-start gap-1 mb-[11px] mt-1'>
-                            {renderStart(start)}
-                        </div>}
+                        {start && (
+                            <div className='flex justify-start gap-1 mb-[11px] mt-1'>
+                                {renderStart(start)}
+                            </div>
+                        )}
                         <p className='font-bold text-[10px] leading-tight font-montserrat'>
                             {formatter.format(price)}
                         </p>

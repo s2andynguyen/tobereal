@@ -1,12 +1,17 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import MainLayout from '@/layouts/MainLayout'
 import HeadBooking from '@/components/HeadBooking'
+
 import HotelResidence from './ui/HotelResidence'
 import RealEstateSale from './ui/RealEstateSale'
 import HotelLioStay from './ui/HotelLioStay'
 import MonthlyCheaperPrice from './ui/MonthlyCheaperPrice'
+import FindBestUnit from './ui/FindBestUnit'
+import PremiumRoom from './ui/PremiumRoom'
+import FindApartment from './ui/FindApartment'
+import WeeklyHotDeals from './ui/WeeklyHotDeals'
 
 export default function Home() {
     const [toggleTab , setToggleTab] = useState('buy')
@@ -48,19 +53,32 @@ export default function Home() {
                     <HeadBooking toggleTab={toggleTab} setToggleTab={handleSetToggleTab}/>
                 </div>
             </div>
+
             {/* content */}
             <div className='h-full  pb-16'>
-                {/* Section 1 */}
+                {/* Hotel Residence */}
                 <HotelResidence />
 
-                {/* Section 2 */}
+                {/* Real Estate Sales */}
                 <RealEstateSale />
 
-                {/* Section 3 */}
+                {/* Stay with Thematic and Instagram Ambience at LioStay */}
                 <HotelLioStay />
 
-                {/* Section 4 */}
+                {/* Stay Monthly For Cheaper Prices */}
                 <MonthlyCheaperPrice />
+
+                {/* Find Best Units for Staycation */}
+                <FindBestUnit />
+
+                {/* Premium */}
+                <PremiumRoom />
+
+                {/* Find Apartment that fits your budget! */}
+                <FindApartment />
+
+                {/* Weekly Hot Deals */}
+                <WeeklyHotDeals />
             </div>
 
         </MainLayout>

@@ -1,11 +1,26 @@
-import React from 'react'
-import { SwiperSlide } from 'swiper/react'
-import { IoStar } from 'react-icons/io5'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { dataHotel } from '../model/hotelRoom'
 import CardNormal from '../re-use/CardNormal'
 import SwiperWrap from '@/components/SwiperWrap'
+import NavigationCustom from './NavigationCustom'
+import CardNormalSlideSkeleton from '../skeletons/CardNormalSlideSkeleton'
+import { SwiperSlide } from 'swiper/react'
 
 function HotelResidenceSlide() {
+    const [pending, setPending] = useState(true)
+    useEffect(() => {
+        const LoadingTimeOutId = setTimeout(() => {
+            setPending(false)
+        }, 1000)
+
+        return () => {
+            clearTimeout(LoadingTimeOutId)
+        }
+    }, [])
+    if(pending) {
+        return <CardNormalSlideSkeleton />
+    } 
     return (
         <SwiperWrap>
             {dataHotel.map((room, index) => (
@@ -21,6 +36,7 @@ function HotelResidenceSlide() {
                     />
                 </SwiperSlide>
             ))}
+            <NavigationCustom />
         </SwiperWrap>
     )
 }
