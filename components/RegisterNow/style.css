@@ -15,6 +15,9 @@
     font-weight: 500;
     line-height: normal;
 }
+.wrap-btn:hover {
+    opacity: 0.8;
+}
 .Gr-RegisterNow {
     display: flex;
     flex-direction: column;
@@ -60,3 +63,7 @@
     width: 286px;
     height: 47px;
 }
+/* .MuiAutocomplete-hasPopupIcon.css-10v2avv-MuiAutocomplete-root .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.css-10v2avv-MuiAutocomplete-root .MuiOutlinedInput-root {
+    border-radius: 20px;
+} */

@@ -25,6 +25,7 @@
     font-weight: 700;
     line-height: normal;
 }
+.wrap-houses,
 .wrap-Differences,
 .Wrap-Service-Options,
 .Jenis-wrap {
@@ -62,7 +63,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background-image: url(../../public/images/home/bg-home.png);
+    background-image: url(../../public/images/property/bg-property.png);
     /* height: 450px; */
     display: flex;
     align-items: center;
@@ -95,7 +96,7 @@
 }
 .wrap-Differences {
     width: 1129px;
-    height: 1507px;
+
     border-radius: 50px;
     background: linear-gradient(147deg, #ffe500 0%, rgba(255, 181, 127, 0) 59.9%);
 }
@@ -106,4 +107,17 @@
     height: 112px;
     border-radius: 50px;
     background: linear-gradient(147deg, #ffa800 0%, rgba(255, 181, 127, 0) 100%);
+}
+.wrap-Difference-table {
+    padding: 20px 40px;
+}
+.registerNow-btn {
+    display: flex;
+    width: 252px;
+    height: 40px;
+    padding: 18px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
 }

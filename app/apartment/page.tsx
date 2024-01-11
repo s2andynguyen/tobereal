@@ -6,6 +6,8 @@ import 'swiper/modules'
 import React, { useState } from 'react'
 import './style.css'
 import Image from 'next/image'
+// mui
+import Skeleton from '@mui/material/Skeleton'
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
@@ -26,6 +28,8 @@ function Apartment() {
 
     const [isShowContent, setIsShowContent] = useState(true)
 
+    // mui
+    const isLoading = true
     return (
         <div className='wrapper bg-white'>
             <div className='aprtment-wrap h-[650px] md:h-[450px]'>
@@ -312,29 +316,43 @@ function Apartment() {
                         // initialSlide={2}
                         spaceBetween={50}
                         slidesPerView={1}>
-                        <SwiperSlide className='box-Katherine min-w-[400px]'>
-                            <div className='wrap-Katherine'>
-                                <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                        Katherine
-                                    </h4>
-                                    <div className='text-Owners gap-8'>
-                                        <p className='Owner-sz title-Calculates'>
-                                            Apartment Owner
-                                        </p>
-                                        <p className='content-Owner-sz pb-7'>
-                                            Midtown Summarecon & Puri Park View
-                                        </p>
+                        <SwiperSlide>
+                            {isLoading ? (
+                                <Skeleton
+                                    animation='wave'
+                                    variant='rectangular'
+                                    height={217}
+                                    width={400}
+                                />
+                            ) : (
+                                <div className='box-Katherine min-w-[400px]'>
+                                    <div className='wrap-Katherine'>
+                                        <div className='contents-Katherine'>
+                                            <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
+                                                Katherine
+                                            </h4>
+                                            <div className='text-Owners gap-8'>
+                                                <p className='Owner-sz title-Calculates'>
+                                                    Apartment Owner
+                                                </p>
+                                                <p className='content-Owner-sz pb-7'>
+                                                    Midtown Summarecon & Puri Park View
+                                                </p>
+                                            </div>
+                                            <p className='content-Owner-sz'>
+                                                Starting from the deposit, continuing with
+                                                daily cleaning, we dont need to take care
+                                                of it anymore, everything has been handled
+                                                by SMART REAL
+                                            </p>
+                                        </div>
+                                        <img
+                                            src={'/images/apartment/room-Katherine.png'}
+                                        />
                                     </div>
-                                    <p className='content-Owner-sz'>
-                                        Starting from the deposit, continuing with daily
-                                        cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by SMART REAL
-                                    </p>
+                                    <a href='#'>View Videos ➔</a>
                                 </div>
-                                <img src={'/images/apartment/room-Katherine.png'} />
-                            </div>
-                            <a href='#'>View Videos ➔</a>
+                            )}
                         </SwiperSlide>
                         <SwiperSlide className='box-Katherine min-w-[400px]'>
                             <div className='wrap-Katherine'>
@@ -733,10 +751,10 @@ function Apartment() {
                     modules={[Navigation, Pagination]}
                     breakpoints={{
                         300: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         },
                         550: {
-                            slidesPerView: 2
+                            slidesPerView: 3
                         },
                         960: {
                             slidesPerView: 3
