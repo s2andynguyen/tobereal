@@ -12,6 +12,9 @@ import FindBestUnit from './ui/FindBestUnit'
 import PremiumRoom from './ui/PremiumRoom'
 import FindApartment from './ui/FindApartment'
 import WeeklyHotDeals from './ui/WeeklyHotDeals'
+import BestSellingApartment from './ui/BestSellingApartment'
+import RecommendedApartments from './ui/RecommendedApartments'
+import RecommendedHouse from './ui/RecommendedHouse'
 
 export default function Home() {
     const [toggleTab , setToggleTab] = useState('buy')
@@ -79,6 +82,17 @@ export default function Home() {
 
                 {/* Weekly Hot Deals */}
                 <WeeklyHotDeals />
+
+                {/* Best Selling Apartment Buildings  */}
+                <BestSellingApartment />
+
+                {/* Recommended Apartments */}
+                <RecommendedApartments />
+            
+                {/* Recommended Houses 🏠 */}
+                <RecommendedHouse />
+
+
             </div>
 
         </MainLayout>

@@ -28,13 +28,14 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
         <div className={`pt-[14px] pb-2 ${bgColor}`}>
             <div className='container mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
                 <div className='flex items-center justify-start shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'
-                style={imageStyle ?? {}}>
+                >
                     <Image
                         src={imageUrl}
                         width={bgWidth ?? 232}
                         height={bgHeight ?? 218}
                         alt='frame-cheaper'
                         className='bg-cover object-contain w-auto mb-3 lg:mb-0 h-[100px] lg:w-auto lg:h-auto'
+                        style={imageStyle ?? {}}
                     />
                     {/* w-[120px] lg:w-[232px] lg:h-[218px] */}
                 </div>
@@ -57,7 +58,6 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                             ))}
                             <ButtonPrevSwiper />
                             <ButtonNextSwiper />
-                            {/* <NavigationCustom /> */}
                         </SwiperWrap>
                     )}
                 </div>

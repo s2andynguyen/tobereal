@@ -2,7 +2,7 @@ import { Skeleton } from '@mui/material'
 import React from 'react'
 function CardWidthSaleSlideSkeleton({sizeSlide}:{sizeSlide?:string}) {
   return (
-    <div className={`grid grid-cols-2  xl:grid-cols-4 h-[250px] gap-[22px] px-[16px] py-3 ${sizeSlide === 'small'? 'sm:grid-cols-3' : 'lg:grid-cols-3'}`}>
+    <div className={`w-full grid grid-cols-2  xl:grid-cols-4 h-[250px] gap-[22px] px-[16px] py-3 ${sizeSlide === 'small'? 'sm:grid-cols-3' : 'lg:grid-cols-3'}`}>
             <div className='w-full h-[220px] rounded-t-[10px] overflow-hidden'>
               <Skeleton variant='rectangular' height={140} />
               <div className='h-20 pt-[15px] px-3'>

@@ -11,6 +11,8 @@ interface HeadTitleProps {
     saleDealBadge?:string
     iconHeight?:number,
     iconWidth?:number,
+    noBackGround?: boolean,
+    selectBackGround?: string
 }
 const HeadTitle: React.FC<HeadTitleProps> = ({
     title,
@@ -22,12 +24,14 @@ const HeadTitle: React.FC<HeadTitleProps> = ({
     descBolder,
     saleDealBadge,
     iconHeight,
-    iconWidth
+    iconWidth,
+    noBackGround,
+    selectBackGround
 }) => {
     let Icon = null
     if (icon) Icon = icon
     return (
-        <div className='bg-white'>
+        <div className={`${noBackGround ? '' : 'bg-white'}`}>
             <div className='container mx-auto px-4 md:px-8 xl:px-[71px] h-[56px] flex justify-between items-center'>
                 {/* title */}
                 <div className={`flex gap-3 items-center lg:items-baseline`}>
@@ -64,8 +68,9 @@ const HeadTitle: React.FC<HeadTitleProps> = ({
                         <select
                             name=''
                             id=''
-                            className='focus:ring-0 focus:outline-none border border-[#cdcdcd] py-1 h-9 w-32 px-4 rounded-md hover:cursor-pointer
-                        text-[15px] font-montserrat font-medium hidden lg:block'>
+                            className={`focus:ring-0 focus:outline-none border border-[#cdcdcd] py-1 h-9 w-32 px-4 rounded-md hover:cursor-pointer
+                            text-[15px] font-montserrat font-medium hidden lg:block ${selectBackGround?? ''}`}
+                        >
                             <option value='1'>Jakarta</option>
                             <option value='2'>Jakarta</option>
                             <option value='3'>Jakarta</option>
