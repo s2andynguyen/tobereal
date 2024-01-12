@@ -1,0 +1,5 @@
+@media (max-width:468px) {
+    .booking-rent__checkbox-group .custom-checkbox-bkr:last-child {
+        display: none;
+    } 
+}

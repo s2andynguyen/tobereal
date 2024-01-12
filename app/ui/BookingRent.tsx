@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Place from '@/icons/Header/Blockhead/Place'
 import FormSelect from '@/components/FormSelect'
 import CustomCheckbox from '@/components/CustomCheckbox'
+import '@/assets/styles/booking-rent.css'
 interface BookingRentProps {
     toggleTab: string
 }
@@ -274,7 +275,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                         </div>
 
                         {/* checkbox group */}
-                        <div className='flex items-center gap-5'>
+                        <div className='flex items-center gap-5 booking-rent__checkbox-group'>
                             { buyListCheckbox && buyListCheckbox.map((itemCheck, index) => (
                                     <CustomCheckbox 
                                     key={index}

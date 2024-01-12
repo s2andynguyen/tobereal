@@ -20,7 +20,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
     bolder
 }) => {
     return (
-        <label className='form-control flex items-center relative'>
+        <label className='custom-checkbox-bkr form-control flex items-center relative'>
             <input
                 type='checkbox'
                 checked={isChecked}

@@ -14,18 +14,21 @@ interface SliderWithSaleProps {
     imageUrl: string
     bgWidth?: number
     bgHeight?: number
+    imageStyle?: object
 }
 const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     pending,
     bgColor = 'bg-zinc-200',
     imageUrl,
     bgWidth,
-    bgHeight
+    bgHeight,
+    imageStyle
 }) => {
     return (
-        <div className={`pt-5 pb-3 ${bgColor}`}>
+        <div className={`pt-[14px] pb-2 ${bgColor}`}>
             <div className='container mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
-                <div className='flex items-center justify-center shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'>
+                <div className='flex items-center justify-start shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'
+                style={imageStyle ?? {}}>
                     <Image
                         src={imageUrl}
                         width={bgWidth ?? 232}

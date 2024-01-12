@@ -19,6 +19,9 @@ function PremiumRoom() {
                 icon={'/images/home/icon/Layer_4.png'}
                 seeAll
                 desc='Selected premium unit with 5 star service by Travelio'
+                descBolder
+                iconHeight={26}
+                iconWidth={14}
             />
             <SliderWithSale
                 pending={pending}

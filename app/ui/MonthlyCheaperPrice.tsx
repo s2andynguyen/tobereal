@@ -23,6 +23,7 @@ function MonthlyCheaperPrice() {
             />
             <SliderWithSale
                 pending={pending}
+                imageStyle={{marginLeft: '54px'}}
                 imageUrl='/images/home/hotel-image/frame-cheaper.png'
             />
         </>

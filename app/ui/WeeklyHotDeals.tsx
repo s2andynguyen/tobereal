@@ -15,15 +15,16 @@ function WeeklyHotDeals() {
     return (
         <div className='pt-[6px]'>
             <HeadTitle
-                title='Premium'
-                icon={'/images/home/icon/Layer_4.png'}
+                title='Weekly Hot Deals 🔥'
+                saleDealBadge='2 day(s)'
+                select
                 seeAll
-                desc='Selected premium unit with 5 star service by Travelio'
             />
             <SliderWithSale
                 pending={pending}
                 imageUrl='/images/home/hotel-image/hot-deals.png'
                 bgColor='bg-gradient-pink'
+                imageStyle={{marginLeft: '30px'}}
                 bgWidth={203}
                 bgHeight={198}
             />

@@ -22,7 +22,7 @@ function RealEstateSale() {
     return (
         <div className='pt-3 pb-[22px] bg-[#DCDCDC] '>
             <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
-                <h2 className='font-bold text-[14px] leading-tight lg:text-[20px] lg:leading-6 font-montserrat'>
+                <h2 className='font-bold text-[14px] leading-tight lg:text-[20px] lg:leading-6 font-montserrat pl-3'>
                     Real Estate Sales
                 </h2>
                 {pending ? (
