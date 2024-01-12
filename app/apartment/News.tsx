@@ -39,20 +39,20 @@ export const Traces_NEWS = [
         img: '/images/apartment/Room-news5.png',
         news: 'Using Funding from Investors,  Develops the Range of Property Management Services',
         title: '2023/06/19/besar-pendanaan-dari-investor-travelio-kembangkan-jangkauan- jasa-manajemen-properti',
-        star: 10
+        star: 9
     },
     {
         id: 7,
         img: '/images/apartment/Room-news6.png',
         news: 'Using Funding from Investors,  Develops the Range of Property Management Services',
         title: '2023/06/19/besar-pendanaan-dari-investor-travelio-kembangkan-jangkauan- jasa-manajemen-properti',
-        star: 10
+        star: 8
     },
     {
         id: 8,
         img: '/images/apartment/Room-news7.png',
         news: 'Using Funding from Investors,  Develops the Range of Property Management Services',
         title: '2023/06/19/besar-pendanaan-dari-investor-travelio-kembangkan-jangkauan- jasa-manajemen-properti',
-        star: 10
+        star: 6
     }
 ]

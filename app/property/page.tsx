@@ -1,11 +1,13 @@
-import 'use client'
+'use client'
 import './style.css'
 import RegisterNow from '@/components/RegisterNow/page'
 import Image from 'next/image'
+// fetch data
 import { JENIS_apartemen } from './Jenis'
 import ShowJenisGr from './ui/ShowJenisGr/page'
 import { Difference } from './Differences'
 import TableDifference from './ui/TableDifference/page'
+// 
 function Property() {
     return (
         <div className='wrapper bg-white'>
@@ -32,7 +34,13 @@ function Property() {
                     Our Service Options
                 </h3>
                 <div className='PropertyManagement-wrap flex flex-col-reverse gap-10 w-full justify-between lg:flex-row'>
-                    <Image src={'/images/property/SerOptions.png'} alt='' />
+                    <Image
+                        width={306}
+                        height={304}
+                        className='w-[412px] h-[auto]'
+                        src={'/images/property/SerOptions.png'}
+                        alt=''
+                    />
                     <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                         <div className='content-PM flex flex-col gap-5 '>
                             <h4 className='title-reuse text-center md:text-left'>
@@ -61,7 +69,13 @@ function Property() {
                         </div>
                         <button className='seeMore-btn wrap-btn'>See More</button>
                     </div>
-                    <Image src={'/images/property/RealtyOptions.png'} alt='' />
+                    <Image
+                        width={412}
+                        height={277}
+                        className='w-[412px] h-[auto]'
+                        src={'/images/property/RealtyOptions.png'}
+                        alt='RealtyOptions img'
+                    />
                 </div>
             </div>
             <div className='wrap-Differences container !p-0'>
@@ -93,9 +107,11 @@ function Property() {
                         </button>
                     </div>
                     <Image
-                        className='min-w-[306px] min-h-[304px]'
+                        width={306}
+                        height={304}
+                        className='w-[306px] h-[auto]'
                         src={'/images/property/money.png'}
-                        alt=''
+                        alt='money'
                     />
                 </div>
             </div>

@@ -16,7 +16,7 @@ function TableDifference({ data }: { data: any }) {
                     <Image
                         width={20}
                         height={20}
-                        // className='max-w-[20px] max-h-[20px]'
+                        className='w-[20px] h-[auto]'
                         src={iconPengelolaan}
                         alt='Icon Pengelolaan'
                     />
@@ -31,6 +31,7 @@ function TableDifference({ data }: { data: any }) {
                     <Image
                         width={20}
                         height={20}
+                        className='w-[20px] h-[auto]'
                         src={iconPemasaran}
                         alt='Icon Pemasaran'
                     />

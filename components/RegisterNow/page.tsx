@@ -4,7 +4,7 @@ import './style.css'
 import Image from 'next/image'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
-// import { SlArrowDown } from 'react-icons/sl'
+import { SlArrowDown } from 'react-icons/sl'
 function RegisterNow() {
     return (
         <div className='Gr-RegisterNow'>
@@ -12,22 +12,17 @@ function RegisterNow() {
             <div className='Asset-Gr'>
                 <div className='Asset'>
                     <p className='text-asset'>Asset type</p>
-                    <Image
-                        width={16}
-                        height={8}
-                        src={'/images/apartment/svg/icon-register.svg'}
-                        alt='abc'
-                    />
+                    <SlArrowDown />
                 </div>
                 <div className='Asset'>
                     <p className='text-asset'>Interior</p>
-                    <Image
+                    {/* <Image
                         width={16}
                         height={8}
                         src={'/images/apartment/svg/icon-register.svg'}
                         alt='abc'
-                    />
-                    {/* <SlArrowDown /> */}
+                    /> */}
+                    <SlArrowDown />
                 </div>
                 {/* <div className='Asset'>
                     <p className='text-asset'>Asset</p>
@@ -44,6 +39,7 @@ function RegisterNow() {
                             padding: '0px',
                             borderRadius: '20px'
                         },
+                        '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
                         '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
                         '& .MuiInputBase-root': { color: 'black' } // Color of the input text
                         // '& .MuiOutlinedInput-notchedOutline': { borderColor: 'red' } // Color of the input outline
@@ -51,7 +47,7 @@ function RegisterNow() {
                     renderInput={(params) => (
                         <>
                             <TextField {...params} label='Movie' />
-                            {/* <SlArrowDown /> */}
+                            <SlArrowDown />
                         </>
                     )}
                 />

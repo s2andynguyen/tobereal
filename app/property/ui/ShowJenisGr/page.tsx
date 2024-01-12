@@ -3,7 +3,7 @@ import Image from 'next/image'
 function ShowJenisGr({ data }: { data: any }) {
     return (
         <div className='wrap-tag items-center justify-evenly'>
-            <Image className='max-w-[85px] max-h-[90px]' src={data?.img} alt='Jenis img' />
+            <Image width={85} height={90} className='w-[85px] h-[auto]' src={data?.img} alt='Jenis img' />
             <h4 className='text-name-jenis'>{data?.name}</h4>
             <div className='See-more-gr flex gap-5 items-center'>
                 <a

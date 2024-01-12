@@ -6,6 +6,8 @@ import 'swiper/modules'
 import React, { useState } from 'react'
 import './style.css'
 import Image from 'next/image'
+// icon
+import { SlArrowDown } from 'react-icons/sl'
 // mui
 import Skeleton from '@mui/material/Skeleton'
 // swiper
@@ -14,7 +16,12 @@ import { Pagination, Navigation } from 'swiper/modules'
 // fetch data
 import ManagementServices from './ui/ManagementServices/page'
 import TrancesNews from './ui/TrancesNews/page'
-
+import Properties from './ui/properties/page'
+import SlKatherine from './ui/SlKatherine/page'
+import ShowRoomSl from './ui/ShowRoomSl/page'
+import { ShowRoom_HOTEL } from './showRoom'
+import { Testimonials } from './katherrinesData'
+import { GR_properties } from './propertiesGr'
 import { Services_TOBE } from './frame'
 import { Traces_NEWS } from './News'
 // compoment
@@ -53,7 +60,13 @@ function Apartment() {
             </div>
             <div className='Earnings-wrap container'>
                 <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
-                    <Image src={'/images/apartment/Calculate.png'} alt='caluate' />
+                    <Image
+                        width={550}
+                        height={290}
+                        className='w-[550px] h-[auto]'
+                        src={'/images/apartment/Calculate.png'}
+                        alt='caluate'
+                    />
                     <div className='content-Calculate'>
                         <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
                             Calculate Your Earning Potential
@@ -74,10 +87,22 @@ function Apartment() {
                             RENTAL GUARANTEE!
                         </p>
                     </div>
-                    <Image src={'/images/apartment/INCOME.png'} alt='caluate' />
+                    <Image
+                        width={423}
+                        height={363}
+                        className='w-[423px] h-[auto]'
+                        src={'/images/apartment/INCOME.png'}
+                        alt='caluate'
+                    />
                 </div>
                 <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
-                    <Image src={'/images/apartment/chair.png'} alt='caluate' />
+                    <Image
+                        width={420}
+                        height={251.648}
+                        className='w-[420px] h-[auto]'
+                        src={'/images/apartment/chair.png'}
+                        alt='caluate'
+                    />
                     <div className='content-Calculate'>
                         <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
                             FURNISHED BY SMART REAL
@@ -99,6 +124,9 @@ function Apartment() {
                     <div className='mkttop flex flex-col gap-5 md:flex-row'>
                         <div className='g-activies p-0 lg:p-3'>
                             <Image
+                                width={86.79}
+                                height={86.85}
+                                className='w-[86.79px] h-[86.85px]'
                                 src={'/images/apartment/mkt-activitie.png'}
                                 alt='activie'
                             />
@@ -120,6 +148,9 @@ function Apartment() {
                         </div>
                         <div className='g-activies p-0 lg:p-3'>
                             <Image
+                                width={86.79}
+                                height={86.85}
+                                className='w-[86.79px] h-[86.85px]'
                                 src={'/images/apartment/clean-activitie.png'}
                                 alt='activie'
                             />
@@ -151,6 +182,9 @@ function Apartment() {
                     <div className='mktbottom flex flex-col gap-5 md:flex-row'>
                         <div className='g-activies p-0 lg:p-3'>
                             <Image
+                                width={86.79}
+                                height={86.85}
+                                className='w-[86.79px] h-[86.85px]'
                                 src={'/images/apartment/flexlble-activitie.png'}
                                 alt='activie'
                             />
@@ -177,6 +211,9 @@ function Apartment() {
                         </div>
                         <div className='g-activies p-0 lg:p-3'>
                             <Image
+                                width={86.79}
+                                height={86.85}
+                                className='w-[86.79px] h-[86.85px]'
                                 src={'/images/apartment/services-activitie.png'}
                                 alt='activie'
                             />
@@ -214,51 +251,70 @@ function Apartment() {
                 <h3 className='title-Calculates text-xl md:text-2xl p-0 text-center lg:p-8'>
                     SMART REAL Online Marketing Partner
                 </h3>
+
                 <div className='Top-Logos flex gap-3 lg:gap-9 '>
                     <Image
-                        className='max-w-[70px] lg:max-w-[100%]'
+                        width={112}
+                        height={38}
+                        className='w-[auto] lg:w-[142px]'
                         src={'/images/apartment/logo-1.png'}
                         alt='top-logo'
                     />
                     <Image
-                        className='max-w-[70px] lg:max-w-[100%]'
+                        width={40}
+                        height={38}
+                        className='w-[auto] lg:w-[72px]'
                         src={'/images/apartment/logo-2.png'}
                         alt='top-logo'
                     />
                     <Image
-                        className='max-w-[70px] lg:max-w-[100%]'
+                        width={90}
+                        height={33}
+                        className='w-[auto] lg:w-[120px]'
                         src={'/images/apartment/logo-3.png'}
                         alt='top-logo'
                     />
                     <Image
-                        className='max-w-[70px] lg:max-w-[100%]'
+                        width={105}
+                        height={38}
+                        className='w-[75px] h-[auto] lg:w-[105px]'
                         src={'/images/apartment/logo-4.png'}
                         alt='top-logo'
                     />
                     <Image
-                        className='max-w-[70px] lg:max-w-[100%]'
+                        width={98}
+                        height={38}
+                        className='w-[68px] h-[auto] lg:w-[98px]'
                         src={'/images/apartment/logo-5.png'}
                         alt='top-logo'
                     />
                 </div>
                 <div className='Bottom-Logos flex gap-3 lg:gap-9 '>
                     <Image
-                        className='max-w-[80px] lg:max-w-[100%]'
+                        width={115}
+                        height={38}
+                        className='w-[85px] h-[auto] lg:w-[115px]'
                         src={'/images/apartment/logo-6.png'}
                         alt='bottom-logo'
                     />
                     <Image
-                        className='max-w-[80px] lg:max-w-[100%]'
+                        width={179}
+                        height={41}
+                        className='w-[149px] h-[auto] lg:w-[179px]'
                         src={'/images/apartment/logo-7.png'}
                         alt='bottom-logo'
                     />
                     <Image
-                        className='max-w-[80px] lg:max-w-[100%]'
+                        width={62}
+                        height={25}
+                        className='w-[32px] h-[auto] lg:w-[62px]'
                         src={'/images/apartment/logo-8.png'}
                         alt='bottom-logo'
                     />
                     <Image
-                        className='max-w-[80px] lg:max-w-[100%]'
+                        width={201}
+                        height={31}
+                        className='w-[151px] h-[auto] lg:w-[201px]'
                         src={'/images/apartment/logo-9.png'}
                         alt='bottom-logo'
                     />
@@ -269,51 +325,16 @@ function Apartment() {
                     Whose properties do we market?
                 </h3>
                 <Image
-                    className='hidden lg:block'
+                    width={684}
+                    height={2}
+                    className='line-propertie hidden h-[auto] lg:block'
                     src={'/images/apartment/svg/line-propertie.svg'}
                     alt='properties'
                 />
                 <div className='propertie-g flex gap-14 flex-col lg:flex-row'>
-                    <div className='group-properties'>
-                        <Image
-                            className='hidden lg:block'
-                            src={'/images/apartment/svg/arrow-propertie.svg'}
-                            alt='properties'
-                        />
-                        <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate text-base md:text-xl '>
-                                For those of you who have apartments in Jabodetabek,
-                                Bandung, Semarang, Yogyakarta Makasar and Surabaya
-                                (Furnished / Unfurnished).
-                            </p>
-                        </div>
-                    </div>
-                    <div className='group-properties'>
-                        <Image
-                            className='hidden lg:block'
-                            src={'/images/apartment/svg/arrow-propertie.svg'}
-                            alt='properties'
-                        />
-                        <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate text-base md:text-xl '>
-                                Those of you who invest in apartment property and want to
-                                achieve maximum yield returns.
-                            </p>
-                        </div>
-                    </div>
-                    <div className='group-properties'>
-                        <Image
-                            className='hidden lg:block'
-                            src={'/images/apartment/svg/arrow-propertie.svg'}
-                            alt='properties'
-                        />
-                        <div className='box-propertie'>
-                            <p className='content-propertie text-Calculate text-base md:text-xl '>
-                                Those of you who invest in apartment property and want to
-                                achieve maximum yield returns.
-                            </p>
-                        </div>
-                    </div>
+                    {GR_properties?.map((card) => (
+                        <Properties data={card} key={card?.id} />
+                    ))}
                 </div>
             </div>
             <div className='wrap-Testimonials container'>
@@ -322,7 +343,7 @@ function Apartment() {
                 </h3>
                 <div className='slider-wrapper w-full'>
                     <Swiper
-                        className='sliders-katherrine'
+                        className='sliders-katherrine flex'
                         loop={false}
                         pagination={true}
                         navigation={{
@@ -341,7 +362,7 @@ function Apartment() {
                         // initialSlide={2}
                         spaceBetween={50}
                         slidesPerView={1}>
-                        <SwiperSlide>
+                        {/* <SwiperSlide>
                             {isLoading ? (
                                 <Skeleton
                                     animation='wave'
@@ -372,6 +393,9 @@ function Apartment() {
                                             </p>
                                         </div>
                                         <Image
+                                            width={50}
+                                            height={50}
+                                            className=' h-[auto]'
                                             src={'/images/apartment/room-Katherine.png'}
                                             alt='Katherine'
                                         />
@@ -379,120 +403,14 @@ function Apartment() {
                                     <a href='#'>View Videos ➔</a>
                                 </div>
                             )}
-                        </SwiperSlide>
-                        <SwiperSlide className='box-Katherine min-w-[400px]'>
-                            <div className='wrap-Katherine'>
-                                <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                        Katherine
-                                    </h4>
-                                    <div className='text-Owners gap-8'>
-                                        <p className='Owner-sz title-Calculates'>
-                                            Apartment Owner
-                                        </p>
-                                        <p className='content-Owner-sz pb-7'>
-                                            Midtown Summarecon & Puri Park View
-                                        </p>
-                                    </div>
-                                    <p className='content-Owner-sz'>
-                                        Starting from the deposit, continuing with daily
-                                        cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by SMART REAL
-                                    </p>
-                                </div>
-                                <Image
-                                    src={'/images/apartment/room-Katherine.png'}
-                                    alt='avt-Katherine'
-                                />
-                            </div>
-                            <a href='#'>View Videos ➔</a>
-                        </SwiperSlide>
-                        <SwiperSlide className='box-Katherine min-w-[400px]'>
-                            <div className='wrap-Katherine'>
-                                <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                        Katherine
-                                    </h4>
-                                    <div className='text-Owners gap-8'>
-                                        <p className='Owner-sz title-Calculates'>
-                                            Apartment Owner
-                                        </p>
-                                        <p className='content-Owner-sz pb-7'>
-                                            Midtown Summarecon & Puri Park View
-                                        </p>
-                                    </div>
-                                    <p className='content-Owner-sz'>
-                                        Starting from the deposit, continuing with daily
-                                        cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by SMART REAL
-                                    </p>
-                                </div>
-                                <Image
-                                    src={'/images/apartment/room-Katherine.png'}
-                                    alt='avt-Katherine'
-                                />
-                            </div>
-                            <a href='#'>View Videos ➔</a>
-                        </SwiperSlide>
-                        <SwiperSlide className='box-Katherine min-w-[400px]'>
-                            <div className='wrap-Katherine'>
-                                <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                        Katherine
-                                    </h4>
-                                    <div className='text-Owners gap-8'>
-                                        <p className='Owner-sz title-Calculates'>
-                                            Apartment Owner
-                                        </p>
-                                        <p className='content-Owner-sz pb-7'>
-                                            Midtown Summarecon & Puri Park View
-                                        </p>
-                                    </div>
-                                    <p className='content-Owner-sz'>
-                                        Starting from the deposit, continuing with daily
-                                        cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by SMART REAL
-                                    </p>
-                                </div>
-                                <Image
-                                    src={'/images/apartment/room-Katherine.png'}
-                                    alt='avt-Katherine'
-                                />
-                            </div>
-                            <a href='#'>View Videos ➔</a>
-                        </SwiperSlide>
-                        <SwiperSlide className='box-Katherine min-w-[400px]'>
-                            <div className='wrap-Katherine'>
-                                <div className='contents-Katherine'>
-                                    <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                        Katherine
-                                    </h4>
-                                    <div className='text-Owners gap-8'>
-                                        <p className='Owner-sz title-Calculates'>
-                                            Apartment Owner
-                                        </p>
-                                        <p className='content-Owner-sz pb-7'>
-                                            Midtown Summarecon & Puri Park View
-                                        </p>
-                                    </div>
-                                    <p className='content-Owner-sz'>
-                                        Starting from the deposit, continuing with daily
-                                        cleaning, we dont need to take care of it anymore,
-                                        everything has been handled by SMART REAL
-                                    </p>
-                                </div>
-                                <Image
-                                    src={'/images/apartment/room-Katherine.png'}
-                                    alt='avt-Katherine'
-                                />
-                            </div>
-                            <a href='#'>View Videos ➔</a>
-                        </SwiperSlide>
-                    </Swiper>
-                    <div
-                        id='carausel-2-columns-1-arrows'
-                        className='flex justify-between '>
-                        <span className='mr-4 text-blue-500 flex slick-arrow custom_prev'>
+                        </SwiperSlide> */}
+                        {Testimonials?.map((card) => (
+                            <SwiperSlide key={card?.id}>
+                                <SlKatherine data={card} />
+                            </SwiperSlide>
+                        ))}
+
+                        <span className='arrow-back mr-4  flex slick-arrow custom_prev'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='40'
@@ -547,7 +465,7 @@ function Apartment() {
                                 </defs>
                             </svg>
                         </span>
-                        <span className='text-blue-500 flex slick-arrow custom_next'>
+                        <span className='arrow-next flex slick-arrow custom_next'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='40'
@@ -608,7 +526,7 @@ function Apartment() {
                                 </defs>
                             </svg>
                         </span>
-                    </div>
+                    </Swiper>
                 </div>
             </div>
             <div className='Wrap-DevloperManagement container gap-5'>
@@ -622,13 +540,14 @@ function Apartment() {
 
                         <button
                             onClick={() => setIsShowContent(false)}
-                            className='title-Calculates text-xl md:text-2xl pb-6 text-xl md:text-2xl'>
+                            className='title-Calculates text-xl md:text-2xl pb-6 '>
                             Building Management
                         </button>
                     </div>
                     <div className='pl-6 line-wrap flex justify-center gap-14'>
                         <div className={`${isShowContent ? '' : 'opacity-0'}`}>
                             <Image
+                                className='w-[293px] h-[auto]'
                                 src={'/images/apartment/line-DevMana.png'}
                                 height={2}
                                 width={293}
@@ -637,6 +556,7 @@ function Apartment() {
                         </div>
                         <div className={`${isShowContent ? 'opacity-0' : ''}`}>
                             <Image
+                                className='w-[293px] h-[auto]'
                                 src={'/images/apartment/line-DevMana.png'}
                                 height={2}
                                 width={293}
@@ -651,78 +571,156 @@ function Apartment() {
                                 className='sliders-Dev'
                                 loop={false}
                                 pagination={true}
+                                navigation={{
+                                    prevEl: '.custom_preva',
+                                    nextEl: '.custom_nexta'
+                                }}
                                 modules={[Navigation, Pagination]}
                                 breakpoints={{
                                     300: {
-                                        slidesPerView: 2
+                                        slidesPerView: 1
                                     },
                                     550: {
+                                        slidesPerView: 2
+                                    },
+                                    960: {
                                         slidesPerView: 3
+                                    },
+                                    1200: {
+                                        slidesPerView: 4
                                     }
                                 }}
                                 // initialSlide={2}
                                 spaceBetween={20}
-                                slidesPerView={1}>
-                                <SwiperSlide className='show-room lg:ml-5'>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
+                                slidesPerView={2}>
+                                {ShowRoom_HOTEL?.map((card) => (
+                                    <SwiperSlide key={card?.id}>
+                                        <ShowRoomSl data={card} />
+                                    </SwiperSlide>
+                                ))}
 
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>Grand Central</h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Bogor, West Java
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='show-room lg:ml-5'>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
-
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>LRT City</h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Ciracas, East Jakarta
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='show-room lg:ml-5'>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
-
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>Meikarta </h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Cikarang, Bekasi
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='show-room lg:ml-5 '>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
-
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>Grand Central</h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Bogor, West Java
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='show-room lg:ml-5'>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
-
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>LRT City</h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Ciracas, East Jakarta
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='show-room lg:ml-5'>
-                                    <Image src='/images/apartment/showRoom.png' alt='' />
-
-                                    <div className='content-room-dev'>
-                                        <h4 className='text-Dev'>Meikarta </h4>
-                                        <p className='text-room-dev text-Dev'>
-                                            Cikarang, Bekasi
-                                        </p>
-                                    </div>
-                                </SwiperSlide>
+                                <span className='arrow-back mr-4  flex slick-arrow custom_preva'>
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        width='40'
+                                        height='40'
+                                        viewBox='0 0 40 40'
+                                        fill='none'>
+                                        <g filter='url(#filter0_d_34_590)'>
+                                            <circle cx='20' cy='16' r='16' fill='black' />
+                                        </g>
+                                        <path
+                                            d='M28 17C28.5523 17 29 16.5523 29 16C29 15.4477 28.5523 15 28 15L28 17ZM11.2929 15.2929C10.9024 15.6834 10.9024 16.3166 11.2929 16.7071L17.6569 23.0711C18.0474 23.4616 18.6805 23.4616 19.0711 23.0711C19.4616 22.6805 19.4616 22.0474 19.0711 21.6569L13.4142 16L19.0711 10.3431C19.4616 9.95262 19.4616 9.31946 19.0711 8.92893C18.6805 8.53841 18.0474 8.53841 17.6569 8.92893L11.2929 15.2929ZM28 15L12 15L12 17L28 17L28 15Z'
+                                            fill='white'
+                                        />
+                                        <defs>
+                                            <filter
+                                                id='filter0_d_34_590'
+                                                x='0'
+                                                y='0'
+                                                width='40'
+                                                height='40'
+                                                filterUnits='userSpaceOnUse'
+                                                colorInterpolationFilters='sRGB'>
+                                                <feFlood
+                                                    floodOpacity='0'
+                                                    result='BackgroundImageFix'
+                                                />
+                                                <feColorMatrix
+                                                    in='SourceAlpha'
+                                                    type='matrix'
+                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+                                                    result='hardAlpha'
+                                                />
+                                                <feOffset dy='4' />
+                                                <feGaussianBlur stdDeviation='2' />
+                                                <feComposite
+                                                    in2='hardAlpha'
+                                                    operator='out'
+                                                />
+                                                <feColorMatrix
+                                                    type='matrix'
+                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
+                                                />
+                                                <feBlend
+                                                    mode='normal'
+                                                    in2='BackgroundImageFix'
+                                                    result='effect1_dropShadow_34_590'
+                                                />
+                                                <feBlend
+                                                    mode='normal'
+                                                    in='SourceGraphic'
+                                                    in2='effect1_dropShadow_34_590'
+                                                    result='shape'
+                                                />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span className='arrow-next flex slick-arrow custom_nexta'>
+                                    <svg
+                                        xmlns='http://www.w3.org/2000/svg'
+                                        width='40'
+                                        height='40'
+                                        viewBox='0 0 40 40'
+                                        fill='none'>
+                                        <g filter='url(#filter0_d_34_593)'>
+                                            <circle
+                                                cx='20'
+                                                cy='16'
+                                                r='16'
+                                                transform='rotate(-180 20 16)'
+                                                fill='black'
+                                            />
+                                        </g>
+                                        <path
+                                            d='M12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17L12 15ZM28.7071 16.7071C29.0976 16.3166 29.0976 15.6834 28.7071 15.2929L22.3431 8.92893C21.9526 8.53841 21.3195 8.53841 20.9289 8.92893C20.5384 9.31946 20.5384 9.95262 20.9289 10.3431L26.5858 16L20.9289 21.6569C20.5384 22.0474 20.5384 22.6805 20.9289 23.0711C21.3195 23.4616 21.9526 23.4616 22.3431 23.0711L28.7071 16.7071ZM12 17L28 17L28 15L12 15L12 17Z'
+                                            fill='white'
+                                        />
+                                        <defs>
+                                            <filter
+                                                id='filter0_d_34_593'
+                                                x='0'
+                                                y='0'
+                                                width='40'
+                                                height='40'
+                                                filterUnits='userSpaceOnUse'
+                                                colorInterpolationFilters='sRGB'>
+                                                <feFlood
+                                                    floodOpacity='0'
+                                                    result='BackgroundImageFix'
+                                                />
+                                                <feColorMatrix
+                                                    in='SourceAlpha'
+                                                    type='matrix'
+                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+                                                    result='hardAlpha'
+                                                />
+                                                <feOffset dy='4' />
+                                                <feGaussianBlur stdDeviation='2' />
+                                                <feComposite
+                                                    in2='hardAlpha'
+                                                    operator='out'
+                                                />
+                                                <feColorMatrix
+                                                    type='matrix'
+                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
+                                                />
+                                                <feBlend
+                                                    mode='normal'
+                                                    in2='BackgroundImageFix'
+                                                    result='effect1_dropShadow_34_593'
+                                                />
+                                                <feBlend
+                                                    mode='normal'
+                                                    in='SourceGraphic'
+                                                    in2='effect1_dropShadow_34_593'
+                                                    result='shape'
+                                                />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </span>
                             </Swiper>
                         </div>
                     )}
@@ -731,54 +729,74 @@ function Apartment() {
                         <div className='wrap-Logo-Manage flex flex-col justify-center align-center w-full min-h-[300px] '>
                             <div className='TopLogos-Management flex justify-center'>
                                 <Image
-                                    className='max-w-[80px] md:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] md:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management1.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] md:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management2.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] md:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management3.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] md:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management4.png'}
                                     alt='logoPartner'
                                 />
                             </div>
                             <div className='BottomLogos-Managemant flex justify-center'>
                                 <Image
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management5.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management6.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management7.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management8.png'}
                                     alt='logoPartner'
                                 />
                                 <Image
-                                    className='max-w-[80px] lg:max-w-[100%]'
+                                    width={70}
+                                    height={80}
+                                    className='w-[auto] lg:w-[138px]'
                                     src={'/images/apartment/logoPartner-Management9.png'}
                                     alt='logoPartner'
                                 />
@@ -796,13 +814,17 @@ function Apartment() {
                     className='gr-news sliders-Dev w-full'
                     loop={false}
                     pagination={true}
+                    navigation={{
+                        prevEl: '.custom_prevb',
+                        nextEl: '.custom_nextb'
+                    }}
                     modules={[Navigation, Pagination]}
                     breakpoints={{
                         300: {
                             slidesPerView: 1
                         },
                         550: {
-                            slidesPerView: 3
+                            slidesPerView: 2
                         },
                         960: {
                             slidesPerView: 3
@@ -819,6 +841,122 @@ function Apartment() {
                             <TrancesNews data={card} />
                         </SwiperSlide>
                     ))}
+                    <span className='arrow-back mr-4  flex slick-arrow custom_prevb'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='40'
+                            height='40'
+                            viewBox='0 0 40 40'
+                            fill='none'>
+                            <g filter='url(#filter0_d_34_590)'>
+                                <circle cx='20' cy='16' r='16' fill='black' />
+                            </g>
+                            <path
+                                d='M28 17C28.5523 17 29 16.5523 29 16C29 15.4477 28.5523 15 28 15L28 17ZM11.2929 15.2929C10.9024 15.6834 10.9024 16.3166 11.2929 16.7071L17.6569 23.0711C18.0474 23.4616 18.6805 23.4616 19.0711 23.0711C19.4616 22.6805 19.4616 22.0474 19.0711 21.6569L13.4142 16L19.0711 10.3431C19.4616 9.95262 19.4616 9.31946 19.0711 8.92893C18.6805 8.53841 18.0474 8.53841 17.6569 8.92893L11.2929 15.2929ZM28 15L12 15L12 17L28 17L28 15Z'
+                                fill='white'
+                            />
+                            <defs>
+                                <filter
+                                    id='filter0_d_34_590'
+                                    x='0'
+                                    y='0'
+                                    width='40'
+                                    height='40'
+                                    filterUnits='userSpaceOnUse'
+                                    colorInterpolationFilters='sRGB'>
+                                    <feFlood
+                                        floodOpacity='0'
+                                        result='BackgroundImageFix'
+                                    />
+                                    <feColorMatrix
+                                        in='SourceAlpha'
+                                        type='matrix'
+                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+                                        result='hardAlpha'
+                                    />
+                                    <feOffset dy='4' />
+                                    <feGaussianBlur stdDeviation='2' />
+                                    <feComposite in2='hardAlpha' operator='out' />
+                                    <feColorMatrix
+                                        type='matrix'
+                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
+                                    />
+                                    <feBlend
+                                        mode='normal'
+                                        in2='BackgroundImageFix'
+                                        result='effect1_dropShadow_34_590'
+                                    />
+                                    <feBlend
+                                        mode='normal'
+                                        in='SourceGraphic'
+                                        in2='effect1_dropShadow_34_590'
+                                        result='shape'
+                                    />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </span>
+                    <span className='arrow-next flex slick-arrow custom_nextb'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='40'
+                            height='40'
+                            viewBox='0 0 40 40'
+                            fill='none'>
+                            <g filter='url(#filter0_d_34_593)'>
+                                <circle
+                                    cx='20'
+                                    cy='16'
+                                    r='16'
+                                    transform='rotate(-180 20 16)'
+                                    fill='black'
+                                />
+                            </g>
+                            <path
+                                d='M12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17L12 15ZM28.7071 16.7071C29.0976 16.3166 29.0976 15.6834 28.7071 15.2929L22.3431 8.92893C21.9526 8.53841 21.3195 8.53841 20.9289 8.92893C20.5384 9.31946 20.5384 9.95262 20.9289 10.3431L26.5858 16L20.9289 21.6569C20.5384 22.0474 20.5384 22.6805 20.9289 23.0711C21.3195 23.4616 21.9526 23.4616 22.3431 23.0711L28.7071 16.7071ZM12 17L28 17L28 15L12 15L12 17Z'
+                                fill='white'
+                            />
+                            <defs>
+                                <filter
+                                    id='filter0_d_34_593'
+                                    x='0'
+                                    y='0'
+                                    width='40'
+                                    height='40'
+                                    filterUnits='userSpaceOnUse'
+                                    colorInterpolationFilters='sRGB'>
+                                    <feFlood
+                                        floodOpacity='0'
+                                        result='BackgroundImageFix'
+                                    />
+                                    <feColorMatrix
+                                        in='SourceAlpha'
+                                        type='matrix'
+                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+                                        result='hardAlpha'
+                                    />
+                                    <feOffset dy='4' />
+                                    <feGaussianBlur stdDeviation='2' />
+                                    <feComposite in2='hardAlpha' operator='out' />
+                                    <feColorMatrix
+                                        type='matrix'
+                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
+                                    />
+                                    <feBlend
+                                        mode='normal'
+                                        in2='BackgroundImageFix'
+                                        result='effect1_dropShadow_34_593'
+                                    />
+                                    <feBlend
+                                        mode='normal'
+                                        in='SourceGraphic'
+                                        in2='effect1_dropShadow_34_593'
+                                        result='shape'
+                                    />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </span>
                 </Swiper>
                 <button className='btn-SeeMore wrap-btn'>See More ➔</button>
             </div>
@@ -834,6 +972,9 @@ function Apartment() {
                     <button className='register-now-btn wrap-btn'>REGISTER NOW ➔</button>
                 </div>
                 <Image
+                    width={427}
+                    height={278}
+                    className='h-[auto]'
                     src={'/images/apartment/apartmentHouse.png'}
                     alt='apartmentHouse'
                 />
@@ -882,42 +1023,24 @@ function Apartment() {
                     </div>
                     <div className='answers flex flex-col gap-7'>
                         <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                            <p className='text-asset ml-7'>
-                                How easy is it to get started?
-                            </p>
-                            <Image
-                                className='mr-7'
-                                src={'/images/apartment/svg/icon-register.svg'}
-                                alt='icon-register'
-                            />
+                            <p className='text-asset'>How easy is it to get started?</p>
+                            <SlArrowDown />
                         </div>
                         <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                            <p className='text-asset ml-7'>
+                            <p className='text-asset'>
                                 Does the apartment have to be fully furnished?
                             </p>
-                            <Image
-                                className='mr-7'
-                                src={'/images/apartment/svg/icon-register.svg'}
-                                alt='icon-register'
-                            />
+                            <SlArrowDown />
                         </div>
                         <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                            <p className='text-asset ml-7'>Area Coverage anywhere?</p>
-                            <Image
-                                className='mr-7'
-                                src={'/images/apartment/svg/icon-register.svg'}
-                                alt='icon-register'
-                            />
+                            <p className='text-asset'>Area Coverage anywhere?</p>
+                            <SlArrowDown />
                         </div>
                         <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                            <p className='text-asset ml-7'>
+                            <p className='text-asset'>
                                 What type of contract should I sign?
                             </p>
-                            <Image
-                                className='mr-7'
-                                src={'/images/apartment/svg/icon-register.svg'}
-                                alt='icon-register'
-                            />
+                            <SlArrowDown />
                         </div>
                     </div>
                 </div>
