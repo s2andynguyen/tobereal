@@ -31,7 +31,6 @@ const CardRecommended: React.FC<CardRecommendedProps> = ({
 }) => {
     const [likedState, setLikedState] = useState(liked)
     const toggleLiked = () => {
-        console.log('likedState :>> ', likedState)
         setLikedState(!likedState)
     }
     return (
@@ -117,7 +116,7 @@ const CardRecommended: React.FC<CardRecommendedProps> = ({
                                 {title} {place && <span>- {place}</span>} <br />
                             </p>
                             {bestSelling && (
-                                <p className='font-medium text-[10px] leading-[10px] font-montserrat mb-[2px]'>
+                                <p className='font-medium hidden sm:block text-[10px] leading-[10px] font-montserrat mb-[2px]'>
                                     Start from
                                 </p>
                             )}

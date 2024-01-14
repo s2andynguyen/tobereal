@@ -15,33 +15,38 @@ import WeeklyHotDeals from './ui/WeeklyHotDeals'
 import BestSellingApartment from './ui/BestSellingApartment'
 import RecommendedApartments from './ui/RecommendedApartments'
 import RecommendedHouse from './ui/RecommendedHouse'
+import LookingForPlace from './ui/LookingForPlace'
+import OthersBottomCard from './ui/OthersBottomCard'
 
 export default function Home() {
-    const [toggleTab , setToggleTab] = useState('buy')
-    const handleSetToggleTab = (value:string) => {
+    const [toggleTab, setToggleTab] = useState('buy')
+    const handleSetToggleTab = (value: string) => {
         setToggleTab(value)
     }
     return (
         <MainLayout>
-            <div className={`w-full h-60 lg:mb-32 sm:h-[321px] bg-headblock bg-no-repeat bg-cover bg-left-top md:bg-center ${
-                toggleTab === 'rent' ? 'sm:mb-40 mb-72' : 'sm:mb-20 mb-[180px]'
-            }`}>
+            <div
+                className={`w-full h-60 lg:mb-32 sm:h-[321px] bg-headblock bg-no-repeat bg-cover bg-left-top md:bg-center ${
+                    toggleTab === 'rent' ? 'sm:mb-40 mb-72' : 'sm:mb-20 mb-[180px]'
+                }`}>
                 <div className='container mx-auto h-full bg-opacity-35 relative'>
                     <div className='flex gap-3 h-full px-5 md:px-10 lg:px-[115px]'>
-                      {/* title & content */}
+                        {/* title & content */}
                         <div className='flex-[65%] lg:flex-[50%] h-full '>
                             <div className='flex flex-col md:py-6 pt-10'>
-                                <h2 className='h2 drop-shadow-title'>Utility and quality</h2>
+                                <h2 className='h2 drop-shadow-title'>
+                                    Utility and quality
+                                </h2>
                                 <p className='font-medium max-w-[456px] leading-5 text-[sm] md:text-[16px]'>
                                     Create a good living or working environment, with the
                                     right amenities and quality for you
-                                </p>    
-                            </div>  
+                                </p>
+                            </div>
                         </div>
 
                         {/* image headblock*/}
                         <div className='flex-[35%] lg:flex-[50%] h-full '>
-                             <div className='h-full flex justify-center items-start'>
+                            <div className='h-full flex justify-center items-start'>
                                 <Image
                                     src={'/images/home/img-content-headblock.png'}
                                     width={266}
@@ -53,7 +58,10 @@ export default function Home() {
                         </div>
                     </div>
                     {/* block booking */}
-                    <HeadBooking toggleTab={toggleTab} setToggleTab={handleSetToggleTab}/>
+                    <HeadBooking
+                        toggleTab={toggleTab}
+                        setToggleTab={handleSetToggleTab}
+                    />
                 </div>
             </div>
 
@@ -88,13 +96,17 @@ export default function Home() {
 
                 {/* Recommended Apartments */}
                 <RecommendedApartments />
-            
+
                 {/* Recommended Houses 🏠 */}
                 <RecommendedHouse />
 
 
-            </div>
+                {/* Looking for a place to stay */}
+                <LookingForPlace />
 
+                {/* 3 Benefits to Stay at Apartment */}
+                <OthersBottomCard />
+            </div>
         </MainLayout>
     )
 }

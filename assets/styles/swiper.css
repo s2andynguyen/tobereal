@@ -2,3 +2,8 @@
     padding: 12px 14px;
     height: 250px;
 }
+
+.swiper-of-looking-place  .swiper.swiper-initialized.swiper-horizontal {
+    /* padding: 12px 30px; */
+    /* height: 250px; */
+}

@@ -2,16 +2,18 @@
 import React, { useState } from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
+import Footer from './Footer'
 function MainLayout({ children }: { children: React.ReactNode }) {
     const [isShowSidebar, setIsShowSidebar] = useState(false)
     const handleSetSidebar = () => {
         setIsShowSidebar(!isShowSidebar);
     }
     return (
-        <div className='min-h-[4500px]'>
+        <div className='min-h-[6000px]'>
             <Header showSidebar={handleSetSidebar} />
             <Sidebar isShow={isShowSidebar} hiddenSidebar={handleSetSidebar}/>
             {children}
+            <Footer />
         </div>
     )
 }
