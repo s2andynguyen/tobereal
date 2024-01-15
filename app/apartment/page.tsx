@@ -48,7 +48,7 @@ function Apartment() {
                 </div>
             </div>
             <div className='Management-Services container'>
-                <h2 className="text-black font-bold font-['Montserrat'] text-center text-2xl md:text-[32px]">
+                <h2 className='text-black font-bold text-center text-2xl md:text-[32px]'>
                     Apartment Management Services by SMART REAL
                 </h2>
 
@@ -353,57 +353,18 @@ function Apartment() {
                         modules={[Navigation, Pagination]}
                         breakpoints={{
                             300: {
-                                slidesPerView: 2
+                                slidesPerView: 1
                             },
                             550: {
+                                slidesPerView: 1
+                            },
+                            960: {
                                 slidesPerView: 2
                             }
                         }}
                         // initialSlide={2}
                         spaceBetween={50}
                         slidesPerView={1}>
-                        {/* <SwiperSlide>
-                            {isLoading ? (
-                                <Skeleton
-                                    animation='wave'
-                                    variant='rectangular'
-                                    height={217}
-                                    width={400}
-                                />
-                            ) : (
-                                <div className='box-Katherine min-w-[400px]'>
-                                    <div className='wrap-Katherine'>
-                                        <div className='contents-Katherine'>
-                                            <h4 className='title-Calculates text-xl md:text-2xl pb-8'>
-                                                Katherine
-                                            </h4>
-                                            <div className='text-Owners gap-8'>
-                                                <p className='Owner-sz title-Calculates'>
-                                                    Apartment Owner
-                                                </p>
-                                                <p className='content-Owner-sz pb-7'>
-                                                    Midtown Summarecon & Puri Park View
-                                                </p>
-                                            </div>
-                                            <p className='content-Owner-sz'>
-                                                Starting from the deposit, continuing with
-                                                daily cleaning, we dont need to take care
-                                                of it anymore, everything has been handled
-                                                by SMART REAL
-                                            </p>
-                                        </div>
-                                        <Image
-                                            width={50}
-                                            height={50}
-                                            className=' h-[auto]'
-                                            src={'/images/apartment/room-Katherine.png'}
-                                            alt='Katherine'
-                                        />
-                                    </div>
-                                    <a href='#'>View Videos ➔</a>
-                                </div>
-                            )}
-                        </SwiperSlide> */}
                         {Testimonials?.map((card) => (
                             <SwiperSlide key={card?.id}>
                                 <SlKatherine data={card} />
@@ -411,120 +372,22 @@ function Apartment() {
                         ))}
 
                         <span className='arrow-back mr-4  flex slick-arrow custom_prev'>
-                            <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                width='40'
-                                height='40'
-                                viewBox='0 0 40 40'
-                                fill='none'>
-                                <g filter='url(#filter0_d_34_590)'>
-                                    <circle cx='20' cy='16' r='16' fill='black' />
-                                </g>
-                                <path
-                                    d='M28 17C28.5523 17 29 16.5523 29 16C29 15.4477 28.5523 15 28 15L28 17ZM11.2929 15.2929C10.9024 15.6834 10.9024 16.3166 11.2929 16.7071L17.6569 23.0711C18.0474 23.4616 18.6805 23.4616 19.0711 23.0711C19.4616 22.6805 19.4616 22.0474 19.0711 21.6569L13.4142 16L19.0711 10.3431C19.4616 9.95262 19.4616 9.31946 19.0711 8.92893C18.6805 8.53841 18.0474 8.53841 17.6569 8.92893L11.2929 15.2929ZM28 15L12 15L12 17L28 17L28 15Z'
-                                    fill='white'
-                                />
-                                <defs>
-                                    <filter
-                                        id='filter0_d_34_590'
-                                        x='0'
-                                        y='0'
-                                        width='40'
-                                        height='40'
-                                        filterUnits='userSpaceOnUse'
-                                        colorInterpolationFilters='sRGB'>
-                                        <feFlood
-                                            floodOpacity='0'
-                                            result='BackgroundImageFix'
-                                        />
-                                        <feColorMatrix
-                                            in='SourceAlpha'
-                                            type='matrix'
-                                            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                            result='hardAlpha'
-                                        />
-                                        <feOffset dy='4' />
-                                        <feGaussianBlur stdDeviation='2' />
-                                        <feComposite in2='hardAlpha' operator='out' />
-                                        <feColorMatrix
-                                            type='matrix'
-                                            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                        />
-                                        <feBlend
-                                            mode='normal'
-                                            in2='BackgroundImageFix'
-                                            result='effect1_dropShadow_34_590'
-                                        />
-                                        <feBlend
-                                            mode='normal'
-                                            in='SourceGraphic'
-                                            in2='effect1_dropShadow_34_590'
-                                            result='shape'
-                                        />
-                                    </filter>
-                                </defs>
-                            </svg>
+                            <Image
+                                width={20}
+                                height={20}
+                                className='w-[auto]'
+                                src={'/images/apartment/svg/slick-arrow-left.svg'}
+                                alt='slick-arrow-r'
+                            />
                         </span>
                         <span className='arrow-next flex slick-arrow custom_next'>
-                            <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                width='40'
-                                height='40'
-                                viewBox='0 0 40 40'
-                                fill='none'>
-                                <g filter='url(#filter0_d_34_593)'>
-                                    <circle
-                                        cx='20'
-                                        cy='16'
-                                        r='16'
-                                        transform='rotate(-180 20 16)'
-                                        fill='black'
-                                    />
-                                </g>
-                                <path
-                                    d='M12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17L12 15ZM28.7071 16.7071C29.0976 16.3166 29.0976 15.6834 28.7071 15.2929L22.3431 8.92893C21.9526 8.53841 21.3195 8.53841 20.9289 8.92893C20.5384 9.31946 20.5384 9.95262 20.9289 10.3431L26.5858 16L20.9289 21.6569C20.5384 22.0474 20.5384 22.6805 20.9289 23.0711C21.3195 23.4616 21.9526 23.4616 22.3431 23.0711L28.7071 16.7071ZM12 17L28 17L28 15L12 15L12 17Z'
-                                    fill='white'
-                                />
-                                <defs>
-                                    <filter
-                                        id='filter0_d_34_593'
-                                        x='0'
-                                        y='0'
-                                        width='40'
-                                        height='40'
-                                        filterUnits='userSpaceOnUse'
-                                        colorInterpolationFilters='sRGB'>
-                                        <feFlood
-                                            floodOpacity='0'
-                                            result='BackgroundImageFix'
-                                        />
-                                        <feColorMatrix
-                                            in='SourceAlpha'
-                                            type='matrix'
-                                            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                            result='hardAlpha'
-                                        />
-                                        <feOffset dy='4' />
-                                        <feGaussianBlur stdDeviation='2' />
-                                        <feComposite in2='hardAlpha' operator='out' />
-                                        <feColorMatrix
-                                            type='matrix'
-                                            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                        />
-                                        <feBlend
-                                            mode='normal'
-                                            in2='BackgroundImageFix'
-                                            result='effect1_dropShadow_34_593'
-                                        />
-                                        <feBlend
-                                            mode='normal'
-                                            in='SourceGraphic'
-                                            in2='effect1_dropShadow_34_593'
-                                            result='shape'
-                                        />
-                                    </filter>
-                                </defs>
-                            </svg>
+                            <Image
+                                width={20}
+                                height={20}
+                                className='w-[auto]'
+                                src={'/images/apartment/svg/slick-arrow-right.svg'}
+                                alt='slick-arrow-r'
+                            />
                         </span>
                     </Swiper>
                 </div>
@@ -544,22 +407,22 @@ function Apartment() {
                             Building Management
                         </button>
                     </div>
-                    <div className='pl-6 line-wrap flex justify-center gap-14'>
+                    <div className='pl-0 line-wrap flex justify-center gap-14 md:gap-2 md:pl-10'>
                         <div className={`${isShowContent ? '' : 'opacity-0'}`}>
                             <Image
-                                className='w-[293px] h-[auto]'
+                                className='w-[336px] h-[auto]'
                                 src={'/images/apartment/line-DevMana.png'}
                                 height={2}
-                                width={293}
+                                width={336}
                                 alt='line'
                             />
                         </div>
                         <div className={`${isShowContent ? 'opacity-0' : ''}`}>
                             <Image
-                                className='w-[293px] h-[auto]'
+                                className='w-[336px] h-[auto]'
                                 src={'/images/apartment/line-DevMana.png'}
                                 height={2}
-                                width={293}
+                                width={336}
                                 alt='line'
                             />
                         </div>
@@ -600,126 +463,24 @@ function Apartment() {
                                 ))}
 
                                 <span className='arrow-back mr-4  flex slick-arrow custom_preva'>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='40'
-                                        height='40'
-                                        viewBox='0 0 40 40'
-                                        fill='none'>
-                                        <g filter='url(#filter0_d_34_590)'>
-                                            <circle cx='20' cy='16' r='16' fill='black' />
-                                        </g>
-                                        <path
-                                            d='M28 17C28.5523 17 29 16.5523 29 16C29 15.4477 28.5523 15 28 15L28 17ZM11.2929 15.2929C10.9024 15.6834 10.9024 16.3166 11.2929 16.7071L17.6569 23.0711C18.0474 23.4616 18.6805 23.4616 19.0711 23.0711C19.4616 22.6805 19.4616 22.0474 19.0711 21.6569L13.4142 16L19.0711 10.3431C19.4616 9.95262 19.4616 9.31946 19.0711 8.92893C18.6805 8.53841 18.0474 8.53841 17.6569 8.92893L11.2929 15.2929ZM28 15L12 15L12 17L28 17L28 15Z'
-                                            fill='white'
-                                        />
-                                        <defs>
-                                            <filter
-                                                id='filter0_d_34_590'
-                                                x='0'
-                                                y='0'
-                                                width='40'
-                                                height='40'
-                                                filterUnits='userSpaceOnUse'
-                                                colorInterpolationFilters='sRGB'>
-                                                <feFlood
-                                                    floodOpacity='0'
-                                                    result='BackgroundImageFix'
-                                                />
-                                                <feColorMatrix
-                                                    in='SourceAlpha'
-                                                    type='matrix'
-                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                                    result='hardAlpha'
-                                                />
-                                                <feOffset dy='4' />
-                                                <feGaussianBlur stdDeviation='2' />
-                                                <feComposite
-                                                    in2='hardAlpha'
-                                                    operator='out'
-                                                />
-                                                <feColorMatrix
-                                                    type='matrix'
-                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                                />
-                                                <feBlend
-                                                    mode='normal'
-                                                    in2='BackgroundImageFix'
-                                                    result='effect1_dropShadow_34_590'
-                                                />
-                                                <feBlend
-                                                    mode='normal'
-                                                    in='SourceGraphic'
-                                                    in2='effect1_dropShadow_34_590'
-                                                    result='shape'
-                                                />
-                                            </filter>
-                                        </defs>
-                                    </svg>
+                                    <Image
+                                        width={20}
+                                        height={20}
+                                        className='w-[auto]'
+                                        src={'/images/apartment/svg/slick-arrow-left.svg'}
+                                        alt='slick-arrow-r'
+                                    />
                                 </span>
                                 <span className='arrow-next flex slick-arrow custom_nexta'>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='40'
-                                        height='40'
-                                        viewBox='0 0 40 40'
-                                        fill='none'>
-                                        <g filter='url(#filter0_d_34_593)'>
-                                            <circle
-                                                cx='20'
-                                                cy='16'
-                                                r='16'
-                                                transform='rotate(-180 20 16)'
-                                                fill='black'
-                                            />
-                                        </g>
-                                        <path
-                                            d='M12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17L12 15ZM28.7071 16.7071C29.0976 16.3166 29.0976 15.6834 28.7071 15.2929L22.3431 8.92893C21.9526 8.53841 21.3195 8.53841 20.9289 8.92893C20.5384 9.31946 20.5384 9.95262 20.9289 10.3431L26.5858 16L20.9289 21.6569C20.5384 22.0474 20.5384 22.6805 20.9289 23.0711C21.3195 23.4616 21.9526 23.4616 22.3431 23.0711L28.7071 16.7071ZM12 17L28 17L28 15L12 15L12 17Z'
-                                            fill='white'
-                                        />
-                                        <defs>
-                                            <filter
-                                                id='filter0_d_34_593'
-                                                x='0'
-                                                y='0'
-                                                width='40'
-                                                height='40'
-                                                filterUnits='userSpaceOnUse'
-                                                colorInterpolationFilters='sRGB'>
-                                                <feFlood
-                                                    floodOpacity='0'
-                                                    result='BackgroundImageFix'
-                                                />
-                                                <feColorMatrix
-                                                    in='SourceAlpha'
-                                                    type='matrix'
-                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                                    result='hardAlpha'
-                                                />
-                                                <feOffset dy='4' />
-                                                <feGaussianBlur stdDeviation='2' />
-                                                <feComposite
-                                                    in2='hardAlpha'
-                                                    operator='out'
-                                                />
-                                                <feColorMatrix
-                                                    type='matrix'
-                                                    values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                                />
-                                                <feBlend
-                                                    mode='normal'
-                                                    in2='BackgroundImageFix'
-                                                    result='effect1_dropShadow_34_593'
-                                                />
-                                                <feBlend
-                                                    mode='normal'
-                                                    in='SourceGraphic'
-                                                    in2='effect1_dropShadow_34_593'
-                                                    result='shape'
-                                                />
-                                            </filter>
-                                        </defs>
-                                    </svg>
+                                    <Image
+                                        width={20}
+                                        height={20}
+                                        className='w-[auto]'
+                                        src={
+                                            '/images/apartment/svg/slick-arrow-right.svg'
+                                        }
+                                        alt='slick-arrow-r'
+                                    />
                                 </span>
                             </Swiper>
                         </div>
@@ -842,120 +603,22 @@ function Apartment() {
                         </SwiperSlide>
                     ))}
                     <span className='arrow-back mr-4  flex slick-arrow custom_prevb'>
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            width='40'
-                            height='40'
-                            viewBox='0 0 40 40'
-                            fill='none'>
-                            <g filter='url(#filter0_d_34_590)'>
-                                <circle cx='20' cy='16' r='16' fill='black' />
-                            </g>
-                            <path
-                                d='M28 17C28.5523 17 29 16.5523 29 16C29 15.4477 28.5523 15 28 15L28 17ZM11.2929 15.2929C10.9024 15.6834 10.9024 16.3166 11.2929 16.7071L17.6569 23.0711C18.0474 23.4616 18.6805 23.4616 19.0711 23.0711C19.4616 22.6805 19.4616 22.0474 19.0711 21.6569L13.4142 16L19.0711 10.3431C19.4616 9.95262 19.4616 9.31946 19.0711 8.92893C18.6805 8.53841 18.0474 8.53841 17.6569 8.92893L11.2929 15.2929ZM28 15L12 15L12 17L28 17L28 15Z'
-                                fill='white'
-                            />
-                            <defs>
-                                <filter
-                                    id='filter0_d_34_590'
-                                    x='0'
-                                    y='0'
-                                    width='40'
-                                    height='40'
-                                    filterUnits='userSpaceOnUse'
-                                    colorInterpolationFilters='sRGB'>
-                                    <feFlood
-                                        floodOpacity='0'
-                                        result='BackgroundImageFix'
-                                    />
-                                    <feColorMatrix
-                                        in='SourceAlpha'
-                                        type='matrix'
-                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                        result='hardAlpha'
-                                    />
-                                    <feOffset dy='4' />
-                                    <feGaussianBlur stdDeviation='2' />
-                                    <feComposite in2='hardAlpha' operator='out' />
-                                    <feColorMatrix
-                                        type='matrix'
-                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                    />
-                                    <feBlend
-                                        mode='normal'
-                                        in2='BackgroundImageFix'
-                                        result='effect1_dropShadow_34_590'
-                                    />
-                                    <feBlend
-                                        mode='normal'
-                                        in='SourceGraphic'
-                                        in2='effect1_dropShadow_34_590'
-                                        result='shape'
-                                    />
-                                </filter>
-                            </defs>
-                        </svg>
+                        <Image
+                            width={20}
+                            height={20}
+                            className='w-[auto]'
+                            src={'/images/apartment/svg/slick-arrow-left.svg'}
+                            alt='slick-arrow-r'
+                        />
                     </span>
                     <span className='arrow-next flex slick-arrow custom_nextb'>
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            width='40'
-                            height='40'
-                            viewBox='0 0 40 40'
-                            fill='none'>
-                            <g filter='url(#filter0_d_34_593)'>
-                                <circle
-                                    cx='20'
-                                    cy='16'
-                                    r='16'
-                                    transform='rotate(-180 20 16)'
-                                    fill='black'
-                                />
-                            </g>
-                            <path
-                                d='M12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17L12 15ZM28.7071 16.7071C29.0976 16.3166 29.0976 15.6834 28.7071 15.2929L22.3431 8.92893C21.9526 8.53841 21.3195 8.53841 20.9289 8.92893C20.5384 9.31946 20.5384 9.95262 20.9289 10.3431L26.5858 16L20.9289 21.6569C20.5384 22.0474 20.5384 22.6805 20.9289 23.0711C21.3195 23.4616 21.9526 23.4616 22.3431 23.0711L28.7071 16.7071ZM12 17L28 17L28 15L12 15L12 17Z'
-                                fill='white'
-                            />
-                            <defs>
-                                <filter
-                                    id='filter0_d_34_593'
-                                    x='0'
-                                    y='0'
-                                    width='40'
-                                    height='40'
-                                    filterUnits='userSpaceOnUse'
-                                    colorInterpolationFilters='sRGB'>
-                                    <feFlood
-                                        floodOpacity='0'
-                                        result='BackgroundImageFix'
-                                    />
-                                    <feColorMatrix
-                                        in='SourceAlpha'
-                                        type='matrix'
-                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                                        result='hardAlpha'
-                                    />
-                                    <feOffset dy='4' />
-                                    <feGaussianBlur stdDeviation='2' />
-                                    <feComposite in2='hardAlpha' operator='out' />
-                                    <feColorMatrix
-                                        type='matrix'
-                                        values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                                    />
-                                    <feBlend
-                                        mode='normal'
-                                        in2='BackgroundImageFix'
-                                        result='effect1_dropShadow_34_593'
-                                    />
-                                    <feBlend
-                                        mode='normal'
-                                        in='SourceGraphic'
-                                        in2='effect1_dropShadow_34_593'
-                                        result='shape'
-                                    />
-                                </filter>
-                            </defs>
-                        </svg>
+                        <Image
+                            width={20}
+                            height={20}
+                            className='w-[auto]'
+                            src={'/images/apartment/svg/slick-arrow-right.svg'}
+                            alt='slick-arrow-r'
+                        />
                     </span>
                 </Swiper>
                 <button className='btn-SeeMore wrap-btn'>See More ➔</button>

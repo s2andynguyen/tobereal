@@ -13,7 +13,6 @@
 .box-Katherine a {
     cursor: pointer;
     color: #f0b90b;
-    font-family: Montserrat;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -32,7 +31,6 @@
 }
 .content-Owner-sz {
     color: #000;
-    font-family: Montserrat;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -45,7 +43,6 @@
 }
 .title-Katherine {
     color: #000;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     line-height: normal !important;

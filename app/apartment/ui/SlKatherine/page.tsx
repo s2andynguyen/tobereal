@@ -2,9 +2,20 @@
 
 import { DiJavascript1 } from 'react-icons/di'
 import './style.css'
+import Skeleton from '@mui/material/Skeleton'
+
 import Image from 'next/image'
 function SlKatherine({ data }: { data: any }) {
     return (
+        // {isLoading ? (: any
+        //     <Skeleton: any
+        //         animation='wave'
+        //         variant='rectangular'
+        //         height={217}
+        //         width={400}
+        //     />
+        // ) : (
+            
         <div className='box-Katherine min-w-[400px]'>
             <div className='wrap-Katherine'>
                 <div className='contents-Katherine'>
@@ -27,6 +38,8 @@ function SlKatherine({ data }: { data: any }) {
             </div>
             <a href='#'>View Videos ➔</a>
         </div>
+        // )}
+    // </SwiperSlide> 
     )
 }
 

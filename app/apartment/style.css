@@ -10,7 +10,6 @@
     background: linear-gradient(90deg, #ffe259 15.1%, #ffa751 85.42%);
     color: #2e2e2e;
     text-align: center;
-    font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -18,7 +17,6 @@
 }
 .title-Calculates {
     color: #000;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     line-height: normal !important;
@@ -26,7 +24,6 @@
 .text-Calculate {
     padding-top: 20px;
     color: #000;
-    font-family: Montserrat;
     /* font-size: 20px; */
     font-style: normal;
     font-weight: 500;
@@ -184,7 +181,6 @@
 }
 .textapartment {
     color: #000;
-    font-family: Montserrat;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
