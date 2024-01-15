@@ -23,7 +23,11 @@ export default function Home() {
     return (
         <MainLayout>
             {/* Heading block with filter */}
-            <HeadingSlideBlock />
+            <HeadingSlideBlock 
+            imageUrl={'/images/home/img-content-headblock.png'} 
+            title='Utility and quality'
+            description='Create a good living or working environment, with the right amenities and quality for you'
+            />
 
             {/* content */}
             <div className='h-full  pb-16'>

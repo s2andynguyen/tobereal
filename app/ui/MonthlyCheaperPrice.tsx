@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
+import { dataHotel } from './model/hotelRoom'
 function MonthlyCheaperPrice() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -25,6 +26,7 @@ function MonthlyCheaperPrice() {
                 pending={pending}
                 imageStyle={{marginLeft: '54px'}}
                 imageUrl='/images/home/hotel-image/frame-cheaper.png'
+                listRoom={dataHotel}
             />
         </>
     )

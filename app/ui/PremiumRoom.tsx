@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
+import { dataPremium } from './model/hotelRoom'
 function PremiumRoom() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -29,6 +30,7 @@ function PremiumRoom() {
                 bgColor='bg-gradient-fade-yellow'
                 bgWidth={333}
                 bgHeight={221}
+                listRoom={dataPremium}
             />
         </div>
     )

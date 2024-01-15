@@ -4,10 +4,12 @@ import { SwiperSlide } from 'swiper/react'
 import { IoIosArrowForward } from 'react-icons/io'
 import Image from 'next/image'
 
-import { dataHotel } from './model/hotelRoom'
+import { dataRealSale } from './model/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
 import NavigationCustom from './swiper-slider/NavigationCustom'
 import RealEstateSaleSkeleton from './skeletons/RealEstateSaleSkeleton'
+import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
+import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 
 function RealEstateSale() {
     const [pending, setPending] = useState(true)
@@ -29,18 +31,18 @@ function RealEstateSale() {
                     <RealEstateSaleSkeleton />
                 ) : (
                     <SwiperWrap>
-                        {dataHotel.map((room, index) => (
+                        {dataRealSale.map((room, index) => (
                             <SwiperSlide key={index} className={`h-[220px] `}>
                                 <div className='w-full h-[220px] flex flex-col justify-between rounded-[10px]'>
                                     {/* content */}
                                     <div className='relative'>
-                                        <div className='h-full'>
+                                        <div className='h-[140px]'>
                                             <Image
-                                                className='rounded-[10px] h-[140px] w-full xl:w-auto bg-cover object-cover bg-center'
+                                                className='rounded-[10px] h-full w-full xl:w-full bg-cover object-cover bg-center'
                                                 src={room.imageUrl}
                                                 width={247}
                                                 height={140}
-                                                alt='hotel-image'
+                                                alt={room.imageUrl}
                                             />
                                         </div>
                                         <p className='absolute top-[15px] left-[14px] text-[14px] font-montserrat font-bold leading-[17px] text-white drop-shadow-context'>
@@ -61,7 +63,8 @@ function RealEstateSale() {
                                 </div>
                             </SwiperSlide>
                         ))}
-                        <NavigationCustom />
+                        <ButtonPrevSwiper />
+                        <ButtonNextSwiper />
                     </SwiperWrap>
                 )}
             </div>

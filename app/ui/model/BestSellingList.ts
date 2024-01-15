@@ -7,7 +7,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-1.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -20,7 +20,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-2.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -33,7 +33,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-3.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -46,7 +46,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-4.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -59,7 +59,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-1.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -72,7 +72,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-2.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -85,7 +85,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-3.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,
@@ -98,7 +98,7 @@ export const BestSellingList:recommendedModel[] = [
         type: 'apartment',
         title: 'Apartemen Maple Park Sunter',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/best-selling-apartment/room-4.jpg',
         price: { 
             daily: 50000,
             monthly: 50000,

@@ -1,12 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { SwiperSlide } from 'swiper/react'
-import { dataHotel } from './model/hotelRoom'
-import SwiperWrap from '@/components/SwiperWrap'
-import HeadTitle from './re-use/HeadTitle'
+import { dataLioStay } from './model/hotelRoom'
 import Image from 'next/image'
-import NavigationCustom from './swiper-slider/NavigationCustom'
+import HeadTitle from './re-use/HeadTitle'
+import SwiperWrap from '@/components/SwiperWrap'
 import HotelLioStaySkeleton from './skeletons/HotelLioStaySkeleton'
+import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
+import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 function HotelLioStay() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -29,15 +30,15 @@ function HotelLioStay() {
                     <HotelLioStaySkeleton />
                 ) : (
                     <SwiperWrap>
-                        {dataHotel.map((room, index) => (
-                            <SwiperSlide key={index} className='h-[220px]'>
+                        {dataLioStay.map((room, index) => (
+                            <SwiperSlide key={index} className='h-[220px] select-none cursor-pointer'>
                                 <div className='h-[220px] relative rounded-[10px] overflow-hidden shadow-gray'>
-                                    <div className='h-full absolute top-0 left-0'>
+                                    <div className='w-full h-full absolute top-0 left-0'>
                                         <Image
                                             src={room.imageUrl}
                                             width={247}
                                             height={140}
-                                            alt='image-room'
+                                            alt={room.imageUrl}
                                             className='h-full w-full object-cover'
                                         />
                                     </div>
@@ -91,7 +92,8 @@ function HotelLioStay() {
                                 </div>
                             </SwiperSlide>
                         ))}
-                        <NavigationCustom />
+                        <ButtonPrevSwiper />
+                        <ButtonNextSwiper />
                     </SwiperWrap>
                 )}
             </div>

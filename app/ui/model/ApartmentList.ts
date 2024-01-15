@@ -1,10 +1,5 @@
 import { recommendedModel } from "./recommendedModel"
 
-// export interface recommendedModel {
-//         monthly?: number,
-//         annual?: number
-//     }
-// }
 export const ApartmentList = [
     {
         id: 1,
@@ -12,7 +7,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-1.jpg',
         liked: true,
         latest: false,
         point: 5,
@@ -28,7 +23,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-2.png',
         liked: false,
         latest: true,
         point: 4,   
@@ -44,7 +39,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-3.jpg',
         liked: true,
         latest: false,
         point: 4,
@@ -60,7 +55,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-4.jpg',
         liked: true,
         latest: true,
         point: 5,
@@ -76,7 +71,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-1.jpg',
         liked: true,
         latest: false,
         point: 5,
@@ -92,7 +87,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-2.png',
         liked: false,
         latest: true,
         point: 4,   
@@ -108,7 +103,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-3.jpg',
         liked: true,
         latest: false,
         point: 4,
@@ -124,7 +119,7 @@ export const ApartmentList = [
         type: 'apartment',
         title: 'Hotel Gran Melia Jakarta',
         place: 'Jakarta',
-        imageUrl: '/images/home/hotel-image/demo-hotel.png',
+        imageUrl: '/images/home/hotel-image/recommend-apartment/room-4.jpg',
         liked: true,
         latest: true,
         point: 5,

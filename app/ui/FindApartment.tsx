@@ -22,7 +22,7 @@ function FindApartment() {
                     <div className='w-full xl:mx-auto xl:w-[965px] lg:h-[190px] shadow-[0_0_5px_0_rgba(240,185,11,0.50)] rounded-[20px]'>
                         <div className='h-full py-4 sm:py-[26px] flex flex-col lg:flex-row lg:gap-0 gap-3'>
                             {/* form */}
-                            <div className='h-full w-full md:w-[300px] xl:w-[375px] px-4 sm:px-6 md:pl-5 xl:pl-[37px] flex flex-col justify-between gap-3 lg:gap-0'>
+                            <div className='h-full w-full md:w-[300px] xl:w-[375px] px-4 sm:px-6 md:pl-5 xl:pl-[37px] flex flex-col sm:flex-row lg:flex-col lg:justify-between gap-3 lg:gap-0'>
                                 {/* Choose City */}
                                 <div className='flex flex-col gap-2'>
                                     <label
@@ -44,7 +44,7 @@ function FindApartment() {
                                 </div>
 
                                 {/* Input Price */}
-                                <div className='flex flex-col gap-2 lg:gap-1'>
+                                <div className='flex flex-col gap-2 lg:gap-1 sm:w-full lg:w-auto'>
                                     <label
                                         htmlFor=''
                                         className='text-[13px] leading-tight font-bold  '>
@@ -52,7 +52,7 @@ function FindApartment() {
                                     </label>
 
                                     {/* input */}
-                                    <div className='grid grid-cols-2 gap-[13px] w-full sm:w-[219px]'>
+                                    <div className='grid grid-cols-2 gap-[13px]  w-full sm:w-full md:w-[219px] '>
                                         <input
                                             className='h-10 w-full border border-[#cdcdcd] rounded-[10px] pl-3 text-sm placeholder:text-[#ACB1C6] focus:outline-none '
                                             type='text'

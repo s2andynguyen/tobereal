@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,6 +10,7 @@ interface HeaderProps {
 }
 const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
     const router = useRouter()
+    const pathName = usePathname()
     const [isShowNavbar, setIsShowNavBar] = useState(false)
     useEffect(() => {
         const handleScrollNavbar = () => {
@@ -26,11 +27,13 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
         <>
             <div className={`w-full`}>
                 <div className='container mx-auto'>
-                    <div className='flex justify-between items-center h-14 md:h-[90px] px-2 md:px-10'>
+                    <div className='flex justify-between items-center h-14 md:h-[90px] px-2 lg:px-10'>
                         {/* logo & nav */}
-                        <div className='flex justify-start items-center gap-10'>
+                        <div className='flex justify-start items-center lg:gap-5 xl:gap-10'>
                             {/* logo */}
-                            <div className='w-[90px] md:w-[115px]'>
+                            <div
+                                className='w-[90px] md:w-[115px] hover:cursor-pointer'
+                                onClick={() => router.push('/')}>
                                 <Image
                                     width={115}
                                     height={60}
@@ -41,25 +44,38 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                             {/* navbar */}
                             <div className='hidden lg:flex gap-3'>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/promotion'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/promotion'
+                                            ? 'bg-gradient-right'
+                                            : ''
+                                    }`}>
                                     Promotion
                                 </Link>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/myproperty'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/myproperty'
+                                            ? 'bg-gradient-right'
+                                            : ''
+                                    }`}>
                                     List My Property
                                 </Link>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/map'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/map' ? 'bg-gradient-right' : ''
+                                    }`}>
                                     MAP
                                 </Link>
                             </div>
                         </div>
-    
+
                         {/* btn  */}
-                        <div className='hidden lg:flex flex-row gap-[34px]'>
+                        <div className='hidden lg:flex flex-row lg:gap-3 xl:gap-[34px]'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
                                 onClick={() => router.push('/auth/register')}>
@@ -71,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                                 Login
                             </button>
                         </div>
-    
+
                         {/* menu-icon on mobile */}
                         <div
                             className='p-3 cursor-pointer hover:drop-shadow-md block lg:hidden'
@@ -85,13 +101,18 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
             </div>
 
             {/* nav on scroll */}
-            <div className={`w-full fixed top-0 z-[9] -translate-y-full transition-all duration-200 bg-white  ${isShowNavbar ? 'translate-y-0 shadow-md' : ''}`}>
+            <div
+                className={`w-full fixed top-0 z-[9] -translate-y-full transition-all duration-200 bg-white  ${
+                    isShowNavbar ? 'translate-y-0 shadow-md' : ''
+                }`}>
                 <div className='container mx-auto'>
-                    <div className='flex justify-between items-center h-14 md:h-[90px] px-2 md:px-10'>
+                    <div className='flex justify-between items-center h-14 md:h-[90px] px-2 lg:px-10'>
                         {/* logo & nav */}
-                        <div className='flex justify-start items-center gap-10'>
+                        <div className='flex justify-start items-center lg:gap-5 xl:gap-10'>
                             {/* logo */}
-                            <div className='w-[90px] md:w-[115px]'>
+                            <div
+                                className='w-[90px] md:w-[115px] hover:cursor-pointer'
+                                onClick={() => router.push('/')}>
                                 <Image
                                     width={115}
                                     height={60}
@@ -102,25 +123,38 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                             {/* navbar */}
                             <div className='hidden lg:flex gap-3'>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/promotion'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/promotion'
+                                            ? 'bg-gradient-right'
+                                            : ''
+                                    }`}>
                                     Promotion
                                 </Link>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/myproperty'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/myproperty'
+                                            ? 'bg-gradient-right'
+                                            : ''
+                                    }`}>
                                     List My Property
                                 </Link>
                                 <Link
-                                    href={'/'}
-                                    className='text-[18px] font-medium font-montserrat px-3 hover:drop-shadow-md'>
+                                    href={'/map'}
+                                    className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
+                                    flex justify-center items-center rounded-[30px] ${
+                                        pathName === '/map' ? 'bg-gradient-right' : ''
+                                    }`}>
                                     MAP
                                 </Link>
                             </div>
                         </div>
 
                         {/* btn  */}
-                        <div className='hidden lg:flex flex-row gap-7'>
+                        <div className='hidden lg:flex flex-row lg:gap-3 xl:gap-[34px]'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
                                 onClick={() => router.push('/auth/register')}>

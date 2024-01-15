@@ -34,13 +34,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                                 alt='icon-navbar-1.png'
                                 className='w-6 h-6'
                             />
-                            <span>Daftarkan Properti Saya</span>
+                            <span>Home</span>
                         </div>
                     </li>
                     <li className='px-5'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
-                            onClick={() => router.push('/')}>
+                            onClick={() => router.push('/promotion')}>
                             <Image
                                 src={'/images/nav/icon-navbar-2.png'}
                                 width={25}
@@ -48,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                                 alt='icon-navbar-2.png'
                                 className='w-6 h-6'
                             />
-                            <span>Pemasaran Rumah</span>
+                            <span>Promotion</span>
                         </div>
                     </li>
                     <li className='px-5'>

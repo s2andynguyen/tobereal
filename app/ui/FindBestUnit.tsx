@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
+import { dataFindBest } from './model/hotelRoom'
 function FindBestUnit() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -27,6 +28,7 @@ function FindBestUnit() {
                 imageStyle={{marginLeft: '44px'}}
                 imageUrl='/images/home/hotel-image/find-best-units.png'
                 bgColor='bg-[#91F2FF]'
+                listRoom={dataFindBest}
             />
         </div>
     )

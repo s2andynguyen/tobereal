@@ -2,7 +2,14 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import HeadBooking from './HeadBooking'
-function HeadingSlideBlock() {
+import { usePathname } from 'next/navigation'
+interface HeadingSlideBlock {
+    title: string,
+    imageUrl: string,
+    description?: string
+}
+const HeadingSlideBlock:React.FC<HeadingSlideBlock> = ({title, description ,imageUrl}) => {
+    const pathname = usePathname()
     const [toggleTab, setToggleTab] = useState('rent')
     const handleSetToggleTab = (value: string) => {
         setToggleTab(value)
@@ -10,7 +17,6 @@ function HeadingSlideBlock() {
     return (
         <div
             className={`w-full h-60 lg:mb-28 sm:h-[321px] bg-headblock bg-no-repeat bg-cover bg-left-top md:bg-center ${
-                //toggleTab === 'rent' ? 'sm:mb-40 mb-72' : 'sm:mb-20 mb-[180px]'
                 toggleTab === 'rent' ? 'sm:mb-48 mb-[340px]' : 'sm:mb-32 mb-[200px]'
             }`}>
             <div className='container mx-auto h-full bg-opacity-35 relative'>
@@ -18,11 +24,12 @@ function HeadingSlideBlock() {
                     {/* title & content */}
                     <div className='flex-[65%] lg:flex-[50%] h-full '>
                         <div className='flex flex-col md:py-6 pt-10'>
-                            <h2 className='h2 drop-shadow-title'>Utility and quality</h2>
-                            <p className='font-medium max-w-[456px] leading-5 text-[sm] md:text-[16px]'>
-                                Create a good living or working environment, with the
-                                right amenities and quality for you
-                            </p>
+                            <h2 className={`h2 drop-shadow-title ${
+                                pathname === '/promotion' ? "max-w-[345px] md:max-w-[300px] mt-5" : ''
+                            }`}>{title}</h2>
+                            {description && <p className='font-medium max-w-[456px] leading-5 text-[sm] md:text-[16px]'>
+                                {description}
+                            </p>}
                         </div>
                     </div>
 
@@ -30,11 +37,13 @@ function HeadingSlideBlock() {
                     <div className='flex-[35%] lg:flex-[50%] h-full '>
                         <div className='h-full flex justify-center items-start'>
                             <Image
-                                src={'/images/home/img-content-headblock.png'}
+                                src={imageUrl}
                                 width={266}
                                 height={227}
-                                className=' md:mt-2 mt-8 '
-                                alt='img-content-headblock.png'
+                                className={`md:mt-2 mt-8 ${
+                                    pathname === '/promotion' ? "w-full h-auto self-start xl:h-full xl:w-auto" : ''
+                                }`}
+                                alt={imageUrl}
                             />
                         </div>
                     </div>

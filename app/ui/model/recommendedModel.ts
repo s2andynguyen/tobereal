@@ -11,9 +11,3 @@ export interface recommendedModel {
     price?: any 
 }
 
-
-// { 
-//     daily?: number,
-//     monthly?: number,
-//     annual?: number
-// }

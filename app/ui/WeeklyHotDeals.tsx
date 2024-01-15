@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
+import { dataFindBest } from './model/hotelRoom'
 function WeeklyHotDeals() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -28,6 +29,7 @@ function WeeklyHotDeals() {
                 bgWidth={203}
                 bgHeight={198}
                 hotDeal
+                listRoom={dataFindBest}
             />
         </div>
     )

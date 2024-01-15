@@ -6,22 +6,22 @@ function Footer() {
         <footer className={`bg-gradient-footer ${ibmPlex.className} relative`}>
             {/* Form subscribe */}
             <div className='container mx-auto absolute -top-[100px] left-0 right-0 w-full'>
-                <div className='px-3'>
+                <div className='px-3 md:px-7 xl:px-[70px]'>
                     <div
-                        className='bg-subscribe-form md:mx-7 xl:mx-[70px] rounded-[20px] h-[210px] bg-no-repeat bg-cover bg-center
+                        className='bg-subscribe-form  rounded-[20px] h-[210px] bg-no-repeat bg-cover bg-center
                         flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 md:px-7 xl:px-14'>
                         {/* content */}
                         <div className='mb-3 lg:mb-0'> 
-                            <p className='font-semibold text-[18px] sm:text-2xl'>
+                            <p className='font-semibold text-[18px] sm:text-2xl text-center sm:text-start'>
                                 Solve Complex Data Challenges.
                             </p>
-                            <p className='font-semibold leading-10 text-[13px]'>
+                            <p className='font-semibold sm:leading-10 leading-[15px] text-[13px] text-center sm:text-start'>
                                 Subscribe to our newsletter for regular updates.
                             </p>
                         </div>
     
                         {/* form */}
-                        <div className='w-auto sm:w-[458px] h-[42px] rounded-[30px] border border-black flex items-center'>
+                        <div className='w-full min-w-[220px] sm:w-[458px] h-[42px] rounded-[30px] border border-black flex items-center'>
                             <input
                                 type='text'
                                 className='text-[18px] flex-grow rounded-[30px] bg-transparent focus:outline-none pl-7
@@ -29,7 +29,7 @@ function Footer() {
                                 placeholder='Enter your Email'
                             />
                             <button
-                                className='w-[80px] sm:w-[120px] md:w-[142px] h-[44px] rounded-[30px] font-semibold text-[14px] sm:text-xl text-white
+                                className='min-w-[80px] sm:w-[120px] md:w-[142px] h-[44px] rounded-[30px] font-semibold text-[14px] sm:text-xl text-white
                               bg-gradient-to-b from-[#FFE259] from-0% to-[#D88A00] outline outline-transparent translate-x-1
                               hover:shadow-gray hover:opacity-85 transition duration-300'>
                                 Subcribe
@@ -44,17 +44,17 @@ function Footer() {
                 <div className='mx-3 sm:mx-[50px] pt-10 mb-24'>
                     <div className='flex xl:gap-0 flex-wrap'>
                         {/* logo */}
-                        <div className='mb-4 lg:mb-0 flex-[100%] md:flex-[33.33%] lg:flex-[20%]'>
+                        <div className='mb-8 lg:mb-0 flex-[100%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
                             <Image  
                                 src={'/images/footer-logo.png'}
                                 width={167}
                                 height={91}
                                 alt='footer-logo'
-                                className='h-auto bg-contain mt-3'
+                                className='w-auto h-[60px] sm:h-[91px] sm:w-auto bg-contain mt-3'
                             />
                         </div>
 
-                        <div className=' mb-4 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[25%] lg:pl-3 xl:pl-8'>
+                        <div className=' mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[25%] pl-12 md:pl-5 lg:pl-3 xl:pl-8'>
                             <div>
                                 <p className='font-bold text-xl'>Popular Search</p>
                                 <ul className='flex flex-col gap-2 pt-[6px] items-start'>
@@ -74,7 +74,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className='mb-4 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[15%]'>
+                        <div className='mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[15%] pl-12 md:pl-12'>
                             <div>
                                 <p className='font-bold text-xl'>About us</p>
                                 <ul className='flex flex-col gap-2 pt-[6px] items-start'>
@@ -91,7 +91,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className='flex-[50%] md:flex-[33.33%] lg:flex-[20%]'>
+                        <div className='flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
                             <div>
                                 <p className='font-bold text-xl'>Contact us</p>
                                 <ul className='flex flex-col gap-2 pt-[6px] items-start'>
@@ -108,8 +108,8 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className='md:max-w-[33.33%] flex-[50%] md:flex-[33.33%] lg:flex-[20%] '>
-                            <div className='flex flex-col gap-[9px] pr-20 sm:pr-8'>
+                        <div className='md:max-w-[33.33%] flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12'>
+                            <div className='flex flex-col gap-[9px] pr-10 sm:pr-8'>
                                 <Image
                                     src={'/images/googleplay.png'}
                                     width={204}

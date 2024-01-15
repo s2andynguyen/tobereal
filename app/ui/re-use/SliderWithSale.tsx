@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { SwiperSlide } from 'swiper/react'
-import { dataHotel } from '../model/hotelRoom'
+import { hotelRoom } from '../model/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
 import CardWithSale from '../re-use/CardWithSale'
 import NavigationCustom from '../swiper-slider/NavigationCustom'
@@ -16,6 +16,7 @@ interface SliderWithSaleProps {
     bgHeight?: number
     imageStyle?: object
     hotDeal?:boolean
+    listRoom: hotelRoom[]
 }
 const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     pending,
@@ -24,7 +25,8 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     bgWidth,
     bgHeight,
     imageStyle,
-    hotDeal
+    hotDeal,
+    listRoom
 }) => {
     return (
         <div className={`pt-[14px] pb-2 ${bgColor}`}>
@@ -36,8 +38,8 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                         width={bgWidth ?? 232}
                         height={bgHeight ?? 218}
                         alt='frame-cheaper'
-                        className={`object-contain mb-3 lg:mb-0 w-auto h-[100px] lg:w-auto lg:h-auto ${
-                            hotDeal ? 'lg:w-[203px] lg:h-auto ml-[38px]': ''
+                        className={`object-contain mb-3 lg:mb-0 w-auto h-[100px] lg:w-auto lg:h-[218px] ${
+                            hotDeal ? 'lg:w-auto lg:h-[198px] ml-[38px]': ''
                         }`}
                         style={imageStyle ?? {}}
                     />
@@ -48,7 +50,7 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                         <CardWidthSaleSlideSkeleton sizeSlide='small' />
                     ) : (
                         <SwiperWrap sizeSlide='small'>
-                            {dataHotel.map((room, index) => (
+                            {listRoom.map((room, index) => (
                                 <SwiperSlide key={index} className='h-[220px]'>
                                     <CardWithSale
                                         imageUrl={room.imageUrl}

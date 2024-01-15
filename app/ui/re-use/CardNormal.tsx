@@ -19,13 +19,15 @@ const CardNormal: React.FC<hotelRoom> = ({
     return (
         <div className='w-full h-[220px] select-none cursor-pointer'>
             <div className=' shadow-gray rounded-[10px] relative'>
-                <Image
-                    src={imageUrl}
-                    width={247}
-                    height={140}
-                    alt='hotel-image'
-                    className='bg-cover object-cover w-full h-[140px] rounded-t-[10px] bg-center'
-                />
+                <div className='h-[140px]'>
+                    <Image
+                        src={imageUrl}
+                        width={247}
+                        height={140}
+                        alt='imageUrl'
+                        className='object-cover h-full w-full rounded-t-[10px] bg-center'
+                    />
+                </div>
                 <div className='h-3 w-3 absolute top-2 left-2 bg-[#E3E3E3] rounded-md flex justify-center items-center'>
                     <Place className='w-[5.5px] h-[7.5px]' />
                 </div>
