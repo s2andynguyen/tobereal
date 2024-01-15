@@ -1,0 +1,11 @@
+ js
+   const [swiperRef1, setSwiperRef1] = useState({
+    isShow:false,
+    content:""
+    })
+    setSwiperRef1(...swiperRef1, isShow:true)
+    
+
+
+ ============   html===========
+ 

@@ -10,7 +10,6 @@
     background: linear-gradient(90deg, #ffe259 15.1%, #ffa751 85.42%);
     color: #2e2e2e;
     text-align: center;
-    font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -18,22 +17,31 @@
 }
 .title-Calculates {
     color: #000;
-    font-family: Montserrat;
-    font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: normal !important;
 }
 .text-Calculate {
     padding-top: 20px;
     color: #000;
-    font-family: Montserrat;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: normal !important;
 }
-/* sd chung */
+.arrow-back {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+}
+.arrow-next {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: 1;
+}
+/* sd chung --- END ---*/
 
 .wrapper {
     position: relative;
@@ -46,7 +54,7 @@
     right: 0;
     left: 0;
     background-image: url(../../assets/svg/bg-yellow.svg);
-    height: 450px;
+    /* height: 450px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,51 +84,7 @@
     font-weight: 700;
     line-height: normal;
 }
-.Gr-RegisterNow {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 20px;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 10px 11.2px 0px rgba(240, 185, 11, 0.25);
-}
-.text-register {
-    color: #000;
 
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.Asset-Gr {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px 0 20px;
-    align-items: center;
-}
-.text-asset {
-    color: #000;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.Asset {
-    padding: 0 20px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    width: 348px;
-    height: 36px;
-    border-radius: 20px;
-    border: 1px solid #cdcdcd;
-    background: #fff;
-}
-.REGISTERED-btn {
-    width: 286px;
-    height: 47px;
-}
 .Management-Services {
     margin: 0 auto;
     display: flex;
@@ -142,6 +106,8 @@
     align-items: center;
     padding: 50px;
 }
+.Wrap-FAQ,
+.Wrap-DevloperManagement,
 .apartmentHouse,
 .wrap-TracesNews,
 .wrap-Testimonials,
@@ -172,95 +138,36 @@
     font-size: 13px !important;
     padding-top: 5px;
 }
-
+/* 
 .g-activies img {
     height: 80px;
     width: 58.96px;
-}
-.box-propertie {
-    border-radius: 10px;
-    border: 1px solid #edd440;
-    background: radial-gradient(
-        61.53% 61.53% at 50.2% 100%,
-        #faff00 0%,
-        rgba(250, 255, 0, 0) 100%
-    );
-    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
-    width: 278px;
-    height: 107px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.content-propertie {
-    font-size: 13px;
-    text-align: center;
-}
-.group-properties {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+} */
+
 .sliders-katherrine {
     display: flex;
     align-items: center;
-
+    padding: 0 20px;
     flex-direction: column;
 }
-.box-Katherine {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width: 490px;
-    height: 217px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
-}
-.box-Katherine a {
-    color: #f0b90b;
-    font-family: Montserrat;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.wrap-Katherine {
-    display: flex;
-    align-items: center;
-}
 
-.Owner-sz {
-    font-size: 13px !important;
-}
-.content-Owner-sz {
-    color: #000;
-    font-family: Montserrat;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.wrap-Katherine img {
-    padding-left: 30px;
-    padding-bottom: 100px;
-    right: 0;
-    top: 0;
-}
+
 .swiper-wrapper {
     display: flex;
+    align-items: center;
+    min-height: 300px;
+    padding: 0 20px;
+    /* margin-left: 30px; */
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    display: none;
 }
 .btn-SeeMore {
     width: 355px !important;
     height: 40px !important;
 }
 .apartmentHouse {
-    flex-direction: row !important;
     justify-content: space-between !important;
 }
 .register-now-btn {
@@ -274,11 +181,43 @@
 }
 .textapartment {
     color: #000;
-    font-family: Montserrat;
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     padding: 20px 0;
 }
+.questions {
+    height: 322px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+}
+.text-questions {
+    padding: 8px;
+    font-size: 16px !important;
 
+    border-bottom: #cdcdcd solid 1px;
+}
+
+.boxAnswer {
+    height: 60px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
+    padding: 0 20px 0 20px;
+}
+
+/* .slider-wrapper {
+    display: flex;
+    align-items: center;
+    
+} */
+.line-propertie{
+    position: absolute;
+    margin-top: 65px
+}
