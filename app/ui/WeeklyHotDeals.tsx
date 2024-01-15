@@ -27,6 +27,7 @@ function WeeklyHotDeals() {
                 // imageStyle={{marginLeft: '30px'}}
                 bgWidth={203}
                 bgHeight={198}
+                hotDeal
             />
         </div>
     )

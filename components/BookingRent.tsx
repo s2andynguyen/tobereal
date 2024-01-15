@@ -95,7 +95,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
             {toggleTab === 'rent' ? (
                 <div className='flex flex-col gap-2 sm:gap-[20px] p-4 h-full '>
                     {/* row 1 */}
-                    <div className='flex flex-col lg:flex-row items-start justify-between gap-3 pt-2'>
+                    <div className='flex flex-col lg:flex-row items-start justify-between gap-3'>
                         {/* group date */}
                         <div className='flex items-center justify-start lg:justify-center w-full lg:w-auto gap-4'>
                             <button
@@ -228,9 +228,9 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                     </div>
                 </div>
             ) : (
-                <div className='flex flex-col gap-3 lg:gap-[20px] p-4 min-h-[140px] '>
+                <div className='flex flex-col justify-between gap-3 lg:gap-[15px] p-4 min-h-[132px] '>
                     {/* row 1 */}
-                    <div className='flex flex-col lg:flex-row pt-2 gap-3 lg:gap-8'>
+                    <div className='flex flex-col lg:flex-row gap-3 lg:gap-8'>
                         {/* location search */}
                         <div className='flex items-center gap-3 flex-[50%] max-w-[50%] w-full'>
                             <div className='flex items-center flex-1 border border-[#cdcdcd] rounded-[20px] bg-[#fefdfe] pr-2'>

@@ -13,7 +13,7 @@ function OthersBottomCard() {
                         src={'/images/home/bottom-card/capa_1.png'}
                         width={179}
                         height={161}
-                        className='w-auto h-auto object-contain'
+                        className='w-[179px] h-auto object-cover flex-shrink-0'
                         alt='capa_1.png'
                     />
                     <div>
@@ -43,13 +43,13 @@ function OthersBottomCard() {
                     Why You Should Choose Apartment By ............?
                 </h2>
                 <div className='flex flex-col md:flex-row items-center gap-4 md:gap-8 lg:gap-[76px] h-auto md:h-[280px] lg:h-[220px] w-full bg-gradient-card rounded-[10px] py-4 px-5  md:py-6 md:pr-[30px] md:pl-[70px]'>
-                    <Image
-                        src={'/images/home/bottom-card/capa_2.png'}
-                        width={169}
-                        height={149}
-                        className='w-auto h-auto object-contain'
-                        alt='capa_2.png'
-                    />
+                        <Image
+                            src={'/images/home/bottom-card/capa_2.png'}
+                            width={169}
+                            height={149}
+                            className='w-[169px] h-auto object-cover flex-shrink-0'
+                            alt='capa_2.png'
+                        />
                     <div>
                         <p className='text-[13px] font-bold font-montserrat leading-4 mb-5'>
                             A wide selection of units both fully furnished and unfurnished{' '}
@@ -81,7 +81,7 @@ function OthersBottomCard() {
                         src={'/images/home/bottom-card/capa_3.png'}
                         width={158}
                         height={167}
-                        className='w-auto h-auto object-contain'
+                        className='w-[158px] h-auto object-cover flex-shrink-0'
                         alt='capa_3.png'
                     />
                     <div>

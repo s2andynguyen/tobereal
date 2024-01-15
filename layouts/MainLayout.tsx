@@ -9,7 +9,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
         setIsShowSidebar(!isShowSidebar);
     }
     return (
-        <div className='min-h-[6000px]'>
+        <div className=''>
             <Header showSidebar={handleSetSidebar} />
             <Sidebar isShow={isShowSidebar} hiddenSidebar={handleSetSidebar}/>
             {children}

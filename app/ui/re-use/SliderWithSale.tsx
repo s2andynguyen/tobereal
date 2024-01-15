@@ -15,6 +15,7 @@ interface SliderWithSaleProps {
     bgWidth?: number
     bgHeight?: number
     imageStyle?: object
+    hotDeal?:boolean
 }
 const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     pending,
@@ -22,7 +23,8 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     imageUrl,
     bgWidth,
     bgHeight,
-    imageStyle
+    imageStyle,
+    hotDeal
 }) => {
     return (
         <div className={`pt-[14px] pb-2 ${bgColor}`}>
@@ -34,7 +36,9 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                         width={bgWidth ?? 232}
                         height={bgHeight ?? 218}
                         alt='frame-cheaper'
-                        className='bg-cover object-contain w-auto mb-3 lg:mb-0 h-[100px] lg:w-auto lg:h-auto'
+                        className={`object-contain mb-3 lg:mb-0 w-auto h-[100px] lg:w-auto lg:h-auto ${
+                            hotDeal ? 'lg:w-[203px] lg:h-auto ml-[38px]': ''
+                        }`}
                         style={imageStyle ?? {}}
                     />
                     {/* w-[120px] lg:w-[232px] lg:h-[218px] */}
