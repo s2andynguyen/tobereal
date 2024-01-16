@@ -49,31 +49,14 @@
     font-size: 16px;
 }
 
-.group {
-    background-color: #fff;
-    border: 1px solid;
-    border-color: #cdcdcd;
-    border-radius: 20px;
-    height: 36px;
-    width: 348px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.text-group {
-    color: #000;
+.registered {
+    color: #2d2d2d;
     font-family: "Montserrat-Medium", Helvetica;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
-    height: 18px;
-    letter-spacing: 0;
-    line-height: normal;
     text-align: center;
-    white-space: nowrap;
+    width: 130px;
 }
-
 
 .button {
     all: unset;
@@ -250,12 +233,22 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+
 }
 
 .container_card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    padding: 50px;
+    padding: 100px;
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: rgb(0, 0, 0);
+}
+
+.css-sxxdbu-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding: 4px;
+    border-radius: 50px;
+    margin: 5px;
 }

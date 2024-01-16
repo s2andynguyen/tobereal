@@ -11,6 +11,8 @@ import Page from './ui/Product/page';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -20,7 +22,6 @@ export default function House() {
       <div className="background">
         <img src={"/images/house/Page.png"} alt="" />
       </div>
-
       <div className="menu">
         <div className="text_searching">
           Searching for!
@@ -30,20 +31,49 @@ export default function House() {
           <div className="text_resgister">
             Resgister Now
           </div>
-          <div className="group">
-            <div className="text-group">Asset type</div>
-            <img className="vector" alt="" src="/images/house/svg/Vector 2.svg" />
-          </div>
-          <div className="group">
-            <div className="text-group">Interior</div>
-            <img className="vector" alt="" src="/images/house/svg/Vector 2.svg" />
-          </div>
-          <div className="group">
-            <div className="text-group">Asset</div>
-            <img className="vector" alt="" src="/images/house/svg/Vector 2.svg" />
-          </div>
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={City}
+              sx={{
+                width: 300,
+                '& .MuiOutlinedInput-root': {
+                  padding: '10',
+                  borderRadius: '30px',
+                  margin: '10px'
+                },
+              }}
+            renderInput={(params) => <TextField {...params} label="Asset type" placeholder="Asset type" />} />
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={City}
+            sx={{
+              width: 300,
+              '& .MuiOutlinedInput-root': {
+                padding: '10',
+                borderRadius: '30px',
+                margin: '10px'
+              },
+            }}
+            renderInput={(params) => <TextField {...params} label="Interior" placeholder="Interior" />} />
+
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={City}
+            sx={{
+              width: 300,
+              '& .MuiOutlinedInput-root': {
+                padding: '10',
+                borderRadius: '30px',
+                margin: '10px'
+              },
+            }}
+            renderInput={(params) => <TextField {...params} label="Asset " placeholder="Asset" />} />
+
           <button className="button">
-            <div className="registered">REGISTERED</div>
+            <a href='#' className="registered">REGISTERED</a>
           </button>
         </div>
       </div>
@@ -268,3 +298,18 @@ export default function House() {
   )
 }
 
+const City = [
+  { label: 'Hồ Chí Minh' },
+  { label: 'An Giang' },
+  { label: 'Vũng Tàu' },
+  { label: 'Bạc Liêu' },
+  { label: 'Nha Trang' },
+  { label: 'Quảng Ngãi' },
+  { label: 'Đắk Lắk' },
+  { label: 'Hà Nội' },
+  { label: 'Thanh Hoá' },
+  { label: 'Sapa' },
+  { label: 'Phú Quốc' },
+  { label: 'Trường Sa' },
+  { label: 'Hoàng Sa' },
+];
