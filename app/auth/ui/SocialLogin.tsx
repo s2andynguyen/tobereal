@@ -6,7 +6,6 @@ import { usePathname, useRouter } from 'next/navigation'
 function SocialLogin() {
     const router = useRouter()
     const pathname = usePathname()
-    console.log('pathname :>> ', pathname);
     return (
         <div className={`flex flex-col items-center gap-10 mt-3 ${pathname==='/auth/login'? 'md:mt-16': 'md:mt-0'}`}>
             {/* seperate */}

@@ -6,7 +6,7 @@ export default function AuthLayout ({
     return (
       <div className="page bg-[#dce6ef]">
         <div className="h-full container max-w-[1440px] mx-auto">
-          {children}
+          {children}  
         </div>
       </div>
     )
