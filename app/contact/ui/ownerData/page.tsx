@@ -28,20 +28,20 @@ export default function OwnerData() {
 
             <Autocomplete
                 disablePortal
-                id="combo-box-demo"
+                id="combo-box"
                 options={City}
                 sx={{
                     width: 300,
                     '& .MuiOutlinedInput-root': {
                         padding: '10',
                         borderRadius: '30px',
-                        margin:'10px'
+                        margin: '10px'
                     },
                 }}
                 renderInput={(params) => <TextField {...params} label="City" placeholder="City" />} />
             <Autocomplete
                 disablePortal
-                id="combo-box-demo"
+                id="combo-box"
                 options={TOBEREAL}
                 sx={{
                     width: 300,
@@ -54,7 +54,7 @@ export default function OwnerData() {
                 renderInput={(params) => <TextField {...params} label="How did you know about TO BE REAL?" placeholder="Select Source Type" />} />
             <Autocomplete
                 disablePortal
-                id="combo-box-demo"
+                id="combo-box"
                 options={City}
                 sx={{
                     width: 300,
@@ -67,7 +67,7 @@ export default function OwnerData() {
                 renderInput={(params) => <TextField {...params} label="Property Type" placeholder="Property Type" />} />
             <Autocomplete
                 disablePortal
-                id="combo-box-demo"
+                id="combo-box"
                 options={City}
                 sx={{
                     width: 300,

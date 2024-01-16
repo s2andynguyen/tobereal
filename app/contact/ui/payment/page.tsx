@@ -21,11 +21,11 @@ export default function Payment() {
             <p className="text_card">You are entitled to a referral fee for properties that successfully join travelio.com. Please fill in the following details to expedite the payment process:</p>
             <Autocomplete
                 disablePortal
-                id="combo-box-demo"
+                id="combo-box"
                 options={momo}
                 sx={{
                     width: 400,
-                    padding:5,
+                    padding: 5,
                     '& .MuiOutlinedInput-root': {
                         padding: '10px',
                         borderRadius: '30px'
@@ -76,7 +76,7 @@ export default function Payment() {
                 <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} className="mx_auto" onChange={setCaptcha} />
             </form>
             <div className="payment_product">
-                <p className="payment_card">
+                <div className="payment_card">
                     Payment is made in the following month (maximum 20th) after the property goes live.
                     <br />
                     Property is a new property that has never previously joined travelio.com and is not in active condition.
@@ -86,8 +86,8 @@ export default function Payment() {
                     Referral is not a family of one house and is not an affiliate of Travelio.
                     <br />
                     Travelio has the right to remove the reference fee if there is fraud from the program.
-                </p>
-                <p className="dengan_card">
+                </div>
+                <div className="dengan_card">
                     <span className="dengan_text">
                         Dengan meng-klik Daftar, Anda telah menyetujui Syarat dan Ketentuan diatas dan telah membaca{" "}
                     </span>
@@ -99,7 +99,7 @@ export default function Payment() {
                         yang berlaku
                         <br />
                     </span>
-                </p>
+                </div>
             </div>
         </div>
     );

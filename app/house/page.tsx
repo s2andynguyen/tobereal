@@ -1,5 +1,5 @@
 'use client'
-import './page.css'
+import './styles.css'
 import './mobi.css'
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -31,22 +32,22 @@ export default function House() {
           <div className="text_resgister">
             Resgister Now
           </div>
-            <Autocomplete
-              disablePortal
-              id="combo-box-demo"
-              options={City}
-              sx={{
-                width: 300,
-                '& .MuiOutlinedInput-root': {
-                  padding: '10',
-                  borderRadius: '30px',
-                  margin: '10px'
-                },
-              }}
+          <Autocomplete
+            disablePortal
+            id="combo-box"
+            options={City}
+            sx={{
+              width: 300,
+              '& .MuiOutlinedInput-root': {
+                padding: '10',
+                borderRadius: '30px',
+                margin: '10px'
+              },
+            }}
             renderInput={(params) => <TextField {...params} label="Asset type" placeholder="Asset type" />} />
           <Autocomplete
             disablePortal
-            id="combo-box-demo"
+            id="combo-box"
             options={City}
             sx={{
               width: 300,
@@ -60,7 +61,7 @@ export default function House() {
 
           <Autocomplete
             disablePortal
-            id="combo-box-demo"
+            id="combo-box"
             options={City}
             sx={{
               width: 300,

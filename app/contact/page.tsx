@@ -1,5 +1,5 @@
 'use client'
-import "./page.css";
+import "./styles.css";
 import "./mobi.css";
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -59,8 +59,8 @@ export default function Contact() {
     };
 
     return (
-        <Box className="form_background" sx={{ width: '40%'  }}>
-            <div className="frame_banner"></div>
+        <Box className="form_background" sx={{ width: '40%' }}>
+            <p className="frame_banner"></p>
             <div >
                 {allStepsCompleted() ? (
                     <React.Fragment>
@@ -74,8 +74,7 @@ export default function Contact() {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        <Typography sx={{ mt: 3, mb: 1, py: 1 }}>
-
+                        <div className="form_contact  mt: 3, mb: 1, py: 1"  >
                             <div className="form">
                                 <div className="basic_information">
                                     <a href="#">Basic Information</a>
@@ -110,7 +109,7 @@ export default function Contact() {
 
                             </div>
 
-                        </Typography>
+                        </div>
                     </React.Fragment>
                 )}
             </div>
