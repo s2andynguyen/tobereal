@@ -10,7 +10,7 @@ export const useIsMobileScreen = () => {
             setWidth(window.innerWidth)
         }
         if (typeof window !== 'undefined') {
-            window.addEventListener('load', handleWindowChange)
+             window.addEventListener('load', handleWindowChange)
         }
 
         updateWidth()
