@@ -20,7 +20,7 @@ interface SliderWithSaleProps {
 }
 const SliderWithSale: React.FC<SliderWithSaleProps> = ({
     pending,
-    bgColor = 'bg-zinc-200',
+    bgColor = 'bg-[#e3e3e3]',
     imageUrl,
     bgWidth,
     bgHeight,
@@ -39,7 +39,7 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                         height={bgHeight ?? 218}
                         alt='frame-cheaper'
                         className={`object-contain mb-3 lg:mb-0 w-auto h-[100px] lg:w-auto lg:h-[218px] ${
-                            hotDeal ? 'lg:w-auto lg:h-[198px] ml-[38px]': ''
+                            hotDeal ? 'lg:w-auto lg:h-[198px] lg:ml-[38px]': 'lg:ml-[44px]'
                         }`}
                         style={imageStyle ?? {}}
                     />

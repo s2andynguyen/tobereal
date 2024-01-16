@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                     isShow ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 <ul>
-                    <li className='px-5'>
+                    <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
@@ -37,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             <span>Home</span>
                         </div>
                     </li>
-                    <li className='px-5'>
+                    <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/promotion')}>
@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             <span>Promotion</span>
                         </div>
                     </li>
-                    <li className='px-5'>
+                    <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             <span>Pengelolaan Apartemen</span>
                         </div>
                     </li>
-                    <li className='px-5'>
+                    <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>
@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             <span>Referensikan Pemilik</span>
                         </div>
                     </li>
-                    <li className='px-5'>
+                    <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => router.push('/')}>

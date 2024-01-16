@@ -25,7 +25,6 @@ function FindBestUnit() {
             />
             <SliderWithSale
                 pending={pending}
-                imageStyle={{marginLeft: '44px'}}
                 imageUrl='/images/home/hotel-image/find-best-units.png'
                 bgColor='bg-[#91F2FF]'
                 listRoom={dataFindBest}

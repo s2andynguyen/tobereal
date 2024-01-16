@@ -200,9 +200,9 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                 bolder
                             />
                             <button
-                                className='h-10 w-36 bg-gradient-bottom rounded-[20px] flex justify-between items-center px-3 hover:shadow-md
+                                className='h-10 sm:w-36 bg-gradient-bottom rounded-[20px] flex justify-between items-center px-1 sm:px-3 hover:shadow-md
                                             transition-all duration-300'>
-                                <p className='min-w-[82px] text-sm font-medium'>
+                                <p className='hidden sm:block sm:min-w-[82px] text-sm font-medium'>
                                     Search Now
                                 </p>
                                 <svg

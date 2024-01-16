@@ -1,14 +1,17 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import { ibmPlex } from '@/assets/styles/fonts'
+import { useRouter } from 'next/navigation'
 function Footer() {
+    const router = useRouter()
     return (
         <footer className={`bg-gradient-footer ${ibmPlex.className} relative`}>
             {/* Form subscribe */}
             <div className='container mx-auto absolute -top-[100px] left-0 right-0 w-full'>
                 <div className='px-3 md:px-7 xl:px-[70px]'>
                     <div
-                        className='bg-subscribe-form  rounded-[20px] h-[210px] bg-no-repeat bg-cover bg-center
+                        className='bg-subscribe-form rounded-[20px] h-[210px] bg-no-repeat bg-cover bg-center
                         flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 md:px-7 xl:px-14'>
                         {/* content */}
                         <div className='mb-3 lg:mb-0'> 
@@ -21,17 +24,17 @@ function Footer() {
                         </div>
     
                         {/* form */}
-                        <div className='w-full min-w-[220px] sm:w-[458px] h-[42px] rounded-[30px] border border-black flex items-center'>
+                        <div className='w-full min-w-[280px] md:w-[458px] h-[42px]  mt-5 sm:mt-0 rounded-[30px] border border-black flex items-center'>
                             <input
                                 type='text'
-                                className='text-[18px] flex-grow rounded-[30px] bg-transparent focus:outline-none pl-7
+                                className=' sm:text-[18px] flex-grow rounded-[30px] bg-transparent focus:outline-none pl-2 sm:pl-7
                                  text-black placeholder:text-black'
                                 placeholder='Enter your Email'
                             />
                             <button
                                 className='min-w-[80px] sm:w-[120px] md:w-[142px] h-[44px] rounded-[30px] font-semibold text-[14px] sm:text-xl text-white
                               bg-gradient-to-b from-[#FFE259] from-0% to-[#D88A00] outline outline-transparent translate-x-1
-                              hover:shadow-gray hover:opacity-85 transition duration-300'>
+                              hover:shadow-gray hover:bg-[#eca62d] transition duration-300'>
                                 Subcribe
                             </button>
                         </div>
@@ -43,6 +46,7 @@ function Footer() {
                 {/* Footer list */} 
                 <div className='mx-3 sm:mx-[50px] pt-10 mb-24'>
                     <div className='flex xl:gap-0 flex-wrap'>
+                        
                         {/* logo */}
                         <div className='mb-8 lg:mb-0 flex-[100%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
                             <Image  
@@ -50,10 +54,11 @@ function Footer() {
                                 width={167}
                                 height={91}
                                 alt='footer-logo'
-                                className='w-auto h-[60px] sm:h-[91px] sm:w-auto bg-contain mt-3'
+                                className='w-auto h-[60px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md'
+                                onClick={() => router.push('/')}
                             />
                         </div>
-
+                        {/* Popular Search */}
                         <div className=' mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[25%] pl-12 md:pl-5 lg:pl-3 xl:pl-8'>
                             <div>
                                 <p className='font-bold text-xl'>Popular Search</p>
@@ -73,8 +78,8 @@ function Footer() {
                                 </ul>
                             </div>
                         </div>
-
-                        <div className='mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[15%] pl-12 md:pl-12'>
+                        {/* About us */}
+                        <div className='mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[15%] pl-12 lg:pl-0'>
                             <div>
                                 <p className='font-bold text-xl'>About us</p>
                                 <ul className='flex flex-col gap-2 pt-[6px] items-start'>
@@ -90,7 +95,7 @@ function Footer() {
                                 </ul>
                             </div>
                         </div>
-
+                        {/* Contact us */}
                         <div className='flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
                             <div>
                                 <p className='font-bold text-xl'>Contact us</p>
@@ -107,8 +112,8 @@ function Footer() {
                                 </ul>
                             </div>
                         </div>
-
-                        <div className='md:max-w-[33.33%] flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12'>
+                        {/* Install on Appstore or GooglePlay */}
+                        <div className='md:max-w-[33.33%] flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12 lg:pl-0'>
                             <div className='flex flex-col gap-[9px] pr-10 sm:pr-8'>
                                 <Image
                                     src={'/images/googleplay.png'}
@@ -127,6 +132,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
+                    {/* end list */}
                 </div>
             </div>
             <div className='h-px w-full bg-[#b6b6b6]'></div>
