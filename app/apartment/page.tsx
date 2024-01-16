@@ -7,7 +7,8 @@ import React, { useState } from 'react'
 import './style.css'
 import Image from 'next/image'
 // icon
-import { SlArrowDown } from 'react-icons/sl'
+import { IoAdd, IoRemoveOutline } from 'react-icons/io5'
+import { SlArrowDown, SlArrowUp } from 'react-icons/sl'
 // mui
 import Skeleton from '@mui/material/Skeleton'
 // swiper
@@ -24,19 +25,61 @@ import { Testimonials } from './katherrinesData'
 import { GR_properties } from './propertiesGr'
 import { Services_TOBE } from './frame'
 import { Traces_NEWS } from './News'
+import { tabContents } from './FrequentlyQuestions'
 // compoment
 import RegisterNow from '@/components/RegisterNow/page'
 import MainLayout from '@/layouts/MainLayout'
+import classNames from 'classnames'
+
 // main Apartment
 function Apartment() {
     // state
-    const [swiperRef, setSwiperRef] = useState(null)
-    const [swiperRef1, setSwiperRef1] = useState(null)
 
+    const [activeTabIndex, setActiveTabIndex] = useState<number>(0)
+    const [visibleContentIndex, setVisibleContentIndex] = useState<number | null>(null)
+
+    const [titleIconStates, setTitleIconStates] = useState<number[]>(
+        Array(tabContents.length).fill(1)
+    )
+    const [textIconStates, setTextIconStates] = useState<number[]>(
+        Array(tabContents[0].content.length).fill(3)
+    )
+
+    const handleTabClick = (tabIndex: number) => {
+        setActiveTabIndex(tabIndex)
+        setVisibleContentIndex(null)
+        setTitleIconStates((prevStates) =>
+            prevStates.map((state, index) => (index === tabIndex ? 2 : state))
+        )
+    }
+
+    const handleSubContentClick = (subContentIndex: number) => {
+        setVisibleContentIndex(
+            visibleContentIndex === subContentIndex ? null : subContentIndex
+        )
+        setTextIconStates((prevStates) =>
+            prevStates.map((state, index) =>
+                index === subContentIndex ? (state === 3 ? 4 : 3) : state
+            )
+        )
+    }
+    // icon FAQ
+    const getTitleIcon = (tabIndex: number) => {
+        // Check if the current tab is active and return the appropriate icon
+        return tabIndex === activeTabIndex && titleIconStates[tabIndex] === 2 ? (
+            <IoAdd />
+        ) : (
+            <IoRemoveOutline />
+        )
+    }
+
+    const getTextIcon = (subContentIndex: number) => {
+        return textIconStates[subContentIndex] === 3 ? <SlArrowUp /> : <SlArrowDown />
+    }
+
+    // state
     const [isShowContent, setIsShowContent] = useState(true)
 
-    // mui
-    const isLoading = true
     return (
         <MainLayout>
             <div className='wrapper bg-white mb-32'>
@@ -369,6 +412,9 @@ function Apartment() {
                                     slidesPerView: 1
                                 },
                                 960: {
+                                    slidesPerView: 1
+                                },
+                                1200: {
                                     slidesPerView: 2
                                 }
                             }}
@@ -676,71 +722,53 @@ function Apartment() {
                         alt='apartmentHouse'
                     />
                 </div>
+
                 <div className='Wrap-FAQ container'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         Frequently Asked Questions(FAQ)
                     </h3>
                     <div className='flex flex-col gap-12 lg:flex-row'>
                         <div className='questions max-w-[420px] md:min-w-[490px]'>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                - How to Get Started & TPM Areas
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Apartment Management Services by Travelio
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Property List & Standardization
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Guests & Payments{' '}
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Security
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Prices & Fees
-                            </a>
-                            <a
-                                href='#'
-                                className='title-Calculates text-xl md:text-2xl text-questions w-[364px] md:w-[434px]'>
-                                + Property Regulations
-                            </a>
+                            {tabContents.map((tab, tabIndex) => (
+                                <button
+                                    className='text-questions title-Calculates text-start text-xl flex md:text-2xl w-[364px] md:w-[434px]'
+                                    key={tabIndex}
+                                    onClick={() => handleTabClick(tabIndex)}>
+                                    {getTitleIcon(tabIndex)}
+                                    {tab.title}
+                                </button>
+                            ))}
                         </div>
-                        <div className='answers flex flex-col gap-7'>
-                            <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                                <p className='text-asset'>
-                                    How easy is it to get started?
-                                </p>
-                                <SlArrowDown />
-                            </div>
-                            <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                                <p className='text-asset'>
-                                    Does the apartment have to be fully furnished?
-                                </p>
-                                <SlArrowDown />
-                            </div>
-                            <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                                <p className='text-asset'>Area Coverage anywhere?</p>
-                                <SlArrowDown />
-                            </div>
-                            <div className='boxAnswer flex justify-between items-center max-w-[420px] md:min-w-[490px]'>
-                                <p className='text-asset'>
-                                    What type of contract should I sign?
-                                </p>
-                                <SlArrowDown />
-                            </div>
+
+                        <div className='content-answers flex flex-col'>
+                            <ul>
+                                {tabContents[activeTabIndex].content.map(
+                                    (subContent, subContentIndex) => (
+                                        <li
+                                            key={subContent.id}
+                                            className={classNames(
+                                                'list-item max-w-[420px] md:min-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
+                                            )}>
+                                            <div
+                                                className='flex justify-between'
+                                                onClick={() =>
+                                                    handleSubContentClick(subContentIndex)
+                                                }>
+                                                <span>{subContent.text}</span>
+                                                {getTextIcon(subContentIndex)}
+                                            </div>
+                                            {visibleContentIndex === subContentIndex && (
+                                                <div className='show-content max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
+                                                    {
+                                                        tabContents[activeTabIndex]
+                                                            .showContent[subContentIndex]
+                                                    }
+                                                </div>
+                                            )}
+                                        </li>
+                                    )
+                                )}
+                            </ul>
                         </div>
                     </div>
                 </div>
