@@ -59,8 +59,8 @@ export default function Contact() {
     };
 
     return (
-        <Box className="form_background" sx={{ width: '40%' }}>
-            <div className="image_frame"></div>
+        <Box className="form_background" sx={{ width: '40%'  }}>
+            <div className="frame_banner"></div>
             <div >
                 {allStepsCompleted() ? (
                     <React.Fragment>

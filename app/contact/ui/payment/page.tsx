@@ -31,45 +31,45 @@ export default function Payment() {
                         borderRadius: '30px'
                     },
                 }}
-                renderInput={(params) => <TextField {...params} label="Bank" placeholder="Bank" />} />
+                renderInput={(params) => <TextField {...params} label="Bank" id="p-10" placeholder="Bank" />} />
             <form method="post" className="form_group" onSubmit={onSubmit}>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="number" className="form_control">Bank Account number</label>
                     <input className="text" type="number" id="number" placeholder="Bank Account number" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="text" className="form_control">Bank Account Name</label>
                     <input className="text" type="text" id="text" placeholder="Bank Account Name" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="text" className="form_control">Bank Account Branch</label>
                     <input className="text" type="text" id="text" placeholder="Whatsapp" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">Bank Account City</label>
                     <input className="text" type="text" id="text" placeholder="Bank Account City" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">KTP</label>
                     <input className="text" type="text" id="Whatsapp" placeholder="File Choice" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">KTP</label>
                     <input className="text" type="text" id="Whatsapp" placeholder="Property Type" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">KTP Number</label>
                     <input className="text" type="text" id="Whatsapp" placeholder="Property Type  " />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">NPWP Number</label>
                     <input className="text" type="text" id="Whatsapp" placeholder="NPWP Number" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">NPWP Ownership</label>
                     <input className="text" type="text" id="Whatsapp" placeholder="NPWP Ownership" />
                 </div>
-                <div className="p-3">
+                <div className="p-2">
                     <label htmlFor="whatsapp" className="form_control">NPWP Address</label>
                     <textarea placeholder="NPWP Ownership" rows={4} cols={40} className='Address' />
                 </div>

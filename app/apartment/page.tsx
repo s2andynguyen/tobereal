@@ -1,9 +1,9 @@
 import React from 'react'
 
-function House() {
+function Apartment() {
   return (
-    <div>House</div>
+    <div>Apartment</div>
   )
 }
 
-export default House
+export default Apartment
