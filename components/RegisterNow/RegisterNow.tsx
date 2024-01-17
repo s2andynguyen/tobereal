@@ -7,27 +7,9 @@ import Autocomplete from '@mui/material/Autocomplete'
 import { SlArrowDown } from 'react-icons/sl'
 function RegisterNow() {
     return (
-        <div className='Gr-RegisterNow'>
+        <div className='Gr-RegisterNow p-3 md:p-5'>
             <p className='text-register'>Register Now</p>
             <div className='Asset-Gr'>
-                <div className='Asset'>
-                    <p className='text-asset'>Asset type</p>
-                    <SlArrowDown />
-                </div>
-                <div className='Asset'>
-                    <p className='text-asset'>Interior</p>
-                    {/* <Image
-                        width={16}
-                        height={8}
-                        src={'/images/apartment/svg/icon-register.svg'}
-                        alt='abc'
-                    /> */}
-                    <SlArrowDown />
-                </div>
-                {/* <div className='Asset'>
-                    <p className='text-asset'>Asset</p>
-                    <img src={'/images/apartment/svg/icon-register.svg'} />
-                </div> */}
                 <Autocomplete
                     disablePortal
                     id='combo-box-demo'
@@ -46,8 +28,62 @@ function RegisterNow() {
                     }}
                     renderInput={(params) => (
                         <div className='relative'>
-                            <TextField {...params} label='Movie' />
-                            <div className='absolute top-3 right-5'><SlArrowDown /></div>
+                            <TextField {...params} label='Asset type' />
+                            <div className='absolute top-3 right-5'>
+                                <SlArrowDown />
+                            </div>
+                        </div>
+                    )}
+                />
+
+                <Autocomplete
+                    disablePortal
+                    id='combo-box-demo'
+                    options={top100Films}
+                    sx={{
+                        width: 348,
+                        // height: 46,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '0px',
+                            borderRadius: '20px'
+                        },
+                        '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
+                        '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
+                        '& .MuiInputBase-root': { color: 'black' } // Color of the input text
+                        // '& .MuiOutlinedInput-notchedOutline': { borderColor: 'red' } // Color of the input outline
+                    }}
+                    renderInput={(params) => (
+                        <div className='relative'>
+                            <TextField {...params} label='Interior' />
+                            <div className='absolute top-3 right-5'>
+                                <SlArrowDown />
+                            </div>
+                        </div>
+                    )}
+                />
+
+                <Autocomplete
+                    disablePortal
+                    id='combo-box-demo'
+                    options={top100Films}
+                    sx={{
+                        width: 348,
+                        // height: 46,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '0px',
+                            borderRadius: '20px'
+                        },
+                        '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
+                        '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
+                        '& .MuiInputBase-root': { color: 'black' } // Color of the input text
+                        // '& .MuiOutlinedInput-notchedOutline': { borderColor: 'red' } // Color of the input outline
+                    }}
+                    renderInput={(params) => (
+                        <div className='relative'>
+                            <TextField {...params} label='Asset' />
+                            <div className='absolute top-3 right-5'>
+                                <SlArrowDown />
+                            </div>
                         </div>
                     )}
                 />
@@ -127,60 +163,7 @@ const top100Films = [
     {
         label: 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
         year: 1964
-    },
-    { label: 'The Great Dictator', year: 1940 },
-    { label: 'Cinema Paradiso', year: 1988 },
-    { label: 'The Lives of Others', year: 2006 },
-    { label: 'Grave of the Fireflies', year: 1988 },
-    { label: 'Paths of Glory', year: 1957 },
-    { label: 'Django Unchained', year: 2012 },
-    { label: 'The Shining', year: 1980 },
-    { label: 'WALL·E', year: 2008 },
-    { label: 'American Beauty', year: 1999 },
-    { label: 'The Dark Knight Rises', year: 2012 },
-    { label: 'Princess Mononoke', year: 1997 },
-    { label: 'Aliens', year: 1986 },
-    { label: 'Oldboy', year: 2003 },
-    { label: 'Once Upon a Time in America', year: 1984 },
-    { label: 'Witness for the Prosecution', year: 1957 },
-    { label: 'Das Boot', year: 1981 },
-    { label: 'Citizen Kane', year: 1941 },
-    { label: 'North by Northwest', year: 1959 },
-    { label: 'Vertigo', year: 1958 },
-    {
-        label: 'Star Wars: Episode VI - Return of the Jedi',
-        year: 1983
-    },
-    { label: 'Reservoir Dogs', year: 1992 },
-    { label: 'Braveheart', year: 1995 },
-    { label: 'M', year: 1931 },
-    { label: 'Requiem for a Dream', year: 2000 },
-    { label: 'Amélie', year: 2001 },
-    { label: 'A Clockwork Orange', year: 1971 },
-    { label: 'Like Stars on Earth', year: 2007 },
-    { label: 'Taxi Driver', year: 1976 },
-    { label: 'Lawrence of Arabia', year: 1962 },
-    { label: 'Double Indemnity', year: 1944 },
-    {
-        label: 'Eternal Sunshine of the Spotless Mind',
-        year: 2004
-    },
-    { label: 'Amadeus', year: 1984 },
-    { label: 'To Kill a Mockingbird', year: 1962 },
-    { label: 'Toy Story 3', year: 2010 },
-    { label: 'Logan', year: 2017 },
-    { label: 'Full Metal Jacket', year: 1987 },
-    { label: 'Dangal', year: 2016 },
-    { label: 'The Sting', year: 1973 },
-    { label: '2001: A Space Odyssey', year: 1968 },
-    { label: "Singin' in the Rain", year: 1952 },
-    { label: 'Toy Story', year: 1995 },
-    { label: 'Bicycle Thieves', year: 1948 },
-    { label: 'The Kid', year: 1921 },
-    { label: 'Inglourious Basterds', year: 2009 },
-    { label: 'Snatch', year: 2000 },
-    { label: '3 Idiots', year: 2009 },
-    { label: 'Monty Python and the Holy Grail', year: 1975 }
+    }
 ]
 
 export default RegisterNow
