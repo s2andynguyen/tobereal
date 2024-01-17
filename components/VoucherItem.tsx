@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import VoucherPercent from '@/app/promotion/ui/VoucherPercent'
-import { color } from 'framer-motion'
 interface VoucherItemProps {
     reverse?: boolean
     percent: string

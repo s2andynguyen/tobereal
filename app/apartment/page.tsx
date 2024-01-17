@@ -25,7 +25,7 @@ import { GR_properties } from './propertiesGr'
 import { Services_TOBE } from './frame'
 import { Traces_NEWS } from './News'
 // compoment
-import RegisterNow from '@/components/RegisterNow/page'
+import RegisterNow from '@/components/RegisterNow/RegisterNow'
 import MainLayout from '@/layouts/MainLayout'
 // main Apartment
 function Apartment() {

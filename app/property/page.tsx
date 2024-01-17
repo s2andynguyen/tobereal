@@ -1,6 +1,6 @@
 'use client'
 import './style.css'
-import RegisterNow from '@/components/RegisterNow/page'
+import RegisterNow from '@/components/RegisterNow/RegisterNow'
 import Image from 'next/image'
 // fetch data
 import { JENIS_apartemen } from './Jenis'
