@@ -4,11 +4,11 @@ import RegisterNow from '@/components/RegisterNow/RegisterNow'
 import Image from 'next/image'
 // fetch data
 import { JENIS_apartemen } from './Jenis'
-import ShowJenisGr from './ui/ShowJenisGr/page'
+import ShowJenisGr from './ui/ShowJenisGr/ShowJenisGr'
 import { Difference } from './Differences'
-import TableDifference from './ui/TableDifference/page'
+import TableDifference from './ui/TableDifference/TableDifference'
 import MainLayout from '@/layouts/MainLayout'
-// 
+//
 function Property() {
     return (
         <MainLayout>
@@ -49,9 +49,9 @@ function Property() {
                                     Property Management
                                 </h4>
                                 <p className='text-PM text-center md:text-left'>
-                                    Professional management for your unit. Without any hassle,
-                                    fully furnished and standardized. Can be rented daily,
-                                    monthly and annually.
+                                    Professional management for your unit. Without any
+                                    hassle, fully furnished and standardized. Can be
+                                    rented daily, monthly and annually.
                                 </p>
                             </div>
                             <button className='seeMore-btn wrap-btn'>See More</button>
@@ -64,9 +64,9 @@ function Property() {
                                     SMART REAL Realty
                                 </h4>
                                 <p className='text-PM text-center md:text-left'>
-                                    Professional management for your unit. Without any hassle,
-                                    fully furnished and standardized. Can be rented daily,
-                                    monthly and annually.
+                                    Professional management for your unit. Without any
+                                    hassle, fully furnished and standardized. Can be
+                                    rented daily, monthly and annually.
                                 </p>
                             </div>
                             <button className='seeMore-btn wrap-btn'>See More</button>
@@ -93,15 +93,15 @@ function Property() {
                     </div>
                 </div>
                 <div className='wrap-houses container '>
-                    <div className='House-wrap flex flex-col gap-10 w-full justify-between lg:flex-row'>
+                    <div className='House-wrap flex flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
                         <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                             <div className='content-House flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
                                     Is your apartment and house empty?
                                 </h4>
                                 <p className='text-PM text-center md:text-left'>
-                                    Dont win it, its better to make money. Come on! Just hand
-                                    it over to ....................!
+                                    Dont win it, its better to make money. Come on! Just
+                                    hand it over to ....................!
                                 </p>
                             </div>
                             <button className='registerNow-btn wrap-btn'>

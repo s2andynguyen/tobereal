@@ -1,0 +1,23 @@
+.title-Calculates {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal !important;
+}
+.text-Calculate {
+    padding-top: 20px;
+    color: #000;
+    /* font-size: 20px; */
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal !important;
+}
+.wrap-Calculates:nth-child(2) {
+    flex-direction: row-reverse;
+}
+.wrap-Calculates:nth-child(2) .content-Calculate h3 {
+    text-align: left !important;
+}
+.wrap-Calculates:nth-child(2) .content-Calculate p {
+    text-align: left !important;
+}

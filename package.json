@@ -15,6 +15,7 @@
     "framer-motion": "^10.18.0",
     "@mui/styled-engine-sc": "^6.0.0-alpha.12",
     "@types/react-google-recaptcha": "^2.1.8",
+    "classnames": "^2.5.1",
     "next": "14.0.4",
     "react": "^18",
     "react-device-detect": "^2.2.3",

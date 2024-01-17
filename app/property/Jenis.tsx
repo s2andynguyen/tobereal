@@ -11,7 +11,7 @@ export const JENIS_apartemen = [
     },
     {
         id: 3,
-        img: '/images/property/jenis3.png',
+        img: '/images/property/jenis4.png',
         name: 'House'
     }
 ]
