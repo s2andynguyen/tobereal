@@ -20,6 +20,8 @@ import TrancesNews from './ui/TrancesNews/TrancesNews'
 import Properties from './ui/properties/properties'
 import SlKatherine from './ui/SlKatherine/SlKatherine'
 import ShowRoomSl from './ui/ShowRoomSl/ShowRoomSl'
+import Calculates from './ui/Calulates/Calulates'
+import { CALCULATES_DT } from './CalculatesDT'
 import { ShowRoom_HOTEL } from './showRoom'
 import { Testimonials } from './katherrinesData'
 import { GR_properties } from './propertiesGr'
@@ -74,7 +76,7 @@ function Apartment() {
     }
 
     const getTextIcon = (subContentIndex: number) => {
-        return textIconStates[subContentIndex] === 3 ? <SlArrowUp /> : <SlArrowDown />
+        return textIconStates[subContentIndex] === 3 ? <SlArrowDown /> : <SlArrowUp />
     }
 
     // state
@@ -103,61 +105,10 @@ function Apartment() {
                     </div>
                 </div>
                 <div className='Earnings-wrap container'>
-                    <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
-                        <Image
-                            width={550}
-                            height={290}
-                            className='w-[550px] h-[auto]'
-                            src={'/images/apartment/Calculate.png'}
-                            alt='caluate'
-                        />
-                        <div className='content-Calculate'>
-                            <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
-                                Calculate Your Earning Potential
-                            </h3>
-                            <p className='text-Calculate text-base md:text-xl text-center lg:text-right'>
-                                *Calculations are estimates based on data on similar units
-                                in nearby apartment buildings
-                            </p>
-                        </div>
-                    </div>
-                    <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col-reverse lg:flex-row'>
-                        <div className='content-Calculate'>
-                            <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-left'>
-                                INCOME GUARANTEE, FREE SERVICE CHARGE!
-                            </h3>
-                            <p className='text-Calculate text-base md:text-xl text-center lg:text-left'>
-                                At SMART REAL property management, we also provide a
-                                DEFINITE RENTAL GUARANTEE!
-                            </p>
-                        </div>
-                        <Image
-                            width={423}
-                            height={363}
-                            className='w-[423px] h-[auto]'
-                            src={'/images/apartment/INCOME.png'}
-                            alt='caluate'
-                        />
-                    </div>
-                    <div className='wrap-Calculates items-center justify-center gap-10 pb-5 pt-5 flex flex-col lg:flex-row'>
-                        <Image
-                            width={420}
-                            height={251.648}
-                            className='w-[420px] h-[auto]'
-                            src={'/images/apartment/chair.png'}
-                            alt='caluate'
-                        />
-                        <div className='content-Calculate'>
-                            <h3 className='title-Calculates text-xl md:text-2xl text-center lg:text-right'>
-                                FURNISHED BY SMART REAL
-                            </h3>
-                            <p className='text-Calculate text-base md:text-xl text-center lg:text-right'>
-                                SMART REAL will furnish your apartment according to our
-                                standards, and the furniture will become your property at
-                                the end of the rental period
-                            </p>
-                        </div>
-                    </div>
+                    {CALCULATES_DT?.map((card) => (
+                        <Calculates data={card} key={card?.id} />
+                    ))}
+                    
                 </div>
                 <div className='wrap-activities container gap-16'>
                     <h3 className='title-Calculates text-xl md:text-2xl text-center'>
@@ -754,7 +705,9 @@ function Apartment() {
                                                 onClick={() =>
                                                     handleSubContentClick(subContentIndex)
                                                 }>
-                                                <span>{subContent.text}</span>
+                                                <span className='content-text-answers max-w-[360px]'>
+                                                    {subContent.text}
+                                                </span>
                                                 {getTextIcon(subContentIndex)}
                                             </div>
                                             {visibleContentIndex === subContentIndex && (

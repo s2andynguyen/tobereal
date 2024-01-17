@@ -4,9 +4,9 @@ import RegisterNow from '@/components/RegisterNow/RegisterNow'
 import Image from 'next/image'
 // fetch data
 import { JENIS_apartemen } from './Jenis'
-import ShowJenisGr from './ui/ShowJenisGr/page'
+import ShowJenisGr from './ui/ShowJenisGr/ShowJenisGr'
 import { Difference } from './Differences'
-import TableDifference from './ui/TableDifference/page'
+import TableDifference from './ui/TableDifference/TableDifference'
 import MainLayout from '@/layouts/MainLayout'
 //
 function Property() {
@@ -93,7 +93,7 @@ function Property() {
                     </div>
                 </div>
                 <div className='wrap-houses container '>
-                    <div className='House-wrap flex flex-col gap-10 w-full justify-between lg:flex-row'>
+                    <div className='House-wrap flex flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
                         <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                             <div className='content-House flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
