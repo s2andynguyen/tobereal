@@ -22,6 +22,7 @@ const config: Config = {
         'headblock': 'url("/images/home/head-block.png")',
         'subscribe-form':'url("/images/bg-subscribe-form.png")',
         'voucher':'url("/images/promotion/voucher-bg.svg")',
+        'dashboard': 'url("/dashboard/images/bg-dashboard.svg")',
         'gradient-left': 'linear-gradient(90deg, #F0B90B 0%, #FADD55 100%)',
         'gradient-right': 'linear-gradient(90deg, #FFE259 15.1%, #FFA751 85.42%)',
         'gradient-bottom': 'linear-gradient(180deg, #F0B90B 0%, #EBF00B 100%)',
