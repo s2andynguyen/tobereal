@@ -10,8 +10,10 @@ import DetailProperty from '../_ui/DetailProperty'
 import AboutHotel from '../_ui/AboutHotel'
 import { renderStart } from '@/lib/render'
 import OtherAccommodation from '../_ui/OtherAccommodation'
-
-
+import OrtherApartmentOption from '../_ui/OrtherApartmentOption'
+import { ListHotelImageDemo, listUnitFacillities, listAbout, propertyList } from '../_model/detailData'
+import { inter } from '@/assets/styles/fonts'
+import FormDetailBooking from '../_ui/FormDetailBooking'
 type Props = {
     params: {
         hotel_id: string
@@ -28,126 +30,43 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
         title: `${head}`
     }
 }
-const ListHotelImageDemo = [
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg',
-    '/images/detail-hotel/room-demo.jpg'
-]
-const listUnitFacillities = [
-    'Air Conditioner (AC)',
-    'Blankets',
-    'Complimentary Bottled Water',
-    'Iron',
-    'Mirrors',
-    'Slippers',
-    'Telephone',
-    'Wardrobe/ Multi Purpose Hanger',
-    'Bathrooms',
-    'Cable TV',
-    'Concierge',
-    'Desks & Chairs',
-    'Ironing Board',
-    'Shower',
-    'Sofa',
-    'Toiletries',
-    'Water heater',
-    'Outdoor Pools',
-    'Bathtub',
-    'City View',
-    'Deposit Box',
-    'Electric Kettles',
-    'Laundry',
-    'Sink',
-    'TV',
-    'Towels',
-    'Garden'
-]
-const listAbout = [
-    {
-        title: 'Tentang Hotel Gran Melia Jakarta',
-        content: [
-            'Kamar Tidur Studio: Bersantailah di studio yang luas dan didekorasi dengan penuh cita rasa dengan perabotan modern.',
-            '1 Kamar Mandi: Kamar mandi lengkap dengan fasilitas kelas atas untuk kenyamanan dan kemudahan Anda.',
-            'King Bed (180x200) 1 Qty'
-        ]
-    },
-    {
-        title: 'Fasilitas hotel',
-        content: [
-            'Keamanan 24 Jam: Yakinlah dengan keamanan sepanjang waktu yang memastikan keselamatan Anda.',
-            'Kolam Renang: Berenanglah di kolam renang setelah hari yang melelahkan.',
-            'Pusat Kebugaran: Pertahankan rutinitas kebugaran Anda dengan peralatan canggih.',
-            'Bersantap di Tempat: Nikmati masakan lezat di restoran hotel.',
-            'Pusat Bisnis: Fasilitas yang nyaman untuk pelancong bisnis.',
-            'Spa dan Pusat Kesehatan: Manjakan diri Anda dengan perawatan spa yang menenangkan.',
-            'Antar-Jemput Bandara: Akses mudah ke layanan transportasi.'
-        ]
-    },
-    {
-        title: 'Rekomendasi Rekreasi dan Kuliner',
-        content: [
-            'Plaza Festival (0,8 km, sekitar 5 menit): Belanja fashion, elektronik, dan nikmati berbagai pilihan bersantap.',
-            'Setiabudi One (1 km, sekitar 5 menit): Tujuan gaya hidup dan bersantap yang dinamis.',
-            'Epicentrum Walk (1,4 km, sekitar 10 menit): Temukan pilihan bersantap, berbelanja, dan hiburan.',
-            'Kota Kasablanka (2 km, sekitar 15 menit): Mal luas yang menampilkan beragam pilihan ritel dan tempat makan.'
-        ]
-    },
-    {
-        title: 'Landmark',
-        content: [
-            'Kuningan City (1,5 km, sekitar 10 menit): Pusat perbelanjaan terkemuka di kawasan ini.',
-            'Taman Menteng (2.8 km, sekitar 15 menit): Taman kota yang tenang, cocok untuk berjalan-jalan santai.',
-            'Museum Satriamandala (3,7 km, sekitar 20 menit): Jelajahi sejarah dan warisan militer Indonesia.'
-        ]
-    },
-    {
-        title: 'Kendaraan umum',
-        content: [
-            'Rasakan akses mudah ke pusat transportasi terdekat:',
-            'Halte Busway Gatot Subroto (0.8 km, sekitar 5 menit): Akses transportasi umum.',
-            'Stasiun Kereta Api Sudirman (2,5 km, sekitar 15 menit): Stasiun kereta api pusat yang menghubungkan Anda ke berbagai tujuan.',
-            'Bandara Internasional Halim Perdanakusuma (14,5 km, sekitar 30 menit): Bandara terdekat dengan penerbangan domestik.'
-        ]
-    }
-]
 
 function DetailHotel() {
     return (
         <MainLayout>
             <div className='container mx-auto min-h-[1800px] font-montserrat pb-20'>
-                <div className='px-16 pt-10 pb-20'>
+                <div className='px-3 lg:px-6 xl:px-16 pt-5 sm:pt-10 pb-20'>
                     {/* Breadcrum Render */}
                     <DetailBreadcrumb place='Jakarta' hotel='Gran Melia Jakarta' />
 
                     {/* Group Image */}
-                    <div className='mt-5 mb-3'>
+                    <div className='mt-5 mb-4 md:mb-6 xl:mb-12'>    
                         <ImageHighlight listImage={ListHotelImageDemo} />
                     </div>
 
-                    <div className='flex'>
+                    {/* Content */}
+                    <div className='flex flex-col lg:flex-row mb-14'>
                         {/* col left */}
-                        <div className='max-w-[65%] basis-[65%] w-[65%] min-h-20 mb-6'>
+                        <div className='lg:max-w-[66.6667%] lg:basis-[66.6667%] xl:max-w-[69%] xl:basis-[69%] flex-grow min-h-20 mb-6 lg:pr-5 xl:px-2'>
                             {/* title */}
-                            <div className='flex items-center gap-[30px]'>
-                                <h2>Gran Melia Hotel Jakarta - Jakarta</h2>
-                                <div className='h-14 px-2 w-32 text-center font-bold font-montserrat leading-[28px] py-1 pr-3 bg-primary rounded-[5px]'>
+                            <div className='flex items-center flex-wrap md:flex-nowrap gap-2 sm:gap-[30px] lg:justify-between lg:pr-8 mb-4 sm:mb-0'>
+                                <h2 className='text-[18px] flex-grow xl:text-2xl font-bold'>
+                                    Gran Melia Hotel Jakarta - Jakarta
+                                </h2>
+                                <div className='h-12 sm:h-14 w-48 sm:w-32 font-bold text-center leading-[24px] py-1 bg-primary rounded-[5px] flex justify-center items-center'>
                                     Hotel Residence 🏨
                                 </div>
                                 {/* Heart icon */}
-                                <HeartItemAction liked={true} />
+                                <HeartItemAction liked={true}/>
                             </div>
-                            {/* rating */}
-                            <div className='flex item-center gap-2'>
+                            {/* Rating */}
+                            <div className='flex item-center gap-2 mb-5'>
                                 {renderStart(4, 24)}
                             </div>
 
-                            {/* address */}
-                            <div className='flex items-center gap-5 mb-[30px]'>
-                                <p className='text-[#909090] font-montserrat font-bold text-[10px]'>
+                            {/* Address */}
+                            <div className='flex items-center gap-5 mb-4 sm:mb-[30px]'>
+                                <p className='text-[#909090] font-bold text-[10px]'>
                                     Jl. HR Rasuna Said Kav X-0 Kuningan, Setiabudi, South
                                     Jakarta 12950 - Property ID: C3D3AEC8A
                                 </p>
@@ -179,8 +98,8 @@ function DetailHotel() {
                                 </span>
                             </div>
 
-                            {/* description */}
-                            <p className='py-4 max-w-[567px] text-[#909090] font-montserrat font-bold text-[10px] border-t border-b  border-[#e3e3e3]'>
+                            {/* Description */}
+                            <p className='py-4 mb-6 max-w-[567px] text-[#909090] font-bold text-[10px] border-t border-b  border-[#e3e3e3]'>
                                 This accommodation is rented on a monthly basis and
                                 includes: 1. Maintenance fee 2. Electricity & Water 3.
                                 Internet 4. Daily Housekeeping 5. Laundry 2 free clothes /
@@ -188,17 +107,21 @@ function DetailHotel() {
                                 ironing services. (View more)
                             </p>
 
-                            {/* property */}
-                            <DetailProperty />
+                            {/* Property */}
+                            <div className='mb-2'>
+                                <DetailProperty/>
+                            </div>
 
                             {/* Unit Facilities */}
-                            <div>
-                                <p className='text-[10px] font-bold font-montserrat mb-2'>
+                            <div className='pl-5'>
+                                <p className='text-[10px] font-bold mb-2'>
                                     Unit Facilities
                                 </p>
                                 <div className='flex flex-wrap '>
                                     {listUnitFacillities.map((facillity, index) => (
-                                        <div className='basis-[28%] self-center' key={index}>
+                                        <div
+                                            className='basis-[28%] self-center'
+                                            key={index}>
                                             <div className='pr-10 flex items-center justify-start'>
                                                 <svg
                                                     className='mr-[10px]'
@@ -214,7 +137,7 @@ function DetailHotel() {
                                                         strokeLinecap='round'
                                                     />
                                                 </svg>
-                                                <p className='text-[10px] font-medium font-montserrat leading-4'>
+                                                <p className='text-[10px] font-medium leading-4'>
                                                     {facillity}
                                                 </p>
                                             </div>
@@ -223,17 +146,19 @@ function DetailHotel() {
                                 </div>
                             </div>
 
-                            <p className='h-[60px] font-bold pl-3 border-t border-b border-[#e3e3e3] mb-6 flex items-center mt-[30px]'>
+                            <p className='h-[60px] font-bold pl-3 border-t border-b border-[#e3e3e3] mb-5  xl:mr-24 flex items-center mt-[30px]'>
                                 Additional Information
                             </p>
 
                             {/* Q&A - Discussion Of This Property */}
                             <div className='max-w-[500px]'>
-                                <p className='pl-3 font-bold mb-4'>Q&A - Discussion Of This Property</p>
+                                <p className='pl-3 font-bold mb-4'>
+                                    Q&A - Discussion Of This Property
+                                </p>
                                 <input
                                     type='text'
                                     placeholder='Name'
-                                    className='h-[30px] pl-6 py-2 max-w-[480px] w-[480px] rounded-[5px] border border-[#dcdcdc] mb-4'
+                                    className='h-[30px] pl-6 py-2 max-w-[480px] w-full rounded-[5px] border border-[#dcdcdc] mb-4'
                                 />
                                 <div className='max-w-[480px]'>
                                     <textarea
@@ -241,30 +166,53 @@ function DetailHotel() {
                                         className='h-[50px] pl-6 py-2 w-full rounded-[5px] border border-[#dcdcdc]'
                                     />
                                 </div>
-                                <button className='h-12 w-[150px] rounded-[30px] py-4 px-8 text-[13px] font-medium text-center bg-gradient-right mt-4'>
+                                <button
+                                    className='h-12 w-[150px] rounded-[30px] px-8 text-[18px] font-medium text-center bg-gradient-right mt-4
+                                hover:shadow-yellow transition duaration-200'>
                                     Send
                                 </button>
                             </div>
 
-                            {/* Group about Hotel */}
-                            <div className='pl-3 pt-8'>
+                            {/* About Hotel */}
+                            <div className='md:pl-3 pt-8 lg:mr-24'>
                                 <AboutHotel
                                     description='Hotel Gran Melia Jakarta menawarkan penginapan mewah dan nyaman, cocok bagi mereka yang mencari pengalaman canggih di Jakarta. Baik Anda berada di sini untuk keperluan bisnis maupun liburan, Anda akan menemukan properti ini sebagai oase yang nyaman di tengah suasana kota yang semarak.'
                                     listAbout={listAbout}
                                 />
                             </div>
-
-                            
                         </div>
-
                         {/* col right */}
-                        <div className='max-w-[35%] basis-[35%] w-[35%] h-20 bg-blue-200'></div>
+                        <div  className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
+                            <div className='w-full mx-auto shadow-yellow bg-white border border-primary/30 sticky top-[110px]'>
+                                {/* head-card */}
+                                <div className='lg:h-[48px] xl:h-[54px] w-full flex items-center justify-end pr-5 bg-primary '>
+                                    <div className='flex items-center justify-end cursor-pointer py-2 group'>
+                                        <span className='lg:text-xl xl:text-2xl font-medium'>USD</span>
+                                        <Image
+                                            src={'/images/detail-hotel/current-down.svg'}
+                                            height={12}
+                                            width={17}
+                                            alt=''
+                                            className='w-4 h-auto object-contain ml-3 group-hover:drop-shadow-md'
+                                        />
+                                    </div>
+                                </div>
+                                {/* body */}
+                                <FormDetailBooking />
+                            </div>
+                        </div>
                     </div>
 
-
                     {/* Other Accommodation Recommendations */}
-                    <h2 className='text-2xl font-bold text-center'>Other Accommodation Recommendations</h2>
+                    <h2 className='text-2xl font-bold text-center mb-3'>
+                        Other Accommodation Recommendations
+                    </h2>
                     <OtherAccommodation />
+                    {/* Check Other Apartment Options */}
+                    <h2 className='text-2xl font-bold text-center mb-3 pt-3'>
+                        Check Other Apartment Options
+                    </h2>
+                    <OrtherApartmentOption />
                 </div>
             </div>
         </MainLayout>

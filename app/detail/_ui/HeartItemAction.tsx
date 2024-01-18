@@ -11,7 +11,7 @@ const HeartItemAction:React.FC<HeartItemActionProps> = ({liked}) => {
     }
     return (
         <div
-            className='w-12 h-[44px] bg-white rounded-[5px] shadow-gray flex justify-center items-center cursor-pointer group'
+            className='w-12 h-[44px] bg-white rounded-[5px] shadow-gray flex justify-center items-center cursor-pointer group ml-3 sm:ml-0'
             onClick={toggleLiked}>
             <Image
                 src={`/images/home/vector/${

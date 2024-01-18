@@ -6,7 +6,7 @@ interface DetailBreadcrumb {
 }
 const DetailBreadcrumb: React.FC<DetailBreadcrumb> = ({ place, hotel }) => {
     return (
-        <div className='flex items-center gap-2 font-bold text-[15px] font-montserrat'>
+        <div className='flex items-center gap-2 font-bold text-[12px] md:text-[15px] font-montserrat'>
             <Link href='/'>Home</Link>
             <svg
                 className='font-normal'

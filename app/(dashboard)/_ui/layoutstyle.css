@@ -24,7 +24,7 @@
 @media (max-width: 1199px) {
     .dashboard-playout__page {
         min-height: calc(100vh - 80px);
-        background-color: red;
+        /* background-color: red; */
     }
 }
 

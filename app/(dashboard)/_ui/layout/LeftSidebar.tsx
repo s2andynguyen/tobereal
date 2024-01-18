@@ -10,28 +10,30 @@ const LeftSidebar = () => {
     const router = useRouter()
     return (
         <div
-            className={`hidden sm:block fixed h-screen w-[200px] md:w-[268px] shadow-md left-sidebar-bg z-[2] ${lato.className}`}>
-            <div className='h-full pl-3 md:pl-10 pt-10'>
-                <Image
-                    src={'/images/home/logo-navbar.svg'}
-                    height={59}
-                    width={114}
-                    priority
-                    alt='sidebar-logo.svg'
-                    className='w-[114px] h-auto pb-20 ml-5 cursor-pointer hover:drop-shadow-md transition duration-200'
-                    onClick={() => router.push('/')}
-                />
+            className={`hidden sm:block fixed h-screen w-[200px] md:w-[268px] shadow-md left-sidebar-bg z-[3] ${lato.className}`}>
+            <div className='h-full w-full pt-10'>
+                <div className='flex justify-center items-center'>
+                    <Image
+                        src={'/dashboard/images/signal-logo.png'}
+                        height={148}
+                        width={112}
+                        priority
+                        alt='sidebar-logo.svg'
+                        className='w-[112px] h-auto pb-4 cursor-pointer transition duration-200'
+                        onClick={() => router.push('/')}
+                    />  
+                </div>
                 {/* sidebar list */}
-                <ul className='pr-3 md:pr-5'>
+                <ul className='pr-4 pl-3 md:pl-10'>
                     <li>
                         <Link
                             href={'/booking'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/booking'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='mr-5'>
+                            <span className='mr-2 md:mr-5'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='19'
@@ -79,12 +81,12 @@ const LeftSidebar = () => {
                     <li>
                         <Link
                             href={'/posting'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='mr-5'>
+                            <span className='mr-2 md:mr-5'>
                                 <svg
                                     width='16'
                                     height='18'
@@ -117,12 +119,12 @@ const LeftSidebar = () => {
                     <li>
                         <Link
                             href={'/posting'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='mr-5'>
+                            <span className='mr-2 md:mr-5'>
                                 <svg
                                     width='16'
                                     height='18'
@@ -155,12 +157,12 @@ const LeftSidebar = () => {
                     <li>
                         <Link
                             href={'/posting'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/reward'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='-ml-[6px] mr-[14px]'>
+                            <span className='-ml-[6px] mr-[5px] md:mr-[14px]'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='25'
@@ -193,12 +195,12 @@ const LeftSidebar = () => {
                     <li>
                         <Link
                             href={'/posting'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/profile'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='mr-5'>
+                            <span className='mr-2 md:mr-5'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='18'
@@ -235,12 +237,12 @@ const LeftSidebar = () => {
                     <li>
                         <Link
                             href={'/posting'}
-                            className={`flex items-center pl-5  h-10 rounded-[4px] mb-3 ${
+                            className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/posting'
                                     ? 'bg-black text-primary'
                                     : 'text-[#cfcfcf] hover:shadow-gray'
                             } cursor-pointer transition-all duration-200`}>
-                            <span className='mr-5'>
+                            <span className='mr-2 md:mr-5'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     width='15'

@@ -2,15 +2,15 @@
 import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 import SwiperWrap from '@/components/SwiperWrap'
-import { ApartmentList } from '@/app/ui/model/ApartmentList'
+import { HouseList } from '@/app/ui/model/HouseList'
 import CardRecommended from '@/app/ui/re-use/CardRecommended'
 import ButtonPrevSwiper from '@/app/ui/swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from '@/app/ui/swiper-slider/ButtonNextSwiper'
-const OtherAccommodation = () => {
+const OrtherApartmentOption = () => {
     return (
         <div className='container mx-auto px-2 md:px-4 xl:px-0 pt-[10px] pb-5'>
             <SwiperWrap>
-                {ApartmentList.map((room, index) => (
+                {HouseList.map((room, index) => (
                     <SwiperSlide key={index} className='h-[220px]'>
                         <CardRecommended
                             typeRoom={room.typeRoom}
@@ -20,8 +20,6 @@ const OtherAccommodation = () => {
                             imageUrl={room.imageUrl}
                             liked={room.liked}
                             latest={room.latest}
-                            point={room.point}
-                            price={room.price}
                         />
                     </SwiperSlide>
                 ))}
@@ -32,4 +30,4 @@ const OtherAccommodation = () => {
     )
 }
 
-export default OtherAccommodation
+export default OrtherApartmentOption
