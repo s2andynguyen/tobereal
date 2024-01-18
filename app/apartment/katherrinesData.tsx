@@ -5,7 +5,7 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     },
     {
         id: 6,
@@ -45,6 +45,6 @@ export const Testimonials = [
         img: '/images/apartment/room-Katherine.png',
         titleSub: 'Apartment Owner',
         textContent: 'Midtown Summarecon & Puri Park View',
-        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by SMART REAL'
+        text: 'Starting from the deposit continuing with daily, cleaning we dont need to take care of it anymore, everything has been handled by S - HOME'
     }
 ]

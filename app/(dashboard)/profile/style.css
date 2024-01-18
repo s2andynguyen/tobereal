@@ -10,7 +10,9 @@
     padding: 50px;
 }
 /* sd chung END*/
-
+.wrapper-Informations {
+    gap: 39px 55px;
+}
 .image-container {
     position: relative;
     width: 100%; /* Điều chỉnh kích thước theo ý muốn của bạn */

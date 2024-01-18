@@ -50,10 +50,10 @@ function InformationForm() {
             <div className='bg-TitleInformation flex items-center'>
                 <h2 className='top-title-Information pl-16'>Information</h2>
             </div>
-            <div className='Gr-form-Informations'>
+            <div className='Gr-form-Informations flex flex-col items-center'>
                 <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
                     <p className='text-Information-input'>ID: 0AE9CC3C6</p>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex justify-between items-center '>
                         <label className='text-Information-input' htmlFor='country'>
                             Country:
                         </label>
@@ -75,7 +75,7 @@ function InformationForm() {
                             ID Card:
                         </label>
                         <input
-                            className='input-style pl-5'
+                            className='input-style pl-5 min-w-[180px]'
                             type='text'
                             id='IDCard'
                             name='IDCard'
@@ -89,7 +89,7 @@ function InformationForm() {
                             Email:
                         </label>
                         <input
-                            className='input-style pl-5'
+                            className='input-style pl-5 min-w-[180px]'
                             type='email'
                             id='Email'
                             name='Email'
@@ -103,7 +103,7 @@ function InformationForm() {
                             Phone:
                         </label>
                         <input
-                            className='input-style pl-5'
+                            className='input-style pl-5 min-w-[180px]'
                             type='number'
                             id='Phone'
                             name='Phone'
@@ -116,9 +116,9 @@ function InformationForm() {
                         <label className='text-Information-input' htmlFor='birthdate'>
                             Birthdate:
                         </label>
-                        <div className='Gr-birthdate flex gap-2 pr-[44px]'>
+                        <div className='Gr-birthdate flex gap-2 pr-8'>
                             <input
-                                className='input-style !max-w-10'
+                                className='input-style !max-w-11'
                                 type='number'
                                 id='birthdate-day'
                                 name='birthdate.day'
@@ -127,7 +127,7 @@ function InformationForm() {
                                 placeholder='Day'
                             />
                             <input
-                                className='input-style !max-w-10'
+                                className='input-style !max-w-11'
                                 type='number'
                                 id='birthdate-month'
                                 name='birthdate.month'
@@ -135,15 +135,18 @@ function InformationForm() {
                                 onChange={handleInputChange}
                                 placeholder='Month'
                             />
-                            <input
-                                className='input-style !max-w-10'
-                                type='number'
+                            <select
+                                className='input-style !max-w-11'
                                 id='birthdate-year'
                                 name='birthdate.year'
-                                value={formData.birthdate.year}
-                                onChange={handleInputChange}
-                                placeholder='Year'
-                            />
+                                value={formData.country}
+                                onChange={handleInputChange}>
+                                <option value=''>Year</option>
+                                <option value='1980'>1980</option>
+                                <option value='1990'>1990</option>
+                                <option value='2000'>2000</option>
+                                <option value='2010'>2010</option>
+                            </select>
                         </div>
                     </div>
 
@@ -152,7 +155,7 @@ function InformationForm() {
                             Address:
                         </label>
                         <textarea
-                            className='input-style pl-5'
+                            className='input-style pl-5 min-w-[180px]'
                             id='address'
                             name='address'
                             value={formData.address}
@@ -162,8 +165,9 @@ function InformationForm() {
                             placeholder='Enter your address'
                         />
                     </div>
-
-                    <button type='submit'>Submit</button>
+                    <button className='SaveInformation-Btn mt-11 ml-14' type='submit'>
+                        Save
+                    </button>
                 </form>
             </div>
         </div>

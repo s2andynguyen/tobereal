@@ -61,7 +61,7 @@ function Property() {
                         <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
-                                    SMART REAL Realty
+                                    S - HOME Realty
                                 </h4>
                                 <p className='text-PM text-center md:text-left'>
                                     Professional management for your unit. Without any

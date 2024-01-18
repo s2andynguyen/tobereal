@@ -3,9 +3,14 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import './style.css'
 // components
-import InformationForm from './InformationForm/InformationForm'
-import IconEdit from '/public/dashboard/svg/EditNameUser.svg'
+import InformationForm from './InformationForms/InformationForm'
+import Favourite from './Favourites/Favourite'
+import InformationBonuss from './InformationBonuss/InformationBonuss'
+import LinkWebsite from './LinkWebsites/LinkWebsite'
+import Manage from './Manages/Manage'
+import ChangePassword from './ChangePassword/ChangePassword'
 // icon
+import IconEdit from '/public/dashboard/images/profile/svg/EditNameUser.svg'
 import { SlBookOpen } from 'react-icons/sl'
 
 const Profile = () => {
@@ -35,14 +40,14 @@ const Profile = () => {
                             width={25}
                             height={20}
                             alt='IconCamera'
-                            src={'/dashboard/images/IconCamera.png'}
+                            src={'/dashboard/images/profile/IconCamera.png'}
                         />
                         <Image
                             className='iconShare w-[auto] h-[23px]'
                             width={20}
                             height={23}
                             alt='IconShare'
-                            src={'/dashboard/images/IconShare.png'}
+                            src={'/dashboard/images/profile/IconShare.png'}
                         />
                     </div>
                     {selectedImage && (
@@ -65,14 +70,14 @@ const Profile = () => {
                         height={103}
                         className='w-[103px] h-[auto]'
                         alt='AvatarUsers'
-                        src={'/dashboard/images/AvatarUsers.png'}
+                        src={'/dashboard/images/profile/AvatarUsers.png'}
                     />
                     <Image
                         width={22}
                         height={16}
                         className='IconCameraAvt w-[22px] h-[auto]'
                         alt='IconCameraAvt'
-                        src={'/dashboard/images/IconCameraAvt.png'}
+                        src={'/dashboard/images/profile/IconCameraAvt.png'}
                     />
                 </div>
                 <div className='Gr-NameUser flex items-center'>
@@ -93,8 +98,13 @@ const Profile = () => {
                     </label>
                 </div>
             </div>
-            <div className='wrapper-Informations container grid gird-cols-3'>
+            <div className='wrapper-Informations container justify-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
                 <InformationForm />
+                <Favourite />
+                <InformationBonuss />
+                <LinkWebsite />
+                <Manage />
+                <ChangePassword />
             </div>
         </div>
     )
