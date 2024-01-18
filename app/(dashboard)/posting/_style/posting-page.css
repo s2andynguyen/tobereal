@@ -1,0 +1,19 @@
+.show-card__shadow {
+    box-shadow: 0px 3px 5px 0px #00000080;
+}
+.postcart-vip__btn {
+    width: 152.9px;
+    height: 32px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #F7E75A 0%, #FFC702 100%);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.postcart-vip__btn:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.12);
+    transition: all ease 0.3s;
+}

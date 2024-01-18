@@ -29,7 +29,8 @@ const config: Config = {
         'gradient-fade-yellow': 'linear-gradient(90deg, #FFF 27.08%, #FFF4CA 100%)',
         'gradient-pink': 'linear-gradient(90deg, #FF9191 0%, #F66 100%)',
         'gradient-card': 'linear-gradient(92.49deg, #D88A00 0%, #FFE259 31.8%)',
-        'gradient-footer': 'linear-gradient(180deg, rgba(198, 147, 41, 0) 0%, #FF7E00 100%)'
+        'gradient-footer': 'linear-gradient(180deg, rgba(198, 147, 41, 0) 0%, #FF7E00 100%)',
+        'posting-card': ' linear-gradient(180deg, #FADD55 0%, #FFEC88 100%)'
       },
       dropShadow: {
         'title': '0 4px 4px rgba(240, 185, 11, 0.50)',
