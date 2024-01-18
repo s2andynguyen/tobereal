@@ -28,7 +28,7 @@ const PostingSell = () => {
                     <p>Land for sale</p>
                 </div>
             </div>
-            <div className="input_container">
+             <div className="input_container">
                 <textarea
                     className='input_text '
                     placeholder="0/10"
@@ -40,7 +40,7 @@ const PostingSell = () => {
                         alt=""
                         className="w-[55px] h-[41px]"
                         width={55}
-                        height={41}
+                       height={41}
                     />
                 </div>
             </div>

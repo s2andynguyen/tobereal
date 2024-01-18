@@ -22,7 +22,7 @@ export default function Payment() {
             <Autocomplete
                 disablePortal
                 id="combo-box"
-                options={momo}
+                options={Banks}
                 sx={{
                     width: 400,
                     padding: 5,
@@ -105,10 +105,17 @@ export default function Payment() {
     );
 }
 
-const momo = [
-    { label: 'Hồ Chí Minh' },
-    { label: 'An Giang' },
-    { label: 'Vũng Tàu' },
+const Banks = [
+    { label: 'Agribank' },
+    { label: 'VietinBank' },
+    { label: 'Vietcombank' },
+    { label: 'Sacombank' },
+    { label: 'BIDV' },
+    { label: 'Techcombank' },
+    { label: 'MBBank ' },
+    { label: 'MSB' },
+    { label: 'TPBANK' },
+    { label: 'VPBANK' },
 
 ];
 

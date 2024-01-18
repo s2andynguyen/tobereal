@@ -18,7 +18,7 @@
 
 .menu_read .p {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0;
@@ -51,7 +51,7 @@
 
 .text_legal span {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0;
@@ -61,10 +61,55 @@
 
 .text_legal p {
     color: #000000;
-    font-family: "Inter-Light", Helvetica;
+    font-family: 'Inter-Light', Helvetica;
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 0;
     line-height: normal;
     width: 361px;
+}
+/* video*/
+.Add_video {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content_add {
+    color: #000000;
+    font-family: 'Inter-Medium', Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 386px;
+}
+.Add_video .link {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 935px;
+}
+.contact_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact_info {
+    color: #000000;
+    font-family: 'Inter-Bold', Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 228px;
+}
+.name {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 935px;
 }
