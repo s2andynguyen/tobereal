@@ -12,6 +12,7 @@ interface InputPasswordProps {
     label?: string
     placeholder?: string
     type?: string
+    noEye?: boolean
 }
 
 const Input: React.FC<InputPasswordProps> = ({
@@ -20,7 +21,8 @@ const Input: React.FC<InputPasswordProps> = ({
     value,
     label,
     placeholder,
-    type
+    type,
+    noEye
 }) => {
     const [ishowPassword, setIsShowPassword] = useState("password")
 
@@ -49,10 +51,10 @@ const Input: React.FC<InputPasswordProps> = ({
                 className='input border-black/40 h-12 rounded-[10px] placeholder:text-black/70'
                 placeholder={placeholder}
             />
-            <span className='absolute right-2 bottom-1 z-[1] cursor-pointer p-3 hover:drop-shadow-lg'
+            {!noEye && <span className='absolute right-2 bottom-1 z-[1] cursor-pointer p-3 hover:drop-shadow-lg'
             onClick={toggleShowPassword}>
                 {ishowPassword==='password' ? <EyeShowIcon /> : <EyeHiddenIcon />}
-            </span>
+            </span>}
         </div>
     )
 }

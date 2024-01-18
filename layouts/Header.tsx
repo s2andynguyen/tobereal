@@ -37,8 +37,8 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                                 <Image
                                     width={115}
                                     height={60}
-                                    src={'/images/home/logo-navbar.svg'}
-                                    alt='logo.png'
+                                    src={'/images/main-logo.png'}
+                                    alt='main-logo'
                                 />
                             </div>
                             {/* navbar */}
@@ -116,8 +116,8 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                                 <Image
                                     width={115}
                                     height={60}
-                                    src={'/images/home/logo-navbar.svg'}
-                                    alt='logo.png'
+                                    src={'/images/main-logo.png'}
+                                    alt='main-logo' 
                                 />
                             </div>
                             {/* navbar */}

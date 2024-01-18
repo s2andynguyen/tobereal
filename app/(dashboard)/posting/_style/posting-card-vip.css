@@ -1,10 +1,4 @@
 
-.posting-card__vip-bg{
-    background: linear-gradient(180deg, #F0B90B 0%, #FFFFFF 100%), linear-gradient(180deg, #FADD55 0%, #FFEC88 100%);
-    border: 1px solid;
-    border-image-source: linear-gradient(180deg, #FADD55 0%, #FFEC88 100%);
-}
-
 .list-postcart-vip .postcart-vip__item:first-child {
     height: 39px;
     color: #fff;
@@ -31,7 +25,7 @@
 
 
 /* card vip special */
-.posting-card__vip-bg--special{
+.posting-card__vip-bg--special{ 
     background: linear-gradient(180deg, #000000 0%, #000000 100%), 
     linear-gradient(180deg, #C0C0C0 0%, rgba(192, 192, 192, 0) 100%);
     border: 1px solid;
@@ -61,4 +55,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.block-slide-card__vip-wrapper {
+    overflow-y: hidden;
+}
+.block-slide-card__vip {
+    transform: translateY(-100%);
+    transition: all linear 0.3s;
+}
+.block-slide-card__vip-wrapper {
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+    height: 57px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    padding: 0 10px 5px;
+    transition: all linear 0.3s;
+    z-index: 0;
+}   
+.block-slide-card__vip-wrapper.show {
+    height: 440px;
+}
+.block-slide-card__vip.show {
+    transform: translateY(0);
+    opacity: 1;
 }
