@@ -32,35 +32,35 @@ function InformationBonuss() {
                 <Image
                     width={45}
                     height={45}
-                    className='w-[45px] h-[auto]'
+                    className='Icon-Link w-[45px] h-[auto]'
                     src={'/dashboard/images/profile/IconBottomShare.png'}
                     alt='Icon-SocialNetwork'
                 />
                 <Image
                     width={45}
                     height={45}
-                    className='w-[45px] h-[auto]'
+                    className='Icon-Link w-[45px] h-[auto]'
                     src={'/dashboard/images/profile/FacebookIcon.png'}
                     alt='Icon-SocialNetwork'
                 />
                 <Image
                     width={45}
                     height={45}
-                    className='w-[45px] h-[auto]'
+                    className='Icon-Link w-[45px] h-[auto]'
                     src={'/dashboard/images/profile/TwitterIcon.png'}
                     alt='Icon-SocialNetwork'
                 />
                 <Image
                     width={45}
                     height={45}
-                    className='w-[45px] h-[auto]'
+                    className='Icon-Link w-[45px] h-[auto]'
                     src={'/dashboard/images/profile/YoutubeIcon.png'}
                     alt='Icon-SocialNetwork'
                 />
                 <Image
                     width={45}
                     height={45}
-                    className='w-[45px] h-[auto]'
+                    className='Icon-Link w-[45px] h-[auto]'
                     src={'/dashboard/images/profile/InstagramIcon.png'}
                     alt='Icon-SocialNetwork'
                 />

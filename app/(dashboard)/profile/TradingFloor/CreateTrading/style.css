@@ -1,0 +1,65 @@
+.CreateTrading-wrap {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.image-CreateTrading {
+    position: relative;
+    width: 100%; /* Điều chỉnh kích thước theo ý muốn của bạn */
+    height: 221px; /* Điều chỉnh kích thước theo ý muốn của bạn */
+    background: rgba(153, 153, 153, 0.5);
+    overflow: hidden;
+
+    position: relative;
+}
+
+label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.selected-image-CreateTrading {
+    width: 100%;
+    height: 221px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.selected-image-CreateTrading img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iconCamera-CreateTrading {
+    position: absolute;
+    bottom: 0;
+    right: 21px;
+    margin: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+.iconShare-CreateTrading {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin: 10px;
+    font-size: 24px;
+    color: #fff;
+}

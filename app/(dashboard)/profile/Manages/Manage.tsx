@@ -1,16 +1,16 @@
+'use client'
+
 import { useRouter } from 'next/navigation'
 import './style.css'
-import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
 function Manage() {
     const router = useRouter()
-    // State để lưu trạng thái hiển thị/ẩn nội dung
+
     const [isContentVisible, setIsContentVisible] = useState(false)
 
-    // Hàm xử lý sự kiện khi button được click
     const toggleContent = () => {
-        setIsContentVisible(!isContentVisible) // Đảo ngược trạng thái
+        setIsContentVisible(!isContentVisible)
     }
     return (
         <div className='wrap-Manages'>
@@ -18,9 +18,7 @@ function Manage() {
                 <h2 className='top-title-Manage pl-16'>Manage</h2>
             </div>
             <div className='Gr-form-Manages flex flex-col items-center gap-3'>
-                <button
-                    className='Btn-Manage'
-                    onClick={() => router.push('/profile/CustomerManagement')}>
+                <button className='Btn-Manage' onClick={() => router.push('/profile')}>
                     Post management
                     <Image
                         width={7}
@@ -44,7 +42,7 @@ function Manage() {
                 </button>
                 <button
                     className='Btn-Manage'
-                    onClick={() => router.push('/profile/CustomerManagement')}>
+                    onClick={() => router.push('/profile/TradingFloor')}>
                     Managing the trading floor
                     <Image
                         width={7}
