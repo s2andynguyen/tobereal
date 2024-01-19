@@ -185,7 +185,7 @@ function CreateTrading() {
                     </div>
                     <div className='CT-grInput'>
                         <p className='text-labelCT'>Branch information</p>
-                        <button className='AddBranch-CT flex w-[855.70px] h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border'>
+                        <button className='AddBranch-CT flex w-[855.70px] h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border justify-center gap-5'>
                             <Image
                                 width={32}
                                 height={32}
@@ -194,6 +194,44 @@ function CreateTrading() {
                                 src={'/dashboard/images/profile/AddBranch-Icon2.png'}
                             />
                             Add branch
+                        </button>
+                    </div>
+                    <div className='CT-grInput'>
+                        <label className='text-labelCT' htmlFor=''>
+                            Contact person information
+                        </label>
+                        <input
+                            className='text-labelCT w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-12 '
+                            type='text'
+                            name=''
+                            id=''
+                            placeholder='Full name'
+                        />
+                        <input
+                            className='text-labelCT w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-12 '
+                            type='text'
+                            name=''
+                            id=''
+                            placeholder='Position'
+                        />
+                        <input
+                            className='text-labelCT w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-12 '
+                            type='email'
+                            name=''
+                            id=''
+                            placeholder='Email'
+                        />
+                        <input
+                            className='text-labelCT w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-12 '
+                            type='number'
+                            name=''
+                            id=''
+                            placeholder='Phone'
+                        />
+                    </div>
+                    <div className='CT-grInput w-[855.70px] flex items-center'>
+                        <button className='Create-Btn w-[749.73px] h-[70px] bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-[10px] text-black text-[32px] font-bold'>
+                            Create
                         </button>
                     </div>
                 </div>
