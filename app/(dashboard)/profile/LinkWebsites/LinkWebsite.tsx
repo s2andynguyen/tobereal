@@ -43,9 +43,9 @@ function LinkWebsite() {
                                     <input
                                         className='input-Link'
                                         type='text'
-                                        id='IconAddLink'
+                                        id='IconAddLink1'
                                     />
-                                    <label htmlFor='IconAddLink'>
+                                    <label htmlFor='IconAddLink1'>
                                         <IoAdd />
                                     </label>
                                 </div>
@@ -53,9 +53,9 @@ function LinkWebsite() {
                                     <input
                                         className='input-Link'
                                         type='text'
-                                        id='IconAddLink'
+                                        id='IconAddLink2'
                                     />
-                                    <label htmlFor='IconAddLink'>
+                                    <label htmlFor='IconAddLink2'>
                                         <IoAdd />
                                     </label>
                                 </div>
@@ -87,9 +87,9 @@ function LinkWebsite() {
                                     <input
                                         className='input-Link'
                                         type='text'
-                                        id='IconAddLink'
+                                        id='IconAddLink3'
                                     />
-                                    <label htmlFor='IconAddLink'>
+                                    <label htmlFor='IconAddLink3'>
                                         <IoAdd />
                                     </label>
                                 </div>
@@ -97,9 +97,9 @@ function LinkWebsite() {
                                     <input
                                         className='input-Link'
                                         type='text'
-                                        id='IconAddLink'
+                                        id='IconAddLink4'
                                     />
-                                    <label htmlFor='IconAddLink'>
+                                    <label htmlFor='IconAddLink4'>
                                         <IoAdd />
                                     </label>
                                 </div>

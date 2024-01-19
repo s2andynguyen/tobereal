@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { USER_Jakartas } from './UserJakarta'
 
 function Favourite() {
-    console.log('USER_Jakartas', USER_Jakartas)
     return (
         <div className='Wrap-Favourite'>
             <div className='bg-TitleFavourite flex items-center'>
