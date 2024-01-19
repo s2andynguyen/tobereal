@@ -83,7 +83,41 @@ const PostingSell = () => {
                             <input className='name' type='text' placeholder='Full Name' />
                             <input className='name' type='text' placeholder='Phone' />
                         </div>
-                        <div className='Asset'></div>
+                        <div className='Asset'>
+                            <span>Asset type</span>
+                            <select
+                                className='select-asset'
+                                id='Asset-type'
+                                name='Asset.type'
+                            >
+                                <option value=''>Select address</option>
+                                <option value=''>Selling townhouses</option>
+                                <option value=''>Selling private house</option>
+                                <option value=''>Selling villas and townhouses</option>
+                                <option value=''>Selling apartments</option>
+                                <option value="">Selling restaurants and hotels</option>
+                                <option value="">Selling warehouse and workshop</option>
+                            </select>
+                        </div>
+                        <div className="Address">
+                            <span>Address</span>
+
+                        </div>
+                        <div className="google_map">
+                            <Image
+                                src='/dashboard/images/posting/img/Map.png'
+                                alt=''
+                                className='w-[934px] h-[900px]'
+                                width={934}
+                                height={900}
+                            />
+
+                        </div>
+                        <div className="Titlle">
+                            <span>Title</span>
+                            <input type="text" placeholder='' />
+                        </div>
+
                     </div>
                 )}
                 {checkbox2 && <p>aaaaa</p>}
