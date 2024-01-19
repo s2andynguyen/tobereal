@@ -12,37 +12,23 @@ function CreateTrading() {
             setSelectedImageCT(file)
         }
     }
+
     return (
-        <div className='CreateTrading-wrap'>
-            <div className='image-CreateTrading '>
+        <div className='CreateTrading-wrap container'>
+            <div className='CreateTrading-container'>
                 <label
-                    htmlFor='imageInput-CT'
+                    htmlFor='imageInput'
                     className={selectedImageCT ? 'has-image' : ''}>
                     <input
                         type='file'
-                        id='imageInputCT'
+                        id='imageInput'
                         accept='image/*'
                         onChange={handleImageChangeCT}
                     />
-                    <div className='overlay-CreateTrading'>
-                        <Image
-                            className='iconCamera-CreateTrading w-[25px] h-[auto]'
-                            width={25}
-                            height={20}
-                            alt='IconCamera'
-                            src={'/dashboard/images/profile/IconCamera.png'}
-                        />
-                        <Image
-                            className='iconShare-CreateTrading w-[auto] h-[23px]'
-                            width={20}
-                            height={23}
-                            alt='IconShare'
-                            src={'/dashboard/images/profile/IconShare.png'}
-                        />
-                    </div>
+
                     {selectedImageCT && (
                         <div
-                            className='CreateTrading-image-preview'
+                            className='selected-image-preview'
                             style={{
                                 backgroundImage: `url(${URL.createObjectURL(
                                     selectedImageCT
@@ -50,8 +36,22 @@ function CreateTrading() {
                             }}
                         />
                     )}
-                    {!selectedImageCT && <div className='CreateTrading'></div>}
+                    {!selectedImageCT && <div className='placeholder'>Choose Logo</div>}
                 </label>
+            </div>
+            <div className='Gr-wrap-inputCT'>
+                <div className='CT-grInput'>
+                    <label className='text-labelCT' htmlFor=''>
+                        Name of the trading platform
+                    </label>
+                    <input
+                        className='w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-5'
+                        type='text'
+                        name=''
+                        id=''
+                        placeholder='Name of the trading platform'
+                    />
+                </div>
             </div>
         </div>
     )
