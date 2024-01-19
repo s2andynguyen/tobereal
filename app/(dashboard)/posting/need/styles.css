@@ -70,7 +70,6 @@
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    padding: 15px;
     letter-spacing: 0;
     line-height: normal;
     width: 252px;
@@ -128,7 +127,6 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: normal;
-    padding: 15px;
 }
 
 .input_title {
@@ -138,7 +136,6 @@
     border-radius: 5px;
     height: 167px;
     width: 934px;
-    padding: 10px;
     padding-bottom: 140px;
 }
 
@@ -155,7 +152,6 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: normal;
-    padding: 15px;
 }
 
 .Description_title {
@@ -184,7 +180,6 @@
     letter-spacing: 0;
     line-height: normal;
     width: 228px;
-    padding: 15px;
 }
 
 .name {

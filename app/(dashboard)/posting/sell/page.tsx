@@ -157,6 +157,19 @@ const PostingSell = () => {
                         </div>
                         <div className="Address">
                             <span className='text-Address'>Address</span>
+                            <select
+                                className='select-asset'
+                                id='Asset-type'
+                                name='Asset.type'
+                            >
+                                <option value=''>Select address type</option>
+                                <option value=''>Selling townhouses</option>
+                                <option value=''>Selling private house</option>
+                                <option value=''>Selling villas and townhouses</option>
+                                <option value=''>Selling apartments</option>
+                                <option value="">Selling restaurants and hotels</option>
+                                <option value="">Selling warehouse and workshop</option>
+                            </select>
 
                         </div>
                         <div className="google_map">
@@ -376,9 +389,6 @@ const PostingSell = () => {
                             className='input_title'
 
                         />
-                        <div className='characterCount'>
-                            {title.length}/100
-                        </div>
                     </div>
                     <div className="Description">
                         <span>Description content</span>
@@ -390,9 +400,6 @@ const PostingSell = () => {
                             className='Description_title'
 
                         />
-                        <div className='Description-characterCount'>
-                            {title.length}/2000
-                        </div>
                     </div>
                     <div className="Acrea">
                         <span>Acreage (m2)</span>

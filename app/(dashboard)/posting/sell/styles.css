@@ -2,6 +2,10 @@
     padding-top: 30px;
 }
 
+.sell {
+    padding: 30px;
+}
+
 .menu_li {
     cursor: pointer;
     background: linear-gradient(180deg, rgb(240, 185, 11) 0%, rgb(255, 236, 136) 100%);
@@ -141,9 +145,7 @@ input[type='file'] {
     line-height: normal;
 }
 
-.text_legal {
-    padding: 15px;
-}
+.text_legal {}
 
 .text_legal span {
     color: #000000;
@@ -181,7 +183,7 @@ input[type='file'] {
     letter-spacing: 0;
     line-height: normal;
     width: 386px;
-    padding: 15px;
+    height: 30px;
 }
 
 .Add_video .link {
@@ -207,7 +209,6 @@ input[type='file'] {
     letter-spacing: 0;
     line-height: normal;
     width: 228px;
-    padding: 15px;
 }
 
 .name {
@@ -257,7 +258,6 @@ input[type='file'] {
     font-weight: 500;
     letter-spacing: 0;
     line-height: normal;
-    padding: 15px;
     width: 135px;
 }
 
@@ -274,7 +274,6 @@ input[type='file'] {
     font-weight: 500;
     letter-spacing: 0;
     line-height: normal;
-    padding: 15px;
 }
 
 .input_title {
@@ -287,13 +286,6 @@ input[type='file'] {
     border-radius: 5px;
 }
 
-/* .characterCount {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 12px;
-
-} */
 
 .Description {
     gap: 10px;

@@ -151,9 +151,6 @@ const PostingSell = () => {
                             className='input_title'
 
                         />
-                        <div className='characterCount'>
-                            {title.length}/100
-                        </div>
                     </div>
                     <div className="Description">
                         <span>Description content</span>
@@ -165,9 +162,6 @@ const PostingSell = () => {
                             className='Description_title'
 
                         />
-                        <div className='Description-characterCount'>
-                            {title.length}/2000
-                        </div>
                     </div>
                     <div className="Acrea">
                         <span>Acreage (m2)</span>
