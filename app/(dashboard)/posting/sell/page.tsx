@@ -2,7 +2,6 @@
 import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
-
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
