@@ -20,91 +20,99 @@ function LinkWebsite() {
             <div className='Gr-form-LinkWebsites flex flex-col items-center p-5 '>
                 {/* Tabs */}
                 <div className='flex flex-col gap-2 items-center'>
-                    <div
-                        className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
-                        onClick={() => handleTabClick('tab1')}
-                        style={{
-                            backgroundColor: activeTab === 'tab1' ? '#ccc' : 'transparent'
-                        }}>
-                        <p className='text-black text-sm font-medium'>Link website:</p>
-                        <Image
-                            width={14}
-                            height={16}
-                            className='Icon-EditName w-[14px] h-[auto]'
-                            src={IconEdit}
-                            alt='IconEdit'
-                        />
-                    </div>
+                    <div className='flex flex-col items-center'>
+                        <div
+                            className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
+                            onClick={() => handleTabClick('tab1')}
+                            style={{
+                                backgroundColor:
+                                    activeTab === 'tab1' ? '#ccc' : 'transparent'
+                            }}>
+                            <p className='text-black text-sm font-medium'>
+                                Link website:
+                            </p>
+                            <Image
+                                width={14}
+                                height={16}
+                                className='Icon-EditName w-[14px] h-[auto]'
+                                src={IconEdit}
+                                alt='IconEdit'
+                            />
+                        </div>
 
-                    <div>
-                        {activeTab === 'tab1' && (
-                            <div className='box-form-input flex flex-col items-center justify-center '>
-                                <div className='Gr-input-bor flex items-end'>
-                                    <input
-                                        className='input-Link'
-                                        type='text'
-                                        id='IconAddLink'
-                                    />
-                                    <label htmlFor='IconAddLink'>
-                                        <IoAdd />
-                                    </label>
+                        <div>
+                            {activeTab === 'tab1' && (
+                                <div className='box-form-input flex flex-col items-center justify-center '>
+                                    <div className='Gr-input-bor flex items-end'>
+                                        <input
+                                            className='input-Link'
+                                            type='text'
+                                            id='IconAddLink'
+                                        />
+                                        <label htmlFor='IconAddLink'>
+                                            <IoAdd />
+                                        </label>
+                                    </div>
+                                    <div className='flex items-end'>
+                                        <input
+                                            className='input-Link'
+                                            type='text'
+                                            id='IconAddLink'
+                                        />
+                                        <label htmlFor='IconAddLink'>
+                                            <IoAdd />
+                                        </label>
+                                    </div>
                                 </div>
-                                <div className='flex items-end'>
-                                    <input
-                                        className='input-Link'
-                                        type='text'
-                                        id='IconAddLink'
-                                    />
-                                    <label htmlFor='IconAddLink'>
-                                        <IoAdd />
-                                    </label>
-                                </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
-                    <div
-                        className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
-                        onClick={() => handleTabClick('tab2')}
-                        style={{
-                            backgroundColor: activeTab === 'tab2' ? '#ccc' : 'transparent'
-                        }}>
-                        <p className='text-black text-sm font-medium'>
-                            Social network link
-                        </p>
-                        <Image
-                            width={14}
-                            height={16}
-                            className='Icon-EditName w-[14px] h-[auto]'
-                            src={IconEdit}
-                            alt='IconEdit'
-                        />
-                    </div>
+                    <div className='flex flex-col items-center'>
+                        <div
+                            className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
+                            onClick={() => handleTabClick('tab2')}
+                            style={{
+                                backgroundColor:
+                                    activeTab === 'tab2' ? '#ccc' : 'transparent'
+                            }}>
+                            <p className='text-black text-sm font-medium'>
+                                Social network link
+                            </p>
+                            <Image
+                                width={14}
+                                height={16}
+                                className='Icon-EditName w-[14px] h-[auto]'
+                                src={IconEdit}
+                                alt='IconEdit'
+                            />
+                        </div>
 
-                    <div>
-                        {activeTab === 'tab2' && (
-                            <div className='box-form-input flex flex-col items-center justify-center '>
-                                <div className='Gr-input-bor flex items-end'>
-                                    <input
-                                        className='input-Link'
-                                        type='text'
-                                        id='IconAddLink'
-                                    />
-                                    <label htmlFor='IconAddLink'>
-                                        <IoAdd />
-                                    </label>
+                        <div>
+                            {activeTab === 'tab2' && (
+                                <div className='box-form-input flex flex-col items-center justify-center '>
+                                    <div className='Gr-input-bor flex items-end'>
+                                        <input
+                                            className='input-Link'
+                                            type='text'
+                                            id='IconAddLink'
+                                        />
+                                        <label htmlFor='IconAddLink'>
+                                            <IoAdd />
+                                        </label>
+                                    </div>
+                                    <div className='flex items-end'>
+                                        <input
+                                            className='input-Link'
+                                            type='text'
+                                            id='IconAddLink'
+                                        />
+                                        <label htmlFor='IconAddLink'>
+                                            <IoAdd />
+                                        </label>
+                                    </div>
                                 </div>
-                                <div className='flex items-end'>
-                                    <input
-                                        className='input-Link'
-                                        type='text'
-                                        id='IconAddLink'
-                                    />
-                                    <label htmlFor='IconAddLink'>
-                                        <IoAdd />
-                                    </label>
-                                </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
                 </div>
 

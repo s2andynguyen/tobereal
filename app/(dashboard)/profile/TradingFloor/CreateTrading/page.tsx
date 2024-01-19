@@ -39,13 +39,13 @@ function CreateTrading() {
                     {!selectedImageCT && <div className='placeholder'>Choose Logo</div>}
                 </label>
             </div>
-            <div className='Gr-wrap-inputCT'>
+            <div className='Gr-wrap-inputCT pt-10'>
                 <div className='CT-grInput'>
                     <label className='text-labelCT' htmlFor=''>
                         Name of the trading platform
                     </label>
                     <input
-                        className='w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-5'
+                        className='text-labelCT w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-12'
                         type='text'
                         name=''
                         id=''
