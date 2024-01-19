@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import './style.css'
-function Main({data}) {
+function Main({ data }: { data: any }) {
     return ( 
         <div className="api">
             <img src={data?.img} alt="" />
