@@ -21,7 +21,7 @@ const PostOptionPage = () => {
             <p>Sell</p>
             <Image
               src="/dashboard/images/posting/img/Sell.png"
-              alt=""
+              alt="" 
               className='w-[40px] h-[38px]'
               width={40}
               height={38} />
