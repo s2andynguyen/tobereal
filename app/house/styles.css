@@ -227,6 +227,7 @@
     line-height: normal;
     display: flex;
     justify-content: space-around;
+    padding: 100px;
 }
 
 .container_grid {
@@ -239,8 +240,8 @@
 .container_card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 100px;
-
+    padding: 160px;
+    align-items: center;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

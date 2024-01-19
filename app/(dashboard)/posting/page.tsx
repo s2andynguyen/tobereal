@@ -6,12 +6,12 @@ import { dataCardVip, dataCardPackage, dataOnlineTrading } from './_model/dataPo
 import PostingPackageSlide from './_ui/slide/PostingPackageSlide';
 import TypeOfNewsSlide from './_ui/slide/TypeOfNewsSlide';
 import OnlineTrading from './_ui/slide/OnlineTrading';
+import PostButton from './_ui/PostButton';
 const PostingPage = () => {
   return (
     <DashboardLayout title='Price list posted in news'>
       <div className='container mx-auto'>      
-        <div className='pl-5 xl:pl-8 pt-10 xl:pt-[60px] pb-[150px] pr-5'>
-          
+        <div className='pl-5 xl:pl-8 pt-10 xl:pt-[60px] pb-[60px] pr-5'>
             {/* Benefits and annual account maintenance fees */}
             <PostCardVipSlide list={dataCardVip} />
 
@@ -23,7 +23,8 @@ const PostingPage = () => {
 
             {/* Create an online trading platform */}
             <OnlineTrading list={dataOnlineTrading} />
-
+            
+            <div className='mt-[80px]'><PostButton /></div>
         </div>
       </div>
     </DashboardLayout>

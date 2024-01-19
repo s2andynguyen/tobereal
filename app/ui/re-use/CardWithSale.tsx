@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { formatter } from '@/lib/helper'
 import { hotelRoom } from '../model/hotelRoom'
 import Place from '@/icons/Header/Blockhead/Place'
+import Link from 'next/link'
 const CardWithSale: React.FC<hotelRoom> = ({
     title,
     place,
@@ -15,7 +16,7 @@ const CardWithSale: React.FC<hotelRoom> = ({
     let Icon: any = null
     if (icon) Icon = icon
     return (
-        <div className='w-full h-[220px] cursor-pointer select-none'>
+        <Link href={'/detail/1'} className='w-full h-[220px] cursor-pointer select-none'>
             <div className=' shadow-gray rounded-[10px] relative'>
                 <Image
                     src={imageUrl}
@@ -67,7 +68,7 @@ const CardWithSale: React.FC<hotelRoom> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 export default CardWithSale

@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { ibmPlex } from '@/assets/styles/fonts'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 function Footer() {
     const router = useRouter()
     return (
@@ -54,7 +55,7 @@ function Footer() {
                                 width={167}
                                 height={91}
                                 alt='main-logo'
-                                className='w-auto h-[60px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md rounded-3xl'
+                                className='w-auto h-[60px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md drop-shadow-footer-logo rounded-3xl '
                                 onClick={() => router.push('/')}
                             />
                         </div>
@@ -89,9 +90,15 @@ function Footer() {
                                     <span className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         Blog Travelio
                                     </span>
-                                    <span className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
+                                    <Link href={'/promotion'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         Promotion
-                                    </span>
+                                    </Link>
+                                    <Link href={'/house'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
+                                        House
+                                    </Link>
+                                    <Link href={'/posting'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
+                                        Dashboard
+                                    </Link>
                                 </ul>
                             </div>
                         </div>
@@ -100,6 +107,12 @@ function Footer() {
                             <div>
                                 <p className='font-bold text-xl'>Contact us</p>
                                 <ul className='flex flex-col gap-2 pt-[6px] items-start'>
+                                    <Link href={'/contact'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
+                                        Contact page
+                                    </Link>
+                                    <Link href={'/apartment'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
+                                        Apartment
+                                    </Link>
                                     <span className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         Live chat on Travelio app
                                     </span>

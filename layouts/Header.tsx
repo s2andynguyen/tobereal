@@ -54,10 +54,10 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                                     Promotion
                                 </Link>
                                 <Link
-                                    href={'/posting'}
+                                    href={'/property'}
                                     className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
                                     flex justify-center items-center rounded-[30px] ${
-                                        pathName === '/posting'
+                                        pathName === '/property'
                                             ? 'bg-gradient-right'
                                             : ''
                                     }`}>
@@ -133,10 +133,10 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                                     Promotion
                                 </Link>
                                 <Link
-                                    href={'/posting'}
+                                    href={'/property'}
                                     className={`text-[18px] font-medium font-montserrat px-4 hover:drop-shadow-md h-12  
                                     flex justify-center items-center rounded-[30px] ${
-                                        pathName === '/posting'
+                                        pathName === '/property'
                                             ? 'bg-gradient-right'
                                             : ''
                                     }`}>

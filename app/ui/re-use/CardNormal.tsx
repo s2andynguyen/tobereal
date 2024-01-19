@@ -5,6 +5,7 @@ import { formatter } from '@/lib/helper'
 import { hotelRoom } from '../model/hotelRoom'
 import { renderStart } from '@/lib/render'
 import Place from '@/icons/Header/Blockhead/Place'
+import Link from 'next/link'
 const CardNormal: React.FC<hotelRoom> = ({
     typeRoom,
     title,
@@ -17,7 +18,7 @@ const CardNormal: React.FC<hotelRoom> = ({
     let Icon: any = null
     if (icon) Icon = icon
     return (
-        <div className='w-full h-[220px] select-none cursor-pointer'>
+        <Link href={'/detail/1'} className='w-full h-[220px] select-none cursor-pointer'>
             <div className=' shadow-gray rounded-[10px] relative'>
                 <div className='h-[140px]'>
                     <Image
@@ -58,7 +59,7 @@ const CardNormal: React.FC<hotelRoom> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 export default CardNormal

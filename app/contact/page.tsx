@@ -61,7 +61,7 @@ export default function Contact() {
 
     return (
         <MainLayout>
-            <Box className="form_background" sx={{ width: '40%' }}>
+            <Box className="form_background min-h-[800px] pt-10" sx={{ width: '40%' }}>
                 <p className="frame_banner"></p>
                 <div >
                     {allStepsCompleted() ? (
@@ -93,7 +93,7 @@ export default function Contact() {
                                     {activeStep === 0 && <ContactUser />}
                                     {activeStep === 1 && <OwnerData />}
                                     {activeStep === 2 && <Payment />}
-    
+
                                     <Box className='form_buttom' sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                                         <Box sx={{ flex: '1 1 auto' }} />
                                         {activeStep !== steps.length &&
@@ -108,9 +108,9 @@ export default function Contact() {
                                                 </Button>
                                             )}
                                     </Box>
-    
+
                                 </div>
-    
+
                             </div>
                         </React.Fragment>
                     )}

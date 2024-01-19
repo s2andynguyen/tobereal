@@ -25,7 +25,6 @@ function WeeklyHotDeals() {
                 pending={pending}
                 imageUrl='/images/home/hotel-image/hot-deals.png'
                 bgColor='bg-gradient-pink'
-                // imageStyle={{marginLeft: '30px'}}
                 bgWidth={203}
                 bgHeight={198}
                 hotDeal

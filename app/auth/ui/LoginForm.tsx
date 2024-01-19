@@ -6,7 +6,9 @@ import Input from '@/components/Input'
 import InputPassword from '@/components/InputPassword'
 import SocialLogin from './SocialLogin'
 import CustomCheckbox from '@/components/CustomCheckbox'
+import { useRouter } from 'next/navigation'
 function AuthForm() {
+    const router = useRouter()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [remember, setRemember] = useState(false)
@@ -52,12 +54,13 @@ function AuthForm() {
                         />
                     {/* fogot password */}
                     <Link
-                        href={'/auth/register'}
+                        href={'/auth/forgot'}
                         className='text-[#E86969] ml-10 hover:underline'>
                         Forgot Password?
                     </Link>
                 </div>
-                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'>
+                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
+                onClick={() => router.push('/')}>
                     Login
                 </button>
             </div>

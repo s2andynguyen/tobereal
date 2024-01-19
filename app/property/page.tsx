@@ -8,8 +8,10 @@ import ShowJenisGr from './ui/ShowJenisGr/ShowJenisGr'
 import { Difference } from './Differences'
 import TableDifference from './ui/TableDifference/TableDifference'
 import MainLayout from '@/layouts/MainLayout'
+import { useRouter } from 'next/navigation'
 //
 function Property() {
+    const router = useRouter()
     return (
         <MainLayout>
             <div className='wrapper bg-white'>
@@ -54,7 +56,8 @@ function Property() {
                                     rented daily, monthly and annually.
                                 </p>
                             </div>
-                            <button className='seeMore-btn wrap-btn'>See More</button>
+                            <button className='seeMore-btn wrap-btn'
+                             onClick={() => router.push('/apartment')}>See More</button>
                         </div>
                     </div>
                     <div className='PropertyManagement-wrap flex flex-col gap-10 w-full justify-between lg:flex-row'>
@@ -69,7 +72,8 @@ function Property() {
                                     rented daily, monthly and annually.
                                 </p>
                             </div>
-                            <button className='seeMore-btn wrap-btn'>See More</button>
+                            <button className='seeMore-btn wrap-btn'
+                            onClick={() => router.push('/promotion')}>See More</button>
                         </div>
                         <Image
                             width={412}

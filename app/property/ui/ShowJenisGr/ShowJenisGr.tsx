@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './style.css'
 import Image from 'next/image'
 function ShowJenisGr({ data }: { data: any }) {
@@ -5,12 +6,11 @@ function ShowJenisGr({ data }: { data: any }) {
         <div className='wrap-tag items-center justify-evenly'>
             <Image width={85} height={90} className='w-[85px] h-[auto]' src={data?.img} alt='Jenis img' />
             <h4 className='text-name-jenis'>{data?.name}</h4>
-            <div className='See-more-gr flex gap-5 items-center'>
-                <a
-                    href='#'
+            <Link href={data.path} className='See-more-gr flex gap-5 items-center'>
+                <span
                     className="w-[110px] text-black text-[15px] font-medium font-['Montserrat']">
                     See more
-                </a>
+                </span>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='20'
@@ -22,7 +22,7 @@ function ShowJenisGr({ data }: { data: any }) {
                         fill='black'
                     />
                 </svg>
-            </div>
+            </Link>
         </div>
     )
 }

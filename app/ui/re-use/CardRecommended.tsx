@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { formatter, upperCaseFirstChar } from '@/lib/helper'
 import Place from '@/icons/Header/Blockhead/Place'
+import Link from 'next/link'
 interface CardRecommendedProps {
     id?: number
     typeRoom: string
@@ -34,7 +35,7 @@ const CardRecommended: React.FC<CardRecommendedProps> = ({
         setLikedState(!likedState)
     }
     return (
-        <div className='w-full h-[220px] select-none cursor-pointer'>
+        <Link href={'/detail/1'} className='w-full h-[220px] select-none cursor-pointer'>
             <div className=' shadow-gray rounded-[10px] relative'>
                 <Image
                     src={imageUrl}
@@ -182,7 +183,7 @@ const CardRecommended: React.FC<CardRecommendedProps> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 export default CardRecommended

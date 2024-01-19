@@ -27,7 +27,7 @@ const DetailBreadcrumb: React.FC<DetailBreadcrumb> = ({ place, hotel }) => {
                 fill='none'>
                 <path d='M1 1L6.5 6.5L1 12' stroke='black' strokeLinecap='round' />
             </svg>
-            <Link href='/'>Hotel Gran Melia Jakarta</Link>
+            <span>Hotel Gran Melia Jakarta</span>
         </div>
     )
 }

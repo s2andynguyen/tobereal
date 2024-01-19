@@ -8,6 +8,7 @@ import SwiperWrap from '@/components/SwiperWrap'
 import HotelLioStaySkeleton from './skeletons/HotelLioStaySkeleton'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
+import Link from 'next/link'
 function HotelLioStay() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
