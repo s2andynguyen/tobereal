@@ -1,0 +1,49 @@
+.left-sidebar-bg {
+    background: linear-gradient(121deg, #FFF 10.96%, #FFF 72%, #FFF 99.98%);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04), 0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.04), 0px 24px 32px 0px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-playout__bg {
+    width: calc(100vw - 268px);
+    height: 60vh;
+    position: fixed;
+    bottom:0;
+    right: 0;
+    z-index: 0;
+    background-image: url('/dashboard/images/bg-dashboard.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain
+}
+.dashboard-playout__page {
+    position: relative;
+    min-height: calc(100vh - 128px);
+    z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    .dashboard-playout__page {
+        min-height: calc(100vh - 80px);
+        /* background-color: red; */
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-playout__bg {
+        width: calc(100vw - 200px);
+        height: 60vh;
+        background-size: cover;
+
+
+    }
+}
+@media (max-width: 639px) {
+    .dashboard-playout__bg {
+        width: 100vw;
+        height: 50vh;
+        background-size: cover;
+    }
+    .dashboard-playout__page {
+        min-height: 100vh;
+    }
+}
