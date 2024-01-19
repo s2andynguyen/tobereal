@@ -11,19 +11,19 @@ const PostingPage = () => {
     <DashboardLayout title='Price list posted in news'>
       <div className='container px-3 sm:px-4  xl:mx-auto'>      
         <div className='pl-5 xl:pl-8 pt-10 xl:pt-[60px] pb-[60px] pr-5'>
-            {/* Benefits and annual account maintenance fees */}
-            <PostCardVipSlide list={dataCardVip} />
+          {/* Benefits and annual account maintenance fees */}
+          <PostCardVipSlide list={dataCardVip} />
 
-            {/* Posting package */}
-            <PostingPackageSlide list={dataCardPackage} />
+          {/* Posting package */}
+          <PostingPackageSlide list={dataCardPackage} />
 
             {/* Cost for each type of news */}
             <TypeOfNewsSlide list={dataTypeNews} />
 
-            {/* Create an online trading platform */}
-            <OnlineTrading list={dataOnlineTrading} />
-            
-            <div className='mt-[80px]'><PostButton /></div>
+          {/* Create an online trading platform */}
+          <OnlineTrading list={dataOnlineTrading} />
+
+          <div className='mt-[80px]'><PostButton /></div>
         </div>
       </div>
     </DashboardLayout>
