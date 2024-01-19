@@ -11,7 +11,12 @@ import AboutHotel from '../_ui/AboutHotel'
 import { renderStart } from '@/lib/render'
 import OtherAccommodation from '../_ui/OtherAccommodation'
 import OrtherApartmentOption from '../_ui/OrtherApartmentOption'
-import { ListHotelImageDemo, listUnitFacillities, listAbout, propertyList } from '../_model/detailData'
+import {
+    ListHotelImageDemo,
+    listUnitFacillities,
+    listAbout,
+    propertyList
+} from '../_model/detailData'
 import { inter } from '@/assets/styles/fonts'
 import FormDetailBooking from '../_ui/FormDetailBooking'
 type Props = {
@@ -40,7 +45,7 @@ function DetailHotel() {
                     <DetailBreadcrumb place='Jakarta' hotel='Gran Melia Jakarta' />
 
                     {/* Group Image */}
-                    <div className='mt-5 mb-4 md:mb-6 xl:mb-12'>    
+                    <div className='mt-5 mb-4 md:mb-6 xl:mb-12'>
                         <ImageHighlight listImage={ListHotelImageDemo} />
                     </div>
 
@@ -57,7 +62,7 @@ function DetailHotel() {
                                     Hotel Residence 🏨
                                 </div>
                                 {/* Heart icon */}
-                                <HeartItemAction liked={true}/>
+                                <HeartItemAction liked={true} />
                             </div>
                             {/* Rating */}
                             <div className='flex item-center gap-2 mb-5'>
@@ -109,7 +114,7 @@ function DetailHotel() {
 
                             {/* Property */}
                             <div className='mb-2'>
-                                <DetailProperty/>
+                                <DetailProperty />
                             </div>
 
                             {/* Unit Facilities */}
@@ -182,12 +187,17 @@ function DetailHotel() {
                             </div>
                         </div>
                         {/* col right */}
-                        <div  className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
+                        {/* <div
+                           className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0`}> */}
+                        <div
+                            className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
                             <div className='w-full mx-auto shadow-yellow bg-white border border-primary/30 sticky top-[110px]'>
                                 {/* head-card */}
                                 <div className='lg:h-[48px] xl:h-[54px] w-full flex items-center justify-end pr-5 bg-primary '>
                                     <div className='flex items-center justify-end cursor-pointer py-2 group'>
-                                        <span className='lg:text-xl xl:text-2xl font-medium'>USD</span>
+                                        <span className='lg:text-xl xl:text-2xl font-medium'>
+                                            USD
+                                        </span>
                                         <Image
                                             src={'/images/detail-hotel/current-down.svg'}
                                             height={12}

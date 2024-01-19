@@ -142,3 +142,13 @@ input[type='file'] {
     font-weight: 500;
     line-height: normal;
 }
+.AddBranch-CT {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    
+}

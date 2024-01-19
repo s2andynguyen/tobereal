@@ -39,7 +39,7 @@ function LinkWebsite() {
                                 alt='IconEdit'
                             />
                         </div>
-
+                    </div>
                     <div>
                         {activeTab === 'tab1' && (
                             <div className='box-form-input flex flex-col items-center justify-center '>
@@ -112,7 +112,6 @@ function LinkWebsite() {
                     </div>
                 </div>
 
-                {/* Hiển thị giao diện tương ứng với tab được chọn */}
             </div>
         </div>
     )
