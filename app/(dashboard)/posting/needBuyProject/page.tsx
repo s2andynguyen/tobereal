@@ -6,16 +6,16 @@ import { NeedTobereal_BUY } from './Buy-ToberealNeed'
 const NeedBuyProject = () => {
     return (
         <DashboardLayout title='Customers need to buy - need to rent'>
-            <div className='wrap-NeedBuyProjects flex flex-col gap-14'>
-                <div className='Gr-CustomersSelects flex flex-col'>
+            <div className='wrap-NeedBuyProjects flex flex-col gap-14 mt-20'>
+                <div className='flex flex-col justify-center items-center gap-6'>
                     <div className='SelectSearch '>
-                        <label className='textLabel-Select !font-bold' htmlFor='Province'>
+                        <label className='textLabel-Select font-bold' htmlFor='Province'>
                             Select Province/City:
                         </label>
                         <input type='text' id='Province' className='inputSelect' />
                     </div>
                     <div className='SelectSearch'>
-                        <label className='textLabel-Select' htmlFor='District'>
+                        <label className='textLabel-Select font-bold' htmlFor='District'>
                             Select District:{' '}
                         </label>
                         <input type='text' id='District' className='inputSelect' />
@@ -25,7 +25,7 @@ const NeedBuyProject = () => {
                         <button className='btn-SearchBuy'>search</button>
                     </div>
                 </div>
-                <div className='Gr-UserTobereals flex flex-col gap-2'>
+                <div className='flex flex-col gap-3 justify-center items-center'>
                     {NeedTobereal_BUY?.map((card) => (
                         <BuyTobereal data={card} key={card?.id} />
                     ))}

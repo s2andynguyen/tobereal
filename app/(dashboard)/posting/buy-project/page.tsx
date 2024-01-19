@@ -7,30 +7,30 @@ const BuyProject = () => {
     return (
         <DashboardLayout title='Customers need to buy the project'>
             <div className='wrap-BuyProjects flex gap-14'>
-                <div className='Gr-CustomersSelects flex flex-col'>
+                <div className='Gr-CustomersSelects flex flex-col justify-center items-center'>
                     <div className='SelectSearch '>
-                        <label className='textLabel-Select !font-bold' htmlFor='Province'>
+                        <label className='textLabel-Select font-bold' htmlFor='Province'>
                             Select Province/City:
                         </label>
                         <input type='text' id='Province' className='inputSelect' />
                     </div>
-                    <div className='SelectSearch'>
-                        <label className='textLabel-Select' htmlFor='District'>
+                    <div className='SelectSearch'>  
+                        <label className='textLabel-Select font-bold' htmlFor='District'>
                             Select District:{' '}
                         </label>
                         <input type='text' id='District' className='inputSelect' />
                     </div>
                     <div className='SelectSearch'>
-                        <label className='textLabel-Select' htmlFor='SLproject'>
+                        <label className='textLabel-Select font-bold' htmlFor='SLproject'>
                             Select project:{' '}
                         </label>
                         <input type='text' id='SLproject' className='inputSelect' />
                     </div>
-                    <div className='SelectSearch items-center'>
+                    <div className='SelectSearch items-center mt-7'>
                         <button className='btn-SearchBuy'>search</button>
                     </div>
                 </div>
-                <div className='Gr-UserTobereals flex flex-col gap-2'>
+                <div className='Gr-UserTobereals flex flex-col justify-center items-center gap-2'>
                     {UserTobereal_BUY?.map((card) => (
                         <BuyTobereal data={card} key={card?.id} />
                     ))}

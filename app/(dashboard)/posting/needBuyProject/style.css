@@ -14,14 +14,13 @@
     line-height: 35.5px; /* 221.875% */
 }
 .Gr-CustomersSelects {
-    gap: 20px;
-    align-items: start;
+    /* gap: 20px;
+    align-items: start; */
 }
 .SelectSearch {
     width: 619px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: start;
 }
 .inputSelect {

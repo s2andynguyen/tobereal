@@ -10,7 +10,7 @@ function CustomerManagement() {
     return (
         <DashboardLayout title='Customer management'>
             <div className='wrap-CustomerManagements'>
-                <div className='Gr-CustomerManagements containerflex flex-col gap-4'>
+                <div className='Gr-CustomerManagements container flex flex-col gap-4'>
                     <div className='wrap-Btn-CM flex items-center justify-between pl-6 pr-4'>
                         <button className='Btn-CM' onClick={() => router.push('/')}>
                             List of customers

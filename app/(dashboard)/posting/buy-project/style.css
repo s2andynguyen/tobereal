@@ -2,7 +2,6 @@
     margin: 0 auto;
     position: relative;
     width: 100%;
-
     flex-direction: column;
     padding: 50px;
 }
@@ -13,16 +12,13 @@
     font-weight: 500;
     line-height: 35.5px; /* 221.875% */
 }
-.Gr-CustomersSelects {
-    gap: 20px;
-    align-items: start;
-}
+
 .SelectSearch {
     width: 619px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: start;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 .inputSelect {
     width: 100%;
