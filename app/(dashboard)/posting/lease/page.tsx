@@ -40,7 +40,7 @@ const PostingSell = () => {
 
     return (
         <DashboardLayout title='Post'>
-            <div className='sale'>
+            <div className='sale pt-[60px] px-10'>
                 <div className="menu_li">
                     <p>Lease</p>
                     <Image

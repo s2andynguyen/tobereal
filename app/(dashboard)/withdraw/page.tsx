@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import DashboardLayout from '../../_ui/layout/DashboardLayout'
-import '../deposit/style.css'
+import DashboardLayout from '../_ui/layout/DashboardLayout'
+import './style.css'
 
 const DepositPage = () => {
     const [ amount, setAmount ] = useState('')

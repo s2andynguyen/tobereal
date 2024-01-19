@@ -1,6 +1,9 @@
+'use client'
 import './style.css'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 function InformationBonuss() {
+    const router = useRouter()
     return (
         <div className='wrap-InformationBonuss flex flex-col justify-between'>
             <div className='InformationBonuss-Gr flex flex-col gap-4 items-center'>
@@ -10,8 +13,8 @@ function InformationBonuss() {
                         <p className='InformationBonus-text'>$ 4,000.00</p>
                     </div>
                     <div className='flex flex-col gap-5'>
-                        <button className='btn-Balances'>Withdraw</button>
-                        <button className='btn-Balances'>Deposit</button>
+                        <button className='btn-Balances'onClick={() => router.push('/withdraw')}>Withdraw</button>
+                        <button className='btn-Balances'onClick={() => router.push('/deposit')}>Deposit</button>
                     </div>
                 </div>
                 <div className='formBalances'>
