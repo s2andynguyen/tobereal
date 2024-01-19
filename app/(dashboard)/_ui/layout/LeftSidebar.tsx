@@ -6,8 +6,9 @@ import { lato } from '@/assets/styles/fonts'
 import { usePathname,useRouter } from 'next/navigation'
 import '../layoutstyle.css'
 const LeftSidebar = () => {
-    const pathname = usePathname()
+    const pathName = usePathname()
     const router = useRouter()
+    const pathname = '/'+ pathName.split('/')[1]
     return (
         <div
             className={`hidden sm:block fixed h-screen w-[200px] md:w-[268px] shadow-md left-sidebar-bg z-[3] ${lato.className}`}>
@@ -194,7 +195,7 @@ const LeftSidebar = () => {
                     </li>
                     <li>
                         <Link
-                            href={'/posting'}
+                            href={'/profile'}
                             className={`flex items-center pl-2 md:pl-5  h-10 rounded-[4px] mb-3 ${
                                 pathname === '/profile'
                                     ? 'bg-black text-primary'
@@ -244,21 +245,25 @@ const LeftSidebar = () => {
                             } cursor-pointer transition-all duration-200`}>
                             <span className='mr-2 md:mr-5'>
                                 <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='15'
-                                    height='19'
-                                    viewBox='0 0 15 19'
-                                    fill='none'>
+                                    width='16'
+                                    height='18'
+                                    viewBox='0 0 16 18'
+                                    fill='none'
+                                    xmlns='http://www.w3.org/2000/svg'>
                                     <path
-                                        d='M9.00704 1H2.60141C2.17669 1 1.76936 1.16872 1.46904 1.46904C1.16872 1.76936 1 2.17669 1 2.60141V15.4127C1 15.8374 1.16872 16.2447 1.46904 16.545C1.76936 16.8454 2.17669 17.0141 2.60141 17.0141H12.2099C12.6346 17.0141 13.0419 16.8454 13.3422 16.545C13.6425 16.2447 13.8113 15.8374 13.8113 15.4127V5.80422L9.00704 1Z'
-                                        stroke='#F0B90B'
+                                        d='M9.58785 0.992188H3.18222C2.7575 0.992188 2.35017 1.16091 2.04985 1.46123C1.74953 1.76155 1.58081 2.16888 1.58081 2.59359V15.4049C1.58081 15.8296 1.74953 16.2369 2.04985 16.5372C2.35017 16.8375 2.7575 17.0063 3.18222 17.0063H12.7907C13.2154 17.0063 13.6227 16.8375 13.923 16.5372C14.2233 16.2369 14.3921 15.8296 14.3921 15.4049V5.79641L9.58785 0.992188Z'
+                                        stroke={`${
+                                            pathname === '/posting' ? '#F0B90B' : '#c7c7c7'
+                                        }`}
                                         strokeWidth='2'
                                         strokeLinecap='round'
                                         strokeLinejoin='round'
                                     />
                                     <path
-                                        d='M9.00732 1V5.80422H13.8115'
-                                        stroke='#F0B90B'
+                                        d='M9.58789 0.992188V5.79641H14.3921'
+                                        stroke={`${
+                                            pathname === '/posting' ? '#F0B90B' : '#c7c7c7'
+                                        }`}
                                         strokeWidth='2'
                                         strokeLinecap='round'
                                         strokeLinejoin='round'

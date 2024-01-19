@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { dataCardVipProperty } from '../../_model/dataPosting'
+import { dataTypeNewsProperty } from '../../_model/dataPosting'
 import { IoIosArrowDown } from 'react-icons/io'
 import '../../_style/posting-page.css'
 import '../../_style/type-of-news.css'
@@ -12,10 +12,10 @@ import {
     handleMouseMove
 } from '@/assets/js/handleDragSlide'
 
-interface PostCardVipSlideProps {
-    list: dataCardVipProperty[]
+interface TypeOfNewsSlideProps {
+    list: dataTypeNewsProperty[]
 }
-const TypeOfNewsSlide: React.FC<PostCardVipSlideProps> = ({ list }) => {
+const TypeOfNewsSlide: React.FC<TypeOfNewsSlideProps> = ({ list }) => {
     const [isShow, setIsShow] = useState(false)
     const handleSetIsShow = () => {
         setIsShow(!isShow)
@@ -39,9 +39,10 @@ const TypeOfNewsSlide: React.FC<PostCardVipSlideProps> = ({ list }) => {
             </div>
 
             {/* show info Benefits and annual account maintenance fees */}
+            {/* max-w-[960px] */}
             <div
                 className={`block-slide-card__type-news posting-slide__container absolute top-0 left-0 w-full h-[545px] pt-[57px] 
-             bg-white rounded-b-[4px] px-6 z-0  max-w-[960px] overflow-x-auto  ${
+             bg-white rounded-b-[4px] px-6 z-0  overflow-x-auto  ${
                  isShow ? 'show' : ''
              }`}
                 onMouseDown={(e) => handleMouseDown(e, 'block-slide-card__type-news')}
@@ -54,40 +55,51 @@ const TypeOfNewsSlide: React.FC<PostCardVipSlideProps> = ({ list }) => {
                             key={index}
                             className={`posting-card__vip-bg min-w-[260px] max-w-[260px] h-[418px] border border-primary/50
                         pb-2 text-center rounded-2xl flex-grow-0`}>
-                            <p className='text-white font-semibold pt-3 flex items-center justify-center mb-4'>
-                                Test news {index + 1}
+                            <p className={`text-white font-semibold pt-3 flex items-center justify-center mb-5 relative ${
+                                index > 2 ? 'after:absolute after:bottom-0 after:left-[10%] after:block after:w-[80%] after:h-px after:bg-black after:bg-opacity-65' :''}`}>
+                                {item.title}
                             </p>
                             <p className='text-center font-bold text-[10px] leading-4 mb-4'>
                                 Description of where it appears
                             </p>
-                            <p className='px-6 text-[10px] leading-[15px] mb-4'>
-                                The news only has 02 unique images and represents the news
-                                that does not appear on the Tobe Real Real Estate home
-                                page, appears from page 3. is the news that appears last
-                                in the search. Unable to upload news (refresh news)
+                            <p className={`px-6 text-[10px] leading-[15px] mb-4 ${
+                                item.desc && 'min-h-[90px]'
+                            }`}>
+                                {item.desc}
                             </p>
                             <div className='list-type-news'>
                                 <div className='type-news__item'>
                                     <p className='text-[10px] leading-4 font-bold'>
-                                        {item.price} <br /> <span className='font-normal'>(Not include VAT)</span>
+                                        Price/Week <br /> {item.price} <br /> <span className='font-normal'>(Not include VAT)</span>
                                     </p>
                                 </div>
 
-                                {item.benefits.map((benefit, benefitIndex) => (
-                                    <div
-                                        key={benefitIndex}
-                                        className='type-news__item'>
-                                        <p className='font-semibold text-[10px] leading-[15px]'>
-                                            {benefit.title} <br />
-                                            {benefit.date && (
-                                                <span className='font-normal'>
-                                                    {' '}
-                                                    1 news/day
-                                                </span>
-                                            )}
-                                        </p>
-                                    </div>
-                                ))}
+                                <div className='type-news__item'>
+                                    <p className='font-semibold text-[10px] leading-[15px]'>
+                                        Inside page <br />
+                                        <span className='font-normal uppercase'>
+                                            {item.insidePage ? 'yes' : 'no'}
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div className='type-news__item'>
+                                    <p className='font-semibold text-[10px] leading-[15px]'>
+                                        According to the project <br />
+                                        <span className='font-normal uppercase'>
+                                            {item.according ? 'yes' : 'no'}
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div className='type-news__item'>
+                                    <p className='font-semibold text-[10px] leading-[15px] uppercase'>
+                                        SHARE FANPAGES <br />
+                                        <span className='font-normal '>
+                                            {item.according ? 'yes' : 'no'}
+                                        </span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     ))}

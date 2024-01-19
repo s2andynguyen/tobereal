@@ -1,7 +1,7 @@
 
 /* card vip special */
 .block-slide-card__online-trading-wrapper {
-    max-width: 960px;
+    /* max-width: 960px; */
     width: 100%;
     position: relative;
     overflow-y: hidden;

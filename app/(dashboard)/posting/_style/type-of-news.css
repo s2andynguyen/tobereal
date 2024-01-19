@@ -1,7 +1,7 @@
 
 /* card vip special */
 .block-slide-card__type-news-wrapper {
-    max-width: 960px;
+    /* max-width: 960px; */
     width: 100%;
     position: relative;
     overflow-y: hidden;
@@ -44,7 +44,7 @@
 }   
 .list-type-news .type-news__item:nth-child(2),
 .list-type-news .type-news__item:nth-child(4) {
-    height: 41px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;

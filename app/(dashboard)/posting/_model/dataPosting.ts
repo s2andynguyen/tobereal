@@ -16,6 +16,16 @@ export interface dataCardPackageProperty {
     total: string,
     time: string
 }
+
+export interface dataTypeNewsProperty {
+    id: number,
+    title: string,
+    desc: string,
+    price: string,
+    insidePage: boolean,
+    according: boolean,
+    shareFanpage: boolean
+}
 export interface dataOnlineTradingProperty {
     id: number,
     title: string,
@@ -185,5 +195,53 @@ export const dataOnlineTrading:dataOnlineTradingProperty[] = [
         pathMap: true,
         listTradingFloor: true,
         contact: true
+    }
+]
+
+export const dataTypeNews:dataTypeNewsProperty[] = [
+    {
+        id:1,
+        title:'Test news',
+        desc: 'The news only has 02 unique images and represents the news that does not appear on the Tobe Real Real Estate home page, appears from page 3. is the news that appears last in the search.Unable to upload news (refresh news)',
+        price: 'Free',
+        insidePage: false,
+        according: false,
+        shareFanpage: false
+    },
+    {
+        id:2,
+        title:'Up news (refresh news)',
+        desc: '',
+        price: '5,000',
+        insidePage: false,
+        according: false,
+        shareFanpage: false
+    },
+    {
+        id:3,
+        title:'Normal news',
+        desc: 'Appearing a front page according to the new before. Can bring up to 10 pictures and 01 video Find the test in front of the test news',
+        price: '20,000',
+        insidePage: false,
+        according: false,
+        shareFanpage: false
+    },
+    {
+        id:4,
+        title:'VIP news',
+        desc: 'Appearing a front page according to the new before. News do not pass over time in categories Can bring up to 10 pictures and 01 video Find the common news There are 3 stars blinking easily click',
+        price: '300,000',
+        insidePage: true,
+        according: true,
+        shareFanpage: false
+    },
+    {
+        id:5,
+        title:'News Super Vip',
+        desc: 'Appearing prominently in the Tobe Rael homepage Appearing a front page according to the new previous mechanism after News do not pass over time in categories Can give up to 16 pictures and 01 video Find signs before VIP news',
+        price: '500,000',
+        insidePage: true,
+        according: true,
+        shareFanpage: false
     }
 ]

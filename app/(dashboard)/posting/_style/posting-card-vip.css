@@ -64,7 +64,7 @@
     transition: all linear 0.3s;
 }
 .block-slide-card__vip-wrapper {
-    max-width: 960px;
+    /* max-width: 960px; */
     width: 100%;
     position: relative;
     height: 57px;

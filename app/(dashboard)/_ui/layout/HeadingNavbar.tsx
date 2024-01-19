@@ -8,11 +8,11 @@ type Props = {
 } 
 const HeadingNavbar = ({title}:Props) => {
   return (
-    <div className='fixed top-0 right-0 hidden sm:block sm:left-[200px] md:left-[268px] bg-white h-[80px] xl:h-[110px] z-[2]'>
+    <div className='header-layout-style fixed top-0 right-0 hidden sm:block sm:left-[200px] md:left-[268px] h-[80px] xl:h-[110px] z-[2] '>
         <div className={`md:px-5 xl:px-12 h-full pt-3 ${inter.className} flex justify-between items-center`}>
             <div className='self-end mb-px'>
               <h2 className='md:text-xl lg:text-3xl mb-3 xl:mb-5 xl:text-[44px] font-bold'>{title}</h2>
-              <div className='w-full h-px bg-black'></div>
+              {/* <div className='w-full h-px bg-black'></div> */}
             </div>
 
             <div className='flex items-center gap-5'>

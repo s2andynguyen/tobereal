@@ -29,8 +29,9 @@ const PostingPackageSlide: React.FC<PostingPackageSlideProps> = ({ list }) => {
             </div>
 
             {/* show info Benefits and annual account maintenance fees */}
+            {/* max-w-[960px] */}
             <div className={`block-slide-card__package posting-slide__container absolute top-0 left-0 w-full h-[440px] pt-[57px] 
-             bg-white rounded-b-[4px] px-6 z-0  max-w-[960px] overflow-x-auto  ${isShow ? 'show' : ''}` }
+             bg-white rounded-b-[4px] px-6 z-0 overflow-x-auto  ${isShow ? 'show' : ''}` }
                 onMouseDown={(e) => handleMouseDown(e, 'block-slide-card__package')}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
