@@ -20,22 +20,26 @@ function LinkWebsite() {
             <div className='Gr-form-LinkWebsites flex flex-col items-center p-5 '>
                 {/* Tabs */}
                 <div className='flex flex-col gap-2 items-center'>
-                    <div
-                        className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
-                        onClick={() => handleTabClick('tab1')}
-                        style={{
-                            backgroundColor: activeTab === 'tab1' ? '#ccc' : 'transparent'
-                        }}>
-                        <p className='text-black text-sm font-medium'>Link website:</p>
-                        <Image
-                            width={14}
-                            height={16}
-                            className='Icon-EditName w-[14px] h-[auto]'
-                            src={IconEdit}
-                            alt='IconEdit'
-                        />
+                    <div className='flex flex-col items-center'>
+                        <div
+                            className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
+                            onClick={() => handleTabClick('tab1')}
+                            style={{
+                                backgroundColor:
+                                    activeTab === 'tab1' ? '#ccc' : 'transparent'
+                            }}>
+                            <p className='text-black text-sm font-medium'>
+                                Link website:
+                            </p>
+                            <Image
+                                width={14}
+                                height={16}
+                                className='Icon-EditName w-[14px] h-[auto]'
+                                src={IconEdit}
+                                alt='IconEdit'
+                            />
+                        </div>
                     </div>
-
                     <div>
                         {activeTab === 'tab1' && (
                             <div className='box-form-input flex flex-col items-center justify-center '>
@@ -108,7 +112,6 @@ function LinkWebsite() {
                     </div>
                 </div>
 
-                {/* Hiển thị giao diện tương ứng với tab được chọn */}
             </div>
         </div>
     )

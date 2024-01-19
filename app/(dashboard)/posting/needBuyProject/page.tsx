@@ -2,11 +2,11 @@ import React from 'react'
 import './style.css'
 import DashboardLayout from '../../_ui/layout/DashboardLayout'
 import BuyTobereal from '../_ui/BuyTobereals/BuyTobereal'
-import { UserTobereal_BUY } from './Buy-Tobereal'
-const BuyProject = () => {
+import { NeedTobereal_BUY } from './Buy-ToberealNeed'
+const NeedBuyProject = () => {
     return (
-        <DashboardLayout title='Customers need to buy the project'>
-            <div className='wrap-BuyProjects flex gap-14'>
+        <DashboardLayout title='Customers need to buy - need to rent'>
+            <div className='wrap-NeedBuyProjects flex flex-col gap-14'>
                 <div className='Gr-CustomersSelects flex flex-col'>
                     <div className='SelectSearch '>
                         <label className='textLabel-Select !font-bold' htmlFor='Province'>
@@ -20,18 +20,13 @@ const BuyProject = () => {
                         </label>
                         <input type='text' id='District' className='inputSelect' />
                     </div>
-                    <div className='SelectSearch'>
-                        <label className='textLabel-Select' htmlFor='SLproject'>
-                            Select project:{' '}
-                        </label>
-                        <input type='text' id='SLproject' className='inputSelect' />
-                    </div>
+
                     <div className='SelectSearch items-center'>
                         <button className='btn-SearchBuy'>search</button>
                     </div>
                 </div>
                 <div className='Gr-UserTobereals flex flex-col gap-2'>
-                    {UserTobereal_BUY?.map((card) => (
+                    {NeedTobereal_BUY?.map((card) => (
                         <BuyTobereal data={card} key={card?.id} />
                     ))}
                 </div>
@@ -40,4 +35,4 @@ const BuyProject = () => {
     )
 }
 
-export default BuyProject
+export default NeedBuyProject

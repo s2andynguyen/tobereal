@@ -1,7 +1,7 @@
 'use client'
+import './style.css'
 
 import { useRouter } from 'next/navigation'
-import './style.css'
 import { useState } from 'react'
 import Image from 'next/image'
 function Manage() {
@@ -18,7 +18,9 @@ function Manage() {
                 <h2 className='top-title-Manage pl-16'>Manage</h2>
             </div>
             <div className='Gr-form-Manages flex flex-col items-center gap-3'>
-                <button className='Btn-Manage' onClick={() => router.push('/profile')}>
+                <button
+                    className='Btn-Manage'
+                    onClick={() => router.push('/posting/managent')}>
                     Post management
                     <Image
                         width={7}
@@ -61,9 +63,7 @@ function Manage() {
                         <div className='wrap-childs-Manage flex flex-col justify-center gap-4'>
                             <button
                                 className='Btn-child-Manage'
-                                onClick={() =>
-                                    router.push('/profile/CustomerManagement')
-                                }>
+                                onClick={() => router.push('/posting/buy-project')}>
                                 Customers need to buy the project
                                 <Image
                                     width={7}
@@ -75,9 +75,7 @@ function Manage() {
                             </button>
                             <button
                                 className='Btn-child-Manage'
-                                onClick={() =>
-                                    router.push('/profile/CustomerManagement')
-                                }>
+                                onClick={() => router.push('/posting/needBuyProject')}>
                                 Customers need to buy - need to rent
                                 <Image
                                     width={7}

@@ -15,26 +15,26 @@ const HeadingNavbar = ({title}:Props) => {
               {/* <div className='w-full h-px bg-black'></div> */}
             </div>
 
-            <div className='flex items-center gap-5'>
-                <Mail />
-                <Bell />
-                <div className='flex item-center'>
-                  <Image 
-                    src={'/dashboard/images/das-posting/avatar.jpg'}
-                    height={43}
-                    width={43}
-                    className='w-[43px] h-[43px] rounded-full object-cover bg-opacity-85'
-                    alt='avatar.jpg'
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold text-sm text-[#404040]'>Andrew</p>
-                    <p className='text-sm text-[#404040]'>$4,000.00</p>
-                  </div>
+                <div className='flex items-center gap-5'>
+                    <Mail />
+                    <Bell />
+                    <div className='flex item-center'>
+                        <Image
+                            src={'/dashboard/images/das-posting/avatar.jpg'}
+                            height={43}
+                            width={43}
+                            className='w-[43px] h-[43px] rounded-full object-cover bg-opacity-85'
+                            alt='avatar.jpg'
+                        />
+                        <div className='ml-3'>
+                            <p className='font-semibold text-sm text-[#404040]'>Andrew</p>
+                            <p className='text-sm text-[#404040]'>$4,000.00</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default HeadingNavbar
