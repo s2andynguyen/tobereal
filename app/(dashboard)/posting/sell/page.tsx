@@ -2,7 +2,9 @@
 import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useDropzone } from 'react-dropzone'
+
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)

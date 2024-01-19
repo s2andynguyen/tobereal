@@ -2,9 +2,9 @@
 import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image';
-import Sell from './sell/page';
-import Least from './least/page';
-import Need from './need/page';
+import Sell from '../sell/page';
+import Least from '../least/page';
+import Need from '../need/page';
 
 
 const TabContent1 = () => <div><Sell /></div>;
