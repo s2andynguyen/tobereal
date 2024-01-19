@@ -2,15 +2,9 @@
 import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image';
-import Sell from '../sell/page';
-import Lease from '../lease/page';
-import Need from '../need/page';
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
 
 
-const TabContent1 = () => <div><Sell /></div>;
-const TabContent2 = () => <div><Lease /></div>;
-const TabContent3 = () => <div><Need /></div>;
 
 const PostOptionPage = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -23,7 +17,7 @@ const PostOptionPage = () => {
     <DashboardLayout title='Post'>
       <div className='Posting mt-[30px] pl-[30px]'>
         <div className='Menu'>
-          <div className="menu_li" onClick={() => handleTabClick(1)}>
+          <a className="menu_li" href='/posting/sell'>
             <p>Sell</p>
             <Image
               src="/dashboard/images/posting/img/Sell.png"
@@ -31,8 +25,8 @@ const PostOptionPage = () => {
               className='w-[40px] h-[38px]'
               width={40}
               height={38} />
-          </div>
-          <div className="menu_li" onClick={() => handleTabClick(2)}>
+          </a>
+          <a className="menu_li" href='/posting/lease'>
             <p>Lease</p>
             <Image
               src="/dashboard/images/posting/img/Lease.png"
@@ -40,8 +34,8 @@ const PostOptionPage = () => {
               className='w-[40px] h-[38px]'
               width={40}
               height={38} />
-          </div>
-          <div className="menu_li" onClick={() => handleTabClick(3)}>
+          </a>
+          <a className="menu_li" href='/posting/need'>
             <p>Need to rent, Need to buy</p>
             <Image
               src="/dashboard/images/posting/img/Need_to.png"
@@ -49,12 +43,7 @@ const PostOptionPage = () => {
               className='w-[40px] h-[38px]'
               width={40}
               height={38} />
-          </div>
-        </div>
-        <div className="content">
-          {/* {activeTab === 1 && <TabContent1 />}
-            {activeTab === 2 && <TabContent2 />}
-            {activeTab === 3 && <TabContent3 />} */}
+          </a>
         </div>
       </div>
     </DashboardLayout>
