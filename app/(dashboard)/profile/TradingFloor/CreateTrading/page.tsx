@@ -1,4 +1,5 @@
 'use client'
+import DashboardLayout from '@/app/(dashboard)/_ui/layout/DashboardLayout'
 import './style.css'
 import Image from 'next/image'
 import React, { useState } from 'react'
@@ -14,46 +15,50 @@ function CreateTrading() {
     }
 
     return (
-        <div className='CreateTrading-wrap container'>
-            <div className='CreateTrading-container'>
-                <label
-                    htmlFor='imageInput'
-                    className={selectedImageCT ? 'has-image' : ''}>
-                    <input
-                        type='file'
-                        id='imageInput'
-                        accept='image/*'
-                        onChange={handleImageChangeCT}
-                    />
-
-                    {selectedImageCT && (
-                        <div
-                            className='selected-image-preview'
-                            style={{
-                                backgroundImage: `url(${URL.createObjectURL(
-                                    selectedImageCT
-                                )})`
-                            }}
+        <DashboardLayout title='Create a trading platform for free'>
+            <div className='CreateTrading-wrap container'>
+                <div className='CreateTrading-container'>
+                    <label
+                        htmlFor='imageInput'
+                        className={selectedImageCT ? 'has-image' : ''}>
+                        <input
+                            type='file'
+                            id='imageInput'
+                            accept='image/*'
+                            onChange={handleImageChangeCT}
                         />
-                    )}
-                    {!selectedImageCT && <div className='placeholder'>Choose Logo</div>}
-                </label>
-            </div>
-            <div className='Gr-wrap-inputCT'>
-                <div className='CT-grInput'>
-                    <label className='text-labelCT' htmlFor=''>
-                        Name of the trading platform
+
+                        {selectedImageCT && (
+                            <div
+                                className='selected-image-preview'
+                                style={{
+                                    backgroundImage: `url(${URL.createObjectURL(
+                                        selectedImageCT
+                                    )})`
+                                }}
+                            />
+                        )}
+                        {!selectedImageCT && (
+                            <div className='placeholder'>Choose Logo</div>
+                        )}
                     </label>
-                    <input
-                        className='w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-5'
-                        type='text'
-                        name=''
-                        id=''
-                        placeholder='Name of the trading platform'
-                    />
+                </div>
+                <div className='Gr-wrap-inputCT'>
+                    <div className='CT-grInput'>
+                        <label className='text-labelCT' htmlFor=''>
+                            Name of the trading platform
+                        </label>
+                        <input
+                            className='w-[855.70px] h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-5'
+                            type='text'
+                            name=''
+                            id=''
+                            placeholder='Name of the trading platform'
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
+        </DashboardLayout>
     )
 }
 
