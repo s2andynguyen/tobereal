@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
-import PostingPage from './posting/post/page'
+import PostingPage from './posting/page'
 import LeftSidebar from './_ui/layout/LeftSidebar'
 import HeadingNavbar from './_ui/layout/HeadingNavbar'
 export const metadata: Metadata = {
