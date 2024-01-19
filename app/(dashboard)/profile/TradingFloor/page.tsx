@@ -8,14 +8,10 @@ function TradingFloor() {
     return (
         <div className='wrap-TradingFloors'>
             <div className='GrTradingFloors container flex flex-col gap-4'>
-                <div className='wrap-Btn-TF flex items-center justify-between pl-6 pr-4'>
-                    <button
-                        className='Btn-TF'
-                        onClick={() =>
-                            router.push('/profile/TradingFloor/CreateTrading')
-                        }>
-                        Create a trading platform for free
-                    </button>
+                <div
+                    className='wrap-Btn-TF flex items-center justify-between pl-6 pr-4'
+                    onClick={() => router.push('/profile/TradingFloor/CreateTrading')}>
+                    <button className='Btn-TF'>Create a trading platform for free</button>
                     <Image
                         width={7}
                         height={10}
