@@ -107,7 +107,6 @@ input[type='file'] {
 
 .avt-wrap {
     padding: 0 50px !important;
-    flex-direction: row;
 }
 
 .input-NameUser::placeholder {
@@ -119,6 +118,7 @@ input[type='file'] {
 }
 .input-NameUser {
     width: 118px;
+    height: 32px;
 }
 .IconCameraAvt,
 .Icon-EditName {

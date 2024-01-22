@@ -29,7 +29,9 @@ const Profile = () => {
         <DashboardLayout title='My Profile'>
             <div className='Wrapper-Profile'>
                 <div className='image-container'>
-                    <label htmlFor='imageInput' className={selectedImage ? 'has-image' : ''}>
+                    <label
+                        htmlFor='imageInput'
+                        className={selectedImage ? 'has-image' : ''}>
                         <input
                             type='file'
                             id='imageInput'
@@ -65,8 +67,8 @@ const Profile = () => {
                         {!selectedImage && <div className='placeholder'></div>}
                     </label>
                 </div>
-                <div className='avt-wrap container flex items-center gap-5'>
-                    <div className='Gr-Avt flex items-center gap-3'>
+                <div className='avt-wrap container flex flex-col md:!flex-row items-center gap-5 '>
+                    <div className='Gr-Avt flex items-end md:items-center gap-3 '>
                         <Image
                             width={103}
                             height={103}

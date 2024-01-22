@@ -11,8 +11,10 @@ function CustomerManagement() {
         <DashboardLayout title='Customer management'>
             <div className='wrap-CustomerManagements'>
                 <div className='Gr-CustomerManagements container flex flex-col gap-4'>
-                    <div className='wrap-Btn-CM flex items-center justify-between pl-6 pr-4'>
-                        <button className='Btn-CM' onClick={() => router.push('/')}>
+                    <div className='wrap-Btn-CM flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'>
+                        <button
+                            className='Btn-CM text-sm font-normal md:text-base md:font-semibold '
+                            onClick={() => router.push('/')}>
                             List of customers
                         </button>
                         <Image
@@ -23,8 +25,10 @@ function CustomerManagement() {
                             alt='NextIcon'
                         />
                     </div>
-                    <div className='wrap-Btn-CM flex items-center justify-between pl-6 pr-4'>
-                        <button className='Btn-CM' onClick={() => router.push('/')}>
+                    <div className='wrap-Btn-CM flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'>
+                        <button
+                            className='Btn-CM text-sm font-normal md:text-base md:font-semibold '
+                            onClick={() => router.push('/')}>
                             Customers see postings
                         </button>
                         <Image

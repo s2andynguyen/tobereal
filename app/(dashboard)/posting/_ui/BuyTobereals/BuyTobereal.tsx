@@ -2,7 +2,7 @@ import './style.css'
 import Image from 'next/image'
 function BuyTobereal({ data }: { data: any }) {
     return (
-        <div className='Box-UserTobereal flex justify-between items-center'>
+        <div className='Box-UserTobereal w-[325px] md:w-[619px] flex justify-between items-center'>
             <div className='infomations-UserTB flex items-start gap-2'>
                 <Image
                     src={data?.imsUser}

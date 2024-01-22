@@ -12,11 +12,11 @@ function TradingFloor() {
             <div className='wrap-TradingFloors'>
                 <div className='GrTradingFloors container flex flex-col gap-4'>
                     <div
-                        className='wrap-Btn-TF flex items-center justify-between pl-6 pr-4'
+                        className='wrap-Btn-TF flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'
                         onClick={() =>
                             router.push('/profile/TradingFloor/CreateTrading')
                         }>
-                        <button className='Btn-TF'>
+                        <button className='Btn-TF text-sm font-normal md:text-base md:font-semibold'>
                             Create a trading platform for free
                         </button>
                         <Image
@@ -27,8 +27,8 @@ function TradingFloor() {
                             alt='NextIcon'
                         />
                     </div>
-                    <div className='wrap-Btn-TF flex items-center justify-between pl-6 pr-4'>
-                        <button className='Btn-TF' onClick={() => router.push('/')}>
+                    <div className='wrap-Btn-TF flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'>
+                        <button className='Btn-TF text-sm font-normal md:text-base md:font-semibold' onClick={() => router.push('/')}>
                             Invitation to join the trading platform
                         </button>
                         <Image
