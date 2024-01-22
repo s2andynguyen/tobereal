@@ -3,6 +3,7 @@ import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
+import Link from 'next/link';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)
@@ -52,16 +53,17 @@ const PostingSell = () => {
 
     return (
         <DashboardLayout title='Post'>
-
-            <div className="menu_li">
-                <p>Need to rent, Need to buy</p>
-                <Image
-                    src="/dashboard/images/posting/img/Need_to.png"
-                    alt=""
-                    className='w-[40px] h-[38px]'
-                    width={40}
-                    height={38} />
-            </div>
+            <Link href="/posting/post">
+                <div className="menu_li">
+                    <p>Need to rent, Need to buy</p>
+                    <Image
+                        src="/dashboard/images/posting/img/Need_to.png"
+                        alt=""
+                        className='w-[40px] h-[38px]'
+                        width={40}
+                        height={38} />
+                </div>
+            </Link>
             <div className='sale'>
                 <div className='sell'>
                     <div className='menu_sell'>

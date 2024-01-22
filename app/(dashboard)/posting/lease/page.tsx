@@ -3,6 +3,7 @@ import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
+import Link from 'next/link';
 
 const PostingSell = () => {
     //textra
@@ -41,15 +42,17 @@ const PostingSell = () => {
     return (
         <DashboardLayout title='Post'>
             <div className='sale'>
-                <div className="menu_li">
-                    <p>Lease</p>
-                    <Image
-                        src="/dashboard/images/posting/img/Lease.png"
-                        alt=""
-                        className='w-[40px] h-[39px]'
-                        width={40}
-                        height={39} />
-                </div>
+                <Link href="/posting/post">
+                    <div className="menu_li">
+                        <p>Lease</p>
+                        <Image
+                            src="/dashboard/images/posting/img/Lease.png"
+                            alt=""
+                            className='w-[40px] h-[39px]'
+                            width={40}
+                            height={39} />
+                    </div>
+                </Link>
                 <div className='sell'>
                     <div className='input_container'>
                         <textarea

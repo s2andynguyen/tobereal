@@ -3,6 +3,7 @@ import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
+import Link from 'next/link';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)
@@ -49,19 +50,65 @@ const PostingSell = () => {
             setSelectedImageCT(file)
         }
     }
+    // rooms number
+
+    const [roomCount, setRoomCount] = useState(1);
+
+    const handleIncrease = () => {
+        setRoomCount(prevCount => prevCount + 1);
+    };
+
+    const handleDecrease = () => {
+        if (roomCount > 1) {
+            setRoomCount(prevCount => prevCount - 1);
+        }
+    };
+    //address
+    const [showSelect, setShowSelect] = useState(false);
+    const [selectedValues, setSelectedValues] = useState({
+        firstSelect: '',
+        secondSelect: '',
+        thirdSelect: '',
+    });
+    const handleLabelClick = () => {
+        setShowSelect(true);
+    };
+
+    const handleSelectChange = (selectName: string, value: string) => {
+        setSelectedValues((prevValues) => ({
+            ...prevValues,
+            [selectName]: value,
+        }));
+    };
+
+    const handleCompleteClick = () => {
+        // Do something with the selected values
+        console.log('Selected Values:', selectedValues);
+
+        // Reset state
+        setShowSelect(false);
+        setSelectedValues({
+            firstSelect: '',
+            secondSelect: '',
+            thirdSelect: '',
+        });
+    };
 
 
     return (
-        <DashboardLayout title='Post'>
-            <div className="menu_li">
-                <p>Sell</p>
-                <Image
-                    src="/dashboard/images/posting/img/Sell.png"
-                    alt=""
-                    className='w-[40px] h-[38px]'
-                    width={40}
-                    height={38} />
-            </div>
+        <DashboardLayout title='Post' >
+            <Link href="/posting/post">
+                <div className="menu_li">
+                    <p>Sell</p>
+                    <Image
+                        src="/dashboard/images/posting/img/Sell.png"
+                        alt=""
+                        className='w-[40px] h-[38px]'
+                        width={40}
+                        height={38} />
+
+                </div>
+            </Link>
             <div className='sale'>
                 <div className='menu_sell'>
                     <label className='menu_read'>
@@ -125,7 +172,13 @@ const PostingSell = () => {
                                         />
                                     )}
                                     {!selectedImageCT && (
-                                        <div className='placeholder'>Choose Logo</div>
+                                        <Image
+                                            src='/dashboard/images/posting/img/icon_camera.png'
+                                            alt=''
+                                            className='w-[55px] h-[41px] icon'
+                                            width={55}
+                                            height={41}
+                                        />
                                     )}
                                 </label>
                             </div>
@@ -157,19 +210,48 @@ const PostingSell = () => {
                         </div>
                         <div className="Address">
                             <span className='text-Address'>Address</span>
-                            <select
-                                className='select-asset'
-                                id='Asset-type'
-                                name='Asset.type'
-                            >
-                                <option value=''>Select address type</option>
-                                <option value=''>Selling townhouses</option>
-                                <option value=''>Selling private house</option>
-                                <option value=''>Selling villas and townhouses</option>
-                                <option value=''>Selling apartments</option>
-                                <option value="">Selling restaurants and hotels</option>
-                                <option value="">Selling warehouse and workshop</option>
-                            </select>
+
+                            <label onClick={handleLabelClick}>Select address</label>
+                            {showSelect && (
+                                <div className='contact_address'>
+                                    <p className='contact_textAddress'>Province/ city</p>
+                                    <select
+                                        value={selectedValues.firstSelect}
+                                        onChange={(e) => handleSelectChange('firstSelect', e.target.value)}
+                                    >
+                                        <option value="">Choose province/ city</option>
+                                        <option value="Option1">Option 1</option>
+                                        <option value="Option2">Option 2</option>
+                                    </select>
+                                    <p className='contact_textAddress'>District</p>
+                                    <select
+                                        value={selectedValues.secondSelect}
+                                        onChange={(e) => handleSelectChange('secondSelect', e.target.value)}
+                                    >
+                                        <option value="">Choose District</option>
+                                        <option value="OptionA">Option A</option>
+                                        <option value="OptionB">Option B</option>
+                                    </select>
+                                    <p className='contact_textAddress'> ward / commune</p>
+                                    <select
+                                        value={selectedValues.thirdSelect}
+                                        onChange={(e) => handleSelectChange('thirdSelect', e.target.value)}
+                                    >
+                                        <option value="">Choose ward / commune</option>
+                                        <option value="ChoiceX">Choice X</option>
+                                        <option value="ChoiceY">Choice Y</option>
+                                    </select>
+                                    <div className="Address-checkbox">
+                                        <p>Enter another ward / commune</p>
+                                        <input type="checkbox" />
+                                    </div>
+                                    <p className='contact_textAddress'>House number</p>
+                                    <input type="text" placeholder='Enter house number' className='input_house' />
+                                    <input type="text" placeholder='Enter Road/Street' className='input_house' />
+                                    <button className='complete_address' onClick={handleCompleteClick}>Complete</button>
+                                </div>
+                            )}
+
 
                         </div>
                         <div className="google_map">
@@ -260,20 +342,23 @@ const PostingSell = () => {
                                         name='form_total-area'
                                     >
                                         <option value=''>Total area</option>
-                                        <option value=''>EUR</option>
-                                        <option value=''>JPY</option>
-                                        <option value=''>GBP</option>
+                                        <option value=''></option>
+                                        <option value=''></option>
+                                        <option value=''></option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div className="Detailed">
                             <span>Detailed information</span>
-                            <select name="" id="">
-                                <option value="">
+                            <label>
 
-                                </option>
-                            </select>
+                                <button onClick={handleDecrease}>-</button>
+                                <p>{roomCount}</p>
+                                <button onClick={handleIncrease}>+</button>
+                                {/* <img src={`path/to/your-image-${roomCount}.png`} alt={`Room ${roomCount}`} /> */}
+
+                            </label>
                         </div>
                         <div className="Vietnamese-checkbox">
                             <p>Do you want to deposit with the Vietnamese brokerage community of 10k people?</p>
