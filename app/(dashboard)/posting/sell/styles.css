@@ -149,7 +149,11 @@ input[type='file'] {
     line-height: normal;
 }
 
-.text_legal {}
+.text_legal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .text_legal span {
     color: #000000;
@@ -291,13 +295,16 @@ input[type='file'] {
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding: 10px;
+    gap: 10px;
 }
 
 .input_house {
     background-color: #0000001a;
     border: 1px solid;
+    border-color: #000;
     border-radius: 5px;
-    padding: 5px;
+    height: 36px;
+    padding: 10px;
 }
 
 .complete_address {
@@ -493,6 +500,11 @@ input[type='file'] {
     border: 1px solid;
 }
 
+.Detailed {}
+.Rooms{
+    display: grid;
+    grid-template-columns: 5, 1fr;
+}
 .Vietnamese-checkbox {
     display: flex;
     gap: 10px;

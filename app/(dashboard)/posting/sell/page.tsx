@@ -93,8 +93,27 @@ const PostingSell = () => {
             thirdSelect: '',
         });
     };
+    //Detailed information
+    const [showLabel, setShowLabel] = useState(false);
+    const [roomCounts, setRoomCounts] = useState([0, 0, 0, 0, 0]);
 
+    const increaseRoomCount = (index) => {
+        const newRoomCounts = [...roomCounts];
+        newRoomCounts[index]++;
+        setRoomCounts(newRoomCounts);
+    };
 
+    const decreaseRoomCount = (index) => {
+        if (roomCounts[index] > 0) {
+            const newRoomCounts = [...roomCounts];
+            newRoomCounts[index]--;
+            setRoomCounts(newRoomCounts);
+        }
+    };
+
+    const toggleLabel = () => {
+        setShowLabel(!showLabel);
+    }
     return (
         <DashboardLayout title='Post' >
             <Link href="/posting/post">
@@ -264,7 +283,6 @@ const PostingSell = () => {
                             />
 
                         </div>
-
                         <div className="Titlle">
                             <span>Title</span>
                             <input
@@ -350,15 +368,28 @@ const PostingSell = () => {
                             </div>
                         </div>
                         <div className="Detailed">
-                            <span>Detailed information</span>
-                            <label>
+                            <div onClick={toggleLabel}>Detailed information</div>
+                            {showLabel && (
+                                <div className='Rooms'>
+                                    <p>Legal status</p>
+                                    <select>
+                                        {/* Nội dung của select */}
+                                    </select>
+                                    <p>Way in</p>
+                                    <select>
+                                        {/* Nội dung của select */}
+                                    </select>
+                                    <p>Asset orientation</p>
+                                    <select>
+                                        {/* Nội dung của select */}
+                                    </select>
+                                    <p>Utilities</p>
+                                    <select>
+                                        {/* Nội dung của select */}
+                                    </select>
+                                </div>
+                            )}
 
-                                <button onClick={handleDecrease}>-</button>
-                                <p>{roomCount}</p>
-                                <button onClick={handleIncrease}>+</button>
-                                {/* <img src={`path/to/your-image-${roomCount}.png`} alt={`Room ${roomCount}`} /> */}
-
-                            </label>
                         </div>
                         <div className="Vietnamese-checkbox">
                             <p>Do you want to deposit with the Vietnamese brokerage community of 10k people?</p>
