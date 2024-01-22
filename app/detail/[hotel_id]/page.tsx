@@ -39,7 +39,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 function DetailHotel() {
     return (
         <MainLayout>
-            <div className='container mx-auto min-h-[1800px] font-montserrat pb-20'>
+            <div className='container mx-auto min-h-[1800px] font-montserrat pb-16'>
                 <div className='px-3 lg:px-6 xl:px-16 pt-5 sm:pt-10 pb-20'>
                     {/* Breadcrum Render */}
                     <DetailBreadcrumb place='Jakarta' hotel='Gran Melia Jakarta' />
@@ -122,26 +122,29 @@ function DetailHotel() {
                                 <p className='text-[10px] font-bold mb-2'>
                                     Unit Facilities
                                 </p>
-                                <div className='flex flex-wrap '>
+                                <div className='row sm-gutters sm:pr-24'>
                                     {listUnitFacillities.map((facillity, index) => (
                                         <div
-                                            className='basis-[28%] self-center'
+                                            className='col c-6 sm-4'
                                             key={index}>
-                                            <div className='pr-10 flex items-center justify-start'>
-                                                <svg
-                                                    className='mr-[10px]'
-                                                    xmlns='http://www.w3.org/2000/svg'
-                                                    width='14'
-                                                    height='13'
-                                                    viewBox='0 0 14 13'
-                                                    fill='none'>
-                                                    <path
-                                                        d='M2 6L6 10L12 2'
-                                                        stroke='#00FF47'
-                                                        strokeWidth='3'
-                                                        strokeLinecap='round'
-                                                    />
-                                                </svg>
+                                            {/* <div className='pr-10 flex items-center justify-start'> */}
+                                            <div className='flex items-center justify-start'>
+                                                <span className='flex-shrink-0'>
+                                                    <svg
+                                                        className='mr-[10px]'
+                                                        xmlns='http://www.w3.org/2000/svg'
+                                                        width='14'
+                                                        height='13'
+                                                        viewBox='0 0 14 13'
+                                                        fill='none'>
+                                                        <path
+                                                            d='M2 6L6 10L12 2'
+                                                            stroke='#00FF47'
+                                                            strokeWidth='3'
+                                                            strokeLinecap='round'
+                                                        />
+                                                    </svg>
+                                                </span>
                                                 <p className='text-[10px] font-medium leading-4'>
                                                     {facillity}
                                                 </p>
@@ -163,12 +166,12 @@ function DetailHotel() {
                                 <input
                                     type='text'
                                     placeholder='Name'
-                                    className='h-[30px] pl-6 py-2 max-w-[480px] w-full rounded-[5px] border border-[#dcdcdc] mb-4'
+                                    className='h-[30px] pl-6 py-2 max-w-[480px] w-full rounded-[5px] border border-[#dcdcdc] mb-4 focus:outline-none'
                                 />
                                 <div className='max-w-[480px]'>
                                     <textarea
                                         placeholder='Content'
-                                        className='h-[50px] pl-6 py-2 w-full rounded-[5px] border border-[#dcdcdc]'
+                                        className='h-[50px] pl-6 py-2 w-full rounded-[5px] border border-[#dcdcdc] focus:outline-none'
                                     />
                                 </div>
                                 <button
@@ -187,8 +190,7 @@ function DetailHotel() {
                             </div>
                         </div>
                         {/* col right */}
-                        {/* <div
-                           className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0`}> */}
+                        
                         <div
                             className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
                             <div className='w-full mx-auto shadow-yellow bg-white border border-primary/30 sticky top-[110px]'>
@@ -214,12 +216,12 @@ function DetailHotel() {
                     </div>
 
                     {/* Other Accommodation Recommendations */}
-                    <h2 className='text-2xl font-bold text-center mb-3'>
+                    <h2 className='text-[18px] leading-[22px] sm:leading-6 sm:text-2xl font-bold text-center mb-3'>
                         Other Accommodation Recommendations
                     </h2>
                     <OtherAccommodation />
                     {/* Check Other Apartment Options */}
-                    <h2 className='text-2xl font-bold text-center mb-3 pt-3'>
+                    <h2 className='text-[18px] leading-[22px] sm:leading-6 sm:text-2xl font-bold text-center mb-3 pt-3'>
                         Check Other Apartment Options
                     </h2>
                     <OrtherApartmentOption />

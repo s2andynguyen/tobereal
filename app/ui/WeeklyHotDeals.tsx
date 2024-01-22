@@ -14,21 +14,24 @@ function WeeklyHotDeals() {
         }
     }, [])
     return (
-        <div className='pt-[6px]'>
+        <div className='pt-3 sm:pt-0 bg-gradient-pink sm:bg-white'>
             <HeadTitle
                 title='Weekly Hot Deals 🔥'
                 saleDealBadge='2 day(s)'
                 select
                 seeAll
+                bgTitle='bg-transparent bg-white'
             />
             <SliderWithSale
                 pending={pending}
-                imageUrl='/images/home/hotel-image/hot-deals.png'
+                imageBgUrl='/images/home/hotel-image/hot-deals.png'
                 bgColor='bg-gradient-pink'
                 bgWidth={203}
                 bgHeight={198}
                 hotDeal
                 listRoom={dataFindBest}
+                imageInSlide
+                hiddenImageOnMobile
             />
         </div>
     )

@@ -93,7 +93,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
     return (
         <>
             {toggleTab === 'rent' ? (
-                <div className='flex flex-col gap-2 sm:gap-[20px] p-4 h-full '>
+                <div className='flex flex-col gap-2 sm:gap-[20px] py-4 px-2 sm:p-4 h-full '>
                     {/* row 1 */}
                     <div className='flex flex-col lg:flex-row items-start justify-between gap-3'>
                         {/* group date */}
@@ -154,8 +154,10 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                     {/* row 2 */}
                     <div className='w-full flex flex-col lg:flex-row gap-2 lg:gap-6 '>
                         {/* select type */}
-                        <div className='flex flex-start gap-2 sm:gap-3 flex-[60%] w-full  h-9 flex-wrap'>
-                            <div className='flex-[30%] md:flex-1 z-[3]'>
+                        {/* <div className='flex flex-start sm:gap-3 flex-[60%] w-full  h-9 flex-wrap'> */}
+                        <div className='row w-full sm-gutters gap-y-[3px]'>
+                            {/* <div className='max-w-[47%] w-full md:basis-[30%] z-[3] sm:mr-0 mr-3'> */}
+                            <div className='col c-6 sm-4'>
                                 <FormSelect
                                     options={furnishs}
                                     optionType='furnishs'
@@ -166,7 +168,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                     title='Furnish Type'
                                 />
                             </div>
-                            <div className='flex-[30%] md:flex-1 z-[2]'>
+                            {/* <div className='max-w-[47%] w-full md:basis-[30%] z-[2]'> */}
+                            <div className='col c-6 sm-4'>
                                 <FormSelect
                                     options={rooms}
                                     optionType='rooms'
@@ -177,7 +180,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                     title='Room Type'
                                 />
                             </div>
-                            <div className='flex-[30%] md:flex-1 z-[1]'>
+                            {/* <div className='max-w-full w-full sm:basis-[30%] flex-grow z-[1]'> */}
+                            <div className='col c-12 sm-4'>
                                 <FormSelect
                                     options={properties}
                                     optionType='properties'
@@ -232,10 +236,11 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                     {/* row 1 */}
                     <div className='flex flex-col lg:flex-row gap-3 lg:gap-8'>
                         {/* location search */}
-                        <div className='flex items-center gap-3 flex-[50%] max-w-[50%] w-full'>
+                        <div className='flex items-center gap-3 sm:flex-[50%] sm:max-w-[50%] w-full'>
                             <div className='flex items-center flex-1 border border-[#cdcdcd] rounded-[20px] bg-[#fefdfe] pr-2'>
                                 <input
-                                    className='h-9 sm:h-10 w-56 sm:w-[219px] pl-5 text-sm text-[#acb1C6] focus:ring-0 rounded-l-[20px] focus:outline-none flex-1'
+                                    className='h-9 sm:h-10  w-full sm:w-[219px] pl-5 text-[#acb1C6] focus:ring-0 rounded-l-[20px] 
+                                    focus:outline-none sm:flex-1 text-[10px] sm:text-[16px] placeholder:text-pimary flex-grow'
                                     type='text'
                                     id='search'
                                     placeholder='Input Area / Apartment Name'
@@ -244,6 +249,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                         setSearchLocation(e.target.value)
                                     }
                                 />
+                                {/* search icon */}
                                 <div className='w-9 h-9'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'

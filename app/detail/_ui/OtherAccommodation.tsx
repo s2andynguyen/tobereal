@@ -11,7 +11,7 @@ const OtherAccommodation = () => {
         <div className='container mx-auto px-2 md:px-4 xl:px-0 pt-[10px] pb-5'>
             <SwiperWrap>
                 {ApartmentList.map((room, index) => (
-                    <SwiperSlide key={index} className='h-[220px]'>
+                    <SwiperSlide key={index} className='max-w-[247px] sm:max-w-full h-[220px]'>
                         <CardRecommended
                             typeRoom={room.typeRoom}
                             type={room.type}

@@ -17,7 +17,7 @@ function FindApartment() {
                     desc='Price below is Monthly price'
                     descBolder
                 />
-                <div className='container mx-auto px-3 md:px-8 xl:px-[56px] xl:px-auto pt-2 lg:pt-4 pb-7 lg:pb-[56px]'>
+                <div className='container mx-auto px-3 md:px-8 xl:px-[56px] xl:px-auto pt-5 pb-7 lg:pb-[56px]'>
                     {/* border */}
                     <div className='w-full xl:mx-auto xl:w-[965px] lg:h-[190px] shadow-[0_0_5px_0_rgba(240,185,11,0.50)] rounded-[20px]'>
                         <div className='h-full py-4 sm:py-[26px] flex flex-col lg:flex-row lg:gap-0 gap-3'>
@@ -91,7 +91,7 @@ function FindApartment() {
                                             <p className='text-[12px] sm:text-[14px] leading-tight'>
                                                 Budget
                                             </p>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight font-bold'>
+                                            <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 4.5
                                             </p>
                                         </div>
@@ -110,7 +110,7 @@ function FindApartment() {
                                             <p className='text-[12px] sm:text-[14px] leading-tight'>
                                                 Popular
                                             </p>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight font-bold'>
+                                            <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 4.5 - 7
                                             </p>
                                         </div>
@@ -131,7 +131,7 @@ function FindApartment() {
                                             <p className='text-[12px] sm:text-[14px] leading-tight'>
                                                 Luxury
                                             </p>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight font-bold'>
+                                            <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 7
                                             </p>
                                         </div>

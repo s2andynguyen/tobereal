@@ -32,7 +32,7 @@ function RecommendedHouse() {
                 :
                 <SwiperWrap>
                     {HouseList.map((room, index) => (
-                        <SwiperSlide key={index} className='h-[220px]'>
+                        <SwiperSlide key={index} className='max-w-[247px] sm:max-w-full h-[220px]'>
                             <CardRecommended
                                 typeRoom={room.typeRoom}
                                 type={room.type}

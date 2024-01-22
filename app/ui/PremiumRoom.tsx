@@ -14,7 +14,7 @@ function PremiumRoom() {
         }
     }, [])
     return (
-        <div className='pt-[6px]'>
+        <div className='pt-3 sm:pt-[6px]'>
             <HeadTitle
                 title='Premium'
                 icon={'/images/home/icon/Layer_4.png'}
@@ -26,11 +26,13 @@ function PremiumRoom() {
             />
             <SliderWithSale
                 pending={pending}
-                imageUrl='/images/home/hotel-image/premium-img.png'
+                imageBgUrl='/images/home/hotel-image/premium-img.png'
                 bgColor='bg-gradient-fade-yellow'
                 bgWidth={333}
                 bgHeight={221}
                 listRoom={dataPremium}
+                hiddenImageOnMobile
+                imageInSlide
             />
         </div>
     )

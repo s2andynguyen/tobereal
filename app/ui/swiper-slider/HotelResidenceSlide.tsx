@@ -25,7 +25,7 @@ function HotelResidenceSlide() {
     return (
         <SwiperWrap>
             {dataHotel.map((room, index) => (
-                <SwiperSlide key={index} className='h-[220px]'>
+                <SwiperSlide key={index} className='max-w-[247px] sm:max-w-none h-[220px]'>
                     <CardNormal
                         title={room.title}
                         typeRoom={room.typeRoom}

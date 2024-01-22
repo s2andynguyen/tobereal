@@ -22,9 +22,9 @@ function RealEstateSale() {
         }
     }, [])
     return (
-        <div className='pt-3 pb-[22px] bg-[#DCDCDC] '>
+        <div className='pt-3 pb-2 sm:pb-[22px] bg-[#DCDCDC] '>
             <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
-                <h2 className='font-bold text-[14px] leading-tight lg:text-[20px] lg:leading-6 font-montserrat pl-3'>
+                <h2 className='font-bold text-[20px] leading-tight lg:text-[20px] lg:leading-6 font-montserrat pl-3'>
                     Real Estate Sales
                 </h2>
                 {pending ? (
@@ -32,7 +32,7 @@ function RealEstateSale() {
                 ) : (
                     <SwiperWrap>
                         {dataRealSale.map((room, index) => (
-                            <SwiperSlide key={index} className={`h-[220px] `}>
+                            <SwiperSlide key={index} className='max-w-[247px] sm:max-w-none h-[220px]'>
                                 <div className='w-full h-[220px] flex flex-col justify-between rounded-[10px]'>
                                     {/* content */}
                                     <div className='relative'>

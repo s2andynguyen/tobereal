@@ -21,18 +21,18 @@ function HotelLioStay() {
         }
     }, [])
     return (
-        <div className='pt-2 pb-7 bg-white'>
+        <div className='mt-5 sm:pt-2 pb-6 bg-white'>
             <HeadTitle
                 title='Stay with Thematic and Instagram Ambience at LioStay ✨'
                 seeAll
             />
-            <div className='container mx-auto px-2 md:px-4 xl:px-[57px] pt-2'>
+            <div className='container mx-auto px-2 md:px-4 xl:px-[57px] pt-3 sm:pt-2'>
                 {pending ? (
                     <HotelLioStaySkeleton />
                 ) : (
                     <SwiperWrap>
                         {dataLioStay.map((room, index) => (
-                            <SwiperSlide key={index} className='h-[220px] select-none cursor-pointer'>
+                            <SwiperSlide key={index} className='max-w-[247px] sm:max-w-none h-[220px] select-none cursor-pointer'>
                                 <div className='h-[220px] relative rounded-[10px] overflow-hidden shadow-gray'>
                                     <div className='w-full h-full absolute top-0 left-0'>
                                         <Image

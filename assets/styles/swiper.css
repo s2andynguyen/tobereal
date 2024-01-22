@@ -1,5 +1,6 @@
 .swiper-wrap  .swiper.swiper-initialized.swiper-horizontal {
     padding: 12px 14px;
     height: 250px;
+    z-index: 0;
 }
 

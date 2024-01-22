@@ -25,7 +25,6 @@ function RecommendedApartments() {
                 title='Recommended Apartments 🏬'
                 select
                 selectBackGround='bg-[#e3e3e3]'
-                noBackGround
             />
             {/* RecommendedApartments swiper */}
             <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-5'>
@@ -34,7 +33,7 @@ function RecommendedApartments() {
                 :
                 <SwiperWrap>
                     {ApartmentList.map((room, index) => (
-                        <SwiperSlide key={index} className='h-[220px]'>
+                        <SwiperSlide key={index} className='max-w-[247px] sm:max-w-full h-[220px]'>
                             <CardRecommended
                                 typeRoom={room.typeRoom}
                                 type={room.type}

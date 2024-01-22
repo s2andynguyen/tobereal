@@ -19,6 +19,7 @@ import LookingForPlace from './ui/LookingForPlace'
 import OthersBottomCard from './ui/OthersBottomCard'
 import HeadingSlideBlock from '@/components/HeadingSlideBlock'
 
+
 export default function Home() {
     return (
         <MainLayout>
@@ -30,7 +31,7 @@ export default function Home() {
             />
 
             {/* content */}
-            <div className='h-full  pb-16'>
+            <div className='h-full pb-8 sm:pb-16'>
                 {/* Hotel Residence */}
                 <HotelResidence />
 
@@ -63,7 +64,6 @@ export default function Home() {
 
                 {/* Recommended Houses 🏠 */}
                 <RecommendedHouse />
-
 
                 {/* Looking for a place to stay */}
                 <LookingForPlace />

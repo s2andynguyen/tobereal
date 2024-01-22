@@ -18,7 +18,7 @@ const CardNormal: React.FC<hotelRoom> = ({
     let Icon: any = null
     if (icon) Icon = icon
     return (
-        <Link href={'/detail/1'} className='w-full h-[220px] select-none cursor-pointer'>
+        <Link href={'/detail/1'} className='w-[247px] sm:w-full h-[220px] select-none cursor-pointer'>
             <div className=' shadow-gray rounded-[10px] relative'>
                 <div className='h-[140px]'>
                     <Image

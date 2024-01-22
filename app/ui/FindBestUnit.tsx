@@ -14,7 +14,7 @@ function FindBestUnit() {
         }
     }, [])
     return (
-        <div className='pt-[6px]'>
+        <div className='pt-3 sm:pt-[6px] bg-[#91F2FF] sm:bg-white'>
             <HeadTitle
                 title='Find Best Units for Staycation'
                 icon={'/images/home/icon/Layer_3.png'}
@@ -22,12 +22,15 @@ function FindBestUnit() {
                 select
                 discount='30'
                 desc='Diskon hingga $ 1.000.000'
+                maxWidhtTitle={200}
             />
             <SliderWithSale
                 pending={pending}
-                imageUrl='/images/home/hotel-image/find-best-units.png'
+                imageBgUrl='/images/home/hotel-image/find-best-units.png'
                 bgColor='bg-[#91F2FF]'
                 listRoom={dataFindBest}
+                hiddenImageOnMobile
+                imageInSlide
             />
         </div>
     )

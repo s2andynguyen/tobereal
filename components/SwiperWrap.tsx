@@ -16,9 +16,8 @@ function SwiperWrap({ children, sizeSlide }: { children: React.ReactNode, sizeSl
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={22}
-                slidesPerView={2}
-                loop={true}
-                // navigation
+                slidesPerView={'auto'}
+                // loop={true}
                 breakpoints={{
                     640: {
                         slidesPerView: configPerView

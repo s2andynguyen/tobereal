@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ibmPlex } from '@/assets/styles/fonts'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+
 function Footer() {
     const router = useRouter()
     return (
@@ -13,10 +14,10 @@ function Footer() {
                 <div className='px-3 md:px-7 xl:px-[70px]'>
                     <div
                         className='bg-subscribe-form rounded-[20px] h-[210px] bg-no-repeat bg-cover bg-center
-                        flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 md:px-7 xl:px-14'>
+                        flex flex-col lg:flex-row items-center justify-center lg:justify-between px-3 md:px-7 xl:px-14'>
                         {/* content */}
                         <div className='mb-3 lg:mb-0'> 
-                            <p className='font-semibold text-[18px] sm:text-2xl text-center sm:text-start'>
+                            <p className='font-semibold leading-[22px] text-[18px] sm:text-2xl sm:leading-[32px] text-center sm:text-start'>
                                 Solve Complex Data Challenges.
                             </p>
                             <p className='font-semibold sm:leading-10 leading-[15px] text-[13px] text-center sm:text-start'>
@@ -25,15 +26,15 @@ function Footer() {
                         </div>
     
                         {/* form */}
-                        <div className='w-full min-w-[280px] md:w-[458px] h-[42px]  mt-5 sm:mt-0 rounded-[30px] border border-black flex items-center'>
+                        <div className='w-full max-w-[480px] md:max-w-[458px] h-[42px]  mt-5 sm:mt-0 rounded-[30px] border border-black flex items-center'>
                             <input
                                 type='text'
-                                className=' sm:text-[18px] flex-grow rounded-[30px] bg-transparent focus:outline-none pl-2 sm:pl-7
-                                 text-black placeholder:text-black'
+                                className='text-sm sm:text-[18px] sm:flex-grow max-w-full rounded-[30px] bg-transparent focus:outline-none pl-2 sm:pl-7
+                                 text-black placeholder:text-black min-w-[120px] w-full'
                                 placeholder='Enter your Email'
                             />
                             <button
-                                className='min-w-[80px] sm:w-[120px] md:w-[142px] h-[44px] rounded-[30px] font-semibold text-[14px] sm:text-xl text-white
+                                className='min-w-[120px] sm:flex-grow-0 max-w-[142px] h-[44px] rounded-[30px] font-semibold text-[14px] sm:text-xl text-white
                               bg-gradient-to-b from-[#FFE259] from-0% to-[#D88A00] outline outline-transparent translate-x-1
                               hover:shadow-gray hover:bg-[#eca62d] transition duration-300'>
                                 Subcribe
@@ -46,24 +47,23 @@ function Footer() {
             <div className='container mx-auto pt-[150px]'>
                 {/* Footer list */} 
                 <div className='mx-3 sm:mx-[50px] pt-10 mb-24'>
-                    <div className='flex xl:gap-0 flex-wrap'>
-                        
+                    <div className='row'>
                         {/* logo */}
-                        <div className='mb-8 lg:mb-0 flex-[100%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
+                        <div className='col c-10 c-o-2 sm-o-0 sm-5 sm-o-1 md-o-0 md-4 lg-2-4 mb-8 lg:mb-0'>
                             <Image  
                                 src={'/images/main-logo.png'}
                                 width={167}
                                 height={91}
                                 alt='main-logo'
-                                className='w-auto h-[60px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md drop-shadow-footer-logo rounded-3xl '
+                                className='w-auto h-[80px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md drop-shadow-footer-logo rounded-3xl '
                                 onClick={() => router.push('/')}
                             />
                         </div>
                         {/* Popular Search */}
-                        <div className=' mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[25%] pl-12 md:pl-5 lg:pl-3 xl:pl-8'>
+                        <div className='col c-10 c-o-2 sm-o-0 sm-5 sm-o-1 md-o-0 md-4 lg-2-4 mb-8 lg:mb-0'>
                             <div>
-                                <p className='font-bold text-xl'>Popular Search</p>
-                                <ul className='flex flex-col gap-2 pt-[6px] items-start'>
+                                <p className='font-bold text-xl sm:pb-0 pb-2'>Popular Search</p>
+                                <ul className='flex flex-col pl-3 sm:pl-0 gap-2 pt-[6px] items-start'>
                                     <span className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         Rent apartment in Bali
                                     </span>
@@ -80,10 +80,10 @@ function Footer() {
                             </div>
                         </div>
                         {/* About us */}
-                        <div className='mb-8 lg:mb-0 flex-[50%] md:flex-[33.33%] lg:flex-[15%] pl-12 lg:pl-0'>
-                            <div>
-                                <p className='font-bold text-xl'>About us</p>
-                                <ul className='flex flex-col gap-2 pt-[6px] items-start'>
+                        <div className='col c-10 c-o-2 sm-o-0 sm-6 md-4 lg-2-4 mb-8 lg:mb-0'>
+                            <div className='sm:pl-10'>
+                                <p className='font-bold text-xl sm:pb-0 pb-2'>About us</p>
+                                <ul className='flex flex-col pl-3 sm:pl-0 gap-2 pt-[6px] items-start'>
                                     <span className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         FAQ
                                     </span>
@@ -103,10 +103,10 @@ function Footer() {
                             </div>
                         </div>
                         {/* Contact us */}
-                        <div className='flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12 md:pl-0'>
+                        <div className='col c-10 c-o-2 sm-o-0 sm-5 md-4 sm-o-1 md-o-4 lg-2-4 lg-o-0 mb-8 lg:mb-0'>
                             <div>
-                                <p className='font-bold text-xl'>Contact us</p>
-                                <ul className='flex flex-col gap-2 pt-[6px] items-start'>
+                                <p className='font-bold text-xl sm:pb-0 pb-2'>Contact us</p>
+                                <ul className='flex flex-col pl-3 sm:pl-0 gap-2 pt-[6px] items-start'>
                                     <Link href={'/contact'} className='text-[13px] leading-4 cursor-pointer hover:opacity-80 transition duration-200'>
                                         Contact page
                                     </Link>
@@ -126,7 +126,7 @@ function Footer() {
                             </div>
                         </div>
                         {/* Install on Appstore or GooglePlay */}
-                        <div className='md:max-w-[33.33%] flex-[50%] md:flex-[33.33%] lg:flex-[20%] pl-12 lg:pl-0'>
+                        <div className='col c-7 c-o-2 sm-o-0 sm-5 md-4 sm-o-7 md-o-0 lg-2-4 mb-0 sm:mb-5 pt-3 sm:mt-0'>
                             <div className='flex flex-col gap-[9px] pr-10 sm:pr-8'>
                                 <Image
                                     src={'/images/googleplay.png'}

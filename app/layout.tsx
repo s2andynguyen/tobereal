@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { inter } from '@/assets/styles/fonts'
 import '@/assets/styles/globals.css'
+import '@/assets/styles/grid-system.css'
 
 export const metadata: Metadata = {
     title: {
