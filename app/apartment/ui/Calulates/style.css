@@ -24,22 +24,22 @@
     flex-direction: row-reverse;
 }
 .wrap-Calculates:nth-child(2) .content-Calculate h3 {
-    text-align: left ;
+    text-align: left;
 }
 .wrap-Calculates:nth-child(2) .content-Calculate p {
-    text-align: left ;
+    text-align: left;
 }
-@media only screen and (max-width: 600px) {
-    .wrap-Calculates{
+@media only screen and (max-width: 768px) {
+    .wrap-Calculates {
         flex-direction: column;
     }
     .wrap-Calculates:nth-child(2) {
         flex-direction: column;
     }
     .wrap-Calculates:nth-child(2) .content-Calculate h3 {
-        text-align: center ;
+        text-align: center;
     }
     .wrap-Calculates:nth-child(2) .content-Calculate p {
-        text-align: center ;
+        text-align: center;
     }
 }

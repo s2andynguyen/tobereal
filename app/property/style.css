@@ -105,10 +105,11 @@
 .Difference-btn {
     display: flex;
     justify-content: center;
-    width: 1129px;
+    width: 100%;
     height: 112px;
     border-radius: 50px;
     background: linear-gradient(147deg, #ffa800 0%, rgba(255, 181, 127, 0) 100%);
+    text-align: center;
 }
 .wrap-Difference-table {
     padding: 20px 40px;

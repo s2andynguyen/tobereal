@@ -2,7 +2,7 @@ import './style.css'
 import Image from 'next/image'
 function BuyTobereal({ data }: { data: any }) {
     return (
-        <div className='Box-UserTobereal w-[325px] md:w-[460px] xl:w-[619px] flex justify-between items-center'>
+        <div className='Box-UserTobereal w-[325px] md:w-[360px] lg:w-[619px] flex justify-between items-center hover:shadow-lg'>
             <div className='infomations-UserTB flex items-start gap-2'>
                 <Image
                     src={data?.imsUser}
@@ -20,9 +20,10 @@ function BuyTobereal({ data }: { data: any }) {
                     </div>
                 </div>
             </div>
-            <button className='btn_BuyTB mt-10'>Buy</button>
+            <button className='btn_BuyTB mt-10 hover:shadow-lg'>Buy</button>
         </div>
     )
 }
 
 export default BuyTobereal
+ 

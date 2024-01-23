@@ -195,7 +195,7 @@ function CreateTrading() {
                         <p className='text-labelCT text-xs md:text-base'>
                             Branch information
                         </p>
-                        <button className='AddBranch-CT flex w-[323px] h-[36px] md:w-full xl:w-[855.70px] md:h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border justify-center gap-5 text-xs md:text-xl'>
+                        <button className='AddBranch-CT hover:shadow-lg flex w-[323px] h-[36px] md:w-full xl:w-[855.70px] md:h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border justify-center gap-5 text-xs md:text-xl'>
                             <Image
                                 width={32}
                                 height={32}
@@ -233,14 +233,14 @@ function CreateTrading() {
                         />
                         <input
                             className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
-                            type='number'
+                            type='text'
                             name=''
                             id=''
                             placeholder='Phone'
                         />
                     </div>
                     <div className='CT-grInput w-[323px] md:w-full md:pr-10 md:pl-10 xl:p-0 xl:w-[855.70px] flex items-center'>
-                        <button className='Create-Btn w-[283px] h-[40px] md:w-full xl:w-[749.73px] md:h-[70px] bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-[10px] text-black text-sm md:text-[32px] font-bold'>
+                        <button className='Create-Btn hover:shadow-lg w-[283px] h-[40px] md:w-full xl:w-[749.73px] md:h-[70px] bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-[10px] text-black text-sm md:text-[32px] font-bold'>
                             Create
                         </button>
                     </div>

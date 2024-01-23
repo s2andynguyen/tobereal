@@ -165,7 +165,7 @@ function InformationForm() {
                             placeholder='Enter your address'
                         />
                     </div>
-                    <button className='SaveInformation-Btn mt-11 ml-14' type='submit'>
+                    <button className='SaveInformation-Btn mt-11 ml-14 hover:shadow-lg' type='submit'>
                         Save
                     </button>
                 </form>

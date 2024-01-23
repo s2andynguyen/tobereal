@@ -21,7 +21,7 @@ function Favourite() {
                 {USER_Jakartas.map((card, index) => (
                     <div
                         key={card.id}
-                        className='wrap-gr-Favourites flex items-center justify-center gap-7'>
+                        className='wrap-gr-Favourites flex items-center justify-center gap-7 hover:shadow-lg'>
                         <div className='Gr-user-Jakartas flex items-center gap-1'>
                             <Image
                                 width={31}

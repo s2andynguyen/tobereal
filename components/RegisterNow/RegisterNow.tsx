@@ -17,12 +17,16 @@ function RegisterNow() {
                     sx={{
                         width: 348,
                         // height: 46,
-
+                       
                         '& .MuiOutlinedInput-root': {
                             padding: '0px',
                             borderRadius: '20px',
                             marginTop: '8px'
                         },
+                        '& .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator':
+                            {
+                                marginRight: '40px'
+                            },
                         '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
                         '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
                         '& .MuiInputBase-root': { color: 'black' } // Color of the input text
@@ -51,6 +55,10 @@ function RegisterNow() {
                             borderRadius: '20px',
                             marginTop: '8px'
                         },
+                        '& .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator':
+                            {
+                                marginRight: '40px'
+                            },
                         '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
                         '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
                         '& .MuiInputBase-root': { color: 'black' } // Color of the input text
@@ -78,6 +86,10 @@ function RegisterNow() {
                             borderRadius: '20px',
                             marginTop: '8px'
                         },
+                        '& .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator':
+                            {
+                                marginRight: '40px'
+                            },
                         '& .css-i4bv87-MuiSvgIcon-root': { display: 'none' },
                         '& .MuiInputLabel-root': { color: 'black' }, // Color of the label
                         '& .MuiInputBase-root': { color: 'black' } // Color of the input text
@@ -98,7 +110,6 @@ function RegisterNow() {
     )
 }
 const top100Films = [
-    
     { label: 'City Lights', year: 1931 },
     { label: 'Psycho', year: 1960 },
     { label: 'The Green Mile', year: 1999 },
@@ -118,7 +129,6 @@ const top100Films = [
     { label: 'Apocalypse Now', year: 1979 },
     { label: 'Alien', year: 1979 },
     { label: 'Sunset Boulevard', year: 1950 }
-   
 ]
 
 export default RegisterNow

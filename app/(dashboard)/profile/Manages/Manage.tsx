@@ -19,7 +19,7 @@ function Manage() {
             </div>
             <div className='Gr-form-Manages flex flex-col items-center gap-3'>
                 <button
-                    className='Btn-Manage'
+                    className='Btn-Manage hover:shadow-lg'
                     onClick={() => router.push('/posting/managent')}>
                     Post management
                     <Image
@@ -31,7 +31,7 @@ function Manage() {
                     />
                 </button>
                 <button
-                    className='Btn-Manage'
+                    className='Btn-Manage hover:shadow-lg'
                     onClick={() => router.push('/profile/CustomerManagement')}>
                     Customer management
                     <Image
@@ -43,7 +43,7 @@ function Manage() {
                     />
                 </button>
                 <button
-                    className='Btn-Manage'
+                    className='Btn-Manage hover:shadow-lg'
                     onClick={() => router.push('/profile/TradingFloor')}>
                     Managing the trading floor
                     <Image
@@ -56,7 +56,7 @@ function Manage() {
                 </button>
 
                 <div className='flex flex-col items-center gap-0'>
-                    <button className='Btn-Manage btn-parent' onClick={toggleContent}>
+                    <button className='Btn-Manage hover:shadow-lg btn-parent' onClick={toggleContent}>
                         client
                     </button>
                     {isContentVisible && (

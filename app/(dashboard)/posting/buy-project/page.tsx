@@ -27,7 +27,7 @@ const BuyProject = () => {
                         <input type='text' id='SLproject' className='inputSelect' />
                     </div>
                     <div className='SelectSearch w-[318px] md:w-[619px] items-center mt-7'>
-                        <button className='btn-SearchBuy'>search</button>
+                        <button className='btn-SearchBuy hover:shadow-lg'>search</button>
                     </div>
                     
                 </div>

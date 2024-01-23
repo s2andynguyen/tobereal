@@ -707,7 +707,7 @@ function Apartment() {
                                                 <span className='content-text-answers max-w-[360px]'>
                                                     {subContent.text}
                                                 </span>
-                                                {getTextIcon(subContentIndex)}
+                                                <div className='rotate-180 origin-center delay-100'>{getTextIcon(subContentIndex)}</div>
                                             </div>
                                             {visibleContentIndex === subContentIndex && (
                                                 <div className='show-content max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
@@ -724,6 +724,7 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
+                
             </div>
         </MainLayout>
     )

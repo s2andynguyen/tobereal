@@ -14,12 +14,12 @@ function InformationBonuss() {
                     </div>
                     <div className='flex flex-col gap-5'>
                         <button
-                            className='btn-Balances'
+                            className='btn-Balances hover:shadow-lg'
                             onClick={() => router.push('/withdraw')}>
                             Withdraw
                         </button>
                         <button
-                            className='btn-Balances'
+                            className='btn-Balances hover:shadow-lg'
                             onClick={() => router.push('/deposit')}>
                             Deposit
                         </button>

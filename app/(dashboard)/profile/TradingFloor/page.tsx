@@ -12,7 +12,7 @@ function TradingFloor() {
             <div className='wrap-TradingFloors'>
                 <div className='GrTradingFloors container flex flex-col gap-4'>
                     <div
-                        className='wrap-Btn-TF flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'
+                        className='wrap-Btn-TF hover:shadow-lg flex w-[334px] h-[36px] md:w-full md:h-[45px] items-center justify-between pl-6 pr-4'
                         onClick={() =>
                             router.push('/profile/TradingFloor/CreateTrading')
                         }>
