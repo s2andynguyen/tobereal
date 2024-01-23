@@ -54,7 +54,7 @@ input[type='file'] {
 }
 
 .iconCamera {
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 21px;
     margin: 10px;
