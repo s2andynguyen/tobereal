@@ -48,21 +48,9 @@ const PostingSell = () => {
 
         if (file) {
             setSelectedImageCT(file)
-        }
-    }
-    // rooms number
-
-    const [roomCount, setRoomCount] = useState(1);
-
-    const handleIncrease = () => {
-        setRoomCount(prevCount => prevCount + 1);
+        };
     };
 
-    const handleDecrease = () => {
-        if (roomCount > 1) {
-            setRoomCount(prevCount => prevCount - 1);
-        }
-    };
     //address
     const [showSelect, setShowSelect] = useState(false);
     const [selectedValues, setSelectedValues] = useState({
@@ -95,25 +83,29 @@ const PostingSell = () => {
     };
     //Detailed information
     const [showLabel, setShowLabel] = useState(false);
-    const [roomCounts, setRoomCounts] = useState([0, 0, 0, 0, 0]);
+    const [livingRooms, setLivingRooms] = useState(0);
+    const [bedrooms, setBedrooms] = useState(0);
+    const [toilets, setToilets] = useState(0);
+    const [otherRooms, setOtherRooms] = useState(0);
+    const [floors, setFloors] = useState(0);
 
-    const increaseRoomCount = (index) => {
-        const newRoomCounts = [...roomCounts];
-        newRoomCounts[index]++;
-        setRoomCounts(newRoomCounts);
+    const increaseValue = (setter: (arg0: (prevValue: any) => any) => void) => {
+        setter((prevValue) => prevValue + 1);
     };
 
-    const decreaseRoomCount = (index) => {
-        if (roomCounts[index] > 0) {
-            const newRoomCounts = [...roomCounts];
-            newRoomCounts[index]--;
-            setRoomCounts(newRoomCounts);
-        }
+    const decreaseValue = (setter: (arg0: (prevValue: any) => number) => void) => {
+        setter((prevValue) => (prevValue > 0 ? prevValue - 1 : 0));
     };
-
     const toggleLabel = () => {
         setShowLabel(!showLabel);
     }
+    //Detailed checkbox
+    const [otherUtility, setOtherUtility] = useState('');
+
+    const handleOtherUtilityChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+        setOtherUtility(event.target.value);
+    };
+
     return (
         <DashboardLayout title='Post' >
             <Link href="/posting/post">
@@ -368,28 +360,223 @@ const PostingSell = () => {
                             </div>
                         </div>
                         <div className="Detailed">
-                            <div onClick={toggleLabel}>Detailed information</div>
+                            <button onClick={toggleLabel}>Detailed information</button>
                             {showLabel && (
-                                <div className='Rooms'>
-                                    <p>Legal status</p>
-                                    <select>
-                                        {/* Nội dung của select */}
-                                    </select>
-                                    <p>Way in</p>
-                                    <select>
-                                        {/* Nội dung của select */}
-                                    </select>
-                                    <p>Asset orientation</p>
-                                    <select>
-                                        {/* Nội dung của select */}
-                                    </select>
-                                    <p>Utilities</p>
-                                    <select>
-                                        {/* Nội dung của select */}
-                                    </select>
+                                <div>
+                                    <div className="detailedInformation">
+                                        <div className="grid">
+                                            <div className="item">
+                                                <label>Number of living rooms:</label>
+                                                <div className="valueControl">
+                                                    <button onClick={() => decreaseValue(setLivingRooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Tru.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                    <span>{livingRooms}</span>
+                                                    <button onClick={() => increaseValue(setLivingRooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Cong.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={"item"}>
+                                                <label>Bedroom number:</label>
+                                                <div className={"valueControl"}>
+                                                    <button onClick={() => decreaseValue(setBedrooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Tru.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                    <span>{bedrooms}</span>
+                                                    <button onClick={() => increaseValue(setBedrooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Cong.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={"item"}>
+                                                <label>The toilet number:</label>
+                                                <div className={"valueControl"}>
+                                                    <button onClick={() => decreaseValue(setToilets)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Tru.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                    <span>{toilets}</span>
+                                                    <button onClick={() => increaseValue(setToilets)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Cong.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={"item"}>
+                                                <label>Other rooms:</label>
+                                                <div className={'valueControl'}>
+                                                    <button onClick={() => decreaseValue(setOtherRooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Tru.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                    <span>{otherRooms}</span>
+                                                    <button onClick={() => increaseValue(setOtherRooms)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Cong.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={"item"}>
+                                                <label>How many floors:</label>
+                                                <div className={"rectangle"}>
+                                                    <button onClick={() => decreaseValue(setFloors)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Tru.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                    <span>{floors}</span>
+                                                    <button onClick={() => increaseValue(setFloors)}>
+                                                        <Image
+                                                            src="/dashboard/images/posting/img/Cong.png"
+                                                            alt=""
+                                                            className='w-[20px] h-[20px]'
+                                                            width={20}
+                                                            height={20} />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='Rooms'>
+                                        <label>Legal status</label>
+                                        <div className='customSelect'>
+                                            <select>
+                                                <option disabled>Choose legal status</option>
+                                                <option value="">House ownership certificate</option>
+                                                <option value="">Red paper</option>
+                                                <option value="">Hand paper</option>
+                                                <option value="">Valid documents</option>
+                                                <option value="">Being legalized</option>
+                                                <option value="">Private transfer owner</option>
+                                                <option value="">Contract</option>
+                                                <option value="">Unknown</option>
+                                            </select>
+                                        </div>
+                                        <label>Way in</label>
+                                        <div className="customSelect">
+                                            <select>
+                                                <option disabled>Select the distance from the outside</option>
+                                                <option>Undefined </option>
+                                                <option>1m</option>
+                                                <option>2m</option>
+                                                <option>3m</option>
+                                                <option>4m</option>
+                                                <option>5m</option>
+                                                <option>6m</option>
+                                                <option>7m</option>
+                                                <option>8m</option>
+                                                <option>9m</option>
+                                                <option>10m</option>
+                                                <option>10m - 20m</option>
+                                                <option>20m - 30m</option>
+                                                <option>30m - 40m</option>
+                                                <option>40m - 50m</option>
+                                                <option>50m - 60m</option>
+                                                <option>60m - 70m</option>
+                                                <option>70m - 80m</option>
+                                                <option>80m - 90m</option>
+                                                <option>90m - 100m</option>
+                                                <option>100m - 200m</option>
+                                                <option> {'>'} 200m</option>
+                                                <option> {'>'} 300m</option>
+                                            </select>
+                                        </div>
+                                        <label>Asset orientation</label>
+                                        <div className="customSelect">
+                                            <select>
+                                                <option disabled>Choose property direction</option>
+                                                <option>Winter </option>
+                                                <option>West</option>
+                                                <option>Male</option>
+                                                <option>North</option>
+                                                <option>northeast</option>
+                                                <option>South East</option>
+                                                <option>northwest</option>
+                                                <option>Southwest</option>
+                                                <option>Unknown</option>
+                                            </select>
+                                        </div>
+                                        <div className=''>
+                                            <label>Utilities</label>
+                                            <div className='Utilities'>
+                                                <input type="checkbox" id="fullFacilities" />
+                                                <label htmlFor="fullFacilities">Full facilities</label>
+
+                                                <input type="checkbox" id="parkingSpace" />
+                                                <label htmlFor="parkingSpace">Parking space</label>
+
+                                                <input type="checkbox" id="businessConvenience" />
+                                                <label htmlFor="businessConvenience">Business convenience</label>
+
+                                                <input type="checkbox" id="garden" />
+                                                <label htmlFor="garden">Garden</label>
+
+                                                <input type="checkbox" id="convenientfor" />
+                                                <label htmlFor="convenientfor">Convenient for production</label>
+
+                                                <input type="checkbox" id="convenientToLive" />
+                                                <label htmlFor="convenientToLive">Convenient to live</label>
+
+                                                <input type="checkbox" id="pool" />
+                                                <label htmlFor="pool">Pool</label>
+
+                                                <input type="checkbox" id="Todooffice" />
+                                                <label htmlFor="Todooffice">Convenient to do office</label>
+
+                                                <input type="checkbox" id="otherUtility" />
+                                                <label htmlFor="otherUtility">Enter the other little other</label>
+                                                <input
+                                                    type="text"
+                                                    id="otherUtilityText"
+                                                    value={otherUtility}
+                                                    onChange={handleOtherUtilityChange}
+                                                    disabled={!document.getElementById('otherUtility')?.ariaChecked}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )}
-
                         </div>
                         <div className="Vietnamese-checkbox">
                             <p>Do you want to deposit with the Vietnamese brokerage community of 10k people?</p>
