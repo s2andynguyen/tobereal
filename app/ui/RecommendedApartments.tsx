@@ -24,7 +24,7 @@ function RecommendedApartments() {
             <HeadTitle
                 title='Recommended Apartments 🏬'
                 select
-                selectBackGround='bg-[#e3e3e3]'
+                showSelectSlide
             />
             {/* RecommendedApartments swiper */}
             <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-5'>

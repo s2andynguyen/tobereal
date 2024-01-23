@@ -15,6 +15,7 @@ function Promotion() {
             <HeadingSlideBlock
                 imageUrl={'/images/home/img-content-headblock-2.svg'}
                 title='Chect out All ongoing promo'
+                imageNoMarginOnMobile
             />
             <div className='container mx-auto pl-3 sm:pl-5 md:px-32 pb-32'>
                 {/* items */}

@@ -26,10 +26,10 @@ const TypeOfNewsSlide: React.FC<TypeOfNewsSlideProps> = ({ list }) => {
                 isShow ? 'show' : ''
             }`}>
             <div
-                className='w-full h-[57px] flex justify-between items-center px-6 border border-primary/50 rounded-[4px] bg-white 
+                className='w-full h-[57px] flex justify-between items-center px-3 sm:px-6 border border-primary/50 rounded-[4px] bg-white 
               cursor-pointer hover:shadow-md transition duration-200 group absolute top-0 left-0 z-[1]'
                 onClick={handleSetIsShow}>
-                <p>Cost for each type of news</p>   
+                <p className='text-[14px] leading-tight sm:text-[16px]'>Cost for each type of news</p>   
                 <IoIosArrowDown
                     size={20}
                     className={`group-hover:drop-shadow-md transition-all duration-300 ${
@@ -49,7 +49,7 @@ const TypeOfNewsSlide: React.FC<TypeOfNewsSlideProps> = ({ list }) => {
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
                 onMouseMove={(e) => handleMouseMove(e, 'block-slide-card__type-news')}>
-                <div className='h-full py-6 flex gap-[22px] w-screen'>
+                <div className='h-full py-6 flex gap-[22px] min-w-[1390px]'>
                     {list.map((item, index) => (
                         <div
                             key={index}

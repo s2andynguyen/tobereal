@@ -56,9 +56,6 @@
     justify-content: center;
     align-items: center;
 }
-.block-slide-card__vip-wrapper {
-    overflow-y: hidden;
-}
 .block-slide-card__vip {
     transform: translateY(-100%);
     transition: all linear 0.3s;
@@ -67,6 +64,7 @@
     /* max-width: 960px; */
     width: 100%;
     position: relative;
+    overflow-y: hidden;
     height: 57px;
     border-radius: 4px;
     margin-bottom: 14px;
@@ -74,6 +72,9 @@
     transition: all linear 0.3s;
     z-index: 0;
 }   
+.block-slide-card__vip-wrapper:hover {
+    cursor: grab;
+}
 .block-slide-card__vip-wrapper.show {
     height: 440px;
 }

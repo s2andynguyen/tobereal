@@ -36,7 +36,7 @@ function SocialLogin() {
 
             {/* option to signIn or signUp */}
             {pathname === '/auth/login' ? (
-                <div className='flex items-center font-medium self-start ml-6 mt-5'>
+                <div className='flex items-center font-medium self-start sm:ml-6 sm:mt-5'>
                     Don&#39;t have an account ?
                     <span
                         className='text-[#2F89FC] cursor-pointer hover:underline hover:opacity-85 inline-block p-1'

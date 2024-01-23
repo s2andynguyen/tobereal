@@ -6,9 +6,10 @@ import { usePathname } from 'next/navigation'
 interface HeadingSlideBlock {
     title: string,
     imageUrl: string,
-    description?: string
+    description?: string,
+    imageNoMarginOnMobile?:boolean
 }
-const HeadingSlideBlock:React.FC<HeadingSlideBlock> = ({title, description ,imageUrl}) => {
+const HeadingSlideBlock:React.FC<HeadingSlideBlock> = ({title, description ,imageUrl, imageNoMarginOnMobile}) => {
     const pathname = usePathname()
     const [toggleTab, setToggleTab] = useState('rent')
     const handleSetToggleTab = (value: string) => {
@@ -27,7 +28,7 @@ const HeadingSlideBlock:React.FC<HeadingSlideBlock> = ({title, description ,imag
                             <h2 className={`h2 drop-shadow-title ${
                                 pathname === '/promotion' ? "max-w-[345px] md:max-w-[300px] mt-5" : ''
                             }`}>{title}</h2>
-                            {description && <p className='font-medium max-w-[456px] leading-5 text-[sm] md:text-[16px]'>
+                            {description && <p className='font-medium max-w-[456px] leading-5 text-[12px] md:text-[16px]'>
                                 {description}
                             </p>}
                         </div>
@@ -40,9 +41,9 @@ const HeadingSlideBlock:React.FC<HeadingSlideBlock> = ({title, description ,imag
                                 src={imageUrl}
                                 width={266}
                                 height={227}
-                                className={`md:mt-2 mt-8 ${
+                                className={`md:mt-2 ${
                                     pathname === '/promotion' ? "w-full h-auto self-start xl:h-full xl:w-auto" : ''
-                                }`}
+                                } ${imageNoMarginOnMobile ? 'mt-0': 'mt-8'}`}
                                 alt={imageUrl}
                             />
                         </div>

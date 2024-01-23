@@ -5,6 +5,8 @@ import { dataCardVipProperty } from '../../_model/dataPosting'
 import { IoIosArrowDown } from "react-icons/io";
 import '../../_style/posting-page.css'
 import '../../_style/posting-card-vip.css'
+import { handleMouseDown, handleMouseUp, handleMouseLeave, handleMouseMove } from '@/assets/js/handleDragSlide';
+
 interface PostCardVipSlideProps {
     list: dataCardVipProperty[]
 }
@@ -18,18 +20,23 @@ const PostCardVipSlide: React.FC<PostCardVipSlideProps> = ({ list }) => {
             isShow ? 'show' : ''
         }`}>
             <div
-                className='w-full h-[57px] flex justify-between items-center px-6 border border-primary/50 rounded-[4px] bg-white 
+                className='w-full h-[57px] flex justify-between items-center px-3 sm:px-6 border border-primary/50 rounded-[4px] bg-white 
               cursor-pointer hover:shadow-md transition duration-200 group absolute top-0 left-0 z-[1]' onClick={handleSetIsShow}>
-                <p>Benefits and annual account maintenance fees</p>
-                <IoIosArrowDown size={20} className={`group-hover:drop-shadow-md transition-all duration-300 ${
+                <p className='text-[14px] leading-tight sm:text-[16px]'>Benefits and annual account maintenance fees</p>
+                <IoIosArrowDown size={20} className={`group-hover:drop-shadow-md transition-all duration-300 min-w-5 ${
                     isShow ? '-rotate-180' : ''
                     }`} />
             </div>
 
             {/* show info Benefits and annual account maintenance fees */}
-            <div className={`block-slide-card__vip absolute top-0 left-0 w-full h-[440px] pt-[57px] 
-             bg-white rounded-b-[4px] px-6 z-0 ${isShow ? 'show' : ''}`}>
-                <div className='h-full py-6 flex gap-[22px]'>
+            <div className={`block-slide-card__vip posting-slide__container absolute top-0 left-0 w-full h-[440px] pt-[57px] 
+             bg-white rounded-b-[4px] px-6 z-0 overflow-x-auto  ${isShow ? 'show' : ''}`}
+             onMouseDown={(e) => handleMouseDown(e, 'block-slide-card__vip')}
+             onMouseUp={handleMouseUp}
+             onMouseLeave={handleMouseLeave}
+             onMouseMove={(e) => handleMouseMove(e, 'block-slide-card__vip')}   
+            >
+                <div className='h-full py-6 flex gap-[22px] min-w-[910px]'>
                     {list.map((item, index) => (
                         <div
                             key={index}

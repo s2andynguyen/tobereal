@@ -23,6 +23,7 @@ function FindBestUnit() {
                 discount='30'
                 desc='Diskon hingga $ 1.000.000'
                 maxWidhtTitle={200}
+                showSelectSlide
             />
             <SliderWithSale
                 pending={pending}

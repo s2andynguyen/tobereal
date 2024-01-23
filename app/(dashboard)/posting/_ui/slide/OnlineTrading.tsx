@@ -19,10 +19,10 @@ const OnlineTrading: React.FC<OnlineTradingSlideProps> = ({ list }) => {
                 isShow ? 'show' : ''
             }`}>
             <div
-                className='w-full h-[57px] flex justify-between items-center px-6 border border-primary/50 rounded-[4px] bg-white 
+                className='w-full h-[57px] flex justify-between items-center px-3 sm:px-6 border border-primary/50 rounded-[4px] bg-white 
               cursor-pointer hover:shadow-md transition duration-200 group absolute top-0 left-0 z-[1]'
                 onClick={handleSetIsShow}>
-                <p>Create an online trading platform</p>   
+                <p className='text-[14px] leading-tight sm:text-[16px]'>Create an online trading platform</p>   
                 <IoIosArrowDown
                     size={20}
                     className={`group-hover:drop-shadow-md transition-all duration-300 ${
@@ -38,7 +38,7 @@ const OnlineTrading: React.FC<OnlineTradingSlideProps> = ({ list }) => {
              bg-white rounded-b-[4px] px-6 z-0  overflow-x-auto  ${
                  isShow ? 'show' : ''
              }`}>
-                <div className='h-full py-6 flex gap-[22px] '>
+                <div className='h-full py-6 flex gap-[22px] min-w-[540px]'>
                     {list.map((item, index) => (    
                         <div
                             key={index}

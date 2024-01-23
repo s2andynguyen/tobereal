@@ -23,6 +23,8 @@ function BestSellingApartment() {
             <HeadTitle
                 title='Best Selling Apartment Buildings 🏆'
                 select
+                showSelectSlide
+                borderSelectColor='border-[#cdcdcd]'
             />
             {/* BestSellingApartment swiper */}
             <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-5'>

@@ -12,13 +12,13 @@ function RegisterForm() {
     const [phoneNumber, setPhoneNumber] = useState('')
     const [password, setPassword] = useState('')
     return (
-        <div className='h-full w-full flex flex-col items-center justify-start gap-3 md:gap-8 pt-8 md:pt-32'>
-            <div className='text-center'>
+        <div className='h-full w-full flex flex-col items-center justify-start gap-3 md:gap-8 pt-3 sm:pt-8 md:pt-16'>
+            <div className='text-center mb-3 sm:mb-0'>
                 <p className='text-[24px] font-semibold'>Create an account</p>
                 <p className='text-sm text-[#343434]'>Connect with your friends today!</p>
             </div>
             {/* form input */}
-            <div className='w-full px-8 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6'>
+            <div className='w-full px-6 sm:px-10 md:px-16 xl:px-[150px] flex flex-col items-center gap-5 md:gap-6'>
                 <Input
                     id={'username'}
                     onChange={(e: any) => {

@@ -7,8 +7,9 @@ import Link from 'next/link'
 import { IoIosMenu } from 'react-icons/io'
 interface HeaderProps {
     showSidebar?: any
+    fixedOnMbile?:boolean
 }
-const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
+const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
     const router = useRouter()
     const pathName = usePathname()
     const [isShowNavbar, setIsShowNavBar] = useState(false)
@@ -26,7 +27,9 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
     return (
         <>
             <div className={`w-full`}>
-                <div className='container mx-auto'>
+                <div className={`container mx-auto ${
+                    fixedOnMbile ? 'fixed top-0 left-0 right-0 h-14 z-[1] bg-white shadow-sm' : ''
+                }`}>
                     <div className='flex justify-between items-center h-14 md:h-[90px] px-2 lg:px-10'>
                         {/* logo & nav */}
                         <div className='flex justify-start items-center lg:gap-5 xl:gap-10'>
@@ -101,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
             </div>
 
             {/* nav on scroll */}
-            <div
+            {!fixedOnMbile && <div
                 className={`w-full fixed top-0 z-[9] -translate-y-full transition-all duration-200 bg-white  ${
                     isShowNavbar ? 'translate-y-0 shadow-md' : ''
                 }`}>
@@ -177,7 +180,7 @@ const Header: React.FC<HeaderProps> = ({ showSidebar }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </>
     )
 }

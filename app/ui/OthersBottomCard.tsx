@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 function OthersBottomCard() {
     return (
-        <div className='container mx-auto  px-4 md:px-7 xl:px-[70px] pt-6 pb-[88px]'>
+        <div className='container mx-auto px-3 md:px-7 xl:px-[70px] pt-6 pb-[88px]'>
             {/* Card */}
             <div className='mb-6'>
                 <h2 className='text-[18px] sm:text-xl sm:leading-[24px] leading-[22px] font-bold font-montserrat mb-2'>

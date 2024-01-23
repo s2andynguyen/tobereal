@@ -24,9 +24,11 @@ function RecommendedHouse() {
             <HeadTitle
                 title='Recommended Houses 🏠'
                 select
+                showSelectSlide
+                borderSelectColor='border-[#cdcdcd]'
             />
             {/* RecommendedHouse swiper */}
-            <div className='container mx-auto px-2 md:px-4 xl:px-14 pb-5'>
+            <div className='container mx-auto px-2 md:px-4 xl:px-14 pb-5 pt-3 sm:pt-0'>
                 {pending ? 
                     <CardRecommendedSkeleton type='house'/>
                 :

@@ -17,11 +17,11 @@ function AuthForm() {
         setRemember(!remember)
     }
     return (
-        <div className='h-full w-full flex flex-col items-center justify-center gap-3 md:gap-8'>
-            <p className='text-[24px] font-black'>Hi, Welcome Back! 👋</p>
+        <div className='h-full w-full flex flex-col items-center justify-start sm:justify-center gap-3 md:gap-8 pt-6 sm:pt-0'>
+            <p className='text-[24px] font-semibold sm:font-black'>Hi, Welcome Back! 👋</p>
 
             {/* form input */}
-            <div className='w-full px-8 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6'>
+            <div className='w-full px-6 sm:px-10 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6 mb-10 sm:mb-0'>
                 {/* email */}
                 <Input
                     id={'email'}
@@ -45,7 +45,7 @@ function AuthForm() {
                 />
 
                 {/* remember & fogot password */}
-                <div className='flex justify-center py-2 md:py-0'>
+                <div className='w-full flex justify-between sm:justify-center py-2 md:py-0'>
                     {/* remember me*/}
                         <CustomCheckbox 
                             isChecked={remember}
@@ -55,7 +55,7 @@ function AuthForm() {
                     {/* fogot password */}
                     <Link
                         href={'/auth/forgot'}
-                        className='text-[#E86969] ml-10 hover:underline'>
+                        className='text-[#E86969] sm:ml-10 hover:underline '>
                         Forgot Password?
                     </Link>
                 </div>
@@ -66,7 +66,7 @@ function AuthForm() {
             </div>
 
             {/* login with social */}
-            <div className="w-full px-10 xl:px-20">
+            <div className="w-full px-6 sm:px-10 xl:px-20">
                 <SocialLogin />
             </div>
         </div>

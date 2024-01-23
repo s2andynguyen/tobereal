@@ -17,7 +17,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
     onChange,
     name,
     smail,
-    bolder
+    bolder,
 }) => {
     return (
         <label className='custom-checkbox-bkr form-control flex items-center relative'>

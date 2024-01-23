@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
 import { dataHotel } from './model/hotelRoom'
-import Image from 'next/image'
 function MonthlyCheaperPrice() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -23,6 +22,7 @@ function MonthlyCheaperPrice() {
                 select
                 desc='Diskon hingga $ 1.000.000'
                 iconInline
+                maxWidhtTitle={246}
             />
             <SliderWithSale
                 pending={pending}

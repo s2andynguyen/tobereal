@@ -5,6 +5,7 @@ import RegisterForm from '../ui/RegisterForm'
 import Image from 'next/image'
 import FrameLogin from '../ui/FrameLogin'
 import ForgotForm from '../ui/ForgotForm'
+import BackToHome from '../ui/BackToHome'
 function ForgotPassWord() {
     return (
         <div className='h-full flex justify-center items-center flex-col md:flex-row py-2 md:py-[100px] relative px-2'>
@@ -22,9 +23,11 @@ function ForgotPassWord() {
                 </div>
             </div>
 
-            {/* form login */}
-            <div className='h-full md:h-[96vh] bg-white w-full md:w-[60%] rounded-[20px] md:absolute right-0 md:max-h-[1024px]  mx-2'>
+            {/* form forgot */}
+            <div className='h-full md:h-[96vh] bg-white w-full md:w-[60%] rounded-[20px] md:absolute right-0 md:max-h-[1024px] pt-12 sm:0 mx-2 relative'>
                 <ForgotForm />
+                {/* back to home */}
+                <BackToHome />
             </div>
         </div>
     )

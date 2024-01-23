@@ -3,6 +3,7 @@ import React from 'react'
 import FrameRegister from '../ui/FrameRegister'
 import RegisterForm from '../ui/RegisterForm'
 import Image from 'next/image'
+import BackToHome from '../ui/BackToHome'
 function Register() {
     return (
         <div className='h-full flex justify-center items-center flex-col md:flex-row py-2 md:py-[100px] relative px-2'>
@@ -16,8 +17,10 @@ function Register() {
             </div>  
 
             {/* form login */}
-            <div className='h-full md:h-[96vh] bg-white w-full md:w-[60%] rounded-[20px] md:absolute right-0 md:max-h-[1024px]  mx-2'>
+            <div className='h-full md:h-[96vh] w-full md:w-[60%] rounded-[20px] md:absolute right-0 md:max-h-[1024px] pt-12 sm:0 mx-2 bg-white'>
                 <RegisterForm />
+                {/* back to home */}
+                <BackToHome />
             </div>
         </div>
     )

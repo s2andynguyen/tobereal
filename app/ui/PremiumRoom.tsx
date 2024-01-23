@@ -23,6 +23,7 @@ function PremiumRoom() {
                 descBolder
                 iconHeight={26}
                 iconWidth={14}
+                showSelectSlide
             />
             <SliderWithSale
                 pending={pending}

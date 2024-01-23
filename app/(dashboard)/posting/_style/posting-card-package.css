@@ -10,10 +10,11 @@
     margin-bottom: 14px;
     padding: 0 10px 5px;
     transition: all linear 0.3s;
-    z-index: 0;
+    z-index: 3;
     cursor: grab;
 }   
 .block-slide-card__package {
+    width: 100%;
     transform: translateY(-100%);
     transition: all linear 0.3s;
 }
@@ -26,6 +27,7 @@
     opacity: 1;
 }
 
+/* card item */
 .list-card-package .card-package__item:first-child {
     height: 51px;
     color: #fff;

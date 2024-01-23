@@ -20,7 +20,8 @@ function WeeklyHotDeals() {
                 saleDealBadge='2 day(s)'
                 select
                 seeAll
-                bgTitle='bg-transparent bg-white'
+                bgTitle='bg-transparent sm:bg-white'
+                showSelectSlide
             />
             <SliderWithSale
                 pending={pending}

@@ -15,7 +15,7 @@ function ForgotForm() {
     const [verify, setVerify] = useState(false)
     return (
         <div className='h-full w-full flex flex-col items-center justify-center gap-3 md:gap-4'>
-            <p className='text-[24px] font-bold'>
+            <p className='text-[24px] font-bold mb-3 sm:mb-0'>
                 {verify ? 'Enter new password' : 'Forgot Password?'}
             </p>
 
