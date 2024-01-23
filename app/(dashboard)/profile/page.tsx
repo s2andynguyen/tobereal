@@ -102,7 +102,7 @@ const Profile = () => {
                         </label>
                     </div>
                 </div>
-                <div className='wrapper-Informations container justify-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                <div className='wrapper-Informations container justify-items-center grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
                     <InformationForm />
                     <Favourite />
                     <InformationBonuss />
