@@ -2,6 +2,7 @@
 import './style.css'
 import RegisterNow from '@/components/RegisterNow/RegisterNow'
 import Image from 'next/image'
+
 // fetch data
 import { JENIS_apartemen } from './Jenis'
 import ShowJenisGr from './ui/ShowJenisGr/ShowJenisGr'
@@ -12,6 +13,7 @@ import { useRouter } from 'next/navigation'
 //
 function Property() {
     const router = useRouter()
+
     return (
         <MainLayout>
             <div className='wrapper bg-white'>
@@ -37,7 +39,7 @@ function Property() {
                     <h3 className='title-reuse text-center md:text-left'>
                         Our Service Options
                     </h3>
-                    <div className='PropertyManagement-wrap flex flex-col-reverse gap-10 w-full justify-between lg:flex-row'>
+                    <div className='PropertyManagement-wrap flex items-center flex-col-reverse gap-10 w-full justify-between lg:flex-row'>
                         <Image
                             width={306}
                             height={304}
@@ -56,11 +58,14 @@ function Property() {
                                     rented daily, monthly and annually.
                                 </p>
                             </div>
-                            <button className='seeMore-btn wrap-btn'
-                             onClick={() => router.push('/apartment')}>See More</button>
+                            <button
+                                className='seeMore-btn wrap-btn'
+                                onClick={() => router.push('/apartment')}>
+                                See More
+                            </button>
                         </div>
                     </div>
-                    <div className='PropertyManagement-wrap flex flex-col gap-10 w-full justify-between lg:flex-row'>
+                    <div className='PropertyManagement-wrap flex items-center flex-col gap-10 w-full justify-between lg:flex-row'>
                         <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
@@ -72,8 +77,11 @@ function Property() {
                                     rented daily, monthly and annually.
                                 </p>
                             </div>
-                            <button className='seeMore-btn wrap-btn'
-                            onClick={() => router.push('/promotion')}>See More</button>
+                            <button
+                                className='seeMore-btn wrap-btn'
+                                onClick={() => router.push('/promotion')}>
+                                See More
+                            </button>
                         </div>
                         <Image
                             width={412}
@@ -84,31 +92,34 @@ function Property() {
                         />
                     </div>
                 </div>
-                <div className='wrap-Differences container !p-0'>
-                    <button className='Difference-btn title-Home text-center md:text-left'>
-                        Difference between Apartment Management by
-                        <br />
-                        ............... and Home Marketing by .............
-                    </button>
-                    <div className='wrap-Difference-table'>
-                        {Difference?.map((card) => (
-                            <TableDifference data={card} key={card?.id} />
-                        ))}
+                <div className=' wrap-Differences container !p-0'>
+                    <div className='TableDifference-wrap'>
+                        <button className='Difference-btn title-Home text-center md:text-left'>
+                            Difference between Apartment Management by
+                            <br />
+                            ............... and Home Marketing by .............
+                        </button>
+
+                        <div className='wrap-Difference-table flex flex-col items-center'>
+                            {Difference?.map((card) => (
+                                <TableDifference data={card} key={card?.id} />
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className='wrap-houses container '>
-                    <div className='House-wrap flex flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
-                        <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
+                    <div className='House-wrap flex items-center flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
+                        <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 lg:items-start '>
                             <div className='content-House flex flex-col gap-5 '>
-                                <h4 className='title-reuse text-center md:text-left'>
+                                <h4 className='title-reuse text-center lg:text-left'>
                                     Is your apartment and house empty?
                                 </h4>
-                                <p className='text-PM text-center md:text-left'>
+                                <p className='text-PM text-center lg:text-left'>
                                     Dont win it, its better to make money. Come on! Just
                                     hand it over to ....................!
                                 </p>
                             </div>
-                            <button className='registerNow-btn wrap-btn'>
+                            <button className='registerNow-btn wrap-btn mt-12'>
                                 REGISTER NOW ➔
                             </button>
                         </div>

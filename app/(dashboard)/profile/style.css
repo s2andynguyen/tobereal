@@ -11,16 +11,15 @@
 }
 /* sd chung END*/
 .wrapper-Informations {
+    top: 200px;
     gap: 39px 55px;
 }
 .image-container {
-    position: relative;
+    position: absolute;
     width: 100%; /* Điều chỉnh kích thước theo ý muốn của bạn */
     height: 221px; /* Điều chỉnh kích thước theo ý muốn của bạn */
     background: rgba(153, 153, 153, 0.5);
     overflow: hidden;
-
-    position: relative;
 }
 
 label {
@@ -29,7 +28,7 @@ label {
     height: 100%;
 }
 
-input[type='file'] {
+.coverImage {
     position: absolute;
     left: 0;
     top: 0;
@@ -53,14 +52,6 @@ input[type='file'] {
     object-fit: cover;
 }
 
-.iconCamera {
-    position: relative;
-    bottom: 0;
-    right: 21px;
-    margin: 10px;
-    font-size: 24px;
-    color: #fff;
-}
 .iconShare {
     position: absolute;
     top: 0;
@@ -106,6 +97,7 @@ input[type='file'] {
 }
 
 .avt-wrap {
+    top: 188px;
     padding: 0 50px !important;
 }
 
@@ -123,4 +115,19 @@ input[type='file'] {
 .IconCameraAvt,
 .Icon-EditName {
     cursor: pointer;
+}
+.iconCamera-wrap {
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+}
+.avtUser-bg {
+    width: 115px;
+    height: 115px;
+    background: #fff;
+    border-radius: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

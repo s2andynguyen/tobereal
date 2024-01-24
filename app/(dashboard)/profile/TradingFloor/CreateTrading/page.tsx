@@ -31,6 +31,7 @@ function CreateTrading() {
                         htmlFor='imageInput'
                         className={selectedImageCT ? 'has-image' : ''}>
                         <input
+                        className='AvtRound'
                             type='file'
                             id='imageInput'
                             accept='image/*'
@@ -60,7 +61,7 @@ function CreateTrading() {
                             Name of the trading platform
                         </label>
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full xl:w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name='NameTrading'
                             id='NameTrading'
@@ -74,7 +75,7 @@ function CreateTrading() {
                             Description content
                         </label>
                         <textarea
-                            className='Description-Style w-[323px] h-[72px] md:w-full xl:w-[855.70px] md:h-[188px] text-labelCT text-xs md:text-base pl-2 md:pl-5 xl:pl-12 '
+                            className='Description-Style h-[72px] w-full max-w-[855.70px] md:h-[188px] text-labelCT text-xs md:text-base pl-2 md:pl-5 xl:pl-12 '
                             name='DescriptionContent'
                             id='DescriptionContent'
                             placeholder='Enter a description'
@@ -84,7 +85,7 @@ function CreateTrading() {
                         <p className='text-labelCT text-xs md:text-base'>
                             Introductory photo
                         </p>
-                        <div className='Image-Introductory w-[323px] h-[124px] md:w-full xl:w-[855.70px] md:h-[188px]'>
+                        <div className='Image-Introductory h-[124px] w-full max-w-[855.70px] md:h-[188px]'>
                             <label
                                 htmlFor='imageIntroductory '
                                 className={classNames('labelIntroductory', {
@@ -100,7 +101,7 @@ function CreateTrading() {
 
                                 {selectedImageCT1 && (
                                     <div
-                                        className='Introductory-image-preview w-[323px] h-[124px] md:w-[855px] md:h-[188px]'
+                                        className='Introductory-image-preview h-[124px] w-full max-w-[855.70px] md:h-[188px]'
                                         style={{
                                             backgroundImage: `url(${URL.createObjectURL(
                                                 selectedImageCT1
@@ -130,13 +131,13 @@ function CreateTrading() {
                             Headquarters information
                         </label>
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name=''
                             id=''
                             placeholder='Office address'
                         />
-                        <div className='Child-input-informations flex justify-between w-[323px] md:w-full'>
+                        <div className='Child-input-informations flex justify-between w-full max-w-[855.70px]'>
                             <input
                                 className='text-labelCT text-xs md:text-base w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                                 type='text'
@@ -160,21 +161,21 @@ function CreateTrading() {
                             />
                         </div>
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='number'
                             name=''
                             id=''
                             placeholder='Phone'
                         />
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='number'
                             name=''
                             id=''
                             placeholder='Hotline:'
                         />
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name=''
                             id=''
@@ -191,11 +192,11 @@ function CreateTrading() {
                             src={'/dashboard/images/profile/Map.jpg'}
                         />
                     </div>
-                    <div className='CT-grInput md:pr-5 md:pl-5 xl:p-0'>
+                    <div className='CT-grInput'>
                         <p className='text-labelCT text-xs md:text-base'>
                             Branch information
                         </p>
-                        <button className='AddBranch-CT hover:shadow-lg flex w-[323px] h-[36px] md:w-full xl:w-[855.70px] md:h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border justify-center gap-5 text-xs md:text-xl'>
+                        <button className='AddBranch-CT hover:shadow-lg flex h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-gradient-to-b from-yellow-500 to-yellow-200 rounded-[5px] border justify-center gap-5 text-xs md:text-xl'>
                             <Image
                                 width={32}
                                 height={32}
@@ -211,35 +212,35 @@ function CreateTrading() {
                             Contact person information
                         </label>
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name=''
                             id=''
                             placeholder='Full name'
                         />
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name=''
                             id=''
                             placeholder='Position'
                         />
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='email'
                             name=''
                             id=''
                             placeholder='Email'
                         />
                         <input
-                            className='text-labelCT text-xs md:text-base w-[323px] h-[36px] md:w-full md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                            className='text-labelCT text-xs md:text-base h-[36px] w-full max-w-[855.70px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                             type='text'
                             name=''
                             id=''
                             placeholder='Phone'
                         />
                     </div>
-                    <div className='CT-grInput w-[323px] md:w-full md:pr-10 md:pl-10 xl:p-0 xl:w-[855.70px] flex items-center'>
+                    <div className='CT-grInput w-[323px] md:w-full md:pr-10 md:pl-10 xl:p-0 max-w-[855.70px] flex items-center'>
                         <button className='Create-Btn hover:shadow-lg w-[283px] h-[40px] md:w-full xl:w-[749.73px] md:h-[70px] bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-[10px] text-black text-sm md:text-[32px] font-bold'>
                             Create
                         </button>

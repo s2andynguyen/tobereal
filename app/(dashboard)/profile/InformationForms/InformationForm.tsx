@@ -139,7 +139,7 @@ function InformationForm() {
                                 className='input-style !max-w-11'
                                 id='birthdate-year'
                                 name='birthdate.year'
-                                value={formData.country}
+                                value={formData.birthdate.year}
                                 onChange={handleInputChange}>
                                 <option value=''>Year</option>
                                 <option value='1980'>1980</option>
@@ -165,7 +165,9 @@ function InformationForm() {
                             placeholder='Enter your address'
                         />
                     </div>
-                    <button className='SaveInformation-Btn mt-11 ml-14 hover:shadow-lg' type='submit'>
+                    <button
+                        className='SaveInformation-Btn mt-11 ml-14 hover:shadow-lg'
+                        type='submit'>
                         Save
                     </button>
                 </form>
