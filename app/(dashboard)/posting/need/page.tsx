@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
 import Link from 'next/link';
+import Checkbox  from './ui/checkbox/page';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)
@@ -57,7 +58,7 @@ const PostingSell = () => {
                 <div className="menu_li">
                     <p>Need to rent, Need to buy</p>
                     <Image
-                        src="/dashboard/images/posting/img/Need_to.png"
+                        src="/dashboard/images/posting/img/search2.png"
                         alt=""
                         className='w-[40px] h-[38px]'
                         width={40}
@@ -131,7 +132,7 @@ const PostingSell = () => {
                             </select>
                         </div>
                         <div className="ward">
-                            <span> ward / commune</span>
+                            <span> Ward / commune</span>
                             <select
                                 className='ward-info'
                                 id='ward-type'
@@ -179,96 +180,8 @@ const PostingSell = () => {
                     </div>
                 )}
                 {checkbox2 && (
-                    <div className='Asset'>
-                        <span className='Type'>Asset type</span>
-                        <select
-                            className='select-asset'
-                            id='Asset-type'
-                            name='Asset.type'
-                        >
-                            <option value=''>Select address type</option>
-                            <option value=''>Selling townhouses</option>
-                            <option value=''>Selling private house</option>
-                            <option value=''>Selling villas and townhouses</option>
-                            <option value=''>Selling apartments</option>
-                            <option value="">Selling restaurants and hotels</option>
-                            <option value="">Selling warehouse and workshop</option>
-                        </select>
-                        <div className='contact_city'>
-                            <span className='contact_info'>Province/ city</span>
-                            <select
-                                className='provin-info'
-                                id='province-type'
-                                name='province.type'
-                            >
-                                <option value=''>Choose province/ city</option>
-                                <option value=''>Selling townhouses</option>
-                                <option value=''>Selling private house</option>
-                                <option value=''>Selling villas and townhouses</option>
-                                <option value=''>Selling apartments</option>
-                                <option value="">Selling restaurants and hotels</option>
-                                <option value="">Selling warehouse and workshop</option>
-                            </select>
-                            <select
-                                className='provin-info'
-                                id='District-type'
-                                name='District.type'
-                            >
-                                <option value=''>Choose District</option>
-                                <option value=''>Selling townhouses</option>
-                                <option value=''>Selling private house</option>
-                                <option value=''>Selling villas and townhouses</option>
-                                <option value=''>Selling apartments</option>
-                                <option value="">Selling restaurants and hotels</option>
-                                <option value="">Selling warehouse and workshop</option>
-                            </select>
-                        </div>
-                        <div className="ward">
-                            <span> ward / commune</span>
-                            <select
-                                className='ward-info'
-                                id='ward-type'
-                                name='ward.type'
-                            >
-                                <option value=''>Choose ward / commune</option>
-                                <option value=''>Selling townhouses</option>
-                                <option value=''>Selling private house</option>
-                                <option value=''>Selling villas and townhouses</option>
-                                <option value=''>Selling apartments</option>
-                                <option value="">Selling restaurants and hotels</option>
-                                <option value="">Selling warehouse and workshop</option>
-                            </select>
-                        </div>
-                        <div className="Titlle">
-                            <span>Title</span>
-                            <input
-                                type="text"
-                                placeholder="Enter a title"
-                                value={title}
-                                onChange={handleChange}
-                                className='input_title'
-                            />
-                        </div>
-                        <div className="Description">
-                            <span>Description content</span>
-                            <input
-                                type="text"
-                                placeholder="Enter a title"
-                                className='Description_title'
-                            />
-                        </div>
-                        <div className='contact_menu'>
-                            <span className='contact_information'>Contact information</span>
-                            <input className='name' type='text' placeholder='First and last name' />
-                            <input className='name' type='text' placeholder='Phone' />
-                        </div>
-                        <div className="button-post">
-                            <button className='post'>
-                                <span>
-                                    POST
-                                </span>
-                            </button>
-                        </div>
+                    <div className='Checkout'>
+                       <Checkbox/>
                     </div>
                 )}
             </div>

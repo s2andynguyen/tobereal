@@ -1,0 +1,30 @@
+
+.legal_images{
+    padding: 20px 0;
+}
+.text_legal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text_legal span {
+    color: #000000;
+    font-family: 'Inter-Medium', Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 182px;
+}
+
+.text_legal p {
+    color: #000000;
+    font-family: 'Inter-Light', Helvetica;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 361px;
+
+}

@@ -13,6 +13,7 @@ const GoogleMap = () => {
                 width={934}
                 height={900}
             />
+
         </div>
 
     )

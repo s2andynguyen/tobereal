@@ -19,7 +19,7 @@
 
 .menu_li p {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0;
@@ -63,11 +63,12 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    padding: 0 30px;
 }
 
 .Type {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0;
@@ -88,6 +89,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .provin-info {
@@ -103,6 +105,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .ward-info {
@@ -118,11 +121,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .Titlle span {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0;
@@ -143,11 +147,12 @@
     gap: 10px;
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 
 .Description span {
     color: #000000;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0;
@@ -170,6 +175,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px 0;
 }
 
 .contact_information {
@@ -203,12 +209,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .post span {
     color: #000000;
-    font-family: "Poppins-Bold", Helvetica;
+    font-family: 'Poppins-Bold', Helvetica;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0;
