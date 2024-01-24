@@ -362,7 +362,7 @@ function Apartment() {
                                     slidesPerView: 1
                                 },
                                 960: {
-                                    slidesPerView: 1
+                                    slidesPerView: 2
                                 },
                                 1200: {
                                     slidesPerView: 2

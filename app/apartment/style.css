@@ -268,3 +268,7 @@
 }
 
 /* ... (other styles) */
+.swiper-slide .swiper-slide-active{
+    max-width: 187px;
+    width: 100%;
+}
