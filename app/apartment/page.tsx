@@ -104,11 +104,10 @@ function Apartment() {
                         ))}
                     </div>
                 </div>
-                <div className='Earnings-wrap container'>
+                <div className='Earnings-wrap container gap-10'>
                     {CALCULATES_DT?.map((card) => (
                         <Calculates data={card} key={card?.id} />
                     ))}
-                    
                 </div>
                 <div className='wrap-activities container gap-16'>
                     <h3 className='title-Calculates text-xl md:text-2xl text-center'>
@@ -499,45 +498,45 @@ function Apartment() {
                             <div className='wrap-Logo-Manage flex flex-col justify-center align-center w-full min-h-[300px] '>
                                 <div className='TopLogos-Management flex justify-center'>
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management1.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management2.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management3.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management4.png'
                                         }
@@ -546,45 +545,45 @@ function Apartment() {
                                 </div>
                                 <div className='BottomLogos-Managemant flex justify-center'>
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management5.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management6.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management7.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management8.png'
                                         }
                                         alt='logoPartner'
                                     />
                                     <Image
-                                        width={70}
+                                        width={138}
                                         height={80}
-                                        className='w-[auto] lg:w-[138px]'
+                                        className='w-[70px] h-[auto] lg:w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management9.png'
                                         }
@@ -708,7 +707,7 @@ function Apartment() {
                                                 <span className='content-text-answers max-w-[360px]'>
                                                     {subContent.text}
                                                 </span>
-                                                {getTextIcon(subContentIndex)}
+                                                <div className='rotate-180 origin-center delay-100'>{getTextIcon(subContentIndex)}</div>
                                             </div>
                                             {visibleContentIndex === subContentIndex && (
                                                 <div className='show-content max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
@@ -725,6 +724,7 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
+                
             </div>
         </MainLayout>
     )

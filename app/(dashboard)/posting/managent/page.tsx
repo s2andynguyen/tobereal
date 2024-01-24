@@ -7,7 +7,7 @@ import DashboardLayout from '../../_ui/layout/DashboardLayout'
 const Managent = () => {
     return (
         <DashboardLayout title='Post managent'>
-            <div className='wrap-Managents container flex flex-col items-start gap-5'>
+            <div className='wrap-Managents container flex flex-col items-start gap-5 p-5 md:p-12'>
                 {POST_Managent?.map((card) => (
                     <ManamentPosts data={card} key={card?.id} />
                 ))}

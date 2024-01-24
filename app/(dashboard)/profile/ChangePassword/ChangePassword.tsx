@@ -121,7 +121,7 @@ function ChangePassword() {
                     </a>
 
                     <div className='flex justify-center'>
-                        <button className='btn-submit-password' type='submit'>
+                        <button className='btn-submit-password hover:shadow-lg' type='submit'>
                             Submit
                         </button>
                     </div>

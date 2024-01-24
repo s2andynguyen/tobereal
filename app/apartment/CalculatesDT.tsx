@@ -14,7 +14,7 @@ export const CALCULATES_DT = [
             'At S - HOME property management, we also provide a DEFINITE RENTAL GUARANTEE!'
     },
     {
-        id: 1,
+        id: 3,
         img: '/images/apartment/chair.png',
         name: 'FURNISHED BY S - HOME',
         content:

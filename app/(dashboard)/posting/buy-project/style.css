@@ -14,7 +14,6 @@
 }
 
 .SelectSearch {
-    width: 619px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +35,4 @@
     height: 40px;
     border-radius: 10px;
     background: linear-gradient(90deg, #f7e75a 0%, #ffc702 100%);
-}
-.btn-SearchBuy:hover {
-    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
