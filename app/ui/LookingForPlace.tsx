@@ -97,13 +97,16 @@ function LookingForPlace() {
     }, [pending])
 
     return (
-        <div className='pt-2 pb-6 bg-[#E3E3E3]'>
-            <HeadTitle
-                title='Looking for a place to stay? 🏠'
-                desc='Find “By Travelio” units in Indonesia’s big cities'
-                descBolder
-            />
+        <div className='pt-4 pb-6 bg-[#E3E3E3]'>
+            {/* title */}
+            <div className='container mx-auto pr-2 pl-5 md:px-8 xl:px-[71px] mb-4'>
+                <div className='flex flex-col sm:flex-row sm:items-baseline items-start gap-1'>
+                    <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat'>Looking for a place to stay? 🏠</h2>
+                    <p className='text-[10px] leading-tight sm:ml-10 font-montserrat font-bold'>Find “By Travelio” units in Indonesia’s big cities</p>
+                </div>
+            </div>
             <div className='container mx-auto px-[22px] md:px-14 xl:px-[100px] pt-2 relative'>
+                {/* body */}
                 {pending ? (
                     <LookingForPlaceSkeleton />
                 ) : (

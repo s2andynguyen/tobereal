@@ -9,6 +9,7 @@ import HotelLioStaySkeleton from './skeletons/HotelLioStaySkeleton'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 import Link from 'next/link'
+import ButtonSeeAll from './re-use/ButtonSeeAll'
 function HotelLioStay() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -21,12 +22,18 @@ function HotelLioStay() {
         }
     }, [])
     return (
-        <div className='mt-5 sm:pt-2 pb-6 bg-white'>
-            <HeadTitle
-                title='Stay with Thematic and Instagram Ambience at LioStay ✨'
-                seeAll
-            />
-            <div className='container mx-auto px-2 md:px-4 xl:px-[57px] pt-3 sm:pt-2'>
+        <div className=' bg-white sm:pt-4 pt-5 pb-3'>
+            <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
+
+                {/* title */}
+                <div className='pl-3 md:px-[14px] flex flex-row sm:items-center items-start justify-between mb-2 sm:mb-4'>
+                    <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat max-w-[400px] md:max-w-full'>
+                        Stay with Thematic and Instagram Ambience at LioStay ✨
+                    </h2>
+                    <ButtonSeeAll />
+                </div>
+
+                {/* body */}
                 {pending ? (
                     <HotelLioStaySkeleton />
                 ) : (

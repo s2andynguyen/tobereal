@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import HeadTitle from './re-use/HeadTitle'
 import Image from 'next/image'
-import Input from '@/components/Input'
 import Place from '@/icons/Header/Blockhead/Place'
 function FindApartment() {
     const [cityChoosed, setCityChoosed] = useState('')
@@ -11,13 +9,14 @@ function FindApartment() {
     })
     return (
         <div>
-            <div className='pt-[6px]'>
-                <HeadTitle
-                    title='Find Apartment that fits your budget! 💳'
-                    desc='Price below is Monthly price'
-                    descBolder
-                />
-                <div className='container mx-auto px-3 md:px-8 xl:px-[56px] xl:px-auto pt-5 pb-7 lg:pb-[56px]'>
+            <div className='bg-white pt-4 pb-7 '>
+                <div className='container mx-auto px-3 md:px-8 xl:px-[56px] xl:px-auto lg:pb-[56px]'>
+                    {/* title */}
+                    <div className='flex flex-col lg:flex-row lg:items-center items-start max-lg:min-h-10 lg:min-h-[56px] mb-4 lg:mb-5 pl-2 md:pl-0 xl:pl-[15px]'>
+                        <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat mb-1 lg:mb-0'>Find Apartment that fits your budget! 💳</h2>
+                        <p className='text-[10px] leading-tight lg:ml-10 font-montserrat font-bold'> Price below is Monthly price</p>
+                    </div>
+
                     {/* border */}
                     <div className='w-full xl:mx-auto xl:w-[965px] lg:h-[190px] shadow-[0_0_5px_0_rgba(240,185,11,0.50)] rounded-[20px]'>
                         <div className='h-full py-4 sm:py-[26px] flex flex-col lg:flex-row lg:gap-0 gap-3'>

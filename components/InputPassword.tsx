@@ -1,7 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-
-import Image from 'next/image'
 import EyeShowIcon from '@/icons/Form/EyeShowIcon'
 import EyeHiddenIcon from '@/icons/Form/EyeHiddenIcon'
 

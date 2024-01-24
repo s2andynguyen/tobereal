@@ -1,17 +1,27 @@
 import React from 'react'
-import HeadTitle from './re-use/HeadTitle'
 import HotelResidenceSlide from './swiper-slider/HotelResidenceSlide'
-
+import Image from 'next/image'
 function HotelResidence() {
     return (
         <div className='bg-white'>
-            <HeadTitle
-                title='Hotel Residence'
-                desc='Eksklusif Pengalamen Tinggal di Hotel'
-                icon={'/images/home/icon/Layer_1.png'}
-            />
-
             <div className='container mx-auto px-2 md:px-4 xl:px-[57px] pt-2 pb-4'>
+
+                {/* title */}
+                <div className='pl-3 flex flex-col sm:flex-row sm:items-center items-start max-lg:min-h-10 lg:min-h-[56px] mb-2 sm:mb-1'>
+                    <div className='flex items-center'>
+                        <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat'>Hotel Residence</h2>
+                            <Image
+                                src={'/images/home/icon/Layer_1.png'}
+                                width={34}
+                                height={29}
+                                alt={'icon/Layer_1.png'}
+                                className='w-auto h-[21px] inline-block ml-3 mb-3 lg:w-[34px] lg:h-[29px] '
+                            />
+                    </div>
+                    <p className='text-[10px] leading-tight sm:ml-10 font-montserrat font-medium'>Eksklusif Pengalamen Tinggal di Hotel</p>
+                </div>
+
+                {/* body */}
                 <HotelResidenceSlide />
             </div>
         </div>

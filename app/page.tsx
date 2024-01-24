@@ -1,8 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import MainLayout from '@/layouts/MainLayout'
-import HeadBooking from '@/components/HeadBooking'
 
 import HotelResidence from './ui/HotelResidence'
 import RealEstateSale from './ui/RealEstateSale'

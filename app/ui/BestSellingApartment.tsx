@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import HeadTitle from './re-use/HeadTitle'
 import CardRecommended from './re-use/CardRecommended'
 import SwiperWrap from '@/components/SwiperWrap'
@@ -7,6 +8,7 @@ import { SwiperSlide } from 'swiper/react'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 import CardRecommendedSkeleton from './skeletons/CardRecommendedSkeleton'
+import SelectSwiperMobile from './re-use/SelectSwiperMobile'
 function BestSellingApartment() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -19,15 +21,15 @@ function BestSellingApartment() {
         }
     }, [])
     return (
-        <div className='bg-white pt-3'>
-            <HeadTitle
-                title='Best Selling Apartment Buildings 🏆'
-                select
-                showSelectSlide
-                borderSelectColor='border-[#cdcdcd]'
-            />
+        <div className='bg-white pt-4 pb-2'>
+
             {/* BestSellingApartment swiper */}
-            <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-5'>
+            <div className='container mx-auto pr-2 pl-5 md:px-8 xl:px-[71px] mb-4'>
+                <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat mb-2 sm:mb-0'>Best Selling Apartment Buildings 🏆</h2>
+            </div>
+            <div className='container mx-auto px-2 md:px-4 xl:px-14 '>
+                {/* title */}   
+                {/* <h2 className='pl-3 font-bold text-[18px] leading-tight lg:text-xl font-montserrat mb-2'>Best Selling Apartment Buildings 🏆</h2> */}
                 {pending ? 
                     <CardRecommendedSkeleton type='apartment'  />
                 :

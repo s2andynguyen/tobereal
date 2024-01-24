@@ -3,82 +3,45 @@ import DashboardLayout from '../_ui/layout/DashboardLayout'
 import { inter } from '@/assets/styles/fonts'
 import './style-booking.css'
 import Image from 'next/image'
+import CardBooking from './CardBooking'
+import { listBooking } from '@/dummy-data/dashboard/booking/data'
 const Booking = () => {
     return (
         <DashboardLayout title='My Bookings'>
-            <div className={`pt-[51px] md:px-10 xl:pl-[41px] xl:pr-[90px] min-h-[300px] pb-14 ${inter.className} `}>
-                <div className='my-booking__head my-booking__head--grid mb-6 max-w-[1500px]'>
-                    <div></div>
-                    <div>Place to Rent</div>
-                    <div className='text-center'>Room Number</div>
-                    <div>Time</div>
-                    <div>Price</div>
-                    <div></div>
+            <div
+                className={`sm:pt-14 pt-7 px-4 md:px-10 xl:pl-[41px] xl:pr-[90px] min-h-[300px] pb-14 ${inter.className} `}>
+                {/* <div className='my-booking__head my-booking__head--grid mb-6'> */}
+                <div className='grid grid-cols-12 mb-6 border border-[#b7b7b7] rounded-[10px] h-[48px] sm:h-[60px] lg:h-[70px]'>
+                    <div className=''></div>
+                    <div className='xl:col-span-4 col-span-10 sm:col-span-5 text-center h-full flex justify-start items-center 
+                    lg:text-xl text-[16px] leading-tight'>
+                        Place to Rent
+                    </div>
+                    <div className='hidden sm:flex col-span-2 text-center h-full justify-center items-center lg:text-xl leading-tight'>
+                        Room Number
+                    </div>
+                    <div className='hidden sm:flex col-span-1 text-center h-full justify-center items-center lg:text-xl leading-tight'>
+                        Time
+                    </div>
+                    <div className='hidden sm:flex col-span-2 text-center h-full justify-center items-center lg:text-xl leading-tight'>
+                        Price
+                    </div>
+                    <div className='xl:col-span-2 col-span-1'></div>
                 </div>
 
-                {/* cart 1 */}
-                <div className='my-booking__item my-booking__head--grid mb-[30px]'>
-                    <div>1</div>
-                    <div>
-                        <p className='font-bold mb-[16px] leading-[22px]'>Gran Melia Hotel Jakarta - Jakarta</p>
-                        <p>Hotel Residence 🏨</p>
-                    </div>
-                    <div>1</div>
-                    <div>1 Day</div>
-                    <div>$ 2,000.00</div>
-                    <div className=''>
-                      <span>
-                        <Image src={'/dashboard/images/my-booking/close-icon.svg'}
-                        height={31}
-                        width={31}
-                        alt='close-icon.svg'
-                        className='w-[31px] h-auto object-cover cursor-pointer hover:drop-shadow-md' />
-                      </span>
-                    </div>
-                </div>
-
-                {/* cart 2*/}
-                <div className='my-booking__item my-booking__head--grid mb-[30px]'>
-                    <div>1</div>
-                    <div className='h-full w-full flex justify-center items-center'>
-                        <p className='font-bold mb-[16px] leading-[22px]'>Gran Melia Hotel Jakarta - Jakarta</p>
-                        <p>Hotel Residence 🏨</p>
-                    </div>
-                    <div>1</div>
-                    <div>1 Day</div>
-                    <div>$ 2,000.00</div>
-                    <div className=''>
-                      <span>
-                        <Image src={'/dashboard/images/my-booking/close-icon.svg'}
-                        height={31}
-                        width={31}
-                        alt='close-icon.svg'
-                        className='w-[31px] h-auto object-cover cursor-pointer hover:drop-shadow-md' />
-                      </span>
-                    </div>
-                </div>
-
-                {/* cart */}
-                <div className='my-booking__item my-booking__head--grid mb-[30px]'>
-                    <div>1</div>
-                    <div className=''>
-                        <p className='font-bold mb-[16px] leading-[22px]'>Gran Melia Hotel Jakarta - Jakarta</p>
-                        <p>Hotel Residence 🏨</p>
-                    </div>
-                    <div>1</div>
-                    <div>1 Day</div>
-                    <div>$ 2,000.00</div>
-                    <div className=''>
-                      <span>
-                        <Image src={'/dashboard/images/my-booking/close-icon.svg'}
-                        height={31}
-                        width={31}
-                        alt='close-icon.svg'
-                        className='w-[31px] h-auto object-cover cursor-pointer hover:drop-shadow-md' />
-                      </span>
-                    </div>
-                </div>
-
+                {listBooking.map((item) => (
+                    <CardBooking 
+                        key={item.id}
+                        id={item.id}
+                        nameHotel={item.nameHotel}
+                        hotelType={item.hotelType}
+                        place={item.place}
+                        roomNumber={item.roomNumber}
+                        day={item.day}
+                        price={item.price}
+                    />
+                ))}
+                
             </div>
         </DashboardLayout>
     )

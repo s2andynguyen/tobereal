@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import HeadTitle from './re-use/HeadTitle'
 import CardRecommended from './re-use/CardRecommended'
 import SwiperWrap from '@/components/SwiperWrap'
 import { ApartmentList } from './model/ApartmentList'
@@ -8,6 +6,8 @@ import { SwiperSlide } from 'swiper/react'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 import CardRecommendedSkeleton from './skeletons/CardRecommendedSkeleton'
+import SelectSwiperMobile from './re-use/SelectSwiperMobile'
+import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 function RecommendedApartments() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -20,14 +20,22 @@ function RecommendedApartments() {
         }
     }, [])
     return (
-        <div className='bg-[#e3e3e3] pt-1'>
-            <HeadTitle
-                title='Recommended Apartments 🏬'
-                select
-                showSelectSlide
-            />
+        <div className='bg-[#e3e3e3] pt-4'>
+            
+            {/* title */}
+            <div className='container mx-auto px-3 md:px-8 xl:px-[71px]'>
+                <div className='flex flex-col sm:flex-row sm:items-center items-start justify-between mb-2 sm:mb-0'>
+                    <div className='flex items-center justify-between sm:w-full'>
+                        <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat pl-2 md:pl-0'>Recommended Apartments 🏬</h2>
+                        <SelectPlaceCustom />
+                    </div>
+                    {/* select on mobile */}
+                    <SelectSwiperMobile />
+                </div>
+            </div>
+
             {/* RecommendedApartments swiper */}
-            <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-5'>
+            <div className='container mx-auto px-2 md:px-4 xl:px-14 pt-[10px] pb-2'>
                 {pending ? 
                     <CardRecommendedSkeleton type='apartment'  />
                 :

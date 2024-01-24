@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import HeadTitle from './re-use/HeadTitle'
 import SliderWithSale from './re-use/SliderWithSale'
 import { dataHotel } from './model/hotelRoom'
+import ButtonSeeAll from './re-use/ButtonSeeAll'
+import Image from 'next/image'
+import SelectPlaceCustom from '@/components/SelectPlaceCustom'
+import SelectSwiperMobile from './re-use/SelectSwiperMobile'
 function MonthlyCheaperPrice() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
@@ -15,15 +18,34 @@ function MonthlyCheaperPrice() {
     }, [])
     return (
         <div className='bg-[#e3e3e3] sm:bg-white pt-3 sm:mt-0'>
-            <HeadTitle
-                title='Stay Monthly For Cheaper Prices'
-                icon={'/images/home/icon/Layer_2.png'}
-                seeAll
-                select
-                desc='Diskon hingga $ 1.000.000'
-                iconInline
-                maxWidhtTitle={246}
-            />
+            {/* title */}
+            <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
+                <div className='flex flex-row sm:items-center items-start justify-between mb-2 sm:mb-4 md:px-[14px] pl-3'>
+                        <div className='flex lg:flex-row flex-col gap-1 lg:gap-9 lg:items-center items-start'>
+                            <h2 className='font-bold text-[18px] leading-tight lg:text-xl font-montserrat max-w-[250px] sm:max-w-full
+                            '>
+                                Stay Monthly For Cheaper Prices
+                                <Image
+                                    src={'/images/home/icon/Layer_2.png'}
+                                    width={34}
+                                    height={29}
+                                    alt={'icon/Layer_2.png'}
+                                    className='w-auto h-[21px] inline-block ml-3 mb-1 lg:w-[34px] lg:h-[29px] '
+                                />
+                            </h2>
+                            <p className='text-[10px] leading-tight font-montserrat font-medium'>Diskon hingga $ 1.000.000 </p>
+                        </div>
+
+                    <div className='flex sm:gap-4'>
+                        <SelectPlaceCustom />
+                        <ButtonSeeAll />
+                    </div>
+                </div>
+                {/* select on mobile */}
+                <SelectSwiperMobile />
+            </div>
+
+            {/* body */}
             <SliderWithSale
                 pending={pending}
                 imageBgUrl='/images/home/hotel-image/frame-cheaper.png'

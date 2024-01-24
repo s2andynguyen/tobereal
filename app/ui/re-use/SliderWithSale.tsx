@@ -47,7 +47,7 @@ const SliderWithSale: React.FC<SliderWithSaleProps> = ({
                             hotDeal
                                 ? 'lg:w-auto lg:h-[198px] lg:ml-[38px]'
                                 : 'lg:ml-[44px]'
-                        } ${hiddenImageOnMobile ? 'sm:block hidden' : ''}`}
+                        } ${hiddenImageOnMobile ? 'lg:block hidden' : ''}`}
                         style={imageStyle ?? {}}
                     />
                 </div>

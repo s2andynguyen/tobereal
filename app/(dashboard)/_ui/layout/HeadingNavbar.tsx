@@ -11,12 +11,13 @@ type Props = {
 }
 const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
     return (
-        <div className={`header-layout-style fixed top-0 right-0 w-full xl:pl-[var(--leftsidebar-width)] h-[var(--navbar-height)] 
-            z-[2] transition-all duration-300 ${ isShowSidebar ? 'lg:pl-[var(--leftsidebar-width)]' : '' }`}
+        <div className={`fixed top-0 right-0 w-full xl:pl-[var(--leftsidebar-width)] h-[var(--navbar-height)] 
+            z-[2] transition-all duration-300 bg-white shadow-[0_3px_12px_0_rgba(0,0,0,0.1)]
+            ${ isShowSidebar ? 'lg:pl-[var(--leftsidebar-width)]' : '' }`}
         >
             {/* wrapper */}
-            <div className={`pr-4 pl-2 md:pr-8 md:pl-5 xl:px-12 h-full sm:pt-3 ${inter.className} flex justify-between items-center`}>
-                <div className='xl:self-end xl:mb-5 flex justify-center items-center'>
+            <div className={`pr-4 pl-2 md:pr-8 md:pl-5 xl:px-12 h-full xl:pt-3 ${inter.className} flex justify-between items-center`}>
+                <div className='flex justify-center items-center'>
                     {/* menu-icon on mobile */}
                     <div
                         className='sm:px-3 py-3 cursor-pointer hover:drop-shadow-md block xl:hidden'
@@ -25,7 +26,7 @@ const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
                         }}>
                         <IoIosMenu size={30} />
                     </div>
-                    <h2 className='leading-tight md:text-xl lg:text-3xl pl-3 xl:pl-0 xl:text-[44px] font-bold'>
+                    <h2 className='leading-tight sm:text-xl xl:text-[44px] pl-3 xl:pl-0 font-bold'>
                         {title}
                     </h2>
                     {/* <div className='w-full h-px bg-black'></div> */}
@@ -43,8 +44,8 @@ const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
                                 alt='avatar.jpg'
                             />
                         <div className='ml-[6px] sm:ml-3'>
-                            <p className='font-semibold text-[12px] sm:text-sm text-[#404040]'>Andrew</p>
-                            <p className='text-[10px] sm:text-sm text-[#404040]'>$4,000.00</p>
+                            <p className='font-semibold text-[12px] sm:text-sm md:text-[16px] text-[#404040] mb-0 md:mb-2'>Andrew</p>
+                            <p className='text-[10px] sm:text-sm md:text-[16px] text-[#404040]'>$4,000.00</p>
                         </div>
                     </div>
                 </div>
