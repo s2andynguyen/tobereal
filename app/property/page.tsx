@@ -47,7 +47,7 @@ function Property() {
                             src={'/images/property/SerOptions.png'}
                             alt=''
                         />
-                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
+                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center md:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
                                     Property Management
@@ -61,12 +61,12 @@ function Property() {
                             <button
                                 className='seeMore-btn wrap-btn'
                                 onClick={() => router.push('/apartment')}>
-                                See More
+                                See More ➔
                             </button>
                         </div>
                     </div>
                     <div className='PropertyManagement-wrap flex items-center flex-col gap-10 w-full justify-between lg:flex-row'>
-                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 md:items-start '>
+                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center md:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
                                     S - HOME Realty
@@ -80,7 +80,7 @@ function Property() {
                             <button
                                 className='seeMore-btn wrap-btn'
                                 onClick={() => router.push('/promotion')}>
-                                See More
+                                See More ➔
                             </button>
                         </div>
                         <Image
@@ -109,7 +109,7 @@ function Property() {
                 </div>
                 <div className='wrap-houses container '>
                     <div className='House-wrap flex items-center flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
-                        <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 items-center md:gap-0 lg:items-start '>
+                        <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center lg:items-start '>
                             <div className='content-House flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center lg:text-left'>
                                     Is your apartment and house empty?
@@ -119,7 +119,7 @@ function Property() {
                                     hand it over to ....................!
                                 </p>
                             </div>
-                            <button className='registerNow-btn wrap-btn mt-12'>
+                            <button className='registerNow-btn wrap-btn'>
                                 REGISTER NOW ➔
                             </button>
                         </div>

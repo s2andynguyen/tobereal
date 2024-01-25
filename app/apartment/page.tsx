@@ -251,21 +251,21 @@ function Apartment() {
                             <Image
                                 width={142}
                                 height={38}
-                                className='w-[142px] h-[auto]'
+                                className='w-[112px] md:w-[142px] h-[auto]'
                                 src={'/images/apartment/logo-1.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={72}
                                 height={38}
-                                className='w-[72px] h-[auto]'
+                                className='w-[42px] md:w-[72px] h-[auto]'
                                 src={'/images/apartment/logo-2.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={120}
                                 height={33}
-                                className='w-[120px] h-[auto]'
+                                className='w-[90px] md:w-[120px] h-[auto]'
                                 src={'/images/apartment/logo-3.png'}
                                 alt='top-logo'
                             />
@@ -274,14 +274,14 @@ function Apartment() {
                             <Image
                                 width={105}
                                 height={38}
-                                className='w-[105px] h-[auto]'
+                                className='w-[75px] md:w-[105px] h-[auto]'
                                 src={'/images/apartment/logo-4.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={98}
                                 height={38}
-                                className='w-[98px] h-[auto]'
+                                className='w-[68px] md:w-[98px] h-[auto]'
                                 src={'/images/apartment/logo-5.png'}
                                 alt='top-logo'
                             />
@@ -292,14 +292,14 @@ function Apartment() {
                             <Image
                                 width={115}
                                 height={38}
-                                className='h-[auto] w-[115px]'
+                                className='h-[auto] w-[85px] md:w-[115px]'
                                 src={'/images/apartment/logo-6.png'}
                                 alt='bottom-logo'
                             />
                             <Image
                                 width={179}
                                 height={41}
-                                className='h-[auto] w-[179px]'
+                                className='h-[auto] w-[149px] md:w-[179px]'
                                 src={'/images/apartment/logo-7.png'}
                                 alt='bottom-logo'
                             />
@@ -308,7 +308,7 @@ function Apartment() {
                             <Image
                                 width={62}
                                 height={25}
-                                className='h-[auto] w-[62px]'
+                                className='h-[auto] w-[32px] md:w-[62px]'
                                 src={'/images/apartment/logo-8.png'}
                                 alt='bottom-logo'
                             />
@@ -316,7 +316,7 @@ function Apartment() {
                             <Image
                                 width={201}
                                 height={31}
-                                className='h-[auto] w-[201px]'
+                                className='h-[auto] w-[171px] md:w-[201px]'
                                 src={'/images/apartment/logo-9.png'}
                                 alt='bottom-logo'
                             />
@@ -681,7 +681,7 @@ function Apartment() {
                         <div className='questions max-w-[420px] md:min-w-[490px]'>
                             {tabContents.map((tab, tabIndex) => (
                                 <button
-                                    className='text-questions title-Calculates text-start text-xl flex md:text-2xl w-[364px] md:w-[434px]'
+                                    className='text-questions last:border-none title-Calculates text-start text-xl flex md:text-2xl w-[364px] md:w-[434px]'
                                     key={tabIndex}
                                     onClick={() => handleTabClick(tabIndex)}>
                                     {getTitleIcon(tabIndex)}
@@ -712,7 +712,7 @@ function Apartment() {
                                                 </div>
                                             </div>
                                             {visibleContentIndex === subContentIndex && (
-                                                <div className='show-content pl-5 pb-7 max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
+                                                <div className='show-content pl-5 pr-5 pb-7 max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
                                                     {
                                                         tabContents[activeTabIndex]
                                                             .showContent[subContentIndex]
