@@ -95,7 +95,7 @@ function Apartment() {
                 </div>
                 <div className='Management-Services container'>
                     <h2 className='text-black font-bold text-center text-2xl md:text-[32px]'>
-                        Apartment Management Services by S - HOME
+                        Apartment Management Services by S HOME
                     </h2>
 
                     <div className='Gr-Services grid grid-cols-1 gap-0 md:grid-cols-3 '>
@@ -243,7 +243,7 @@ function Apartment() {
                 </div>
                 <div className='wrap-MarketingPartners container gap-6 lg:gap-8'>
                     <h3 className='title-Calculates text-xl md:text-2xl p-0 text-center lg:p-8'>
-                        S - HOME Online Marketing Partner
+                        S HOME Online Marketing Partner
                     </h3>
 
                     <div className='Top-Logos w-full flex flex-col gap-2 items-center justify-center lg:gap-9 md:flex-row '>
@@ -596,7 +596,7 @@ function Apartment() {
                 </div>
                 <div className='wrap-TracesNews container gap-7'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
-                        S - HOME Traces In The News
+                        S HOME Traces In The News
                     </h3>
 
                     <Swiper

@@ -69,7 +69,7 @@ function Property() {
                         <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center md:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
                                 <h4 className='title-reuse text-center md:text-left'>
-                                    S - HOME Realty
+                                    S HOME Realty
                                 </h4>
                                 <p className='text-PM text-center md:text-left'>
                                     Professional management for your unit. Without any
@@ -95,9 +95,9 @@ function Property() {
                 <div className=' wrap-Differences container !p-0'>
                     <div className='TableDifference-wrap'>
                         <button className='Difference-btn text-center md:text-left'>
-                            Difference between Apartment Management by SMART REAL
+                            Difference between Apartment Management by S HOME
                             <br />
-                            and Home Marketing by SMART REAL
+                            and Home Marketing by S HOME
                         </button>
 
                         <div className='wrap-Difference-table flex flex-col items-center pt-4 '>
