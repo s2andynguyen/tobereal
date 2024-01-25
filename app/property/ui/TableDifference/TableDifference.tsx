@@ -11,7 +11,7 @@ function TableDifference({ data }: { data: any }) {
                 {data?.name}
             </div>
 
-            <div className='grid-item name-top !border-t-0 !border-r-0 !border-l-0'>
+            <div className='grid-item name-top !border-t-0 !border-x-0'>
                 {iconPengelolaan ? (
                     <Image
                         width={20}
