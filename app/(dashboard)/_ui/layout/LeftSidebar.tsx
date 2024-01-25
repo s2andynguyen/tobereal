@@ -15,7 +15,7 @@ const LeftSidebar = ({isShowSidebar,toggleSidebar}:{isShowSidebar: boolean, togg
     }
     return (
             <div
-                className={`dashboard__left-sidebar fixed h-screen w-[var(--leftsidebar-width)] shadow-md left-sidebar-bg z-[10] 
+                className={`dashboard__left-sidebar fixed h-screen w-[var(--leftsidebar-width)] sm:shadow-md left-sidebar-bg z-[10] 
                 transition duration-300
                 ${lato.className}
                 ${isShowSidebar? 'translate-x-0': '-translate-x-full xl:translate-x-0'}`}>

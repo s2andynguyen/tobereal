@@ -24,8 +24,8 @@ const ModalComponent = () => {
         }`} onClick={() => dispatch(closeModal())}
         >
             {/* container */}
-            <div className={`modal-container max-w-full lg:max-w-[950px] lg:min-h-[675px] min-h-screen bg-white flex-1 lg:mx-auto lg:mt-36 lg:rounded-xl
-            grid grid-cols-12 overflow-hidden shadow-gray relative transition-all delay-100 duration-500 z-10 ${
+            <div className={`modal-container max-w-full lg:max-w-[950px] lg:min-h-[600px] min-h-screen bg-white flex-1 lg:mx-auto lg:mt-7 lg:rounded-xl
+            grid grid-cols-12 overflow-hidden shadow-[0_5px_15px_0_rgba(0,0,0,0.5   )] relative transition-all delay-100 duration-500 z-10 ${
                 isShowModal ? 'translate-y-0' : '-translate-y-52'
             }`} onClick={(e) => e.stopPropagation()}
             >
