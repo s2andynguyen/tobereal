@@ -76,8 +76,9 @@ function FindApartment() {
                                 {/* group btn option fillter */}
                                 <div className='flex justify-between items-center mb-[23px] gap-2 sm:gap-[22px]'>
                                     {/* button Frequently Budget*/}
-                                    <div className='w-full lg:w-[163px] h-12 sm:h-[50px] border border-[#cdcdcd] rounded-[10px] flex items-center gap-2 sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
-                                        <div className='w-[30px] sm:w-[38px] h-[30px] sm:h-[38px]  ml-[6px] bg-[#ebebeb] rounded-full flex items-center justify-center'>
+                                    <div className='w-full lg:w-[163px] h-full sm:h-[50px] py-1 sm:py-0 border border-[#cdcdcd] rounded-[10px] 
+                                    flex items-center sm:flex-row flex-col sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
+                                        <div className='min-w-[38px] h-[38px] sm:ml-[6px] bg-[#ebebeb] rounded-full flex items-center justify-center'>
                                             <Image
                                                 src={'/images/home/vector/budget.svg'}
                                                 width={24}
@@ -86,10 +87,11 @@ function FindApartment() {
                                                 alt='budget.svg'
                                             />
                                         </div>
-                                        <div className='flex-grow flex flex-col justify-between py-[6px] sm:py-1 sm:h-auto h-full'>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight'>
+                                        <div className='flex-grow flex flex-col justify-between sm:items-start items-center py-1 sm:h-auto h-full w-full'>
+                                            <p className='text-[12px] sm:text-[14px] leading-tight '>
                                                 Budget
                                             </p>
+                                            <div className='block sm:hidden w-1/2 h-px bg-[#cdcdcd] my-[2px]'></div>
                                             <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 4.5
                                             </p>
@@ -97,27 +99,31 @@ function FindApartment() {
                                     </div>
 
                                     {/* button Frequently Popular*/}
-                                    <div className='w-full lg:w-[163px] h-12 sm:h-[50px] border border-[#cdcdcd] rounded-[10px] flex items-center gap-2 sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
+                                    <div className='w-full lg:w-[163px] h-full sm:h-[50px] py-1 sm:py-0 border border-[#cdcdcd] rounded-[10px] 
+                                    flex items-center sm:flex-row flex-col sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
                                         <Image
                                               src={'/images/home/vector/popular.svg'}
                                               width={38}
                                               height={38}
-                                              className='w-[30px] sm:w-[38px] h-[30px] sm:h-[38px] ml-[6px]'
+                                              className='w-[38px] h-[38px] sm:ml-[6px]'
                                               alt='popular.svg'
                                           />
-                                        <div className='flex-grow flex flex-col justify-between py-[6px] sm:py-1 sm:h-auto h-full'>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight'>
+                                        <div className='flex-grow flex flex-col justify-between sm:items-start items-center py-1 sm:h-auto h-full w-full'>
+                                            <p className='text-[12px] sm:text-[14px] leading-tight '>
                                                 Popular
                                             </p>
+                                            <div className='block sm:hidden w-1/2 h-px bg-[#cdcdcd] my-[2px]'></div>
                                             <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 4.5 - 7
                                             </p>
                                         </div>
                                     </div>
-
+                                    
                                     {/* button Frequently Luxury*/}
-                                    <div className='w-full lg:w-[163px] h-12 sm:h-[50px] border border-[#cdcdcd] rounded-[10px] flex items-center gap-2 sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
-                                        <div className='w-[30px] sm:w-[38px] h-[30px] sm:h-[38px]  ml-[6px] bg-[#ebebeb] rounded-full flex items-center justify-center'>
+
+                                    <div className='w-full lg:w-[163px] h-full sm:h-[50px] py-1 sm:py-0 border border-[#cdcdcd] rounded-[10px] 
+                                    flex items-center sm:flex-row flex-col sm:gap-3 hover:shadow-md cursor-pointer transition duration-200'>
+                                        <div className='min-w-[38px] h-[38px] sm:ml-[6px] bg-[#ebebeb] rounded-full flex items-center justify-center'>
                                             <Image
                                                 src={'/images/home/vector/budget.svg'}
                                                 width={24}
@@ -126,15 +132,17 @@ function FindApartment() {
                                                 alt='budget.svg'
                                             />
                                         </div>
-                                        <div className='flex-grow flex flex-col justify-between py-[6px] sm:py-1 sm:h-auto h-full'>
-                                            <p className='text-[12px] sm:text-[14px] leading-tight'>
+                                        <div className='flex-grow flex flex-col justify-between sm:items-start items-center py-1 sm:h-auto h-full w-full'>
+                                            <p className='text-[12px] sm:text-[14px] leading-tight '>
                                                 Luxury
                                             </p>
+                                            <div className='block sm:hidden w-1/2 h-px bg-[#cdcdcd] my-[2px]'></div>
                                             <p className='text-[10px] sm:text-[14px] leading-tight font-bold'>
                                                 &#60;$ 7
                                             </p>
                                         </div>
                                     </div>
+                                    
                                 </div>
 
                                 {/* buton submit Frequently */}

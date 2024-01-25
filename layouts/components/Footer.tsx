@@ -26,7 +26,7 @@ function Footer() {
                         </div>
     
                         {/* form */}
-                        <div className='w-full max-w-[480px] md:max-w-[458px] h-[42px]  mt-5 sm:mt-0 rounded-[30px] border border-black flex items-center'>
+                        <div className='w-full max-w-[480px] md:max-w-[458px] h-[42px]  mt-3 sm:mt-0 rounded-[30px] border border-black flex items-center'>
                             <input
                                 type='text'
                                 className='text-sm sm:text-[18px] sm:flex-grow max-w-full rounded-[30px] bg-transparent focus:outline-none pl-2 sm:pl-7

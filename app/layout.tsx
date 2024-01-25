@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { inter } from '@/assets/styles/fonts'
 import '@/assets/styles/globals.css'
 import '@/assets/styles/grid-system.css'
-
+import ReduxProvider from '@/redux/ReduxProvider'
 export const metadata: Metadata = {
     title: {
         default: 'Smart Real',
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang='en'>
             <body className={`${inter.className} antialiased`}>
-                {children}
+                <ReduxProvider>{children}</ReduxProvider>
             </body>
         </html>
     )

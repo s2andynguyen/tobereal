@@ -13,7 +13,7 @@ function HotelResidenceSlide() {
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)

@@ -1,13 +1,11 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import HeadTitle from './re-use/HeadTitle'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { GoArrowLeft, GoArrowRight } from 'react-icons/go'
-
-import 'swiper/swiper-bundle.css'
 import LookingForPlaceSkeleton from './skeletons/LookingForPlaceSkeleton'
+import 'swiper/swiper-bundle.css'
 
 const placeList = [
     {
@@ -67,7 +65,7 @@ function LookingForPlace() {
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
         return () => {
             clearTimeout(LoadingTimeOutId)
         }
@@ -97,7 +95,7 @@ function LookingForPlace() {
     }, [pending])
 
     return (
-        <div className='pt-4 pb-6 bg-[#E3E3E3]'>
+        <div className='pt-6 pb-6 bg-[#E3E3E3]'>
             {/* title */}
             <div className='container mx-auto pr-2 pl-5 md:px-8 xl:px-[71px] mb-4'>
                 <div className='flex flex-col sm:flex-row sm:items-baseline items-start gap-1'>

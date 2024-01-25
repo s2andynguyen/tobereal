@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import HeadTitle from './re-use/HeadTitle'
-import SliderWithSale from './re-use/SliderWithSale'
+
 import { dataFindBest } from './model/hotelRoom'
-import Image from 'next/image'
+import SliderWithSale from './re-use/SliderWithSale'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 import ButtonSeeAll from './re-use/ButtonSeeAll'
 import SelectSwiperMobile from './re-use/SelectSwiperMobile'
+
 function WeeklyHotDeals() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)

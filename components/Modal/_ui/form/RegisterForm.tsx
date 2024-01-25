@@ -1,24 +1,27 @@
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
-
 import Input from '@/components/Input'
 import InputPassword from '@/components/InputPassword'
-import SocialLogin from './SocialLogin'
+import SocialLogin from '../SocialLogin'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/redux/store'
+import { switchModal } from '@/redux/features/modal-slice'
 
 function RegisterForm() {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
     const [password, setPassword] = useState('')
+
+    const dispatch = useDispatch<AppDispatch>()
     return (
-        <div className='h-full w-full flex flex-col items-center justify-start gap-3 md:gap-8 pt-3 sm:pt-8 md:pt-16'>
-            <div className='text-center mb-3 sm:mb-0'>
+        <div className='h-full w-full flex flex-col items-center sm:justify-center'>
+            <div className='text-center mb-3'>
                 <p className='text-[24px] font-semibold'>Create an account</p>
                 <p className='text-sm text-[#343434]'>Connect with your friends today!</p>
             </div>
             {/* form input */}
-            <div className='w-full px-6 sm:px-10 md:px-16 xl:px-[150px] flex flex-col items-center gap-5 md:gap-6'>
+            <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3'>
                 <Input
                     id={'username'}
                     onChange={(e: any) => {
@@ -54,13 +57,13 @@ function RegisterForm() {
                     placeholder='Enter your Password...'
                     value={password}
                 />
-
-                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'>
+                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
+                onClick={() => dispatch(switchModal('register'))}>
                     Sign Up
                 </button>
             </div>
-
-            <div className='w-full px-10 xl:px-20'>
+            
+            <div className='w-full px-6 sm:px-10 xl:px-20'>
                 <SocialLogin />
             </div>
         </div>

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import SliderWithSale from './re-use/SliderWithSale'
-import { dataHotel } from './model/hotelRoom'
-import ButtonSeeAll from './re-use/ButtonSeeAll'
 import Image from 'next/image'
+
+import { dataHotel } from './model/hotelRoom'
+import SliderWithSale from './re-use/SliderWithSale'
+import ButtonSeeAll from './re-use/ButtonSeeAll'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 import SelectSwiperMobile from './re-use/SelectSwiperMobile'
+
 function MonthlyCheaperPrice() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)

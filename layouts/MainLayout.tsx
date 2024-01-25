@@ -1,10 +1,10 @@
 import React from 'react'
-import Footer from './Footer'
-import WrapperHeader from './WrapperHeader'
+import Footer from './components/Footer'
+import WrapperHeader from './components/WrapperHeader'
 function MainLayout({ children }: { children: React.ReactNode }) {
     
     return (
-        <div className=''>
+        <div className='relative'>
             <WrapperHeader />
             {children}
             <Footer />

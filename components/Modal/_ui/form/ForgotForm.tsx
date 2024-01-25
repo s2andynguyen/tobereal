@@ -1,9 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
-
 import Input from '@/components/Input'
-import SocialLogin from './SocialLogin'
+import SocialLogin from '../SocialLogin'
 import InputPassword from '@/components/InputPassword'
 function ForgotForm() {
     const [email, setEmail] = useState('')
@@ -14,14 +12,14 @@ function ForgotForm() {
     const [submitted, setSubmitted] = useState(false)
     const [verify, setVerify] = useState(false)
     return (
-        <div className='h-full w-full flex flex-col items-center justify-center gap-3 md:gap-4'>
+        <div className='h-full w-full flex flex-col items-center sm:justify-center sm:gap-3'>
             <p className='text-[24px] font-bold mb-3 sm:mb-0'>
                 {verify ? 'Enter new password' : 'Forgot Password?'}
             </p>
 
             {/* form input */}
             {!verify ? (
-                <div className='w-full px-8 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6 mb-5'>
+                <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3 md:gap-6'>
                     {submitted ? (
                         <Input
                             id={'code'}
@@ -55,7 +53,7 @@ function ForgotForm() {
                     </button>
                 </div>
             ) : (
-                <div className='w-full px-8 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6'>
+                <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3 md:gap-6'>
                     {/* password */}
                     <InputPassword
                         id={'password'}

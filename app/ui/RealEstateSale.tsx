@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 import { dataRealSale } from './model/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
-import NavigationCustom from './swiper-slider/NavigationCustom'
 import RealEstateSaleSkeleton from './skeletons/RealEstateSaleSkeleton'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
@@ -16,7 +15,7 @@ function RealEstateSale() {
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
         return () => {
             clearTimeout(LoadingTimeOutId)
         }

@@ -3,19 +3,18 @@ import React, { useEffect, useState } from 'react'
 import { SwiperSlide } from 'swiper/react'
 import { dataLioStay } from './model/hotelRoom'
 import Image from 'next/image'
-import HeadTitle from './re-use/HeadTitle'
 import SwiperWrap from '@/components/SwiperWrap'
 import HotelLioStaySkeleton from './skeletons/HotelLioStaySkeleton'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
-import Link from 'next/link'
 import ButtonSeeAll from './re-use/ButtonSeeAll'
+
 function HotelLioStay() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)

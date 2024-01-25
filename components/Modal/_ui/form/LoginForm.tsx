@@ -1,14 +1,17 @@
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
-
 import Input from '@/components/Input'
 import InputPassword from '@/components/InputPassword'
-import SocialLogin from './SocialLogin'
+import SocialLogin from '../SocialLogin'
 import CustomCheckbox from '@/components/CustomCheckbox'
 import { useRouter } from 'next/navigation'
-function AuthForm() {
+import { switchModal } from '@/redux/features/modal-slice'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/redux/store'
+
+function LoginForm() {
     const router = useRouter()
+    const dispath = useDispatch<AppDispatch>();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [remember, setRemember] = useState(false)
@@ -17,11 +20,11 @@ function AuthForm() {
         setRemember(!remember)
     }
     return (
-        <div className='h-full w-full flex flex-col items-center justify-start sm:justify-center gap-3 md:gap-8 pt-6 sm:pt-0'>
-            <p className='text-[24px] font-semibold sm:font-black'>Hi, Welcome Back! 👋</p>
+        <div className='h-full w-full flex flex-col items-center sm:justify-center md:gap-0'>
+            <p className='text-[24px] font-semibold mb-4'>Hi, Welcome Back! 👋</p>
 
             {/* form input */}
-            <div className='w-full px-6 sm:px-10 md:px-16 xl:px-[150px] flex flex-col items-center gap-3 md:gap-6 mb-10 sm:mb-0'>
+            <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3'>
                 {/* email */}
                 <Input
                     id={'email'}
@@ -53,11 +56,11 @@ function AuthForm() {
                             label='Remember Me'
                         />
                     {/* fogot password */}
-                    <Link
-                        href={'/auth/forgot'}
-                        className='text-[#E86969] sm:ml-10 hover:underline '>
+                    <div 
+                        className='text-[#E86969] sm:ml-10 hover:underline cursor-pointer'
+                        onClick={() => dispath(switchModal('forgot'))}>
                         Forgot Password?
-                    </Link>
+                    </div>
                 </div>
                 <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
                 onClick={() => router.push('/')}>
@@ -73,4 +76,4 @@ function AuthForm() {
     )
 }
 
-export default AuthForm
+export default LoginForm

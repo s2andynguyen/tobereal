@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Place from '@/icons/Header/Blockhead/Place'
 import FormSelect from '@/components/FormSelect'
 import CustomCheckbox from '@/components/CustomCheckbox'
-import '@/assets/styles/booking-rent.css'
 interface BookingRentProps {
     toggleTab: string
 }
@@ -54,14 +53,13 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
         buyListSelected: string[], 
         setBuyListSelected: any
     ] = useState([])
-
-    const handleTogleSelectForm = (selectName: string) => {
-        if (isOpen.includes(selectName)) {
-            setIsOpen(isOpen.filter((item) => item !== selectName))
-        } else {
-            setIsOpen([...isOpen, selectName])
-        }
+    const handleOpenSelectForm = (type:string) => {
+        setIsOpen([...isOpen, type])
     }
+    const handleCloseSelectForm = (type:string) => {
+        setIsOpen(isOpen.filter((item) => item !== type))
+    }
+   
 
     const handleByOptionType = (optionType: string, value: any) => {
         switch (optionType) {
@@ -88,8 +86,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
         } else {
             setSelected([...arrSelected, value])
         }
-    }
-
+    }   
     return (
         <>
             {toggleTab === 'rent' ? (
@@ -154,42 +151,41 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                     {/* row 2 */}
                     <div className='w-full flex flex-col lg:flex-row gap-2 lg:gap-6 '>
                         {/* select type */}
-                        {/* <div className='flex flex-start sm:gap-3 flex-[60%] w-full  h-9 flex-wrap'> */}
-                        <div className='row w-full sm-gutters gap-y-[3px]'>
-                            {/* <div className='max-w-[47%] w-full md:basis-[30%] z-[3] sm:mr-0 mr-3'> */}
-                            <div className='col c-6 sm-4'>
+                        <div className=' grid sm:grid-cols-3 grid-cols-2 -mx-1 sm:-mx-2 gap-y-1 w-auto lg:w-full'>
+                            <div className='w-full px-1 sm:px-2 z-[3]'>
                                 <FormSelect
                                     options={furnishs}
                                     optionType='furnishs'
                                     selectedOption={furnishSelected}
                                     listIsShow={isOpen}
-                                    onClick={handleTogleSelectForm}
                                     onChange={handleByOptionType}
                                     title='Furnish Type'
+                                    setOpen={handleOpenSelectForm}
+                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
-                            {/* <div className='max-w-[47%] w-full md:basis-[30%] z-[2]'> */}
-                            <div className='col c-6 sm-4'>
+                            <div className='w-full px-1 sm:px-2 z-[2]'>
                                 <FormSelect
                                     options={rooms}
                                     optionType='rooms'
                                     selectedOption={roomSelected}
                                     listIsShow={isOpen}
-                                    onClick={handleTogleSelectForm}
                                     onChange={handleByOptionType}
                                     title='Room Type'
+                                    setOpen={handleOpenSelectForm}
+                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
-                            {/* <div className='max-w-full w-full sm:basis-[30%] flex-grow z-[1]'> */}
-                            <div className='col c-12 sm-4'>
+                            <div className='w-full px-1 sm:px-2 sm:col-span-1 col-span-2 z-[1]'>
                                 <FormSelect
                                     options={properties}
                                     optionType='properties'
                                     selectedOption={propertySelected}
                                     listIsShow={isOpen}
-                                    onClick={handleTogleSelectForm}
                                     onChange={handleByOptionType}
                                     title='Property Type'
+                                    setOpen={handleOpenSelectForm}
+                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
                         </div>
@@ -236,8 +232,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                     {/* row 1 */}
                     <div className='flex flex-col lg:flex-row gap-3 lg:gap-8'>
                         {/* location search */}
-                        <div className='flex items-center gap-3 sm:flex-[50%] sm:max-w-[50%] w-full'>
-                            <div className='flex items-center flex-1 border border-[#cdcdcd] rounded-[20px] bg-[#fefdfe] pr-2'>
+                        <div className='flex items-center gap-3 sm:basis-[50%] lg:max-w-[50%] w-full'>
+                            <div className='flex items-center flex-1 border border-[#cdcdcd] rounded-[20px] bg-[#fefdfe] pr-[2px]'>
                                 <input
                                     className='h-9 sm:h-10  w-full sm:w-[219px] pl-5 text-[#acb1C6] focus:ring-0 rounded-l-[20px] 
                                     focus:outline-none sm:flex-1 text-[10px] sm:text-[16px] placeholder:text-pimary flex-grow'
@@ -281,7 +277,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                         </div>
 
                         {/* checkbox group */}
-                        <div className='flex items-center gap-5 booking-rent__checkbox-group'>
+                        <div className='flex items-center gap-5 max-w-full overflow-x-auto invisible-scrollbar'>
                             { buyListCheckbox && buyListCheckbox.map((itemCheck, index) => (
                                     <CustomCheckbox 
                                     key={index}
@@ -302,9 +298,10 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                             optionType='properties'
                             selectedOption={propertySelected}
                             listIsShow={isOpen}
-                            onClick={handleTogleSelectForm}
                             onChange={handleByOptionType}
                             title='Property Type'
+                            setOpen={handleOpenSelectForm}
+                            setClose={handleCloseSelectForm}
                         />
                     </div>
                 </div>

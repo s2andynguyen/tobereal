@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import SliderWithSale from './re-use/SliderWithSale'
-import { dataFindBest } from './model/hotelRoom'
 import Image from 'next/image'
+
+import { dataFindBest } from './model/hotelRoom'
+import SliderWithSale from './re-use/SliderWithSale'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 import ButtonSeeAll from './re-use/ButtonSeeAll'
 import SelectSwiperMobile from './re-use/SelectSwiperMobile'
+
 function FindBestUnit() {
     const [pending, setPending] = useState(true)
     useEffect(() => {

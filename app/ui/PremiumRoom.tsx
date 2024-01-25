@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { isMobile } from 'react-device-detect'
 import { SwiperSlide } from 'swiper/react'
-// import SliderWithSale from './re-use/SliderWithSale'
 import SwiperWrap from '@/components/SwiperWrap'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 import { dataPremium } from './model/hotelRoom'
@@ -18,7 +17,7 @@ function PremiumRoom() {
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)
@@ -57,17 +56,6 @@ function PremiumRoom() {
             </div>
 
             {/* body */}
-
-            {/* <SliderWithSale
-                pending={pending}
-                imageBgUrl='/images/home/hotel-image/premium-img.png'
-                bgColor='bg-gradient-fade-yellow'
-                bgWidth={333}
-                bgHeight={221}
-                listRoom={dataPremium}
-                hiddenImageOnMobile
-                imageInSlide
-            /> */}
             <div className={`pt-2 sm:pt-[14px] pb-2 bg-gradient-fade-yellow`}>
                 <div className='container mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
                     <div className='flex items-center justify-start shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'>

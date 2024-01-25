@@ -3,8 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { IoIosMenu } from 'react-icons/io'
+
+import { openModal } from '@/redux/features/modal-slice'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/redux/store'
 interface HeaderProps {
     showSidebar?: any
     fixedOnMbile?:boolean
@@ -13,6 +16,11 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
     const router = useRouter()
     const pathName = usePathname()
     const [isShowNavbar, setIsShowNavBar] = useState(false)
+    const dispatch = useDispatch<AppDispatch>();
+
+    const onChangeModal = (typeForm:string) => {
+        dispatch(openModal(typeForm))
+    }
     useEffect(() => {
         const handleScrollNavbar = () => {
             const scrollPosition = window.scrollY
@@ -24,6 +32,7 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
             window.removeEventListener('scroll', handleScrollNavbar)
         }
     })
+
     return (
         <>
             <div className={`w-full`}>
@@ -81,12 +90,12 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
                         <div className='hidden lg:flex flex-row lg:gap-3 xl:gap-[34px]'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/register')}>
+                                onClick={() => onChangeModal('register')}>
                                 Register
                             </button>
                             <button
                                 className='border border-primary h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/login')}>
+                                onClick={() => onChangeModal('login')}>
                                 Login
                             </button>
                         </div>
@@ -160,12 +169,12 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
                         <div className='hidden lg:flex flex-row lg:gap-3 xl:gap-[34px]'>
                             <button
                                 className='bg-gradient-right h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/register')}>
+                                onClick={() => onChangeModal('register')}>
                                 Register
                             </button>
                             <button
                                 className='border border-primary h-12 min-w-36 rounded-[30px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                                onClick={() => router.push('/auth/login')}>
+                                onClick={() => onChangeModal('register')}>
                                 Login
                             </button>
                         </div>

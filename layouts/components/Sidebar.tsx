@@ -2,6 +2,8 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { useDispatch } from 'react-redux'
+import { openModal } from '@/redux/features/modal-slice'
 
 interface SidebarProps {
     isShow: boolean
@@ -9,6 +11,7 @@ interface SidebarProps {
 }
 const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
     const router = useRouter()  
+    const dispatch = useDispatch()
     const handleChangeRoute = (path:string) => {
         hiddenSidebar()
         router.push(path)
@@ -17,24 +20,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
         <div className='block lg:hidden'>
             {/* layout */}
             <div
-                className={`h-full w-full fixed top-0 left-0 bg-zinc-900 bg-opacity-70 transition duration-500 z-10 ${
+                className={`h-full w-full fixed top-0 left-0 bg-zinc-900 bg-opacity-70 transition duration-300 z-10 ${
                     isShow ? 'block' : 'hidden'
                 }`}
                 onClick={() => hiddenSidebar()}></div>
             <div
-                className={`w-[275px] fixed top-0 right-0 h-full bg-white transition duration-500 z-10 ${
+                className={`w-[275px] fixed top-0 right-0 h-full bg-white transition duration-300 z-10 ${
                     isShow ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 {/* btn  */}
                 <div className='flex flex-col gap-3 xl:gap-[34px] px-5 pt-5 pb-3'>
                     <button
                         className='border border-primary h-12 min-w-36 rounded-[10px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                        onClick={() => handleChangeRoute('/auth/login')}>
+                        onClick={() => {
+                            dispatch(openModal('login'))
+                            hiddenSidebar()
+                        }}>
                         Login
                     </button>
                     <button
                         className='bg-gradient-right h-12 min-w-36 rounded-[10px] font-montserrat text-lg font-medium hover:shadow-md transiton duration-200'
-                        onClick={() => handleChangeRoute('/auth/register')}>
+                        onClick={() => {
+                            dispatch(openModal('register'))
+                            hiddenSidebar()
+                        }}>
                         Register
                     </button>
                 </div>

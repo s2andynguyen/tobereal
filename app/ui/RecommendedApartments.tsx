@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { SwiperSlide } from 'swiper/react'
+
+import { ApartmentList } from './model/ApartmentList'
 import CardRecommended from './re-use/CardRecommended'
 import SwiperWrap from '@/components/SwiperWrap'
-import { ApartmentList } from './model/ApartmentList'
-import { SwiperSlide } from 'swiper/react'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'
 import CardRecommendedSkeleton from './skeletons/CardRecommendedSkeleton'
 import SelectSwiperMobile from './re-use/SelectSwiperMobile'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
+
 function RecommendedApartments() {
     const [pending, setPending] = useState(true)
     useEffect(() => {
         const LoadingTimeOutId = setTimeout(() => {
             setPending(false)
-        }, 1000)
+        }, 300)
 
         return () => {
             clearTimeout(LoadingTimeOutId)
