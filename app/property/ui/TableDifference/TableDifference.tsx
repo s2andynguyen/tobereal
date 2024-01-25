@@ -7,11 +7,11 @@ function TableDifference({ data }: { data: any }) {
 
     return (
         <div className='property-table-difference__items main grid grid-cols-3'>
-            <div className='grid-item name-top bor-top bor-left !text-left !justify-start pl-5 '>
+            <div className='grid-item name-top !border-t-0 !border-l-0 !text-left !justify-start pl-5 '>
                 {data?.name}
             </div>
 
-            <div className='grid-item name-top bor-top bor-left bor-right'>
+            <div className='grid-item name-top !border-t-0 !border-r-0 !border-l-0'>
                 {iconPengelolaan ? (
                     <Image
                         width={20}
@@ -26,7 +26,7 @@ function TableDifference({ data }: { data: any }) {
                     </div>
                 )}
             </div>
-            <div className='grid-item name-top bor-top bor-right'>
+            <div className='grid-item name-top !border-t-0 !border-r-0'>
                 {iconPemasaran ? (
                     <Image
                         width={20}
