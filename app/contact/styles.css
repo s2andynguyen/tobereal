@@ -101,4 +101,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px 0;
+    width: 150px;
+}
+
+.MuiAutocomplete-root {
+    height: 35px;
+    width: 300px;
+    display: flex;
+    padding: 40px 0;
 }
