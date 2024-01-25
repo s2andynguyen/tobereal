@@ -56,6 +56,9 @@
     padding: 10px 0;
 }
 
+.customSelect option{
+    border-bottom: 1px solid #0000001a;
+}
 .input_custom {
     padding: 20px;
     border-bottom: 1px solid #0000001a;

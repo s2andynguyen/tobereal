@@ -1,0 +1,13 @@
+@media screen and (max-width: 960px) {
+    .menu_li {
+        width: 1104px;
+    }
+
+    .menu_sell {
+        width: 435px;
+    }
+
+    .menu_read {
+        width: 200px;
+    }
+}

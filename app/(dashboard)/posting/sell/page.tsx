@@ -1,5 +1,6 @@
 'use client'
 import './styles.css'
+import './mobi.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout'

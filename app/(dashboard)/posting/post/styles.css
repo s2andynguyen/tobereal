@@ -15,9 +15,12 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding-left: 20px;
-    gap: 15px;
+    gap: 25px;
 }
 
 .menu_li:hover {
     background-color: #fadd55;
+}
+.menu_li p{
+    width: 280px;
 }

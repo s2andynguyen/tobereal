@@ -1,4 +1,4 @@
-.sale {
+/* .sale {
     padding-top: 30px;
 }
 
@@ -97,7 +97,7 @@ input[type='file'] {
     line-height: normal;
 }
 
-/* video*/
+
 .Add_video {
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@ input[type='file'] {
     width: 935px;
 }
 
-/* .Asset */
+
 .Asset {
     display: flex;
     flex-direction: column;
@@ -228,4 +228,4 @@ input[type='file'] {
     line-height: normal;
     white-space: nowrap;
     width: 98px;
-}
+} */
