@@ -69,9 +69,9 @@ function Apartment() {
     const getTitleIcon = (tabIndex: number) => {
         // Check if the current tab is active and return the appropriate icon
         return tabIndex === activeTabIndex && titleIconStates[tabIndex] === 2 ? (
-            <IoAdd />
-        ) : (
             <IoRemoveOutline />
+        ) : (
+            <IoAdd />
         )
     }
 
@@ -362,7 +362,7 @@ function Apartment() {
                                     slidesPerView: 1
                                 },
                                 960: {
-                                    slidesPerView: 2
+                                    slidesPerView: 1
                                 },
                                 1200: {
                                     slidesPerView: 2
@@ -700,17 +700,19 @@ function Apartment() {
                                                 'list-item max-w-[420px] md:min-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
                                             )}>
                                             <div
-                                                className='flex justify-between'
+                                                className='flex justify-between items-center pt-5 pb-5 pl-7 pr-7'
                                                 onClick={() =>
                                                     handleSubContentClick(subContentIndex)
                                                 }>
                                                 <span className='content-text-answers max-w-[360px]'>
                                                     {subContent.text}
                                                 </span>
-                                                <div className='rotate-180 origin-center delay-100'>{getTextIcon(subContentIndex)}</div>
+                                                <div className='rotate-180 origin-center delay-100'>
+                                                    {getTextIcon(subContentIndex)}
+                                                </div>
                                             </div>
                                             {visibleContentIndex === subContentIndex && (
-                                                <div className='show-content max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
+                                                <div className='show-content pl-5 pb-7 max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
                                                     {
                                                         tabContents[activeTabIndex]
                                                             .showContent[subContentIndex]
@@ -724,7 +726,6 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </MainLayout>
     )

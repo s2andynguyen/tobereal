@@ -51,9 +51,6 @@
     font-weight: 500;
     line-height: normal;
 }
-.seeMore-btn:hover {
-    opacity: 0.7;
-}
 /* sdchung end */
 .wrapper {
     position: relative;
@@ -125,4 +122,5 @@
 }
 .wrap-Differences {
     overflow-x: scroll;
+    align-items: start !important;
 }

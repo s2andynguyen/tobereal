@@ -92,7 +92,7 @@ function InformationForm() {
                             className='input-style pl-5 min-w-[180px]'
                             type='email'
                             id='Email'
-                            name='Email'
+                            name=' Email'
                             value={formData.Email}
                             onChange={handleInputChange}
                             placeholder='Enter your Email'
