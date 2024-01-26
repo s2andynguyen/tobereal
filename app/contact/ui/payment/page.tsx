@@ -1,6 +1,6 @@
 'use clent'
 import './style.css'
-import * as React from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -19,19 +19,25 @@ export default function Payment() {
     return (
         <div className="Payment">
             <p className="text_card">You are entitled to a referral fee for properties that successfully join travelio.com. Please fill in the following details to expedite the payment process:</p>
-            <Autocomplete
-                disablePortal
-                id="combo-box"
-                options={Banks}
-                sx={{
-                    width: 400,
-                    padding: 5,
-                    '& .MuiOutlinedInput-root': {
-                        padding: '10px',
-                        borderRadius: '30px'
-                    },
-                }}
-                renderInput={(params) => <TextField {...params} label="Bank" id="p-10" placeholder="Bank" />} />
+            <div className='interBank'>
+                <label className='Banking'>Bank</label>
+                <Autocomplete
+                    disablePortal
+                    id='combo-box'
+                    options={Banks}
+                    sx={{
+                        width: 300,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '10',
+                            borderRadius: '30px',
+                            margin: '10px'
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField {...params} placeholder='City' />
+                    )}
+                />
+            </div>
             <form method="post" className="form_group" onSubmit={onSubmit}>
                 <div className="p-2">
                     <label htmlFor="number" className="form_control">Bank Account number</label>

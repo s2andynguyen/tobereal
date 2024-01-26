@@ -1,7 +1,7 @@
 'use client'
 import './styles.css'
 import React, { useState } from "react";
-import Image from "next/image";
+
 
 const Asset = () => {
     return (

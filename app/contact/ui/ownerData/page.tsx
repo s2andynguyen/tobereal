@@ -1,6 +1,6 @@
 'use clent'
 import './style.css'
-import * as React from 'react'
+import React from 'react'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
 
@@ -43,83 +43,85 @@ export default function OwnerData() {
                     />
                 </div>
             </form>
-
-            <Autocomplete
-                disablePortal
-                id='combo-box'
-                options={City}
-                sx={{
-                    width: 300,
-                    '& .MuiOutlinedInput-root': {
-                        padding: '10',
-                        borderRadius: '30px',
-                        margin: '10px'
-                    }
-                }}
-                renderInput={(params) => (
-                    <TextField {...params} label='City' placeholder='City' />
-                )}
-            />
-            <Autocomplete
-                disablePortal
-                id='combo-box'
-                options={TOBEREAL}
-                sx={{
-                    width: 300,
-                    '& .MuiOutlinedInput-root': {
-                        padding: '10px',
-                        borderRadius: '30px',
-                        margin: '10px'
-                    }
-                }}
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        label='How did you know about TO BE REAL?'
-                        placeholder='Select Source Type'
-                    />
-                )}
-            />
-            <Autocomplete
-                disablePortal
-                id='combo-box'
-                options={Propertytype}
-                sx={{
-                    width: 300,
-                    '& .MuiOutlinedInput-root': {
-                        padding: '10',
-                        borderRadius: '30px',
-                        margin: '10px'
-                    }
-                }}
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        label='Property Type'
-                        placeholder='Property Type'
-                    />
-                )}
-            />
-            <Autocomplete
-                disablePortal
-                id='combo-box'
-                options={PropertyCon}
-                sx={{
-                    width: 300,
-                    '& .MuiOutlinedInput-root': {
-                        padding: '10',
-                        borderRadius: '30px',
-                        margin: '10px'
-                    }
-                }}
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        label='Property Condition'
-                        placeholder='Property Type'
-                    />
-                )}
-            />
+            <div className="autolog">
+                <label className='Autocomp'>City</label>
+                <Autocomplete
+                    disablePortal
+                    id='combo-box'
+                    options={City}
+                    sx={{
+                        width: 300,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '10',
+                            borderRadius: '30px',
+                            margin: '10px'
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField {...params} placeholder='City' />
+                    )}
+                />
+                <label className='Autocomp'>How did you know about TO BE REAL?</label>
+                <Autocomplete
+                    disablePortal
+                    id='combo-box'
+                    options={TOBEREAL}
+                    sx={{
+                        width: 300,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '10px',
+                            borderRadius: '30px',
+                            margin: '10px'
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField
+                            {...params}
+                            placeholder='Select Source Type'
+                        />
+                    )}
+                />
+                <label className='Autocomp'>Property Type</label>
+                <Autocomplete
+                    disablePortal
+                    id='combo-box'
+                    options={Propertytype}
+                    sx={{
+                        width: 300,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '10',
+                            borderRadius: '30px',
+                            margin: '10px'
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField
+                            {...params}
+                            placeholder='Property Type'
+                        />
+                    )}
+                />
+                <label className='Autocomp'>Property Condition</label>
+                <Autocomplete
+                    disablePortal
+                    id='combo-box'
+                    options={PropertyCon}
+                    sx={{
+                        width: 300,
+                        '& .MuiOutlinedInput-root': {
+                            padding: '10',
+                            borderRadius: '30px',
+                            margin: '10px'
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField
+                            {...params}
+                            placeholder='Property Type'
+                        />
+                    )}
+                />
+            </div>
         </div>
     )
 }

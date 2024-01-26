@@ -1,8 +1,11 @@
 @media screen and (max-width: 960px) {
     .background img {
         width: 100%;
-        height: 400px;
+        height: 500px;
     }
+        .text_searching{
+            padding: 19px;
+        }
 
     .menu {
         display: flex;

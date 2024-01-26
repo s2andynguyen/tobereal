@@ -1,11 +1,11 @@
 'use client'
 import './styles.css'
-import'./mobi.css'
+import './mobi.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
 import Link from 'next/link';
-import Checkbox  from './ui/checkbox/page';
+import Checkbox from './ui/checkbox/page';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)
@@ -182,7 +182,7 @@ const PostingSell = () => {
                 )}
                 {checkbox2 && (
                     <div className='Checkout'>
-                       <Checkbox/>
+                        <Checkbox />
                     </div>
                 )}
             </div>

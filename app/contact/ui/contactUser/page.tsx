@@ -1,6 +1,6 @@
 import './style.css'
 function ContactUser() {
-    return ( 
+    return (
         <form method="post" className="form_group">
             <div className="p-3">
                 <label htmlFor="name" className="form_control">Referrer Name</label>
@@ -15,7 +15,7 @@ function ContactUser() {
                 <input className="text" type="text" id="phone" placeholder="Phone" />
             </div>
         </form>
-     );
+    );
 }
 
 export default ContactUser;
