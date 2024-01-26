@@ -20,7 +20,7 @@ function WeeklyHotDeals() {
     return (
         <div className='pt-3 sm:pt-0 bg-gradient-pink'>
             {/* title */}
-            <div className='sm:bg-white bg-transparent'>
+            <div className='sm:bg-white bg-transparent -translate-y-px'>
                 <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
                     <div className='flex flex-row sm:items-center items-start justify-between pb-2 sm:pb-4 md:px-[14px] pl-3'>
                         <div className='flex lg:flex-row flex-col gap-1 lg:gap-7 lg:items-center items-start'>
@@ -54,7 +54,7 @@ function WeeklyHotDeals() {
             </div>
             <SliderWithSale
                 pending={pending}
-                imageBgUrl='/images/home/hotel-image/hot-deals.png'
+                imageBgUrl='/images/home/highlight-img/hot-deals.png'
                 bgColor='bg-transparent'
                 bgWidth={203}
                 bgHeight={198}

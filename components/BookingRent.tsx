@@ -36,7 +36,6 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
     const [searchInput, setSearchInput] = useState('')
     const [searchLocation, setSearchLocation] = useState('')
     const [flexible, setFlexible] = useState(false)
-    const [isOpen, setIsOpen]: [isOpen: string[], setIsOpen: any] = useState([])
     const [furnishSelected, setFurnishSelected]: [
         furnishSelected: any[],
         setFurnishSelected: any
@@ -53,13 +52,6 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
         buyListSelected: string[], 
         setBuyListSelected: any
     ] = useState([])
-    const handleOpenSelectForm = (type:string) => {
-        setIsOpen([...isOpen, type])
-    }
-    const handleCloseSelectForm = (type:string) => {
-        setIsOpen(isOpen.filter((item) => item !== type))
-    }
-   
 
     const handleByOptionType = (optionType: string, value: any) => {
         switch (optionType) {
@@ -157,11 +149,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                     options={furnishs}
                                     optionType='furnishs'
                                     selectedOption={furnishSelected}
-                                    listIsShow={isOpen}
                                     onChange={handleByOptionType}
                                     title='Furnish Type'
-                                    setOpen={handleOpenSelectForm}
-                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
                             <div className='w-full px-1 sm:px-2 z-[2]'>
@@ -169,11 +158,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                     options={rooms}
                                     optionType='rooms'
                                     selectedOption={roomSelected}
-                                    listIsShow={isOpen}
                                     onChange={handleByOptionType}
                                     title='Room Type'
-                                    setOpen={handleOpenSelectForm}
-                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
                             <div className='w-full px-1 sm:px-2 sm:col-span-1 col-span-2 z-[1]'>
@@ -181,11 +167,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                                     options={properties}
                                     optionType='properties'
                                     selectedOption={propertySelected}
-                                    listIsShow={isOpen}
                                     onChange={handleByOptionType}
                                     title='Property Type'
-                                    setOpen={handleOpenSelectForm}
-                                    setClose={handleCloseSelectForm}
                                 />
                             </div>
                         </div>
@@ -277,7 +260,7 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                         </div>
 
                         {/* checkbox group */}
-                        <div className='flex items-center gap-5 max-w-full overflow-x-auto invisible-scrollbar'>
+                        <div className='flex items-center gap-5 max-w-full overflow-x-auto snap-mandatory invisible-scrollbar'>
                             { buyListCheckbox && buyListCheckbox.map((itemCheck, index) => (
                                     <CustomCheckbox 
                                     key={index}
@@ -297,11 +280,8 @@ const BookingRent: React.FC<BookingRentProps> = ({ toggleTab }) => {
                             options={properties}
                             optionType='properties'
                             selectedOption={propertySelected}
-                            listIsShow={isOpen}
                             onChange={handleByOptionType}
                             title='Property Type'
-                            setOpen={handleOpenSelectForm}
-                            setClose={handleCloseSelectForm}
                         />
                     </div>
                 </div>

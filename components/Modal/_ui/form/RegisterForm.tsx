@@ -57,7 +57,7 @@ function RegisterForm() {
                     placeholder='Enter your Password...'
                     value={password}
                 />
-                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
+                <button className='bg-gradient-left h-10 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
                 onClick={() => dispatch(switchModal('register'))}>
                     Sign Up
                 </button>

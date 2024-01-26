@@ -2,12 +2,17 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../_ui/layout/DashboardLayout'
+import AddNewBank from '../_ui/AddNewBank'
 
 const DepositPage = () => {
     const [ amount, setAmount ] = useState('')
+    const [ isShowAddBank, setIsShowAddBank ] = useState(false)
+    const handleToggleShowBank = () => {
+        setIsShowAddBank(!isShowAddBank)
+    }
   return (
     <DashboardLayout title='Desposit'>
-        <div className='w-full mx-auto mt-7 sm:mt-14 flex items-start justify-center'>
+        <div className='w-full mx-auto pt-7 sm:pt-14 flex items-start justify-center'>
             <div className='h-full max-md:container'>
                 {/* head */}
                 {/* <div className="desposit-head md:w-[620px] md:max-w-[620px] mb-4 mx-3 md:mx-0"> */}
@@ -64,7 +69,7 @@ const DepositPage = () => {
                         </div>
                         <div className='shadow-md h-12 bg-[#fff4c0] border border-black/10 px-8 
                         flex items-center justify-center rounded-[8px] cursor-pointer hover:shadow-md
-                        transition duaration-200'>
+                        transition duaration-200' onClick={handleToggleShowBank}>
                             <span className='mr-5'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
                                     <path d="M10.5 2.5V19.5" stroke="black" strokeWidth="4" strokeLinecap="round"/>
@@ -112,6 +117,9 @@ const DepositPage = () => {
                         
                     </div>
                 </div>
+
+                {/* add bank */}
+                <AddNewBank isShowAddBank={isShowAddBank} onClick={handleToggleShowBank} />
             </div>
         </div>
     </DashboardLayout>

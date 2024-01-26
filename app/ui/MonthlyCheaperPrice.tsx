@@ -28,10 +28,10 @@ function MonthlyCheaperPrice() {
                             '>
                                 Stay Monthly For Cheaper Prices
                                 <Image
-                                    src={'/images/home/icon/Layer_2.png'}
+                                    src={'/images/home/icon/layer_icon_2.png'}
                                     width={34}
                                     height={29}
-                                    alt={'icon/Layer_2.png'}
+                                    alt={'icon/layer_icon_2.png'}
                                     className='w-auto h-[21px] inline-block ml-3 mb-1 lg:w-[34px] lg:h-[29px] '
                                 />
                             </h2>
@@ -50,7 +50,7 @@ function MonthlyCheaperPrice() {
             {/* body */}
             <SliderWithSale
                 pending={pending}
-                imageBgUrl='/images/home/hotel-image/frame-cheaper.png'
+                imageBgUrl='/images/home/highlight-img/frame-cheaper.png'
                 listRoom={dataHotel}
                 hiddenImageOnMobile
             />

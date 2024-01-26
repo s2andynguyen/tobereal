@@ -34,10 +34,10 @@ function PremiumRoom() {
                             '>
                             Premium
                             <Image
-                                src={'/images/home/icon/Layer_4.png'}
+                                src={'/images/home/icon/layer_icon_4.png'}
                                 width={26}
                                 height={14}
-                                alt={'icon/Layer_4.png'}
+                                alt={'icon/layer_icon_4.png'}
                                 className='w-auto h-[21px] inline-block ml-3 mb-1 lg:w-auto lg:h-auto '
                             />
                         </h2>
@@ -60,7 +60,7 @@ function PremiumRoom() {
                 <div className='container mx-auto px-2 md:px-4 xl:px-14 flex flex-col lg:flex-row items-center '>
                     <div className='flex items-center justify-start shrink-0 flex-grow lg:flex-[33.3333%] lg:max-w-[33.3333%]'>
                         <Image
-                            src={'/images/home/hotel-image/premium-img.png'}
+                            src={'/images/home/highlight-img/premium-img.png'}
                             width={333}
                             height={221}
                             alt='frame-cheaper'
@@ -76,10 +76,10 @@ function PremiumRoom() {
                                     <SwiperSlide className='max-w-[160px] sm:max-w-full h-[220px]'>
                                         <div className='h-full w-full flex justify-center items-center'>
                                             <Image
-                                                src={'/images/home/hotel-image/premium-img.png'}
+                                                src={'/images/home/highlight-img/premium-img.png'}
                                                 width={232}
                                                 height={218}
-                                                alt={'/images/home/hotel-image/premium-img.png'}
+                                                alt={'/images/home/highlight-img/premium-img.png'}
                                                 className='object-contain mb-3 w-[160px] h-auto'
                                             />
                                         </div>

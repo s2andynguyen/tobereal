@@ -34,6 +34,7 @@ background-color: rgb(70, 70, 70)
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 @layer base {
   body {
     @apply leading-relaxed;

@@ -29,10 +29,10 @@ function FindBestUnit() {
                             '>
                             Find Best Units for Staycation
                             <Image
-                                src={'/images/home/icon/Layer_3.png'}
+                                src={'/images/home/icon/layer_icon_3.png'}
                                 width={34}
                                 height={29}
-                                alt={'icon/Layer_3.png'}
+                                alt={'icon/layer_icon_3.png'}
                                 className='w-auto h-[21px] inline-block ml-3 mb-1 lg:w-[34px] lg:h-[29px] '
                             />
                         </h2>
@@ -56,7 +56,7 @@ function FindBestUnit() {
 
             <SliderWithSale
                 pending={pending}
-                imageBgUrl='/images/home/hotel-image/find-best-units.png'
+                imageBgUrl='/images/home/highlight-img/find-best-units.png'
                 bgColor='bg-[#91F2FF]'
                 listRoom={dataFindBest}
                 hiddenImageOnMobile

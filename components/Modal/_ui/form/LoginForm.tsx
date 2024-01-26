@@ -24,7 +24,7 @@ function LoginForm() {
             <p className='text-[24px] font-semibold mb-4'>Hi, Welcome Back! 👋</p>
 
             {/* form input */}
-            <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3'>
+            <div className='w-full px-6 sm:px-10 md:px-16 lg:px-24 flex flex-col items-center gap-3 lg:gap-2'>
                 {/* email */}
                 <Input
                     id={'email'}
@@ -48,7 +48,7 @@ function LoginForm() {
                 />
 
                 {/* remember & fogot password */}
-                <div className='w-full flex justify-between sm:justify-center py-2 md:py-0'>
+                <div className='w-full flex justify-between sm:justify-center py-2 md:py-0  sm:mt-2'>
                     {/* remember me*/}
                         <CustomCheckbox 
                             isChecked={remember}
@@ -57,12 +57,12 @@ function LoginForm() {
                         />
                     {/* fogot password */}
                     <div 
-                        className='text-[#E86969] sm:ml-10 hover:underline cursor-pointer'
+                        className='text-[#E86969] sm:ml-10 hover:underline cursor-pointer text-[14px]'
                         onClick={() => dispath(switchModal('forgot'))}>
                         Forgot Password?
                     </div>
                 </div>
-                <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
+                <button className='bg-gradient-left h-10 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
                 onClick={() => router.push('/')}>
                     Login
                 </button>

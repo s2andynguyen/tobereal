@@ -5,11 +5,12 @@ import Mail from '@/icons/Header-Dashboard/Mail'
 import Bell from '@/icons/Header-Dashboard/Bell'
 import { IoIosMenu } from 'react-icons/io'
 type Props = {
-    title: any
+    title: string
     isShowSidebar: boolean
     toggleSidebar: any
 }
 const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
+    
     return (
         <div className={`fixed top-0 right-0 w-full xl:pl-[var(--leftsidebar-width)] h-[var(--navbar-height)] 
             z-[2] transition-all duration-300 bg-white shadow-[0_3px_12px_0_rgba(0,0,0,0.1)]
@@ -29,7 +30,6 @@ const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
                     <h2 className='leading-tight sm:text-xl xl:text-[44px] pl-3 xl:pl-0 font-bold'>
                         {title}
                     </h2>
-                    {/* <div className='w-full h-px bg-black'></div> */}
                 </div>
 
                 <div className='flex items-center gap-5'>

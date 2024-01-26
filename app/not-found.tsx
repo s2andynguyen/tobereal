@@ -6,7 +6,7 @@ function NotFound() {
     <MainLayout > 
          {/* Heading block with filter */}
         <div className='h-[70vh] flex justify-center items-center'>
-            <p className='text-[38px] font-bold drop-shadow-md'>404 | Page not found</p>
+            <p className='text-xl sm:text-[38px] font-bold drop-shadow-md'>404 | Page not found</p>
         </div>
 
     </MainLayout>

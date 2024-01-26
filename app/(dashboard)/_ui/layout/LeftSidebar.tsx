@@ -1,10 +1,9 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { lato } from '@/assets/styles/fonts'
 import { usePathname,useRouter } from 'next/navigation'
-import '../layoutstyle.css'
+import '../../_style/layoutstyle.css'
 const LeftSidebar = ({isShowSidebar,toggleSidebar}:{isShowSidebar: boolean, toggleSidebar:any}) => {
     const pathName = usePathname()
     const router = useRouter()
@@ -22,15 +21,16 @@ const LeftSidebar = ({isShowSidebar,toggleSidebar}:{isShowSidebar: boolean, togg
                 
                 <div className='h-full w-full pt-10'>
                     <div className='flex justify-center items-center'>
-                        <Image
-                            src={'/dashboard/images/signal-logo.png'}
-                            height={148}
-                            width={112}
-                            priority
-                            alt='sidebar-logo.svg'
-                            className='w-[112px] h-auto pb-4 cursor-pointer transition duration-200'
-                            onClick={() => router.push('/')}
-                        />  
+                            <div className='pb-4 cursor-pointer transition duration-200'>
+                                <Image
+                                    src={'/dashboard/images/signal-logo.png'}
+                                    height={148}
+                                    width={112}
+                                    alt='sidebar-logo.svg'
+                                    className='w-[112px] h-auto'
+                                    onClick={() => handleClick('/')}
+                                />
+                            </div>
                     </div>
                     {/* sidebar list */}
                     <ul className='pr-4 pl-3 lg:pl-10'>

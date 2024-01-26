@@ -30,7 +30,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
                 }`}
                 onChange={onChange}
             />
-            <span className={`select-none cursor-pointer ml-2 flex-[100%] ${bolder ? 'font-montserrat font-semibold text-[13px] text-nowrap': ''}`}>{label}</span>
+            <span className={`select-none text-[14px] cursor-pointer ml-2 flex-[100%] ${bolder ? 'font-montserrat font-semibold text-[13px] text-nowrap': ''}`}>{label}</span>
             <div className={`absolute peer-checked:scale-100 peer-checked:opacity-100 opacity-0 scale-0 transition duration-200 
             top-[50%] -translate-y-[50%] ${
                     smail ? 'left-[2px]': 'left-[3px]'

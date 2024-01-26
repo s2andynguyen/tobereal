@@ -63,7 +63,8 @@
         height: 50vh;
     }
     .dashboard-playout__page {
-        min-height: calc(100vh - var(--navbar-height));
+        max-height: calc(100vh - var(--navbar-height));
+        overflow-y: auto;
     }
 }
 

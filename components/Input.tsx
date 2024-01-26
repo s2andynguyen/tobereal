@@ -22,7 +22,7 @@ const Input: React.FC<InputProps> = ({
             {label && (
                 <label
                     htmlFor={id}
-                    className='font-[14px] text-[#695C5C] font-montserrat block md:pb-2'>
+                    className='text-[14px] text-[#695C5C] font-montserrat block md:pb-1'>
                     {label}
                 </label>
             )}
@@ -31,7 +31,7 @@ const Input: React.FC<InputProps> = ({
                 value={value}
                 type={type}
                 onChange={onChange}
-                className='input border-black/40 h-12 rounded-[10px] placeholder:text-black/70'
+                className='input border-black/40 h-10 rounded-[10px] placeholder:text-black/70 text-sm'
                 placeholder={placeholder}
             />
         </div>

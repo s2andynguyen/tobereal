@@ -25,7 +25,7 @@ const ModalComponent = () => {
         >
             {/* container */}
             <div className={`modal-container max-w-full lg:max-w-[950px] lg:min-h-[600px] min-h-screen bg-white flex-1 lg:mx-auto lg:mt-7 lg:rounded-xl
-            grid grid-cols-12 overflow-hidden shadow-[0_5px_15px_0_rgba(0,0,0,0.5   )] relative transition-all delay-100 duration-500 z-10 ${
+            grid grid-cols-12 overflow-hidden shadow-[0_5px_15px_0_rgba(0,0,0,0.5)] relative transition-all delay-100 duration-500 z-10 ${
                 isShowModal ? 'translate-y-0' : '-translate-y-52'
             }`} onClick={(e) => e.stopPropagation()}
             >
@@ -38,7 +38,7 @@ const ModalComponent = () => {
                 </div>
 
                 <div className='h-full w-full max-sm:max-h-screen overflow-auto lg:col-span-7 col-span-12 relative
-                pt-10 pb-3'>
+                pt-6 pb-3'>
                     {/* < /> */}
                     {currentForm === 'login' && <LoginForm />}
                     {currentForm === 'register' && <RegisterForm />}
@@ -46,14 +46,14 @@ const ModalComponent = () => {
 
                     <div className='absolute sm:top-2 sm:right-2 top-1 right-1 cursor-pointer hover:drop-shadow-md transition-all duration-300'
                     onClick={() => dispatch(closeModal())}>
-                    <Image
-                        className='w-[30px] h-auto object-cover'
-                        src={'/images/auth/close-icon.svg'}
-                        height={30}
-                        width={30}
-                        alt='close-icon.svg'
-                    />
-                </div>
+                        <Image
+                            className='w-[30px] h-auto object-cover'
+                            src={'/images/auth/close-icon.svg'}
+                            height={30}
+                            width={30}
+                            alt='close-icon.svg'
+                        />
+                    </div>
                 </div>
             </div>
         </div>

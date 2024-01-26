@@ -45,7 +45,7 @@ function ForgotForm() {
                     )}
 
                     <button
-                        className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
+                        className='bg-gradient-left h-10 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'
                         onClick={() => {
                             submitted ? setVerify(true) : setSubmitted(true)
                         }}>
@@ -74,7 +74,7 @@ function ForgotForm() {
                         value={passwordConfirm}
                     />
 
-                    <button className='bg-gradient-left h-12 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'>
+                    <button className='bg-gradient-left h-10 w-full rounded-md max-w-[312px] mt-3 font-semibold hover:shadow-lg transition duration-200 hover:opacity-85'>
                         Login
                     </button>
                 </div>

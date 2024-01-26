@@ -44,11 +44,12 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
                         <div className='flex justify-start items-center lg:gap-5 xl:gap-10'>
                             {/* logo */}
                             <div
-                                className='w-[90px] md:w-[115px] hover:cursor-pointer'
+                                className='hover:cursor-pointer'
                                 onClick={() => router.push('/')}>
                                 <Image
                                     width={115}
                                     height={60}
+                                    className='w-[90px] h-auto md:w-[115px]'
                                     src={'/images/main-logo.png'}
                                     alt='main-logo'
                                 />
@@ -123,13 +124,14 @@ const Header: React.FC<HeaderProps> = ({ showSidebar, fixedOnMbile }) => {
                         <div className='flex justify-start items-center lg:gap-5 xl:gap-10'>
                             {/* logo */}
                             <div
-                                className='w-[90px] md:w-[115px] hover:cursor-pointer'
+                                className='hover:cursor-pointer'
                                 onClick={() => router.push('/')}>
                                 <Image
                                     width={115}
                                     height={60}
+                                    className='w-[90px] h-auto md:w-[115px]'
                                     src={'/images/main-logo.png'}
-                                    alt='main-logo' 
+                                    alt='main-logo'
                                 />
                             </div>
                             {/* navbar */}

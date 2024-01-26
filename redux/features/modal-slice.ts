@@ -7,7 +7,7 @@ type InitialState = {
 
 const initialState = {
     isShowModal:false,
-    currentForm: '',
+    currentForm: ''
 } as InitialState
 
 export const modal = createSlice({
@@ -16,6 +16,7 @@ export const modal = createSlice({
     reducers: {
         openModal: (state, action: PayloadAction<string>) => {
             return {
+                ...state,
                 isShowModal: true,
                 currentForm: action.payload
             }
