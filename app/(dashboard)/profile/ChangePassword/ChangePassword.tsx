@@ -55,7 +55,7 @@ function ChangePassword() {
                                 htmlFor='currentPassword'>
                                 Current Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword1 ? 'text' : 'password'}
@@ -75,7 +75,7 @@ function ChangePassword() {
                             <label className='textLabelPassword' htmlFor='newPassword'>
                                 New Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword2 ? 'text' : 'password'}
@@ -97,7 +97,7 @@ function ChangePassword() {
                                 htmlFor='confirmNewPassword'>
                                 Confirm New Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword3 ? 'text' : 'password'}
