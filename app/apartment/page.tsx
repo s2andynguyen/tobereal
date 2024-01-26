@@ -86,7 +86,7 @@ function Apartment() {
         <MainLayout>
             <div className='wrapper bg-white mb-32'>
                 <div className='aprtment-wrap h-[650px] md:h-[450px]'>
-                    <div className='Apartment-Solution container flex-col  md:flex-row'>
+                    <div className='Apartment-Solution container flex-col px-5 md:flex-row'>
                         <div className='title-Apartment text-center md:text-left'>
                             Empty House & Apartment Solutions
                         </div>
@@ -495,12 +495,12 @@ function Apartment() {
                         )}
 
                         {!isShowContent && (
-                            <div className='wrap-Logo-Manage flex flex-col justify-center align-center w-full min-h-[300px] '>
-                                <div className='TopLogos-Management flex justify-center'>
+                            <div className='wrap-Logo-Manage flex flex-col justify-center items-center w-full min-h-[300px] '>
+                                <div className='TopLogos-Management flex flex-col md:flex-row justify-center'>
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management.png'
                                         }
@@ -509,7 +509,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management1.png'
                                         }
@@ -518,7 +518,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management2.png'
                                         }
@@ -527,7 +527,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management3.png'
                                         }
@@ -536,18 +536,18 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management4.png'
                                         }
                                         alt='logoPartner'
                                     />
                                 </div>
-                                <div className='BottomLogos-Managemant flex justify-center'>
+                                <div className='BottomLogos-Managemant flex flex-col md:flex-row justify-center'>
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management5.png'
                                         }
@@ -556,7 +556,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management6.png'
                                         }
@@ -565,7 +565,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management7.png'
                                         }
@@ -574,7 +574,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management8.png'
                                         }
@@ -583,7 +583,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management9.png'
                                         }
@@ -678,10 +678,10 @@ function Apartment() {
                         Frequently Asked Questions(FAQ)
                     </h3>
                     <div className='flex flex-col gap-12 lg:flex-row'>
-                        <div className='questions max-w-[420px] md:min-w-[490px]'>
+                        <div className='questions w-full max-w-[490px] h-[350px] sm:h-[322px] xl:min-w-[490px] p-2'>
                             {tabContents.map((tab, tabIndex) => (
                                 <button
-                                    className='text-questions last:border-none title-Calculates text-start text-xl flex md:text-2xl w-[364px] md:w-[434px]'
+                                    className='text-questions last:border-none title-Calculates text-start text-xl flex md:text-2xl w-full max-w-[434px]'
                                     key={tabIndex}
                                     onClick={() => handleTabClick(tabIndex)}>
                                     {getTitleIcon(tabIndex)}
@@ -697,7 +697,7 @@ function Apartment() {
                                         <li
                                             key={subContent.id}
                                             className={classNames(
-                                                'list-item max-w-[420px] md:min-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
+                                                'list-item w-full max-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
                                             )}>
                                             <div
                                                 className='flex justify-between items-center pt-5 pb-5 pl-7 pr-7'

@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import './style.css'
+import classNames from 'classnames'
 // components
 import InformationForm from './InformationForms/InformationForm'
 import Favourite from './Favourites/Favourite'
@@ -32,7 +33,7 @@ const Profile = () => {
                     <div className='image-container'>
                         <label
                             htmlFor='imageInput'
-                            className={selectedImage ? 'has-image' : ''}>
+                            className={classNames('ImageCover-Profile', { 'has-image': selectedImage })}>
                             <input
                                 className='coverImage'
                                 type='file'
@@ -111,7 +112,7 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <div className='wrapper-Informations container justify-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
+                <div className='wrapper-Informations container p-6 md:p-12 justify-items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
                     <InformationForm />
                     <Favourite />
                     <InformationBonuss />

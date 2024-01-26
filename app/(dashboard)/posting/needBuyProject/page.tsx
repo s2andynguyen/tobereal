@@ -25,7 +25,7 @@ const NeedBuyProject = () => {
                         <button className='btn-SearchBuy'>search</button>
                     </div>
                 </div>
-                <div className='flex flex-col gap-3 justify-center items-center'>
+                <div className='flex flex-col gap-3 justify-center items-center p-5'>
                     {NeedTobereal_BUY?.map((card) => (
                         <BuyTobereal data={card} key={card?.id} />
                     ))}

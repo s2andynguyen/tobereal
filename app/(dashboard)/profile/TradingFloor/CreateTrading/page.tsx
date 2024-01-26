@@ -29,9 +29,11 @@ function CreateTrading() {
                 <div className='CreateTrading-container w-[142px] h-[142px] md:w-[226px] md:h-[226px]'>
                     <label
                         htmlFor='imageInput'
-                        className={selectedImageCT ? 'has-image' : ''}>
+                        className={classNames('ImageCover-CT', {
+                            'has-image': selectedImageCT
+                        })}>
                         <input
-                        className='AvtRound'
+                            className='AvtRound'
                             type='file'
                             id='imageInput'
                             accept='image/*'
@@ -53,8 +55,8 @@ function CreateTrading() {
                         )}
                     </label>
                 </div>
-                <div className='Gr-wrap-inputCT p-0 md:p-5 xl:p-0'>
-                    <div className='CT-grInput items-center md:items-start'>
+                <div className='Gr-wrap-inputCT w-full p-0 md:p-5 xl:p-0'>
+                    <div className='CT-grInput items-left md:items-start'>
                         <label
                             className='text-labelCT text-xs md:text-base'
                             htmlFor='NameTrading'>
@@ -68,7 +70,7 @@ function CreateTrading() {
                             placeholder='Name of the trading platform'
                         />
                     </div>
-                    <div className='CT-grInput items-center md:items-start'>
+                    <div className='CT-grInput items-left md:items-start'>
                         <label
                             className='text-labelCT text-xs md:text-base'
                             htmlFor='DescriptionContent'>
@@ -126,7 +128,7 @@ function CreateTrading() {
                             </label>
                         </div>
                     </div>
-                    <div className='CT-grInput items-center md:items-start'>
+                    <div className='CT-grInput items-left md:items-start'>
                         <label className='text-labelCT text-xs md:text-base'>
                             Headquarters information
                         </label>
@@ -139,21 +141,21 @@ function CreateTrading() {
                         />
                         <div className='Child-input-informations flex justify-between w-full max-w-[855.70px]'>
                             <input
-                                className='text-labelCT text-xs md:text-base w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                                className='text-labelCT text-xs md:text-base w-[90px] sm:w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                                 type='text'
                                 name=''
                                 id=''
                                 placeholder='Province/city'
                             />
                             <input
-                                className='text-labelCT text-xs md:text-base w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                                className='text-labelCT text-xs md:text-base w-[90px] sm:w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                                 type='text'
                                 name=''
                                 id=''
                                 placeholder='County'
                             />
                             <input
-                                className='text-labelCT text-xs md:text-base w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
+                                className='text-labelCT text-xs md:text-base w-[90px] sm:w-[97px] h-[36px] md:w-[157px] xl:w-[257px] md:h-[50px] bg-neutral-200 rounded-[5px] border border-white border-opacity-10 pl-2 md:pl-5 xl:pl-12 '
                                 type='text'
                                 name=''
                                 id=''
@@ -187,7 +189,7 @@ function CreateTrading() {
                         <Image
                             width={856}
                             height={855}
-                            className='w-[323px] h-[auto] md:w-[856px]'
+                            className='w-full h-[auto] max-w-[856px]'
                             alt='MapHCM'
                             src={'/dashboard/images/profile/Map.jpg'}
                         />
@@ -207,7 +209,7 @@ function CreateTrading() {
                             Add branch
                         </button>
                     </div>
-                    <div className='CT-grInput items-center md:items-start'>
+                    <div className='CT-grInput items-left md:items-start'>
                         <label className='text-labelCT text-xs md:text-base' htmlFor=''>
                             Contact person information
                         </label>
@@ -240,7 +242,7 @@ function CreateTrading() {
                             placeholder='Phone'
                         />
                     </div>
-                    <div className='CT-grInput w-[323px] md:w-full md:pr-10 md:pl-10 xl:p-0 max-w-[855.70px] flex items-center'>
+                    <div className='CT-grInput max-w-[323px] md:w-full md:pr-10 md:pl-10 xl:p-0 sm:max-w-[855.70px] flex items-center'>
                         <button className='Create-Btn hover:shadow-lg w-[283px] h-[40px] md:w-full xl:w-[749.73px] md:h-[70px] bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-[10px] text-black text-sm md:text-[32px] font-bold'>
                             Create
                         </button>

@@ -6,8 +6,8 @@ function InformationBonuss() {
     const router = useRouter()
     return (
         <div className='wrap-InformationBonuss flex flex-col justify-between'>
-            <div className='InformationBonuss-Gr flex flex-col gap-4 items-center'>
-                <div className='formBalances flex !justify-around'>
+            <div className='InformationBonuss-Gr flex flex-col gap-4 w-full max-w-[335px] '>
+                <div className='formBalances w-full max-w-[335px] flex !justify-around'>
                     <div className='flex flex-col items-center'>
                         <p className='InformationBonus-text'>Balance</p>
                         <p className='InformationBonus-text'>$ 4,000.00</p>
@@ -25,14 +25,14 @@ function InformationBonuss() {
                         </button>
                     </div>
                 </div>
-                <div className='formBalances'>
+                <div className='formBalances w-full max-w-[335px]'>
                     <div className='flex flex-col items-center pl-8'>
                         <p className='InformationBonus-text'>Bonus</p>
                         <p className='InformationBonus-text'>$ 4,000.00</p>
                     </div>
                 </div>
 
-                <div className='formBalances'>
+                <div className='formBalances w-full max-w-[335px]'>
                     <div className='flex flex-col items-left pl-8'>
                         <p className='InformationBonus-text pl-4'>Gift account</p>
                         <p className='InformationBonus-text'>$ 4,000.00</p>

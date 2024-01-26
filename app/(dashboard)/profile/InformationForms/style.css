@@ -20,7 +20,8 @@
 /* sd chung end */
 
 .wrap-Informations {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
     height: 455px;
 
     border-radius: 10px;

@@ -1,7 +1,7 @@
 .wrap-Manages {
-    width: 335px;
+    max-width: 335px;
     height: 326px;
-
+    width: 100%;
     border-radius: 10px;
     background: radial-gradient(
         854.96% 154.48% at 0% 0%,
@@ -36,7 +36,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 301px;
+    max-width: 301px;
+    width: 100%;
     height: 29px;
     border-radius: 4px;
     background: linear-gradient(180deg, #f0b90b 0%, rgba(255, 255, 255, 0) 100%);
@@ -57,14 +58,16 @@
 .wrap-childs-Manage {
     border-radius: 5px;
     background: #eee;
-    width: 301px;
+    max-width: 301px;
+    width: 100%;
     height: 88px;
 }
 .Btn-child-Manage {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 301px;
+    max-width: 301px;
+    width: 100%;
     padding: 0 10px 0 20px;
     color: #000;
     font-size: 10px;

@@ -17,7 +17,7 @@ function Manage() {
             <div className='bg-TitleManage flex items-center'>
                 <h2 className='top-title-Manage pl-16'>Manage</h2>
             </div>
-            <div className='Gr-form-Manages flex flex-col items-center gap-3'>
+            <div className='Gr-form-Manages flex flex-col gap-3'>
                 <button
                     className='Btn-Manage hover:shadow-lg'
                     onClick={() => router.push('/posting/managent')}>
@@ -55,7 +55,7 @@ function Manage() {
                     />
                 </button>
 
-                <div className='flex flex-col items-center gap-0'>
+                <div className='flex flex-col gap-0'>
                     <button className='Btn-Manage hover:shadow-lg btn-parent' onClick={toggleContent}>
                         client
                     </button>

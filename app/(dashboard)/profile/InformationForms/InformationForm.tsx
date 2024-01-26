@@ -116,9 +116,9 @@ function InformationForm() {
                         <label className='text-Information-input' htmlFor='birthdate'>
                             Birthdate:
                         </label>
-                        <div className='Gr-birthdate flex gap-2 pr-5'>
+                        <div className='Gr-birthdate flex gap-2 pr-4'>
                             <input
-                                className='input-style !max-w-12'
+                                className='input-style pl-3 !max-w-12'
                                 type='number'
                                 id='birthdate-day'
                                 name='birthdate.day'
@@ -127,7 +127,7 @@ function InformationForm() {
                                 placeholder='Day'
                             />
                             <input
-                                className='input-style !max-w-12'
+                                className='input-style pl-3 !max-w-12'
                                 type='number'
                                 id='birthdate-month'
                                 name='birthdate.month'
@@ -136,7 +136,7 @@ function InformationForm() {
                                 placeholder='Month'
                             />
                             <select
-                                className='input-style !max-w-12'
+                                className='input-style pl-2 max-w-[52px]'
                                 id='birthdate-year'
                                 name='birthdate.year'
                                 value={formData.birthdate.year}

@@ -13,7 +13,7 @@ function BuyTobereal({ data }: { data: any }) {
                 />
                 <div className='ContentTobereal '>
                     <p className='text-black text-base font-medium'>{data?.Name}</p>
-                    <div className='UserContentTB flex flex-col pt-2 pl-2 gap-1'>
+                    <div className='UserContentTB flex flex-col p-0 sm:pt-2 sm:pl-2 gap-1'>
                         <p className='text-contentTB'>Project: {data?.project}</p>
                         <p className='text-contentTB'>Location: {data?.location}</p>
                         <p className='text-contentTB'>Content: {data?.content}</p>
