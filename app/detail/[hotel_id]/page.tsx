@@ -193,10 +193,10 @@ function DetailHotel() {
                             </div>
                         </div>
                         {/* col right */}
-                        
+                                        
                         <div
-                            className={`sm:max-w-full  lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
-                            <div className='w-full mx-auto shadow-yellow bg-white border border-primary/30 sticky top-[110px]'>
+                            className={`sm:max-w-full lg:max-w-[33.3333%]  lg:basis-[33.3333%] xl:max-w-[31%] xl:basis-[31%] flex-shrink-0 ${inter.className} `}>
+                            <div className='w-full md:max-w-[60%] lg:max-w-full mx-auto shadow-yellow bg-white border border-primary/30 sticky top-[110px]'>
                                 {/* head-card */}
                                 <div className='lg:h-[48px] xl:h-[54px] w-full flex items-center justify-end pr-5 bg-primary '>
                                     <div className='flex items-center justify-end cursor-pointer py-2 group'>

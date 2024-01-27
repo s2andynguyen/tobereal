@@ -25,7 +25,7 @@ const SelectPlaceCustom = () => {
         hover:shadow-md transition duration-200 select-none z-[1]'
         onClick={toggleShow} onFocus={toggleShow} onBlur={toggleShow}>
             <span>jakarta</span>
-            <ArrowDown />
+            <div className={`transition duration-200 ${ isShow ? '-rotate-180' : 'rotate-0'}`}><ArrowDown /></div>
         </div>
         
             <ul className={`absolute top-8 sm:top-12 right-0 shadow-gray w-[200px]

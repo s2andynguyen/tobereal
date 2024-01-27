@@ -19,8 +19,9 @@ function WeeklyHotDeals() {
     }, [])
     return (
         <div className='pt-3 sm:pt-0 bg-gradient-pink'>
+            {/* container mx-auto px-2 md:px-4 xl:px-[57px] mb-3 sm:mb-0 */}
             {/* title */}
-            <div className='sm:bg-white bg-transparent -translate-y-px'>
+            <div className='sm:bg-white bg-transparent -translate-y-px relative z-[1]'>
                 <div className='container mx-auto px-2 md:px-4 xl:px-[57px]'>
                     <div className='flex flex-row sm:items-center items-start justify-between pb-2 sm:pb-4 md:px-[14px] pl-3'>
                         <div className='flex lg:flex-row flex-col gap-1 lg:gap-7 lg:items-center items-start'>
