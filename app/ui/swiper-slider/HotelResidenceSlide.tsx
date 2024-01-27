@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { dataHotel } from '../model/hotelRoom'
+import { dataHotel } from '../../../dummy-data/home/hotelRoom'
 import CardNormal from '../re-use/CardNormal'
 import SwiperWrap from '@/components/SwiperWrap'
 import ButtonPrevSwiper from './ButtonPrevSwiper'

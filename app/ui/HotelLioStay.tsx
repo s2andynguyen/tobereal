@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { SwiperSlide } from 'swiper/react'
-import { dataLioStay } from './model/hotelRoom'
+import { dataLioStay } from '../../dummy-data/home/hotelRoom'
 import Image from 'next/image'
 import SwiperWrap from '@/components/SwiperWrap'
 import HotelLioStaySkeleton from './skeletons/HotelLioStaySkeleton'

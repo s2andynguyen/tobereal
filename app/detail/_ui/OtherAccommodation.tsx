@@ -2,7 +2,7 @@
 import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 import SwiperWrap from '@/components/SwiperWrap'
-import { ApartmentList } from '@/app/ui/model/ApartmentList'
+import { ApartmentList } from '@/dummy-data/home/ApartmentList'
 import CardRecommended from '@/app/ui/re-use/CardRecommended'
 import ButtonPrevSwiper from '@/app/ui/swiper-slider/ButtonPrevSwiper'
 import ButtonNextSwiper from '@/app/ui/swiper-slider/ButtonNextSwiper'

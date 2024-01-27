@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { SwiperSlide } from 'swiper/react'
-import { hotelRoom } from '../model/hotelRoom'
+import { hotelRoom } from '../../../dummy-data/home/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
 import CardWithSale from '../re-use/CardWithSale'
 import ButtonPrevSwiper from '../swiper-slider/ButtonPrevSwiper'

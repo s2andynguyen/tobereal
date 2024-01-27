@@ -39,13 +39,13 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 function DetailHotel() {
     return (
         <MainLayout>
-            <div className='container mx-auto min-h-[1800px] font-montserrat pb-16'>
-                <div className='px-3 lg:px-6 xl:px-16 pt-5 sm:pt-10 pb-20'>
+            <div className='container mx-auto min-h-[1800px] font-montserrat pt-3 sm:pt-10 pb-36 '>
+                <div className='px-3 lg:px-6 xl:px-16 '>
                     {/* Breadcrum Render */}
                     <DetailBreadcrumb place='Jakarta' hotel='Gran Melia Jakarta' />
 
                     {/* Group Image */}
-                    <div className='mt-5 mb-4 md:mb-6 xl:mb-12'>
+                    <div className='py-3 md:mb-6 xl:mb-12'>
                         <ImageHighlight listImage={ListHotelImageDemo} />
                     </div>
 
@@ -54,15 +54,18 @@ function DetailHotel() {
                         {/* col left */}
                         <div className='lg:max-w-[66.6667%] lg:basis-[66.6667%] xl:max-w-[69%] xl:basis-[69%] flex-grow min-h-20 mb-6 lg:pr-5 xl:px-2'>
                             {/* title */}
-                            <div className='flex items-center flex-wrap md:flex-nowrap gap-2 sm:gap-[30px] lg:justify-between lg:pr-8 mb-4 sm:mb-0'>
-                                <h2 className='text-[18px] flex-grow xl:text-2xl font-bold'>
+                            {/* <div className='flex items-center flex-wrap md:flex-nowrap gap-2 sm:gap-[30px] lg:justify-between lg:pr-8 mb-4 sm:mb-0'> */}
+                            <div className='flex items-center flex-wrap md:flex-nowrap gap-2 sm:gap-[30px] lg:pr-8 mb-4 sm:mb-0'>
+                                <h2 className='text-sm sm:text-[18px] leading-tight flex-grow-0 xl:text-2xl font-bold'>
                                     Gran Melia Hotel Jakarta - Jakarta
                                 </h2>
-                                <div className='h-12 sm:h-14 w-48 sm:w-32 font-bold text-center leading-[24px] py-1 bg-primary rounded-[5px] flex justify-center items-center'>
-                                    Hotel Residence 🏨
+                                <div className='flex items-center flex-grow sm:flex-grow-0 sm:gap-7'>
+                                    <div className='h-9 sm:h-14 w-48 sm:w-32 sm:text-[16px] text-sm font-bold text-center leading-[24px] py-1 bg-primary rounded-[5px] flex justify-center items-center'>
+                                        Hotel Residence 🏨
+                                    </div>
+                                    {/* Heart icon */}
+                                    <div className='ml-auto sm:ml-0'><HeartItemAction liked={true} /></div>
                                 </div>
-                                {/* Heart icon */}
-                                <HeartItemAction liked={true} />
                             </div>
                             {/* Rating */}
                             <div className='flex item-center gap-2 mb-5'>
@@ -104,7 +107,7 @@ function DetailHotel() {
                             </div>
 
                             {/* Description */}
-                            <p className='py-4 mb-6 max-w-[567px] text-[#909090] font-bold text-[10px] border-t border-b  border-[#e3e3e3]'>
+                            <p className='py-4 mb-6 max-sm:max-w-[567px] lg:max-w-[567px] text-[#909090] font-bold text-[10px] border-t border-b  border-[#e3e3e3]'>
                                 This accommodation is rented on a monthly basis and
                                 includes: 1. Maintenance fee 2. Electricity & Water 3.
                                 Internet 4. Daily Housekeeping 5. Laundry 2 free clothes /

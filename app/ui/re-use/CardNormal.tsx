@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { formatter } from '@/lib/helper'
-import { hotelRoom } from '../model/hotelRoom'
+import { hotelRoom } from '../../../dummy-data/home/hotelRoom'
 import { renderStart } from '@/lib/render'
 import Place from '@/icons/Header/Blockhead/Place'
 import Link from 'next/link'

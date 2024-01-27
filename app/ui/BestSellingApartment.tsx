@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SwiperSlide } from 'swiper/react'
 
-import { BestSellingList } from './model/BestSellingList'
+import { BestSellingList } from '../../dummy-data/home/BestSellingList'
 import CardRecommended from './re-use/CardRecommended'
 import SwiperWrap from '@/components/SwiperWrap'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-import { dataHotel } from './model/hotelRoom'
+import { dataHotel } from '../../dummy-data/home/hotelRoom'
 import SliderWithSale from './re-use/SliderWithSale'
 import ButtonSeeAll from './re-use/ButtonSeeAll'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'

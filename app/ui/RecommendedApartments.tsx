@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SwiperSlide } from 'swiper/react'
 
-import { ApartmentList } from './model/ApartmentList'
+import { ApartmentList } from '../../dummy-data/home/ApartmentList'
 import CardRecommended from './re-use/CardRecommended'
 import SwiperWrap from '@/components/SwiperWrap'
 import ButtonPrevSwiper from './swiper-slider/ButtonPrevSwiper'

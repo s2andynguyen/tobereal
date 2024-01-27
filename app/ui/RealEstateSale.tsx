@@ -4,7 +4,7 @@ import { SwiperSlide } from 'swiper/react'
 import { IoIosArrowForward } from 'react-icons/io'
 import Image from 'next/image'
 
-import { dataRealSale } from './model/hotelRoom'
+import { dataRealSale } from '../../dummy-data/home/hotelRoom'
 import SwiperWrap from '@/components/SwiperWrap'
 import RealEstateSaleSkeleton from './skeletons/RealEstateSaleSkeleton'
 import ButtonNextSwiper from './swiper-slider/ButtonNextSwiper'

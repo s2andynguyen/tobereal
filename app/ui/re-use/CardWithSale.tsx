@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { formatter } from '@/lib/helper'
-import { hotelRoom } from '../model/hotelRoom'
+import { hotelRoom } from '../../../dummy-data/home/hotelRoom'
 import Place from '@/icons/Header/Blockhead/Place'
 import Link from 'next/link'
 const CardWithSale: React.FC<hotelRoom> = ({
