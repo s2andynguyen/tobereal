@@ -8,13 +8,13 @@ import { api_content } from './product'
 import { grid } from './grid'
 import Main from './ui/Grid/page'
 import Page from './ui/Product/page'
+
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
-
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import MainLayout from '@/layouts/MainLayout'
 
