@@ -172,10 +172,9 @@
 }
 
 .myswiper img {
-    object-fit: cover;
     background-size: 100% 100%;
-    height: 165px;
-    width: 180px;
+    height: 180px;
+    width: 200px;
 }
 
 .swiper-slide {
@@ -241,8 +240,8 @@
 .container_card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 160px;
-    align-items: center;
+    height: 550px;
+    padding: 100px;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

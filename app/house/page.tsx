@@ -44,7 +44,7 @@ export default function House() {
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
-                                    label='Asset type'
+
                                     placeholder='Asset type'
                                 />
                             )}
@@ -64,7 +64,6 @@ export default function House() {
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
-                                    label='Interior'
                                     placeholder='Interior'
                                 />
                             )}
@@ -85,14 +84,13 @@ export default function House() {
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
-                                    label='Asset '
                                     placeholder='Asset'
                                 />
                             )}
                         />
 
                         <button className='button'>
-                            <a href='#' className='registered'>
+                            <a href='' className='registered'>
                                 REGISTERED
                             </a>
                         </button>
