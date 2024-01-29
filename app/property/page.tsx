@@ -18,7 +18,7 @@ function Property() {
         <MainLayout>
             <div className='wrapper bg-white'>
                 <div className='home-wrap h-[650px] md:h-[450px]'>
-                    <div className='Home-Solution container px-5 flex-col md:flex-row '>
+                    <div className='Home-Solution container px-5 flex-col md:flex-row gap-16'>
                         <div className='title-Home text-center md:text-left'>
                             Chect out All ongoing promo
                         </div>
