@@ -31,7 +31,7 @@ function Favourite() {
                                 alt='UserJakarta'
                             />
                             <div className='contentUsers-Favourite'>
-                                <h4 className='w-[180px] text-black text-[10px] font-medium'>
+                                <h4 className='max-w-[180px] text-black text-[10px] font-medium'>
                                     {card.UserName}
                                 </h4>
                                 <p className='w-[29px] text-black text-[7px] font-light'>
