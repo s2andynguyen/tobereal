@@ -6,8 +6,8 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { api_content } from './product'
 import { grid } from './grid'
-import Main from './ui/Grid/page'
-import Page from './ui/Product/page'
+import Main from './ui/Grid/grid'
+import Page from './ui/Product/Product'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -319,12 +319,18 @@ export default function House() {
                     <div className='text-api'>Servis Pemasaran Rumah oleh TO BE REAL</div>
                     <div className='container_grid'>
                         {api_content?.map((card) => (
-                            <Main data={card} key={card?.id} />
+                            <Main 
+                            img={card.img}
+                            name={card.name}
+                            title={card.title} key={card.id} />
                         ))}
                     </div>
                     <div className='container_card'>
                         {grid?.map((card) => (
-                            <Page data={card} key={card?.id} />
+                            <Page 
+                            img={card.img}
+                            name={card.name}
+                            title={card.title} key={card?.id} />
                         ))}
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import HotelResidenceSlide from './swiper-slider/HotelResidenceSlide'
 import Image from 'next/image'

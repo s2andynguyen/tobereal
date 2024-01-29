@@ -1,20 +1,13 @@
-'use clent'
 import './style.css'
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import ReCAPTCHA from 'react-google-recaptcha'
 import { useState } from 'react';
 
 
 export default function Payment() {
-    const [captcha, setCaptcha] = useState<string | null>();
     const onSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log(captcha)
-        if (captcha) {
-            console.log('ReCAPTCHA Verified!')
-        }
     }
     return (
         <div className="Payment">
@@ -73,7 +66,6 @@ export default function Payment() {
                     <label htmlFor="whatsapp" className="form_control">NPWP Address</label>
                     <textarea placeholder="NPWP Ownership" rows={4} cols={40} className='Address' />
                 </div>
-                <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} className="mx_auto" onChange={setCaptcha} />
             </form>
             <div className="payment_product">
                 <div className="payment_card">

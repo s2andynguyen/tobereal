@@ -1,4 +1,3 @@
-'use client'
 import MainLayout from '@/layouts/MainLayout'
 
 import HotelResidence from './ui/HotelResidence'

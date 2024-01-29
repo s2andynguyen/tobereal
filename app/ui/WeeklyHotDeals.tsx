@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react'
 
 import { dataFindBest } from '../../dummy-data/home/hotelRoom'

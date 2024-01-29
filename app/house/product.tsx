@@ -1,6 +1,10 @@
-import { title } from "process"
-
-export const api_content = [
+interface MainPathProps {
+    id?: number,
+    img: string,
+    name: string,
+    title: string
+}
+export const api_content:MainPathProps[] = [
     {
         id: 1,
         img: "/images/house/img/Layer_1.png",

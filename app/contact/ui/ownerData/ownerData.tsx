@@ -1,4 +1,3 @@
-'use clent'
 import './style.css'
 import * as React from 'react'
 import TextField from '@mui/material/TextField'
@@ -7,7 +6,7 @@ import Autocomplete from '@mui/material/Autocomplete'
 export default function OwnerData() {
     return (
         <div className='User'>
-            <form method='post' className='form_group'>
+            <div className='form_group'>
                 <div className='p-3'>
                     <label htmlFor='name' className='form_control'>
                         Full Name
@@ -42,7 +41,7 @@ export default function OwnerData() {
                         placeholder='Whatsapp'
                     />
                 </div>
-            </form>
+            </div>
 
             <Autocomplete
                 disablePortal

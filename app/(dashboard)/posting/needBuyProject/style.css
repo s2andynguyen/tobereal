@@ -13,10 +13,7 @@
     font-weight: 500;
     line-height: 35.5px; /* 221.875% */
 }
-.Gr-CustomersSelects {
-    /* gap: 20px;
-    align-items: start; */
-}
+
 .SelectSearch {
     display: flex;
     flex-direction: column;
