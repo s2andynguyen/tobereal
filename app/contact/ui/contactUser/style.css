@@ -5,7 +5,6 @@
     width: 380px;
 }
 
-
 .basic_information {
     font-family: "Montserrat-Bold", Helvetica;
     color: #000;
@@ -13,9 +12,6 @@
     font-weight: 700;
     display: flex;
 }
-
-
-
 
 .text_button {
     color: #2d2d2d;

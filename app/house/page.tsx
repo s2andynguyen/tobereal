@@ -133,7 +133,7 @@ export default function House() {
                             }}
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}
-                            className='myswiper'>
+                            className='my-container-swiper'>
                             <SwiperSlide>
                                 <div className='product_color'>
                                     <p className='professional'>
@@ -185,13 +185,13 @@ export default function House() {
                                             No. 1 in Indonesia
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             ................. is the number 1 and largest
                                             site for residential rentals. Serving tens of
                                             thousands of rentals every month.
@@ -207,13 +207,13 @@ export default function House() {
                                             Property Partner Site
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             Marketing through leading property sites in
                                             Indonesia.
                                         </span>
@@ -228,13 +228,13 @@ export default function House() {
                                             Passive Income
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             Monthly rent
                                             <br />
                                             Annual Rent
@@ -250,13 +250,13 @@ export default function House() {
                                             Search Engine Rank
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             ................. has the first page ranking
                                             in search engines mostly for apartment rental
                                             keywords.
@@ -272,13 +272,13 @@ export default function House() {
                                             Corporate Partner
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             ................... has been dedicated to
                                             helping hundreds of our corporate partners in
                                             providing accommodation for expatriate and
@@ -295,13 +295,13 @@ export default function House() {
                                             Agent Partner
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='container_swiperslide_span'>
                                             Agent Partners are not our competitors, but
                                             partners. We collaborate with property agents
                                             throughout Indonesia.

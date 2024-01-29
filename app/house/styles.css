@@ -154,7 +154,7 @@
     font-weight: 700;
 }
 
-.span {
+.container_swiperslide_span {
     font-family: "Montserrat-Medium", Helvetica;
     font-size: 13px;
     font-weight: 500;
@@ -166,27 +166,23 @@
 }
 
 
-.myswiper {
+.my-container-swiper {
     width: 100%;
     height: 100%;
 }
 
-.myswiper img {
+.my-container-swiper img {
     background-size: 100% 100%;
     height: 180px;
     width: 200px;
 }
 
-.swiper-slide {
-    display: flex;
-}
-
-.swiper-button-prev,
+.slider_tobe .swiper-button-prev,
 .swiper-button-next {
-    width: calc(var(--swiper-navigation-size) / 50 * 50) !important;
+    width: calc(var(--swiper-navigation-size) / 30 * 30) !important;
 }
 
-.swiper-button-prev,
+.slider_tobe .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
     background-image: url(/images/house/svg/Trai.svg);
     background-size: cover;
@@ -194,7 +190,7 @@
     right: auto;
 }
 
-.swiper-button-next,
+.slider_tobe .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
     background-image: url(/images/house/svg/phai.svg);
     background-size: cover;
@@ -202,17 +198,17 @@
     left: auto;
 }
 
-.swiper-button-lock {
+.slider_tobe .swiper-button-lock {
     display: none;
 }
 
-.swiper-backface-hidden .swiper-slide {
+.slider_tobe .swiper-backface-hidden .swiper-slide {
     display: flex;
     justify-content: space-around;
     padding: 40px;
 }
 
-.swiper-button-prev:after,
+.slider_tobe .swiper-button-prev:after,
 .swiper-button-next:after {
     display: none;
 }
@@ -244,11 +240,11 @@
     padding: 100px;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+.slider_tobe .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     background-color: rgb(0, 0, 0);
 }
 
-.css-sxxdbu-MuiAutocomplete-root .MuiOutlinedInput-root {
+.overlap .css-sxxdbu-MuiAutocomplete-root .MuiOutlinedInput-root {
     padding: 4px;
     border-radius: 50px;
     margin: 5px;
