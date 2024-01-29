@@ -17,16 +17,16 @@ function Favourite() {
                     <h2 className='top-title-Favourite'>Favourite</h2>
                 </div>
             </div>
-            <div className='Gr-form-Favourites flex flex-col items-center justify-center gap-3'>
+            <div className='Gr-form-Favourites px-2 py-3 sm:px-4 flex flex-col items-center justify-center gap-3'>
                 {USER_Jakartas.map((card, index) => (
                     <div
                         key={card.id}
-                        className='wrap-gr-Favourites flex items-center justify-center gap-7 hover:shadow-lg'>
+                        className='wrap-gr-Favourites flex items-center justify-between px-4 gap-0 hover:shadow-lg'>
                         <div className='Gr-user-Jakartas flex items-center gap-1'>
                             <Image
                                 width={31}
                                 height={31}
-                                className='w-[31px] h-[auto]'
+                                className='min-w-[31px] h-[auto]'
                                 src={card.Userimg}
                                 alt='UserJakarta'
                             />
@@ -42,7 +42,7 @@ function Favourite() {
                         <Image
                             width={25}
                             height={19}
-                            className='w-[25px] h-[auto]'
+                            className='min-w-[25px] h-[auto]'
                             src={card.FavouriteImg}
                             alt='HeartShape'
                         />

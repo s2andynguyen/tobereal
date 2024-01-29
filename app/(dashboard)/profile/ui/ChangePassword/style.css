@@ -1,7 +1,7 @@
-.wrap-Manages {
-    width: 335px;
+.wrap-changePasswords {
+    max-width: 335px;
+    width: 100%;
     height: 326px;
-
     border-radius: 10px;
     background: radial-gradient(
         854.96% 154.48% at 0% 0%,
@@ -10,7 +10,7 @@
     );
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
-.top-title-Manage {
+.top-title-changePassword {
     color: #000;
 
     font-size: 20px;
@@ -18,7 +18,7 @@
     font-weight: 700;
     line-height: normal;
 }
-.bg-TitleManage {
+.bg-TitlechangePassword {
     width: 100%;
     height: 43px;
     border-radius: 10px;
@@ -29,46 +29,45 @@
     );
     box-shadow: 0px 2px 5px 0px rgba(255, 255, 255, 0.2);
 }
-.Gr-form-Manages {
-    padding: 20px;
+.Gr-form-changePasswords {
+    padding: 9px 21px;
 }
-.Btn-Manage {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 301px;
-    height: 29px;
+.Input-Password {
+    width: 100%;
+    max-width: 293px;
+    height: 34px;
     border-radius: 4px;
-    background: linear-gradient(180deg, #f0b90b 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    /* text */
+    border: 1px solid #c8c8c8;
+}
+.textLabelPassword {
     color: #000;
     font-size: 13px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
-    padding: 0 10px 0 20px;
 }
-
-
-.btn-parent {
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5) !important;
-}
-.wrap-childs-Manage {
-    border-radius: 5px;
-    background: #eee;
-    width: 301px;
-    height: 88px;
-}
-.Btn-child-Manage {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 301px;
-    padding: 0 10px 0 20px;
-    color: #000;
+.ForgotA {
+    color: #f00 !important;
     font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
 }
+.ForgotA:hover {
+    color: #ffffff;
+}
+.btn-submit-password {
+    color: #2e2e2e;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 123px;
+    height: 32px;
+    padding: 18px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ffe259 15.1%, #ffa751 85.42%);
+}
+

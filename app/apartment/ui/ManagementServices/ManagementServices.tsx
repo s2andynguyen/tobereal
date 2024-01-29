@@ -7,7 +7,7 @@ function ManagementServices({ data }: { data: any }) {
             <Image
                 width={175}
                 height={162}
-                className='h-[162px] w-[auto]'
+                className='h-[auto] max-w-[175px] w-full'
                 src={data?.img}
                 alt='Managements img'
             />

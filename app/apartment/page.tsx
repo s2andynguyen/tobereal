@@ -69,9 +69,9 @@ function Apartment() {
     const getTitleIcon = (tabIndex: number) => {
         // Check if the current tab is active and return the appropriate icon
         return tabIndex === activeTabIndex && titleIconStates[tabIndex] === 2 ? (
-            <IoAdd />
-        ) : (
             <IoRemoveOutline />
+        ) : (
+            <IoAdd />
         )
     }
 
@@ -86,16 +86,16 @@ function Apartment() {
         <MainLayout>
             <div className='wrapper bg-white mb-32'>
                 <div className='aprtment-wrap h-[650px] md:h-[450px]'>
-                    <div className='Apartment-Solution container flex-col  md:flex-row'>
+                    <div className='Apartment-Solution container flex-col px-5 md:flex-row'>
                         <div className='title-Apartment text-center md:text-left'>
                             Empty House & Apartment Solutions
                         </div>
                         <RegisterNow />
                     </div>
                 </div>
-                <div className='Management-Services container'>
+                <div className='Management-Services container p-6 md:p-12'>
                     <h2 className='text-black font-bold text-center text-2xl md:text-[32px]'>
-                        Apartment Management Services by S - HOME
+                        Apartment Management Services by S HOME
                     </h2>
 
                     <div className='Gr-Services grid grid-cols-1 gap-0 md:grid-cols-3 '>
@@ -104,12 +104,12 @@ function Apartment() {
                         ))}
                     </div>
                 </div>
-                <div className='Earnings-wrap container gap-10'>
+                <div className='Earnings-wrap container gap-10 p-6 md:p-12'>
                     {CALCULATES_DT?.map((card) => (
                         <Calculates data={card} key={card?.id} />
                     ))}
                 </div>
-                <div className='wrap-activities container gap-16'>
+                <div className='wrap-activities container gap-16 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl text-center'>
                         All about your units activities at your fingertips
                     </h3>
@@ -241,9 +241,9 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
-                <div className='wrap-MarketingPartners container gap-6 lg:gap-8'>
+                <div className='wrap-MarketingPartners container gap-6 lg:gap-8 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl p-0 text-center lg:p-8'>
-                        S - HOME Online Marketing Partner
+                        S HOME Online Marketing Partner
                     </h3>
 
                     <div className='Top-Logos w-full flex flex-col gap-2 items-center justify-center lg:gap-9 md:flex-row '>
@@ -251,21 +251,21 @@ function Apartment() {
                             <Image
                                 width={142}
                                 height={38}
-                                className='w-[142px] h-[auto]'
+                                className='w-[112px] md:w-[142px] h-[auto]'
                                 src={'/images/apartment/logo-1.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={72}
                                 height={38}
-                                className='w-[72px] h-[auto]'
+                                className='w-[42px] md:w-[72px] h-[auto]'
                                 src={'/images/apartment/logo-2.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={120}
                                 height={33}
-                                className='w-[120px] h-[auto]'
+                                className='w-[90px] md:w-[120px] h-[auto]'
                                 src={'/images/apartment/logo-3.png'}
                                 alt='top-logo'
                             />
@@ -274,14 +274,14 @@ function Apartment() {
                             <Image
                                 width={105}
                                 height={38}
-                                className='w-[105px] h-[auto]'
+                                className='w-[75px] md:w-[105px] h-[auto]'
                                 src={'/images/apartment/logo-4.png'}
                                 alt='top-logo'
                             />
                             <Image
                                 width={98}
                                 height={38}
-                                className='w-[98px] h-[auto]'
+                                className='w-[68px] md:w-[98px] h-[auto]'
                                 src={'/images/apartment/logo-5.png'}
                                 alt='top-logo'
                             />
@@ -292,14 +292,14 @@ function Apartment() {
                             <Image
                                 width={115}
                                 height={38}
-                                className='h-[auto] w-[115px]'
+                                className='h-[auto] w-[85px] md:w-[115px]'
                                 src={'/images/apartment/logo-6.png'}
                                 alt='bottom-logo'
                             />
                             <Image
                                 width={179}
                                 height={41}
-                                className='h-[auto] w-[179px]'
+                                className='h-[auto] w-[149px] md:w-[179px]'
                                 src={'/images/apartment/logo-7.png'}
                                 alt='bottom-logo'
                             />
@@ -308,7 +308,7 @@ function Apartment() {
                             <Image
                                 width={62}
                                 height={25}
-                                className='h-[auto] w-[62px]'
+                                className='h-[auto] w-[32px] md:w-[62px]'
                                 src={'/images/apartment/logo-8.png'}
                                 alt='bottom-logo'
                             />
@@ -316,14 +316,14 @@ function Apartment() {
                             <Image
                                 width={201}
                                 height={31}
-                                className='h-[auto] w-[201px]'
+                                className='h-[auto] w-[171px] md:w-[201px]'
                                 src={'/images/apartment/logo-9.png'}
                                 alt='bottom-logo'
                             />
                         </div>
                     </div>
                 </div>
-                <div className='wrap-properties container'>
+                <div className='wrap-properties container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         Whose properties do we market?
                     </h3>
@@ -340,11 +340,11 @@ function Apartment() {
                         ))}
                     </div>
                 </div>
-                <div className='wrap-Testimonials container'>
+                <div className='wrap-Testimonials container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8'>
                         Testimonials
                     </h3>
-                    <div className='slider-wrapper w-full'>
+                    <div className='slider-sliders-katherrine__wrapper w-full'>
                         <Swiper
                             className='sliders-katherrine flex'
                             loop={false}
@@ -398,7 +398,7 @@ function Apartment() {
                         </Swiper>
                     </div>
                 </div>
-                <div className='Wrap-DevloperManagement container gap-5'>
+                <div className='Wrap-DevloperManagement container gap-5 p-6 md:p-12'>
                     <div className='nav-DevloperManagements flex-col items-center w-full gap-10'>
                         <div className='flex gap-10 justify-center'>
                             <button
@@ -435,7 +435,7 @@ function Apartment() {
                         </div>
 
                         {isShowContent && (
-                            <div className='w-full'>
+                            <div className='sliders-Dev__wrapper w-full'>
                                 <Swiper
                                     className='sliders-Dev'
                                     loop={false}
@@ -495,12 +495,12 @@ function Apartment() {
                         )}
 
                         {!isShowContent && (
-                            <div className='wrap-Logo-Manage flex flex-col justify-center align-center w-full min-h-[300px] '>
-                                <div className='TopLogos-Management flex justify-center'>
+                            <div className='wrap-Logo-Manage flex flex-col justify-center items-center w-full min-h-[300px] '>
+                                <div className='TopLogos-Management flex flex-col md:flex-row justify-center'>
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management.png'
                                         }
@@ -509,7 +509,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management1.png'
                                         }
@@ -518,7 +518,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management2.png'
                                         }
@@ -527,7 +527,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management3.png'
                                         }
@@ -536,18 +536,18 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management4.png'
                                         }
                                         alt='logoPartner'
                                     />
                                 </div>
-                                <div className='BottomLogos-Managemant flex justify-center'>
+                                <div className='BottomLogos-Managemant flex flex-col md:flex-row justify-center'>
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management5.png'
                                         }
@@ -556,7 +556,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management6.png'
                                         }
@@ -565,7 +565,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management7.png'
                                         }
@@ -574,7 +574,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management8.png'
                                         }
@@ -583,7 +583,7 @@ function Apartment() {
                                     <Image
                                         width={138}
                                         height={80}
-                                        className='w-[70px] h-[auto] lg:w-[138px]'
+                                        className='h-[auto] w-[138px]'
                                         src={
                                             '/images/apartment/logoPartner-Management9.png'
                                         }
@@ -594,9 +594,9 @@ function Apartment() {
                         )}
                     </div>
                 </div>
-                <div className='wrap-TracesNews container gap-7'>
+                <div className='wrap-TracesNews container gap-7 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
-                        S - HOME Traces In The News
+                        S HOME Traces In The News
                     </h3>
 
                     <Swiper
@@ -651,7 +651,7 @@ function Apartment() {
                     </Swiper>
                     <button className='btn-SeeMore wrap-btn'>See More ➔</button>
                 </div>
-                <div className='apartmentHouse container flex-col lg:!flex-row'>
+                <div className='apartmentHouse container flex-col lg:!flex-row p-6 md:p-12'>
                     <div className='wrap-content-apartment pb-10 flex flex-col items-center lg:items-start'>
                         <h3 className='title-Calculates text-xl md:text-2xl text-center lg:!text-left'>
                             Is your apartment & house empty?
@@ -673,15 +673,15 @@ function Apartment() {
                     />
                 </div>
 
-                <div className='Wrap-FAQ container'>
+                <div className='Wrap-FAQ container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         Frequently Asked Questions(FAQ)
                     </h3>
                     <div className='flex flex-col gap-12 lg:flex-row'>
-                        <div className='questions max-w-[420px] md:min-w-[490px]'>
+                        <div className='questions w-full max-w-[490px] h-[350px] sm:h-[322px] xl:min-w-[490px] p-2'>
                             {tabContents.map((tab, tabIndex) => (
                                 <button
-                                    className='text-questions title-Calculates text-start text-xl flex md:text-2xl w-[364px] md:w-[434px]'
+                                    className='text-questions last:border-none title-Calculates text-start text-xl flex md:text-2xl w-full max-w-[434px]'
                                     key={tabIndex}
                                     onClick={() => handleTabClick(tabIndex)}>
                                     {getTitleIcon(tabIndex)}
@@ -697,20 +697,22 @@ function Apartment() {
                                         <li
                                             key={subContent.id}
                                             className={classNames(
-                                                'list-item max-w-[420px] md:min-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
+                                                'list-item w-full max-w-[490px] flex-col text-black text-base font-bold font-Montserrat'
                                             )}>
                                             <div
-                                                className='flex justify-between'
+                                                className='flex justify-between items-center pt-5 pb-5 pl-7 pr-7'
                                                 onClick={() =>
                                                     handleSubContentClick(subContentIndex)
                                                 }>
                                                 <span className='content-text-answers max-w-[360px]'>
                                                     {subContent.text}
                                                 </span>
-                                                <div className='rotate-180 origin-center delay-100'>{getTextIcon(subContentIndex)}</div>
+                                                <div className='rotate-180 origin-center delay-100'>
+                                                    {getTextIcon(subContentIndex)}
+                                                </div>
                                             </div>
                                             {visibleContentIndex === subContentIndex && (
-                                                <div className='show-content max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
+                                                <div className='show-content pl-5 pr-5 pb-7 max-w-[430px] text-black text-[13px] font-medium font-Montserrat'>
                                                     {
                                                         tabContents[activeTabIndex]
                                                             .showContent[subContentIndex]
@@ -724,7 +726,6 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </MainLayout>
     )

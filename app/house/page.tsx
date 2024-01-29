@@ -100,7 +100,7 @@ export default function House() {
                 </div>
 
                 <div className='product_menu'>
-                    <div className='product_menu_btn'>
+                    <div className='product_menu_btn gap-9'>
                         <div className='container_menu'>
                             <div className='content_trusted'>
                                 Trusted Real Estate Partner!
@@ -120,7 +120,7 @@ export default function House() {
                 </div>
                 <div className='content_tobe'>
                     <div className='to-be-real'>
-                        Home Marketing Benefits by Smart REAL
+                        Home Marketing Benefits by S Home
                     </div>
                     <div className='slider_tobe'>
                         <Swiper

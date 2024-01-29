@@ -18,9 +18,11 @@
     box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
 }
 .Gr-RegisterNow {
+    max-width: 400px;
+    width: 100%;
+    height: 254px;
     display: flex;
     flex-direction: column;
-    /* padding: 20px 20px; */
     border-radius: 20px;
     background: #fff;
     box-shadow: 0px 10px 11.2px 0px rgba(240, 185, 11, 0.25);
@@ -36,8 +38,8 @@
 .Asset-Gr {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px 0 20px;
+    gap: 12px;
+    
     align-items: center;
 }
 .text-asset {
@@ -59,8 +61,10 @@
     background: #fff;
 }
 .REGISTERED-btn {
-    width: 286px;
+    max-width: 286px;
+    width: 100%;
     height: 47px;
+    margin-top: 15px;
 }
 /* .MuiAutocomplete-hasPopupIcon.css-10v2avv-MuiAutocomplete-root .MuiOutlinedInput-root,
 .MuiAutocomplete-hasClearIcon.css-10v2avv-MuiAutocomplete-root .MuiOutlinedInput-root {

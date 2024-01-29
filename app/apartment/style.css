@@ -72,7 +72,7 @@
     z-index: -1;
 }
 .Apartment-Solution {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     position: relative;
     width: 100%;
@@ -88,27 +88,8 @@
     line-height: normal;
 }
 
-.Management-Services {
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
-
-.Earnings-wrap {
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
+.Management-Services,
+.Earnings-wrap,
 .Wrap-FAQ,
 .Wrap-DevloperManagement,
 .apartmentHouse,
@@ -124,12 +105,13 @@
     align-items: center;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    
 }
 .g-activies {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     align-items: center;
 }
 .title-activie {
@@ -154,19 +136,21 @@
     flex-direction: column;
 }
 
-.swiper-wrapper {
+.slider-sliders-katherrine__wrapper .swiper-wrapper,
+.sliders-Dev__wrapper .swiper-wrapper {
     display: flex;
     align-items: center;
     min-height: 300px;
     padding: 0 20px;
     /* margin-left: 30px; */
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.slider-sliders-katherrine__wrapper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.slider-sliders-katherrine__wrapper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     display: none;
 }
 .btn-SeeMore {
-    width: 355px !important;
+    max-width: 355px;
+    width: 100%;
     height: 40px !important;
 }
 .apartmentHouse {
@@ -190,7 +174,7 @@
     padding: 20px 0;
 }
 .questions {
-    height: 322px;
+    /* height: 322px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,7 +223,6 @@
 
 .list-item {
     display: flex;
-    padding: 19px 27px;
     border-radius: 10px;
     background: #fff;
     box-shadow: 0px 4px 11.2px 0px rgba(0, 0, 0, 0.25);
@@ -268,3 +251,9 @@
 }
 
 /* ... (other styles) */
+.slider-sliders-katherrine__wrapper .swiper-slide .swiper-slide-active,
+.sliders-Dev__wrapper .swiper-wrapper .swiper-slide .swiper-slide-active
+{
+    max-width: 187px;
+    width: 100%;
+}

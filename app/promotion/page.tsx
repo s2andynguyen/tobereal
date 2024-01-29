@@ -2,8 +2,6 @@ import HeadingSlideBlock from '@/components/HeadingSlideBlock'
 import MainLayout from '@/layouts/MainLayout'
 import { Metadata } from 'next'
 import React from 'react'
-import Image from 'next/image'
-import VoucherPercent from './ui/VoucherPercent'
 import VoucherItem from '@/components/VoucherItem'
 export const metadata: Metadata = {
     title: 'Promotion'

@@ -1,12 +1,4 @@
-.wrap-BuyProjects {
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-
-    flex-direction: column;
-    padding: 50px;
-}
-.textLabel-Select {
+.Need-textLabel-Select {
     color: #000;
     font-size: 16px;
     font-style: normal;
@@ -14,18 +6,18 @@
     line-height: 35.5px; /* 221.875% */
 }
 
-.SelectSearch {
+.Need-SelectSearch {
     display: flex;
     flex-direction: column;
     justify-content: start;
 }
-.inputSelect {
+.Need-inputSelect {
     width: 100%;
     height: 45px;
     border-radius: 8px;
     background: #e3e3e3;
 }
-.btn-SearchBuy {
+.btn-SearchBuyNeed {
     color: #000;
     font-size: 15px;
     font-style: normal;
@@ -36,4 +28,3 @@
     border-radius: 10px;
     background: linear-gradient(90deg, #f7e75a 0%, #ffc702 100%);
 }
-

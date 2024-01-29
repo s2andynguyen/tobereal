@@ -92,14 +92,14 @@ function InformationForm() {
                             className='input-style pl-5 min-w-[180px]'
                             type='email'
                             id='Email'
-                            name='Email'
+                            name=' Email'
                             value={formData.Email}
                             onChange={handleInputChange}
                             placeholder='Enter your Email'
                         />
                     </div>
                     <div className='flex justify-between items-center'>
-                        <label className='text-Information-input' htmlFor='Email'>
+                        <label className='text-Information-input' htmlFor='Phone'>
                             Phone:
                         </label>
                         <input
@@ -116,9 +116,9 @@ function InformationForm() {
                         <label className='text-Information-input' htmlFor='birthdate'>
                             Birthdate:
                         </label>
-                        <div className='Gr-birthdate flex gap-2 pr-8'>
+                        <div className='Gr-birthdate flex gap-2 pr-4'>
                             <input
-                                className='input-style !max-w-11'
+                                className='input-style pl-3 !max-w-12'
                                 type='number'
                                 id='birthdate-day'
                                 name='birthdate.day'
@@ -127,7 +127,7 @@ function InformationForm() {
                                 placeholder='Day'
                             />
                             <input
-                                className='input-style !max-w-11'
+                                className='input-style pl-3 !max-w-12'
                                 type='number'
                                 id='birthdate-month'
                                 name='birthdate.month'
@@ -136,10 +136,10 @@ function InformationForm() {
                                 placeholder='Month'
                             />
                             <select
-                                className='input-style !max-w-11'
+                                className='input-style pl-2 max-w-[52px]'
                                 id='birthdate-year'
                                 name='birthdate.year'
-                                value={formData.country}
+                                value={formData.birthdate.year}
                                 onChange={handleInputChange}>
                                 <option value=''>Year</option>
                                 <option value='1980'>1980</option>
@@ -165,7 +165,9 @@ function InformationForm() {
                             placeholder='Enter your address'
                         />
                     </div>
-                    <button className='SaveInformation-Btn mt-11 ml-14 hover:shadow-lg' type='submit'>
+                    <button
+                        className='SaveInformation-Btn mt-11 ml-14 hover:shadow-lg'
+                        type='submit'>
                         Save
                     </button>
                 </form>

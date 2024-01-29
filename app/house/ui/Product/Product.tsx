@@ -9,7 +9,7 @@ interface ProDuctProps {
 const ProDuct: React.FC<ProDuctProps> = ({ img, name, title }) => {
  
     return ( 
-        <div className="card">
+        <div className="house__product-card">
             <img src={img} alt="" />
             <h4>{name}</h4>
             <p>{title}</p>
