@@ -92,18 +92,20 @@ function Property() {
                         />
                     </div>
                 </div>
-                <div className=' wrap-Differences container !p-0'>
-                    <div className='TableDifference-wrap'>
-                        <button className='Difference-btn text-center md:text-left'>
-                            Difference between Apartment Management by S HOME
-                            <br />
-                            and Home Marketing by S HOME
-                        </button>
-
-                        <div className='wrap-Difference-table flex flex-col items-center pt-4 '>
-                            {Difference?.map((card) => (
-                                <TableDifference data={card} key={card?.id} />
-                            ))}
+                <div className='p-12 '>
+                    <div className=' wrap-Differences container !p-0'>
+                        <div className='TableDifference-wrap'>
+                            <button className='Difference-btn text-center md:text-left'>
+                                Difference between Apartment Management by S HOME
+                                <br />
+                                and Home Marketing by S HOME
+                            </button>
+    
+                            <div className='wrap-Difference-table flex flex-col items-center pt-4 '>
+                                {Difference?.map((card) => (
+                                    <TableDifference data={card} key={card?.id} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
