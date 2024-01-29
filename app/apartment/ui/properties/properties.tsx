@@ -11,7 +11,7 @@ function Properties({ data }: { data: any }) {
                 alt='properties'
             />
             <div className='box-propertie'>
-                <p className='content-propertie text-Calculate text-base md:text-xl '>
+                <p className='content-propertie text-base md:text-xl px-2'>
                     {data?.content}
                 </p>
             </div>

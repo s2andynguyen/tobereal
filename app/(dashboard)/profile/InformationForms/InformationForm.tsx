@@ -99,7 +99,7 @@ function InformationForm() {
                         />
                     </div>
                     <div className='flex justify-between items-center'>
-                        <label className='text-Information-input' htmlFor='Email'>
+                        <label className='text-Information-input' htmlFor='Phone'>
                             Phone:
                         </label>
                         <input

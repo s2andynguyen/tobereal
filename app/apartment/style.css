@@ -129,7 +129,8 @@
 .g-activies {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     align-items: center;
 }
 .title-activie {

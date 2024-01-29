@@ -47,12 +47,12 @@ function Property() {
                             src={'/images/property/SerOptions.png'}
                             alt=''
                         />
-                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center md:items-start '>
+                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center lg:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
-                                <h4 className='title-reuse text-center md:text-left'>
+                                <h4 className='title-reuse text-center lg:text-left'>
                                     Property Management
                                 </h4>
-                                <p className='text-PM text-center md:text-left'>
+                                <p className='text-PM text-center lg:text-left'>
                                     Professional management for your unit. Without any
                                     hassle, fully furnished and standardized. Can be
                                     rented daily, monthly and annually.
@@ -66,12 +66,12 @@ function Property() {
                         </div>
                     </div>
                     <div className='PropertyManagement-wrap flex items-center flex-col gap-10 w-full justify-between lg:flex-row'>
-                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center md:items-start '>
+                        <div className='informations-PM flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center lg:items-start '>
                             <div className='content-PM flex flex-col gap-5 '>
-                                <h4 className='title-reuse text-center md:text-left'>
+                                <h4 className='title-reuse text-center lg:text-left'>
                                     S HOME Realty
                                 </h4>
-                                <p className='text-PM text-center md:text-left'>
+                                <p className='text-PM text-center lg:text-left'>
                                     Professional management for your unit. Without any
                                     hassle, fully furnished and standardized. Can be
                                     rented daily, monthly and annually.
