@@ -1,7 +1,7 @@
-
-.legal_images{
+.legal_images {
     padding: 20px 0;
 }
+
 .text_legal {
     display: flex;
     flex-direction: column;
@@ -27,4 +27,44 @@
     line-height: normal;
     width: 361px;
 
+}
+
+.legal_images label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.legal_images input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+ 
+.legal_images .inputIntroductory[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 328px;
+    cursor: pointer;
+}
+
+.legal_images .selected-image-preview {
+    width: 226px;
+    height: 226px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.legal_images .selected-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

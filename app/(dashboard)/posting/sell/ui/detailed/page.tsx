@@ -41,7 +41,7 @@ const Asset = () => {
                     <div className="detailedInformation">
                         <div className="grid">
                             <div className="item">
-                                <label>Number of living rooms:</label>
+                                <p>Number of living rooms:</p>
                                 <div className="valueControl">
                                     <button onClick={() => decreaseValue(setLivingRooms)}>
                                         <Image
@@ -63,7 +63,7 @@ const Asset = () => {
                                 </div>
                             </div>
                             <div className="item">
-                                <label>Bedroom number:</label>
+                                <p>Bedroom number:</p>
                                 <div className="valueControl">
                                     <button onClick={() => decreaseValue(setBedrooms)}>
                                         <Image
@@ -85,7 +85,7 @@ const Asset = () => {
                                 </div>
                             </div>
                             <div className="item">
-                                <label>The toilet number:</label>
+                                <p>The toilet number:</p>
                                 <div className="valueControl">
                                     <button onClick={() => decreaseValue(setToilets)}>
                                         <Image
@@ -107,7 +107,7 @@ const Asset = () => {
                                 </div>
                             </div>
                             <div className="item">
-                                <label>Other rooms:</label>
+                                <p>Other rooms:</p>
                                 <div className='valueControl'>
                                     <button onClick={() => decreaseValue(setOtherRooms)}>
                                         <Image
@@ -129,7 +129,7 @@ const Asset = () => {
                                 </div>
                             </div>
                             <div className="item">
-                                <label>How many floors:</label>
+                                <p>How many floors:</p>
                                 <div className="rectangle">
                                     <button onClick={() => decreaseValue(setFloors)}>
                                         <Image
@@ -153,7 +153,7 @@ const Asset = () => {
                         </div>
                     </div>
                     <div className='Rooms'>
-                        <label>Legal status</label>
+                        <p>Legal status</p>
                         <div className='customSelect'>
                             <select>
                                 <option className='input_custom' value="">Choose legal status</option>
@@ -167,7 +167,7 @@ const Asset = () => {
                                 <option className='input_custom' value="">Unknown</option>
                             </select>
                         </div>
-                        <label>Way in</label>
+                        <p>Way in</p>
                         <div className="customSelect">
                             <select>
                                 <option className='input_custom'>Select the distance from the outside</option>
@@ -196,7 +196,7 @@ const Asset = () => {
                                 <option className='input_custom'> {'>'} 300m</option>
                             </select>
                         </div>
-                        <label>Asset orientation</label>
+                        <p>Asset orientation</p>
                         <div className="customSelect">
                             <select>
                                 <option className='input_custom'>Choose property direction</option>
@@ -212,7 +212,7 @@ const Asset = () => {
                             </select>
                         </div>
                         <div className='Utilities_contact'>
-                            <label>Utilities</label>
+                            <p>Utilities</p>
                             <div className='Utilities'>
                                <div className='input_box'>
                                     <input type="checkbox" id="fullFacilities" />
