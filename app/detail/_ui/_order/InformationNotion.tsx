@@ -18,7 +18,7 @@ const InformationNotion = ({onClick}:{onClick:(state:boolean)=>void}) => {
                 long-term rental with a monthly installment payment method to avoid an
                 increase in the unit price when the lease is extended.
             </p>
-            <FaAngleLeft size={40} className='absolute top-2 lg:top-1 xl:top-2 left-0 p-2 cursor-pointer hover:drop-shadow-md' 
+            <FaAngleLeft size={40} className='absolute top-px lg:top-2 lg:top-1 xl:top-2 left-0 p-2 cursor-pointer hover:drop-shadow-md' 
             onClick={() => onClick(false)}
             />
         </div>
