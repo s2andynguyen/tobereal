@@ -11,7 +11,6 @@ const FormDetailBooking = () => {
     const [isShowInformation, setIsShowInformation] = useState(false)
 
     const handleShowInformation = (state: boolean) => {
-        console.log('state :>> ', state)
         setIsShowInformation(state)
     }
     return (
