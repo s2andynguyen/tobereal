@@ -25,7 +25,7 @@ function Property() {
                         <RegisterNow />
                     </div>
                 </div>
-                <div className='Jenis-wrap container flex flex-col gap-10'>
+                <div className='Jenis-wrap container p-6 md:p-12 flex flex-col gap-10'>
                     <h3 className='title-reuse text-center md:text-left'>
                         Apa Jenis Unit Anda?
                     </h3>
@@ -35,7 +35,7 @@ function Property() {
                         ))}
                     </div>
                 </div>
-                <div className='Wrap-Service-Options container flex flex-col gap-10'>
+                <div className='Wrap-Service-Options container p-6 md:p-12 flex flex-col gap-10'>
                     <h3 className='title-reuse text-center md:text-left'>
                         Our Service Options
                     </h3>
@@ -92,15 +92,15 @@ function Property() {
                         />
                     </div>
                 </div>
-                <div className='p-12 '>
-                    <div className=' wrap-Differences container !p-0'>
+                <div className='p-6 md:p-12 '>
+                    <div className=' wrap-Differences container '>
                         <div className='TableDifference-wrap'>
                             <button className='Difference-btn text-center md:text-left'>
                                 Difference between Apartment Management by S HOME
                                 <br />
                                 and Home Marketing by S HOME
                             </button>
-    
+
                             <div className='wrap-Difference-table flex flex-col items-center pt-4 '>
                                 {Difference?.map((card) => (
                                     <TableDifference data={card} key={card?.id} />
@@ -109,7 +109,7 @@ function Property() {
                         </div>
                     </div>
                 </div>
-                <div className='wrap-houses container '>
+                <div className='wrap-houses container p-6 md:p-12'>
                     <div className='House-wrap flex items-center flex-col gap-10 w-full justify-between pb-36 lg:flex-row'>
                         <div className='informations-House flex flex-col justify-between max-w-[493px] gap-10 md:gap-20 items-center lg:items-start '>
                             <div className='content-House flex flex-col gap-5 '>

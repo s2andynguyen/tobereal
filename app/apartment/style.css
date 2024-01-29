@@ -88,27 +88,8 @@
     line-height: normal;
 }
 
-.Management-Services {
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
-
-.Earnings-wrap {
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
+.Management-Services,
+.Earnings-wrap,
 .Wrap-FAQ,
 .Wrap-DevloperManagement,
 .apartmentHouse,
@@ -124,7 +105,7 @@
     align-items: center;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    
 }
 .g-activies {
     display: flex;
@@ -269,7 +250,7 @@
 }
 
 /* ... (other styles) */
-.swiper-slide .swiper-slide-active{
+.swiper-slide .swiper-slide-active {
     max-width: 187px;
     width: 100%;
 }

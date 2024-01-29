@@ -93,7 +93,7 @@ function Apartment() {
                         <RegisterNow />
                     </div>
                 </div>
-                <div className='Management-Services container'>
+                <div className='Management-Services container p-6 md:p-12'>
                     <h2 className='text-black font-bold text-center text-2xl md:text-[32px]'>
                         Apartment Management Services by S HOME
                     </h2>
@@ -104,12 +104,12 @@ function Apartment() {
                         ))}
                     </div>
                 </div>
-                <div className='Earnings-wrap container gap-10'>
+                <div className='Earnings-wrap container gap-10 p-6 md:p-12'>
                     {CALCULATES_DT?.map((card) => (
                         <Calculates data={card} key={card?.id} />
                     ))}
                 </div>
-                <div className='wrap-activities container gap-16'>
+                <div className='wrap-activities container gap-16 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl text-center'>
                         All about your units activities at your fingertips
                     </h3>
@@ -241,7 +241,7 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
-                <div className='wrap-MarketingPartners container gap-6 lg:gap-8'>
+                <div className='wrap-MarketingPartners container gap-6 lg:gap-8 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl p-0 text-center lg:p-8'>
                         S HOME Online Marketing Partner
                     </h3>
@@ -323,7 +323,7 @@ function Apartment() {
                         </div>
                     </div>
                 </div>
-                <div className='wrap-properties container'>
+                <div className='wrap-properties container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         Whose properties do we market?
                     </h3>
@@ -340,7 +340,7 @@ function Apartment() {
                         ))}
                     </div>
                 </div>
-                <div className='wrap-Testimonials container'>
+                <div className='wrap-Testimonials container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8'>
                         Testimonials
                     </h3>
@@ -398,7 +398,7 @@ function Apartment() {
                         </Swiper>
                     </div>
                 </div>
-                <div className='Wrap-DevloperManagement container gap-5'>
+                <div className='Wrap-DevloperManagement container gap-5 p-6 md:p-12'>
                     <div className='nav-DevloperManagements flex-col items-center w-full gap-10'>
                         <div className='flex gap-10 justify-center'>
                             <button
@@ -594,7 +594,7 @@ function Apartment() {
                         )}
                     </div>
                 </div>
-                <div className='wrap-TracesNews container gap-7'>
+                <div className='wrap-TracesNews container gap-7 p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         S HOME Traces In The News
                     </h3>
@@ -651,7 +651,7 @@ function Apartment() {
                     </Swiper>
                     <button className='btn-SeeMore wrap-btn'>See More ➔</button>
                 </div>
-                <div className='apartmentHouse container flex-col lg:!flex-row'>
+                <div className='apartmentHouse container flex-col lg:!flex-row p-6 md:p-12'>
                     <div className='wrap-content-apartment pb-10 flex flex-col items-center lg:items-start'>
                         <h3 className='title-Calculates text-xl md:text-2xl text-center lg:!text-left'>
                             Is your apartment & house empty?
@@ -673,7 +673,7 @@ function Apartment() {
                     />
                 </div>
 
-                <div className='Wrap-FAQ container'>
+                <div className='Wrap-FAQ container p-6 md:p-12'>
                     <h3 className='title-Calculates text-xl md:text-2xl pb-8 text-center'>
                         Frequently Asked Questions(FAQ)
                     </h3>
