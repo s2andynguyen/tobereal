@@ -1,10 +1,4 @@
-.wrap-BuyProjects {
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    flex-direction: column;
-    padding: 50px;
-}
+
 .textLabel-Select {
     color: #000;
     font-size: 16px;
