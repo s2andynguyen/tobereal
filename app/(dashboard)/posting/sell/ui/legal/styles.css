@@ -29,6 +29,15 @@
 
 }
 
+.lable_input {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    height: 359px;
+    width: 935px;
+}
+
 .legal_images label {
     position: relative;
     width: 100%;

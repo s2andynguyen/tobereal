@@ -86,15 +86,6 @@
     position: absolute;
 }
 
-.lable_input {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #0000001a;
-    border-radius: 5px;
-    height: 359px;
-    width: 935px;
-}
-
 /* video*/
 .Add_video {
     display: flex;
@@ -117,7 +108,7 @@
 .Add_video .link {
     background-color: #ffffff;
     border: 1px solid;
-    border-color: #0000001a;
+    border-color: black;
     border-radius: 5px;
     height: 50px;
     width: 935px;
@@ -143,7 +134,7 @@
 .name {
     background-color: #ffffff;
     border: 1px solid;
-    border-color: #0000001a;
+    border-color: black;
     border-radius: 5px;
     height: 50px;
     width: 935px;
