@@ -362,7 +362,7 @@ function Apartment() {
                                     slidesPerView: 1
                                 },
                                 960: {
-                                    slidesPerView: 1
+                                    slidesPerView: 2
                                 },
                                 1200: {
                                     slidesPerView: 2
@@ -377,7 +377,7 @@ function Apartment() {
                                 </SwiperSlide>
                             ))}
 
-                            <span className='arrow-back mr-4  flex slick-arrow custom_prev'>
+                            <span className='arrow-back hidden mr-4 sm:flex slick-arrow custom_prev'>
                                 <Image
                                     width={20}
                                     height={20}
@@ -386,7 +386,7 @@ function Apartment() {
                                     alt='slick-arrow-r'
                                 />
                             </span>
-                            <span className='arrow-next flex slick-arrow custom_next'>
+                            <span className='arrow-next hidden sm:flex slick-arrow custom_next'>
                                 <Image
                                     width={20}
                                     height={20}
@@ -468,7 +468,7 @@ function Apartment() {
                                         </SwiperSlide>
                                     ))}
 
-                                    <span className='arrow-back mr-4  flex slick-arrow custom_preva'>
+                                    <span className='arrow-back mr-4 hidden sm:flex slick-arrow custom_preva'>
                                         <Image
                                             width={20}
                                             height={20}
@@ -479,7 +479,7 @@ function Apartment() {
                                             alt='slick-arrow-r'
                                         />
                                     </span>
-                                    <span className='arrow-next flex slick-arrow custom_nexta'>
+                                    <span className='arrow-next hidden sm:flex slick-arrow custom_nexta'>
                                         <Image
                                             width={20}
                                             height={20}
@@ -630,7 +630,7 @@ function Apartment() {
                                 <TrancesNews data={card} />
                             </SwiperSlide>
                         ))}
-                        <span className='arrow-back mr-4  flex slick-arrow custom_prevb'>
+                        <span className='arrow-back mr-4 hidden sm:flex slick-arrow custom_prevb'>
                             <Image
                                 width={20}
                                 height={20}
@@ -639,7 +639,7 @@ function Apartment() {
                                 alt='slick-arrow-r'
                             />
                         </span>
-                        <span className='arrow-next flex slick-arrow custom_nextb'>
+                        <span className='arrow-next hidden sm:flex slick-arrow custom_nextb'>
                             <Image
                                 width={20}
                                 height={20}
