@@ -15,7 +15,7 @@ const PostOptionPage = () => {
 
   return (
     <DashboardLayout title='Post'>
-      <div className='Posting mt-[30px] pl-[30px]'>
+      <div className='Posting mt-[30px] pl-[30px] pr-[30px] '>
         <div className='Menu'>
           <a className="menu_li" href='/posting/sell'>
             <p>Sell</p>
