@@ -1,16 +1,16 @@
 'use client'
 import "./styles.css";
 import "./mobi.css";
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ContactUser from './ui/contactUser/contactUser';
-import OwnerData from './ui/ownerData/ownerData';
-import Payment from './ui/payment/PayMent';
+import ContactUser from './ui/contactUser/User_content';
+import OwnerData from './ui/ownerData/Owner_content';
+import Payment from './ui/payment/Payment_content';
 import MainLayout from "@/layouts/MainLayout";
 
 const steps = ['Basic Information', 'Owner Data', 'Payment Information'];
@@ -61,7 +61,7 @@ export default function Contact() {
 
     return (
         <MainLayout>
-            <Box className="form_background min-h-[800px] pt-10" sx={{ width: '40%' }}>
+            <Box className="form_background container min-h-[800px] pt-10" sx={{ width: '40%' }}>
                 <p className="frame_banner"></p>
                 <div >
                     {allStepsCompleted() ? (

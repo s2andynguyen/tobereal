@@ -1,0 +1,76 @@
+.legal_images {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legal_images span {
+    color: #000000;
+    font-family: 'Inter-Medium', Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 182px;
+}
+
+.legal_images p {
+    color: #000000;
+    font-family: 'Inter-Light', Helvetica;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 361px;
+
+}
+
+.legal_images .lable_input {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    height: 359px;
+    width: 935px;
+}
+
+.legal_images label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.legal_images input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.legal_images .inputIntroductory[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 328px;
+    cursor: pointer;
+}
+
+.legal_images .selected-image-preview {
+    width: 226px;
+    height: 226px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.legal_images .selected-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
