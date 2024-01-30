@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    width: 490px;
+    max-width: 490px;
+    width: 100%;
+    min-width: 232px;
     height: 217px;
     border-radius: 10px;
     background: #fff;

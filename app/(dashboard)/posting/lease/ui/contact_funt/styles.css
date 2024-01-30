@@ -1,0 +1,186 @@
+.contact_center .Titlle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.Titlle span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.Titlle .input_title {
+    width: 933px;
+    padding: 8px;
+    font-size: 16px;
+    height: 98px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+
+.contact_center .Description {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.contact_center .Description span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.Description .Description_title {
+    width: 933px;
+    padding: 8px;
+    font-size: 16px;
+    height: 98px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.Acrea {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.Acrea span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.Acrea .text_Acrea {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 934px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.content_Hori {
+    gap: 90px;
+    display: flex;
+    padding: 20px 0;
+}
+
+.content_Hori .Horizontal {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Horizontal span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.Horizontal .text_Hori {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 422px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.content_Hori .Longs {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content_Hori .Longs span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.Longs .text_Longs {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 422px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.container_Price {
+    gap: 10px;
+    display: flex;
+    padding: 20px 0;
+}
+
+.container_Price span {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.flex-price .Price {
+    gap: 15px;
+    display: flex;
+}
+
+.container_Price .flex-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.Price .input_Price {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 422px;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 5px;
+}
+
+.Price .content_input {
+    background-color: #ffffff;
+    border-color: #0000001a;
+    border-radius: 5px;
+    height: 50px;
+    width: 240px;
+    border-radius: 5px;
+    border: 1px solid;
+}

@@ -1,8 +1,16 @@
 'use client'
 import './styles.css'
+import './mobi.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import DashboardLayout from '../../_ui/layout/DashboardLayout';
+import DashboardLayout from '../../_ui/layout/DashboardLayout'
+import Link from 'next/link'
+import Legal from './ui/legal/Legal_content'
+import GoogleMap from './ui/map/Map_content'
+import Address from './ui/address/address_contact'
+import Contact from './ui/contact_funt/contact_funt_content'
+
+
 
 const PostingSell = () => {
     //textra
@@ -15,41 +23,22 @@ const PostingSell = () => {
             setInputValue(newValue)
         }
     }
-    //input title
-    const [title, setTitle] = useState('');
-
-    const handleChange = (e: { target: { value: any; }; }) => {
-        const inputText = e.target.value;
-        setTitle(inputText);
-
-        // Limit the input to 100 characters
-        if (inputText.length > 100) {
-            e.target.value = inputText.slice(0, 100);
-        }
-    };
-    //inport img
-    const [selectedImageCT, setSelectedImageCT] = useState<File | null>(null)
-
-    const handleImageChangeCT = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files && event.target.files[0]
-
-        if (file) {
-            setSelectedImageCT(file)
-        }
-    }
 
     return (
         <DashboardLayout title='Post'>
-            <div className='sale pt-[60px] px-10'>
-                <div className="menu_li">
-                    <p>Lease</p>
-                    <Image
-                        src="/dashboard/images/posting/img/Lease.png"
-                        alt=""
-                        className='w-[40px] h-[39px]'
-                        width={40}
-                        height={39} />
-                </div>
+            <div className='sale'>
+                <Link href='/posting/post'>
+                    <div className='menu_li mx-12'>
+                        <p>Lease</p>
+                        <Image
+                            src='/dashboard/images/posting/img/Lease2.png'
+                            alt=''
+                            className='w-[40px] h-[39px]'
+                            width={40}
+                            height={39}
+                        />
+                    </div>
+                </Link>
                 <div className='sell'>
                     <div className='input_container'>
                         <textarea
@@ -68,35 +57,8 @@ const PostingSell = () => {
                             />
                         </div>
                     </div>
-                    <div className='text_legal'>
-                        <span>Legal images</span>
-                        <p>Update images to a maximum of two images</p>
-                        <div className='lable_input'>
-                            <label
-                                htmlFor='image_Input'
-                                className={selectedImageCT ? 'has-image' : ''}>
-                                <input
-                                    type='file'
-                                    id='image_Input'
-                                    accept='image/*'
-                                    onChange={handleImageChangeCT}
-                                />
-
-                                {selectedImageCT && (
-                                    <div
-                                        className='selected-image-preview'
-                                        style={{
-                                            backgroundImage: `url(${URL.createObjectURL(
-                                                selectedImageCT
-                                            )})`
-                                        }}
-                                    />
-                                )}
-                                {!selectedImageCT && (
-                                    <div className='placeholder'>Choose Logo</div>
-                                )}
-                            </label>
-                        </div>
+                    <div className='legal'>
+                        <Legal />
                     </div>
                     <div className='Add_video'>
                         <span className='content_add'>Video Youtube (add video)</span>
@@ -112,150 +74,51 @@ const PostingSell = () => {
                         <select
                             className='select-asset'
                             id='Asset-type'
-                            name='Asset.type'
-                        >
+                            name='Asset.type'>
                             <option value=''>Select address type</option>
                             <option value=''>Townhouse</option>
                             <option value=''>Home</option>
                             <option value=''>Villa</option>
                             <option value=''>Apartment</option>
-                            <option value="">Office</option>
-                            <option value="">Ground</option>
-                            <option value="">Restaurant Hotel</option>
-                            <option value="">Warehouse - workshop</option>
-                            <option value="">Motel room</option>
+                            <option value=''>Office</option>
+                            <option value=''>Ground</option>
+                            <option value=''>Restaurant Hotel</option>
+                            <option value=''>Warehouse - workshop</option>
+                            <option value=''>Motel room</option>
                         </select>
                     </div>
-                    <div className="Address">
-                        <span className='text-Address'>Address</span>
-
+                    <div className='Address'>
+                        <Address />
                     </div>
-                    <div className="google_map">
-                        <Image
-                            src='/dashboard/images/posting/img/Map.png'
-                            alt=''
-                            className='w-[934px] h-[900px]'
-                            width={934}
-                            height={900}
-                        />
-
+                    <div className='google_map'>
+                        <GoogleMap />
                     </div>
-
-                    <div className="Titlle">
-                        <span>Title</span>
-                        <input
-                            type="text"
-                            placeholder="Enter a title"
-                            value={title}
-                            onChange={handleChange}
-                            className='input_title'
-
-                        />
-                        <div className='characterCount'>
-                            {title.length}/100
-                        </div>
+                    <div className='contact'>
+                        <Contact />
                     </div>
-                    <div className="Description">
-                        <span>Description content</span>
-                        <input
-                            type="text"
-                            placeholder="Enter a title"
-                            value={title}
-                            onChange={handleChange}
-                            className='Description_title'
-
-                        />
-                        <div className='Description-characterCount'>
-                            {title.length}/2000
-                        </div>
+                    <div className='Vietnamese-checkbox'>
+                        <p>
+                            Do you want to deposit with the Vietnamese brokerage community
+                            of 10k people?
+                        </p>
+                        <input type='checkbox' />
                     </div>
-                    <div className="Acrea">
-                        <span>Acreage (m2)</span>
-                        <input
-                            type="text"
-                            placeholder="Enter the land area"
-                            className='text_Acrea'
-                        />
+                    <div className='note'>
+                        <p>
+                            Note: TOBE REAL Real Estate does not allow properties to be
+                            posted that are not real or misleading to solicit customer
+                            information. If discovered, your account will be permanently
+                            banned.
+                        </p>
                     </div>
-                    <div className="content_Hori">
-                        <div className="Horizontal">
-                            <span>Horizontal (m)</span>
-                            <input
-                                type="text"
-                                placeholder="Enter horizontal"
-                                className='text_Hori'
-                            />
-                        </div>
-                        <div className="Longs">
-                            <span>Longs (m)</span>
-                            <input
-                                type="text"
-                                placeholder="Enter horizontal"
-                                className='text_Longs'
-                            />
-                        </div>
-                    </div>
-                    <div className="container_Price">
-                        <div className="flex-price">
-                            <span>Price</span>
-
-                            <div className="Price">
-
-                                <input
-                                    type="text"
-                                    placeholder="Enter Price"
-                                    className='input_Price'
-                                />
-
-                                <select
-                                    className='content_input'
-                                    id='price-vnd'
-                                    name='price.vnd'
-                                >
-                                    <option value=''>VNĐ</option>
-                                    <option value=''>USD</option>
-                                    <option value=''>EUR</option>
-                                    <option value=''>JPY</option>
-                                    <option value=''>GBP</option>
-                                </select>
-                                <select
-                                    className='content_input'
-                                    id='form_total'
-                                    name='form_total-area'
-                                >
-                                    <option value=''>Total area</option>
-                                    <option value=''>EUR</option>
-                                    <option value=''>JPY</option>
-                                    <option value=''>GBP</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="Detailed">
-                        <span>Detailed information</span>
-                        <select name="" id="">
-                            <option value="">
-
-                            </option>
-                        </select>
-                    </div>
-                    <div className="Vietnamese-checkbox">
-                        <p>Do you want to deposit with the Vietnamese brokerage community of 10k people?</p>
-                        <input type="checkbox" />
-                    </div>
-                    <div className="note">
-                        <p>Note: TOBE REAL Real Estate does not allow properties to be posted that are not real or misleading to solicit customer information. If discovered, your account will be permanently banned.</p>
-                    </div>
-                    <div className="button-post">
+                    <div className='button-post'>
                         <button className='post'>
-                            <span>
-                                POST
-                            </span>
+                            <span>POST</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </DashboardLayout >
+        </DashboardLayout>
     )
 }
 
