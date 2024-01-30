@@ -96,6 +96,7 @@
 
 .TableDifference-wrap {
     width: 1129px;
+    margin: 0 auto;
     border-radius: 50px;
     background: linear-gradient(147deg, #ffe500 0%, rgba(255, 181, 127, 0) 59.9%);
 }
