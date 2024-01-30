@@ -76,7 +76,7 @@ function Apartment() {
     }
 
     const getTextIcon = (subContentIndex: number) => {
-        return textIconStates[subContentIndex] === 3 ? <SlArrowDown /> : <SlArrowUp />
+        return textIconStates[subContentIndex] === 3 ? <SlArrowUp /> : <SlArrowDown />
     }
 
     // state
@@ -84,8 +84,8 @@ function Apartment() {
 
     return (
         <MainLayout>
-            <div className='wrapper bg-white mb-32'>
-                <div className='aprtment-wrap h-[650px] md:h-[450px]'>
+            <div className='wrapper-apartment bg-white mb-32'>
+                <div className='apartment-wrap h-[650px] md:h-[450px]'>
                     <div className='Apartment-Solution container flex-col px-5 md:flex-row gap-16'>
                         <div className='title-Apartment text-center md:text-left'>
                             Empty House & Apartment Solutions

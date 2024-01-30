@@ -16,15 +16,15 @@ function SlKatherine({ data }: { data: any }) {
         //     />
         // ) : (
             
-        <div className='box-Katherine min-w-[400px]'>
+        <div className='box-Katherine'>
             <div className='wrap-Katherine'>
-                <div className='contents-Katherine'>
-                    <h4 className='title-Katherine text-xl md:text-2xl pb-8'>
+                <div className='contents-Katherine max-w-[380px] w-full'>
+                    <h4 className='title-Katherine text-xl md:text-2xl pb-3 sm:pb-8'>
                         {data?.title}
                     </h4>
                     <div className='text-Owners gap-8'>
                         <p className='Owner-sz title-Katherine'>{data?.titleSub}</p>
-                        <p className='content-Owner-sz pb-7'>{data?.textContent}</p>
+                        <p className='content-Owner-sz pb-2 sm:pb-7'>{data?.textContent}</p>
                     </div>
                     <p className='content-Owner-sz'>{data?.text}</p>
                 </div>
