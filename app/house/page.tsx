@@ -115,177 +115,180 @@ export default function House() {
                         </div>
                     </div>
                 </div>
-                <div className='content_tobe container'>
-                    <div className='to-be-real'>
-                        Home Marketing Benefits by Smart REAL
-                    </div>
-                    <div className='slider_tobe'>
-                        <Swiper
-                            spaceBetween={30}
-                            centeredSlides={true}
-                            autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false
-                            }}
-                            pagination={{
-                                clickable: true
-                            }}
-                            navigation={true}
-                            modules={[Autoplay, Pagination, Navigation]}
-                            className='my-container-swiper'>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Professional Photographer
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='product_span'>
-                                            Your unit will be photographed by our team of
-                                            professional photographers to capture the best
-                                            aspects of your unit.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/1.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Professional Content Writer
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='product_span'>
-                                            Content is the salesman in the online world.
-                                            Our content writers will describe each unit
-                                            uniquely highlighting the best aspects.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/2.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            No. 1 in Indonesia
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            ................. is the number 1 and largest
-                                            site for residential rentals. Serving tens of
-                                            thousands of rentals every month.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/3.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Property Partner Site
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            Marketing through leading property sites in
-                                            Indonesia.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/4.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Passive Income
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            Monthly rent
-                                            <br />
-                                            Annual Rent
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/5.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Search Engine Rank
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            ................. has the first page ranking
-                                            in search engines mostly for apartment rental
-                                            keywords.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/6.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Corporate Partner
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            ................... has been dedicated to
-                                            helping hundreds of our corporate partners in
-                                            providing accommodation for expatriate and
-                                            intercity workers.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/7.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className='product_color'>
-                                    <p className='professional'>
-                                        <span className='content_text'>
-                                            Agent Partner
-                                            <br />
-                                        </span>
-                                        <span className='over_text'>
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
-                                            Agent Partners are not our competitors, but
-                                            partners. We collaborate with property agents
-                                            throughout Indonesia.
-                                        </span>
-                                    </p>
-                                    <img src='/images/house/svg/8.svg' alt='' />
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
+                <div className='content_tobe '>
+                    <div className='Real_content container'>
+                        
+                        <div className='to-be-real'>
+                            Home Marketing Benefits by Smart REAL
+                        </div>
+                        <div className='slider_tobe'>
+                            <Swiper
+                                spaceBetween={30}
+                                centeredSlides={true}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false
+                                }}
+                                pagination={{
+                                    clickable: true
+                                }}
+                                navigation={true}
+                                modules={[Autoplay, Pagination, Navigation]}
+                                className='my-container-swiper'>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Professional Photographer
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='product_span'>
+                                                Your unit will be photographed by our team of
+                                                professional photographers to capture the best
+                                                aspects of your unit.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/1.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Professional Content Writer
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='product_span'>
+                                                Content is the salesman in the online world.
+                                                Our content writers will describe each unit
+                                                uniquely highlighting the best aspects.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/2.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                No. 1 in Indonesia
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                ................. is the number 1 and largest
+                                                site for residential rentals. Serving tens of
+                                                thousands of rentals every month.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/3.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Property Partner Site
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                Marketing through leading property sites in
+                                                Indonesia.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/4.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Passive Income
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                Monthly rent
+                                                <br />
+                                                Annual Rent
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/5.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Search Engine Rank
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                ................. has the first page ranking
+                                                in search engines mostly for apartment rental
+                                                keywords.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/6.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Corporate Partner
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                ................... has been dedicated to
+                                                helping hundreds of our corporate partners in
+                                                providing accommodation for expatriate and
+                                                intercity workers.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/7.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='product_color'>
+                                        <p className='professional'>
+                                            <span className='content_text'>
+                                                Agent Partner
+                                                <br />
+                                            </span>
+                                            <span className='over_text'>
+                                                <br />
+                                            </span>
+                                            <span className='container_swiperslide_span'>
+                                                Agent Partners are not our competitors, but
+                                                partners. We collaborate with property agents
+                                                throughout Indonesia.
+                                            </span>
+                                        </p>
+                                        <img src='/images/house/svg/8.svg' alt='' />
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
                 <div className='content_api container'>
