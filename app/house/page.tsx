@@ -6,8 +6,8 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { api_content } from './product'
 import { grid } from './grid_contact'
-import Main from './ui/Grid/Grid_content'
-import Page from './ui/Product/product_content'
+import Main from './ui/Grid/Grid'
+import Page from './ui/Product/Product'
 
 // Import Swiper styles
 import 'swiper/css'
