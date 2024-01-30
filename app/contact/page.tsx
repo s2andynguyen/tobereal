@@ -8,9 +8,9 @@ import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ContactUser from './ui/contactUser/page';
-import OwnerData from './ui/ownerData/page';
-import Payment from './ui/payment/page';
+import ContactUser from './ui/contactUser/User_content';
+import OwnerData from './ui/ownerData/Owner_content';
+import Payment from './ui/payment/Payment_content';
 import MainLayout from "@/layouts/MainLayout";
 
 const steps = ['Basic Information', 'Owner Data', 'Payment Information'];
