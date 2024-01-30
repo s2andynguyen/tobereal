@@ -21,7 +21,7 @@ function Favourite() {
                 {USER_Jakartas.map((card, index) => (
                     <div
                         key={card.id}
-                        className='wrap-gr-Favourites flex items-center justify-between px-4 gap-0 hover:shadow-lg'>
+                        className='wrap-gr-Favourites flex items-center justify-between px-4 gap-2 hover:shadow-lg'>
                         <div className='Gr-user-Jakartas flex items-center gap-1'>
                             <Image
                                 width={31}
@@ -31,7 +31,7 @@ function Favourite() {
                                 alt='UserJakarta'
                             />
                             <div className='contentUsers-Favourite'>
-                                <h4 className='w-[180px] text-black text-[10px] font-medium'>
+                                <h4 className='max-w-[180px] text-black text-[10px] font-medium'>
                                     {card.UserName}
                                 </h4>
                                 <p className='w-[29px] text-black text-[7px] font-light'>
