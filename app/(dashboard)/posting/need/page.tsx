@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout';
 import Link from 'next/link';
-import Checkbox from './ui/checkbox/page';
+import Checkbox from './ui/checkbox/Check_fun';
 
 const PostingSell = () => {
     const [checkbox1, setCheckbox1] = useState(false)
