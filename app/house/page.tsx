@@ -6,7 +6,6 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { api_content } from './product'
 import { grid } from './grid_contact'
-import Main from './ui/Grid/Grid'
 import Page from './ui/Product/Product'
 
 // Import Swiper styles
@@ -17,6 +16,7 @@ import TextField from '@mui/material/TextField'
 import Autocomplete from '@mui/material/Autocomplete'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import MainLayout from '@/layouts/MainLayout'
+import Main from './ui/Grid/grid'
 
 export default function House() {
     return (
@@ -295,7 +295,7 @@ export default function House() {
                     <div className='text-api'>Servis Pemasaran Rumah oleh TO BE REAL</div>
                     <div className='container_grid'>
                         {api_content?.map((card) => (
-                            <Main 
+                            <Main
                             img={card.img}
                             name={card.name}
                             title={card.title} key={card.id} />
