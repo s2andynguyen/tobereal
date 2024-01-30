@@ -61,7 +61,7 @@ export default function Contact() {
 
     return (
         <MainLayout>
-            <Box className="form_background min-h-[800px] pt-10" sx={{ width: '40%' }}>
+            <Box className="form_background container min-h-[800px] pt-10" sx={{ width: '40%' }}>
                 <p className="frame_banner"></p>
                 <div >
                     {allStepsCompleted() ? (

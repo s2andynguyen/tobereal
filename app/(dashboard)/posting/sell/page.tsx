@@ -40,7 +40,7 @@ const PostingSell = () => {
     return (
         <DashboardLayout title='Post'>
             <Link href='/posting/post'>
-                <div className='menu_li'>
+                <div className='menu_li '>
                     <p>Sell</p>
                     <Image
                         src='/dashboard/images/posting/img/house.png'

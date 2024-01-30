@@ -25,7 +25,7 @@ export default function House() {
                 <div className='background'>
                     <img src={'/images/house/Page.png'} alt='' />
                 </div>
-                <div className='menu'>
+                <div className='menu container'>
                     <div className='text_searching'>Searching for! House for rent!</div>
                     <div className='overlap'>
                         <div className='text_resgister'>Resgister Now</div>
@@ -96,8 +96,7 @@ export default function House() {
                         </button>
                     </div>
                 </div>
-
-                <div className='product_menu'>
+                <div className='product_menu container'>
                     <div className='product_menu_btn'>
                         <div className='container_menu'>
                             <div className='content_trusted'>
@@ -116,7 +115,7 @@ export default function House() {
                         </div>
                     </div>
                 </div>
-                <div className='content_tobe'>
+                <div className='content_tobe container'>
                     <div className='to-be-real'>
                         Home Marketing Benefits by Smart REAL
                     </div>
@@ -141,13 +140,10 @@ export default function House() {
                                             Professional Photographer
                                             <br />
                                         </span>
-                                        <span className='span'>
-                                            <br />
-                                        </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='product_span'>
                                             Your unit will be photographed by our team of
                                             professional photographers to capture the best
                                             aspects of your unit.
@@ -163,13 +159,10 @@ export default function House() {
                                             Professional Content Writer
                                             <br />
                                         </span>
-                                        <span className='span'>
-                                            <br />
-                                        </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
-                                        <span className='span'>
+                                        <span className='product_span'>
                                             Content is the salesman in the online world.
                                             Our content writers will describe each unit
                                             uniquely highlighting the best aspects.
@@ -183,9 +176,6 @@ export default function House() {
                                     <p className='professional'>
                                         <span className='content_text'>
                                             No. 1 in Indonesia
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
@@ -207,9 +197,6 @@ export default function House() {
                                             Property Partner Site
                                             <br />
                                         </span>
-                                        <span className='container_swiperslide_span'>
-                                            <br />
-                                        </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
@@ -226,9 +213,6 @@ export default function House() {
                                     <p className='professional'>
                                         <span className='content_text'>
                                             Passive Income
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
@@ -250,9 +234,6 @@ export default function House() {
                                             Search Engine Rank
                                             <br />
                                         </span>
-                                        <span className='container_swiperslide_span'>
-                                            <br />
-                                        </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
@@ -270,9 +251,6 @@ export default function House() {
                                     <p className='professional'>
                                         <span className='content_text'>
                                             Corporate Partner
-                                            <br />
-                                        </span>
-                                        <span className='container_swiperslide_span'>
                                             <br />
                                         </span>
                                         <span className='over_text'>
@@ -295,9 +273,6 @@ export default function House() {
                                             Agent Partner
                                             <br />
                                         </span>
-                                        <span className='container_swiperslide_span'>
-                                            <br />
-                                        </span>
                                         <span className='over_text'>
                                             <br />
                                         </span>
@@ -313,7 +288,7 @@ export default function House() {
                         </Swiper>
                     </div>
                 </div>
-                <div className='content_api'>
+                <div className='content_api container'>
                     <div className='text-api'>Servis Pemasaran Rumah oleh TO BE REAL</div>
                     <div className='container_grid'>
                         {api_content?.map((card) => (

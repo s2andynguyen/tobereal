@@ -21,6 +21,7 @@
 .menu_li:hover {
     background-color: #fadd55;
 }
-.menu_li p{
+
+.menu_li p {
     width: 280px;
 }
