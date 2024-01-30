@@ -2,7 +2,7 @@ import './style.css'
 import Image from 'next/image'
 function BuyTobereal({ data }: { data: any }) {
     return (
-        <div className='Box-UserTobereal w-[325px] md:w-[360px] lg:w-[619px] flex justify-between items-center hover:shadow-lg'>
+        <div className='Box-UserTobereal w-full max-w-[619px] flex justify-between items-center hover:shadow-lg'>
             <div className='infomations-UserTB flex items-start gap-2'>
                 <Image
                     src={data?.imsUser}
@@ -13,7 +13,7 @@ function BuyTobereal({ data }: { data: any }) {
                 />
                 <div className='ContentTobereal '>
                     <p className='text-black text-base font-medium'>{data?.Name}</p>
-                    <div className='UserContentTB flex flex-col pt-2 pl-2 gap-1'>
+                    <div className='UserContentTB flex flex-col p-0 sm:pt-2 sm:pl-2 gap-1'>
                         <p className='text-contentTB'>Project: {data?.project}</p>
                         <p className='text-contentTB'>Location: {data?.location}</p>
                         <p className='text-contentTB'>Content: {data?.content}</p>

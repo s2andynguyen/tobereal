@@ -11,13 +11,13 @@ export const CALCULATES_DT = [
         img: '/images/apartment/INCOME.png',
         name: 'INCOME GUARANTEE, FREE SERVICE CHARGE!',
         content:
-            'At S - HOME property management, we also provide a DEFINITE RENTAL GUARANTEE!'
+            'At S HOME property management, we also provide a DEFINITE RENTAL GUARANTEE!'
     },
     {
         id: 3,
         img: '/images/apartment/chair.png',
-        name: 'FURNISHED BY S - HOME',
+        name: 'FURNISHED BY S HOME',
         content:
-            'S - HOME will furnish your apartment according to our standards, and the furniture will become your property at the end of the rental period'
+            'S HOME will furnish your apartment according to our standards, and the furniture will become your property at the end of the rental period'
     }
 ]

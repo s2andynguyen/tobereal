@@ -11,7 +11,6 @@ const WrapperHeader = ({fixedOnMbile}:{fixedOnMbile ?: boolean}) => {
     }
     const handleToggleModal = () => {
         setIsShowModal(!isShowModal)
-        console.log('isShowModal :>> ', isShowModal);
       }
     return (
         <div>

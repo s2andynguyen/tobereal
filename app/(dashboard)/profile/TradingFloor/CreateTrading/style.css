@@ -2,6 +2,7 @@
     margin: 0 auto;
     position: relative;
     width: 100%;
+    gap: 30px;
 }
 .CreateTrading-container {
     position: relative;
@@ -12,13 +13,13 @@
     position: relative;
 }
 
-label {
+.ImageCover-CT {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-input[type='file'] {
+.AvtRound {
     position: absolute;
     left: 0;
     top: 0;
@@ -27,7 +28,7 @@ input[type='file'] {
     height: 100%;
     cursor: pointer;
 }
-.inputIntroductory[type='file'] {
+.inputIntroductory {
     position: absolute;
     left: 0;
     top: 0;
@@ -139,4 +140,3 @@ input[type='file'] {
     display: flex;
     align-items: center;
 }
-

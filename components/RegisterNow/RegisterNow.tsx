@@ -7,7 +7,7 @@ import Autocomplete from '@mui/material/Autocomplete'
 import { SlArrowDown } from 'react-icons/sl'
 function RegisterNow() {
     return (
-        <div className='Gr-RegisterNow p-3 md:p-5'>
+        <div className='Gr-RegisterNow p-3 px-5 py-3 '>
             <p className='text-register'>Register Now</p>
             <div className='Asset-Gr'>
                 <Autocomplete
@@ -15,8 +15,8 @@ function RegisterNow() {
                     id='combo-box-demo'
                     options={top100Films}
                     sx={{
-                        width: 348,
-                        // height: 46,
+                        width: '100%',
+                        height: 36,
                        
                         '& .MuiOutlinedInput-root': {
                             padding: '0px',
@@ -47,9 +47,8 @@ function RegisterNow() {
                     id='combo-box-demo'
                     options={top100Films}
                     sx={{
-                        width: 348,
-                        // height: 46,
-
+                        width: '100%',
+                        height: 36,
                         '& .MuiOutlinedInput-root': {
                             padding: '0px',
                             borderRadius: '20px',
@@ -78,8 +77,8 @@ function RegisterNow() {
                     id='combo-box-demo'
                     options={top100Films}
                     sx={{
-                        width: 348,
-                        // height: 46,
+                        width: '100%',
+                        height: 36,
 
                         '& .MuiOutlinedInput-root': {
                             padding: '0px',

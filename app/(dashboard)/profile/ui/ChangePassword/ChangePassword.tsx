@@ -43,10 +43,10 @@ function ChangePassword() {
     }
     return (
         <div className='wrap-changePasswords'>
-            <div className='bg-TitlechangePassword flex items-center'>
-                <h2 className='top-title-changePassword pl-16'>Change the password</h2>
+            <div className='bg-TitlechangePassword flex justify-center items-center'>
+                <h2 className='top-title-changePassword'>Change the password</h2>
             </div>
-            <div className='Gr-form-changePasswords flex flex-col items-center'>
+            <div className='Gr-form-changePasswords flex flex-col'>
                 <form onSubmit={handleSubmit} className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-1'>
                         <div className='flex flex-col gap-1'>
@@ -55,7 +55,7 @@ function ChangePassword() {
                                 htmlFor='currentPassword'>
                                 Current Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword1 ? 'text' : 'password'}
@@ -75,7 +75,7 @@ function ChangePassword() {
                             <label className='textLabelPassword' htmlFor='newPassword'>
                                 New Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword2 ? 'text' : 'password'}
@@ -97,7 +97,7 @@ function ChangePassword() {
                                 htmlFor='confirmNewPassword'>
                                 Confirm New Password:
                             </label>
-                            <div className='flex'>
+                            <div className='flex gap-2'>
                                 <input
                                     className='Input-Password'
                                     type={showPassword3 ? 'text' : 'password'}

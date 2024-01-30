@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-import { dataFindBest } from '../../dummy-data/home/hotelRoom'
+import { dataFindBest } from '@/dummy-data/home/hotelRoom'
 import SliderWithSale from './re-use/SliderWithSale'
 import SelectPlaceCustom from '@/components/SelectPlaceCustom'
 import ButtonSeeAll from './re-use/ButtonSeeAll'

@@ -17,12 +17,12 @@ function LinkWebsite() {
             <div className='bg-TitleLinkWebsite flex items-center'>
                 <h2 className='top-title-LinkWebsite pl-16'>LinkWebsite</h2>
             </div>
-            <div className='Gr-form-LinkWebsites flex flex-col items-center p-5 '>
+            <div className='Gr-form-LinkWebsites flex flex-col p-5 '>
                 {/* Tabs */}
-                <div className='flex flex-col gap-2 items-center'>
+                <div className='flex flex-col gap-2 w-full'>
                     <div className='flex flex-col items-center'>
                         <div
-                            className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
+                            className='btn-LinkWebsite w-full max-w-[301px] flex items-center justify-between pl-8 pr-4'
                             onClick={() => handleTabClick('tab1')}
                             style={{
                                 backgroundColor:
@@ -67,7 +67,7 @@ function LinkWebsite() {
                         )}
                     </div>
                     <div
-                        className='btn-LinkWebsite flex items-center justify-between pl-8 pr-4'
+                        className='btn-LinkWebsite w-full max-w-[301px] flex items-center justify-between pl-8 pr-4'
                         onClick={() => handleTabClick('tab2')}
                         style={{
                             backgroundColor: activeTab === 'tab2' ? '#ccc' : 'transparent'
@@ -111,7 +111,6 @@ function LinkWebsite() {
                         )}
                     </div>
                 </div>
-
             </div>
         </div>
     )

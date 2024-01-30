@@ -20,7 +20,7 @@ const SelectSwiperMobile = ({ borderSelectColor }: { borderSelectColor?: string 
                 {listSelect.slice(0, 3).map((item, index) => (
                     <SwiperSlide key={index} className='max-w-[150px]'>
                         <div
-                            className={`select-none flex justify-center items-center h-7 rounded-[5px] border   ${
+                            className={`select-none flex justify-center items-center h-7 rounded-[5px] border ${
                                 item.active && 'bg-gradient-right'
                             } ${borderSelectColor ?? 'border-white'}`}>
                             {item.title}

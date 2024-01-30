@@ -1,11 +1,11 @@
-.card {
+.house__product-card {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 
-.card h4 {
+.house__product-card h4 {
     color: #000000;
     font-family: "Montserrat-Bold", Helvetica;
     font-size: 20px;
@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-.card p {
+.house__product-card p {
     color: #000000;
     font-family: "Montserrat-Medium", Helvetica;
     font-size: 15px;
