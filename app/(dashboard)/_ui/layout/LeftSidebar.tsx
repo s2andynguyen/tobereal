@@ -14,7 +14,7 @@ const LeftSidebar = ({isShowSidebar,toggleSidebar}:{isShowSidebar: boolean, togg
     }
     return (
             <div
-                className={`dashboard__left-sidebar fixed h-screen w-[var(--leftsidebar-width)] sm:shadow-md left-sidebar-bg z-[10] 
+                className={`dashboard__left-sidebar fixed h-screen w-[var(--leftsidebar-width)]  left-sidebar-bg z-[10] 
                 transition duration-300
                 ${lato.className}
                 ${isShowSidebar? 'translate-x-0': '-translate-x-full xl:translate-x-0'}`}>
@@ -23,10 +23,10 @@ const LeftSidebar = ({isShowSidebar,toggleSidebar}:{isShowSidebar: boolean, togg
                     <div className='flex justify-center items-center'>
                             <div className='pb-4 cursor-pointer transition duration-200'>
                                 <Image
-                                    src={'/dashboard/images/signal-logo.png'}
+                                    src={'/dashboard/images/logo-dashboard.svg'}
                                     height={148}
                                     width={112}
-                                    alt='sidebar-logo.svg'
+                                    alt='logo-dashboard.svg'
                                     className='w-[112px] h-auto'
                                     onClick={() => handleClick('/')}
                                 />

@@ -1,20 +1,32 @@
 'use client'
-import React from 'react'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useDispatch } from 'react-redux'
+import { useAppSelector } from '@/redux/store'
+import { UseDispatch } from 'react-redux'
+import { IoCheckmark } from 'react-icons/io5'
 import { openModal } from '@/redux/features/modal-slice'
-
+import { chageLanguage } from '@/redux/features/language'
+import ArrowDown from '@/icons/Arrow/ArrowDown'
 interface SidebarProps {
     isShow: boolean
     hiddenSidebar?: any
 }
 const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
-    const router = useRouter()  
+    const [isSelectLanguage, setIsSelectLanguage] = useState(false)
+    const router = useRouter()
     const dispatch = useDispatch()
-    const handleChangeRoute = (path:string) => {
+    const listLanguage = useAppSelector((state) => state.language.languages)
+    const handleChangeRoute = (path: string) => {
         hiddenSidebar()
         router.push(path)
+    }
+    const handleChangeLanguage = (locale: string) => {
+        dispatch(chageLanguage(locale))
+    }
+    const handleToggleLanguage = () => {
+        setIsSelectLanguage(!isSelectLanguage)
     }
     return (
         <div className='block lg:hidden'>
@@ -53,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
                             onClick={() => handleChangeRoute('/')}>
                             <Image
-                                src={'/images/nav/icon-navbar-1.png'}
+                                src={'/images/nav/home-icon.svg'}
                                 width={25}
                                 height={25}
                                 alt='icon-navbar-1.png'
@@ -79,7 +91,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                     <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
                             className='flex gap-2 pt-4 pb-3 border-b border-zinc-900/10'
-                            onClick={() => handleChangeRoute('/promotion')}>
+                            onClick={() => handleChangeRoute('/deposit')}>
                             <Image
                                 src={'/images/nav/icon-navbar-3.png'}
                                 width={25}
@@ -87,8 +99,55 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                                 alt='icon-navbar-3.png'
                                 className='w-6 h-6'
                             />
-                            <span>Promotion</span>
+                            <span>Deposit</span>
                         </div>
+                    </li>
+
+                    {/* Language */}
+                    <li className='cursor-pointer select-none'>
+                        <div
+                            className='px-5 bg-white hover:bg-[#e3e3e3] relative z-[1]'
+                            onClick={handleToggleLanguage}>
+                            <div className='flex items-center justify-between pt-4 pb-3 pr-3 border-b border-zinc-900/10 select-none'>
+                                <div className='flex items-center gap-2'>
+                                    <Image
+                                        src={'/images/nav/global-language-com.svg'}
+                                        width={25}
+                                        height={25}
+                                        alt='global-language-com.svg'
+                                        className='w-6 h-6'
+                                    />
+                                    <span>Language</span>
+                                </div>
+
+                                <ArrowDown className={`w-3 h-3 transition-all duration-200 ${isSelectLanguage ? '-rotate-180' : 'rotate-0'}`} />
+                            </div>
+                        </div>
+                        <ul
+                            className={`pl-4 transition-all duration-200 overflow-hidden  ${
+                                isSelectLanguage
+                                    ? 'h-[110px] visible translate-y-0 opacity-100'
+                                    : 'h-0 invisible -translate-y-[50%] opacity-0'
+                            }`}>
+                            {listLanguage.map((lang, index) => (
+                                <li
+                                    key={index}
+                                    className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'
+                                    onClick={() => handleChangeLanguage(lang.locale)}>
+                                    <div className='flex items-center justify-between gap-2 pt-4 pb-3 border-b border-zinc-900/10 pr-5'>
+                                        <div>
+                                            <span className='uppercase'>
+                                                {lang.locale} -{' '}
+                                            </span>
+                                            ({lang.name})
+                                        </div>
+                                         <IoCheckmark  size={20} className={`transition-all duration-200 ${
+                                            lang.selected ? 'visible opacity-100 scale-1' : 'invisible opacity-0 scale-0'
+                                         }`} />
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
                     </li>
                     <li className='px-5 hover:bg-[#e3e3e3] transition duration-200 cursor-pointer'>
                         <div
@@ -104,7 +163,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isShow, hiddenSidebar }) => {
                             <span>Profile</span>
                         </div>
                     </li>
-                    
                 </ul>
             </div>
         </div>

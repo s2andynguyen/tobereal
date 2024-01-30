@@ -51,10 +51,10 @@ function Footer() {
                         {/* logo */}
                         <div className='col c-10 c-o-2 sm-o-0 sm-5 sm-o-1 md-o-0 md-4 lg-2-4 mb-8 lg:mb-0'>
                             <Image  
-                                src={'/images/main-logo.png'}
+                                src={'/images/header-logo.svg'}
                                 width={167}
                                 height={91}
-                                alt='main-logo'
+                                alt='header-logo.svg'
                                 className='w-auto h-[80px] sm:h-[91px] bg-contain mt-3 hover:cursor-pointer hover:drop-shadow-md drop-shadow-footer-logo rounded-3xl '
                                 onClick={() => router.push('/')}
                             />

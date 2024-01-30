@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import  modalReducer from './features/modal-slice'
 import leftsidebarReducer  from './features/dashboard-left-sidebar'
+import language  from './features/language'
 import { TypedUseSelectorHook, useSelector } from 'react-redux'
 
 export const store = configureStore({
     reducer: {
         modalReducer,
-        leftsidebarReducer
+        leftsidebarReducer,
+        language
     },
 })
 

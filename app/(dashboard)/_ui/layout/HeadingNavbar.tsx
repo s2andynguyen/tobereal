@@ -17,7 +17,7 @@ const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
             ${ isShowSidebar ? 'lg:pl-[var(--leftsidebar-width)]' : '' }`}
         >
             {/* wrapper */}
-            <div className={`pr-4 pl-2 md:pr-8 md:pl-5 xl:px-12 h-full xl:pt-3 ${inter.className} flex justify-between items-center`}>
+            <div className={`pr-3 pl-2 md:pr-8 md:pl-5 xl:px-12 h-full xl:pt-3 ${inter.className} flex justify-between items-center`}>
                 <div className='flex justify-center items-center'>
                     {/* menu-icon on mobile */}
                     <div
@@ -27,7 +27,7 @@ const HeadingNavbar = ({ title, isShowSidebar, toggleSidebar }: Props) => {
                         }}>
                         <IoIosMenu size={30} />
                     </div>
-                    <h2 className='leading-tight sm:text-xl xl:text-[44px] pl-3 xl:pl-0 font-bold'>
+                    <h2 className='leading-tight text-sm sm:text-2xl xl:text-[44px] pl-2 sm:pl-3 xl:pl-0 font-bold'>
                         {title}
                     </h2>
                 </div>
