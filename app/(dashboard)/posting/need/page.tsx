@@ -56,7 +56,7 @@ const PostingSell = () => {
     return (
         <DashboardLayout title='Post'>
             <Link href="/posting/post">
-                <div className="menu_li">
+                <div className="menu_li mx-12">
                     <p>Need to rent, Need to buy</p>
                     <Image
                         src="/dashboard/images/posting/img/search2.png"
@@ -66,7 +66,7 @@ const PostingSell = () => {
                         height={38} />
                 </div>
             </Link>
-            <div className='sale'>
+            <div className='sale mx-12'>
                 <div className='sell'>
                     <div className='menu_sell'>
                         <label className='menu_read'>
@@ -88,7 +88,7 @@ const PostingSell = () => {
                     </div>
                 </div>
                 {checkbox1 && (
-                    <div className='Asset'>
+                    <div className='Asset mx-12'>
                         <span className='Type'>Asset type</span>
                         <select
                             className='select-asset'

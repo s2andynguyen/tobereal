@@ -40,7 +40,7 @@ const PostingSell = () => {
     return (
         <DashboardLayout title='Post'>
             <Link href='/posting/post'>
-                <div className='menu_li '>
+                <div className='menu_li mx-12 '>
                     <p>Sell</p>
                     <Image
                         src='/dashboard/images/posting/img/house.png'
@@ -51,8 +51,8 @@ const PostingSell = () => {
                     />
                 </div>
             </Link>
-            <div className='sale'>
-                <div className='menu_sell'>
+            <div className='sale mx-12 '>
+                <div className='menu_sell '>
                     <label className='menu_read'>
                         <input
                             type='checkbox'
