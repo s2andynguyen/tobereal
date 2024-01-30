@@ -6,7 +6,7 @@
     padding: 10px 0;
 }
 
-.Type {
+.Asset .Type {
     color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
@@ -16,7 +16,7 @@
     width: 252px;
 }
 
-.select-asset {
+.Asset .select-asset {
     background-color: #ffffff;
     border: 1px solid;
     border-color: black;

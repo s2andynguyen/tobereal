@@ -21,7 +21,7 @@
     border-color: black;
 }
 
-.text-Address {
+.Address .text-Address {
     color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
@@ -32,7 +32,7 @@
     padding: 20px 0;
 }
 
-.Address-checkbox {
+.contact_address .Address-checkbox {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -40,7 +40,7 @@
     gap: 10px;
 }
 
-.input_house {
+.contact_house .input_house {
     background-color: #0000001a;
     border: 1px solid;
     border-color: #000;
@@ -49,7 +49,7 @@
     padding: 20px;
 }
 
-.contact_house {
+.contact_address .contact_house {
     display: flex;
     gap: 40px;
 }
@@ -59,7 +59,7 @@
     padding: 60px 190px;
 }
 
-.complete_address {
+.complete_button .complete_address {
     display: flex;
     background: linear-gradient(180deg, rgb(248, 232, 90) 0%, rgb(255, 201, 6) 100%);
     border-radius: 5px;

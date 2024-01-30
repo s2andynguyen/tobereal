@@ -1,4 +1,4 @@
-.Titlle {
+.contact_center .Titlle {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -14,7 +14,7 @@
     line-height: normal;
 }
 
-.input_title {
+.Titlle .input_title {
     width: 933px;
     padding: 8px;
     font-size: 16px;
@@ -25,14 +25,14 @@
 }
 
 
-.Description {
+.contact_center .Description {
     gap: 10px;
     display: flex;
     flex-direction: column;
     padding: 20px 0;
 }
 
-.Description span {
+.contact_center .Description span {
     color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
@@ -41,7 +41,7 @@
     line-height: normal;
 }
 
-.Description_title {
+.Description .Description_title {
     width: 933px;
     padding: 8px;
     font-size: 16px;
@@ -66,7 +66,7 @@
     letter-spacing: 0;
 }
 
-.text_Acrea {
+.Acrea .text_Acrea {
     background-color: #ffffff;
     border: 1px solid;
     border-color: #0000001a;
@@ -84,7 +84,7 @@
     padding: 20px 0;
 }
 
-.Horizontal {
+.content_Hori .Horizontal {
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@
     line-height: normal;
 }
 
-.text_Hori {
+.Horizontal .text_Hori {
     background-color: #ffffff;
     border: 1px solid;
     border-color: #0000001a;
@@ -111,13 +111,13 @@
     border-radius: 5px;
 }
 
-.Longs {
+.content_Hori .Longs {
     gap: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.Longs span {
+.content_Hori .Longs span {
     color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
@@ -126,7 +126,7 @@
     line-height: normal;
 }
 
-.text_Longs {
+.Longs .text_Longs {
     background-color: #ffffff;
     border: 1px solid;
     border-color: #0000001a;
@@ -153,17 +153,17 @@
     line-height: normal;
 }
 
-.Price {
+.flex-price .Price {
     gap: 15px;
     display: flex;
 }
 
-.flex-price {
+.container_Price .flex-price {
     display: flex;
     flex-direction: column;
 }
 
-.input_Price {
+.Price .input_Price {
     background-color: #ffffff;
     border: 1px solid;
     border-color: #0000001a;
@@ -175,7 +175,7 @@
     border-radius: 5px;
 }
 
-.content_input {
+.Price .content_input {
     background-color: #ffffff;
     border-color: #0000001a;
     border-radius: 5px;

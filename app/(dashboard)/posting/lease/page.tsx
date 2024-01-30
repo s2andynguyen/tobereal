@@ -1,14 +1,16 @@
 'use client'
 import './styles.css'
-import'./mobi.css'
+import './mobi.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import DashboardLayout from '../../_ui/layout/DashboardLayout'
 import Link from 'next/link'
-import Legal from './ui/legal/page'
-import GoogleMap from './ui/map/page'
-import Address from './ui/address/page'
-import Contact from './ui/contact_funt/page'
+import Legal from './ui/legal/Legal_content'
+import GoogleMap from './ui/map/Map_content'
+import Address from './ui/address/address_contact'
+import Contact from './ui/contact_funt/contact_funt_content'
+
+
 
 const PostingSell = () => {
     //textra

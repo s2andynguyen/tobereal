@@ -1,9 +1,9 @@
-.detailedinformation {
+.Detailed .detailed-contact {
     display: flex;
     padding: 10px 0;
 }
 
-.detailedInformation {
+.Detailed .detailedInformation {
     display: flex;
 }
 
@@ -14,14 +14,13 @@
     padding: 20px 0;
 }
 
-.grid {
-
+.detailedInformation .input-format {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
-.rectangle {
+.item .rectangle {
     border: 1px solid;
     border-radius: 5px;
     border-color: #066499;
@@ -32,19 +31,19 @@
     justify-content: space-around;
 }
 
-.valueControl {
+.item .valueControl {
     display: flex;
     align-items: center;
 }
 
-.valueControl button {
+.item .valueControl button {
     width: 30px;
     height: 30px;
     margin: 0 35px;
     cursor: pointer;
 }
 
-.valueControl {
+.item .valueControl {
     border: 1px solid;
     border-color: #066499;
     border-radius: 5px;
@@ -52,26 +51,27 @@
     width: 200px;
 }
 
-.customSelect {
+.Rooms .customSelect {
     padding: 10px 0;
 }
 
-.customSelect option{
+.Rooms .customSelect option {
     border-bottom: 1px solid #0000001a;
 }
-.input_custom {
+
+.Rooms .input_custom {
     padding: 20px;
     border-bottom: 1px solid #0000001a;
 }
 
-.customSelect select {
+.Rooms .customSelect select {
     background-color: #0000001a;
     border-radius: 5px;
     height: 40px;
     width: 320px;
 }
 
-.customSelect select::after {
+.Rooms .customSelect select::after {
     content: '\25BC';
     position: absolute;
     top: 50%;
@@ -80,31 +80,31 @@
     pointer-events: none;
 }
 
-.Utilities {
+.Utilities_contact .Utilities {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.enter_other {
+.input_textbox .enter_other {
     width: 260px;
     background-color: #0000001a;
     border-radius: 5px;
 }
 
-.input_box {
+.Utilities .input_box {
     width: 300px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
 
-.input_textbox {
+.Utilities_contact .input_textbox {
     width: 300px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     border-radius: 5px;
     height: 40px;
-    
+
 }

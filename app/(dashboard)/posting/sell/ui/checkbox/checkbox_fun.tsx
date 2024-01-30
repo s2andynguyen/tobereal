@@ -2,11 +2,11 @@
 import './styles.css'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Legal from '../legal/page'
-import GoogleMap from '../map/page'
-import Address from '../address/page'
-import Detailed from '..//detailed/page'
-import Contact from '../contact_funt/page'
+import Legal from '../legal/Legal_content'
+import GoogleMap from '../map/Map_content'
+import Address from '../address/address_contact'
+import Detailed from '../detailed/detailed_content'
+import Contact from '../contact_funt/contact_funt_content'
 
 const PostingSell = () => {
     //textra

@@ -1,9 +1,11 @@
-.google_map {
+.google_map{
     padding: 20px 0;
+    width: auto;
+    height: auto;
 }
 
-@media screen and (max-width: 960px) {
-    .google_map {
+@media screen and (max-width: 960px){
+    .google_map{
         width: 960px;
     }
 }

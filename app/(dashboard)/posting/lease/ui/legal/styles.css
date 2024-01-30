@@ -1,14 +1,11 @@
 .legal_images {
     padding: 20px 0;
-}
-
-.text_legal {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.text_legal span {
+.legal_images span {
     color: #000000;
     font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
@@ -18,7 +15,7 @@
     width: 182px;
 }
 
-.text_legal p {
+.legal_images p {
     color: #000000;
     font-family: 'Inter-Light', Helvetica;
     font-size: 13px;
@@ -29,7 +26,7 @@
 
 }
 
-.lable_input {
+.legal_images .lable_input {
     background-color: #ffffff;
     border: 1px solid;
     border-color: black;

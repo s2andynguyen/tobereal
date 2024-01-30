@@ -33,13 +33,13 @@ const Asset = () => {
 
     return (
         <div className="Detailed">
-            <div className="detailedinformation">
+            <div className="detailed-contact">
                 <button onClick={toggleLabel}>Detailed information</button>
             </div>
             {showLabel && (
                 <div>
                     <div className="detailedInformation">
-                        <div className="grid">
+                        <div className="input-format">
                             <div className="item">
                                 <p>Number of living rooms:</p>
                                 <div className="valueControl">

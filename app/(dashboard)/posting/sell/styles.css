@@ -41,7 +41,7 @@
     gap: 60px;
 }
 
-.menu_read {
+.menu_sell .menu_read {
     border: 1px solid;
     border-color: #000000;
     border-radius: 5px;
@@ -53,7 +53,7 @@
     gap: 10px;
 }
 
-.menu_read .p {
+.menu_sell .menu_read .p {
     color: #000000;
     font-family: 'Inter-Medium', Helvetica;
     font-size: 16px;
@@ -62,7 +62,7 @@
     line-height: normal;
 }
 
-.input_container {
+.sell .input_container {
     width: 935px;
     height: 360px;
     display: flex;
@@ -72,7 +72,7 @@
     gap: 10px;
 }
 
-.input_text {
+.sell .input_text {
     width: 935px;
     height: 359px;
     border: 1px solid;
@@ -81,7 +81,7 @@
     border-radius: 10px;
 }
 
-.camera-icon {
+.sell .camera-icon {
     padding: 20px;
     position: absolute;
 }
@@ -94,7 +94,7 @@
     padding: 20px 0;
 }
 
-.content_add {
+.Add_video .content_add {
     color: #000000;
     font-family: 'Inter-Medium', Helvetica;
     font-size: 20px;
@@ -121,7 +121,7 @@
     padding: 10px 0;
 }
 
-.contact_info {
+.contact_menu .contact_info {
     color: #000000;
     font-family: 'Inter-Bold', Helvetica;
     font-size: 20px;
@@ -131,42 +131,13 @@
     width: 228px;
 }
 
-.name {
+.contact_menu .name {
     background-color: #ffffff;
     border: 1px solid;
     border-color: black;
     border-radius: 5px;
     height: 50px;
     width: 935px;
-}
-
-
-/* .Asset */
-.Asset {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-}
-
-.Type {
-    color: #000000;
-    font-family: "Inter-Medium", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    width: 252px;
-}
-
-.select-asset {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #0000001a;
-    border-radius: 5px;
-    height: 50px;
-    width: 934px;
 }
 
 
@@ -200,7 +171,7 @@
     padding: 35px;
 }
 
-.post {
+.button-post .post {
     background: linear-gradient(180deg, rgb(248, 232, 90) 0%, rgb(255, 201, 6) 100%);
     border-radius: 10px;
     height: 70px;
@@ -211,7 +182,7 @@
 
 }
 
-.post span {
+.button-post .post span {
     color: #000000;
     font-family: "Poppins-Bold", Helvetica;
     font-size: 36px;

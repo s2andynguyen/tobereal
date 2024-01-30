@@ -69,9 +69,7 @@ const Contact = () => {
             <div className="container_Price">
                 <div className="flex-price">
                     <span>Price</span>
-
                     <div className="Price">
-
                         <input
                             type="text"
                             placeholder="Enter Price"
